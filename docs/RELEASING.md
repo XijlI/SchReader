@@ -55,8 +55,17 @@ Android only installs an update when `versionCode` grows. Never reuse a version.
 
 Android refuses to install an APK whose signing key differs from the installed one, so
 releases must always be signed with the *same* keystore. That keystore lives **outside**
-this repo, in `C:\Users\i2026\Documents\schreader-signing\` (`schreader-release.jks`),
-and GitHub gets it as repository secrets.
+this repo, in `<backup-dir>/schreader-release.jks`, and GitHub gets it as repository secrets.
+
+The current key is:
+
+```
+CN=SchReader, OU=Personal, O=SchReader, C=CN
+SHA-256 32:78:B1:ED:34:01:18:14:62:38:2C:16:9C:72:3C:A1:39:3C:69:EB:53:6D:06:5B:91:CC:22:9C:3D:32:BB:CA
+```
+
+It was rotated once, before the first public release: v0.1.0 is the first build signed with this
+key, so no installed copy is stranded.
 
 Add these four at **Settings → Secrets and variables → Actions → New repository secret**:
 
@@ -67,7 +76,7 @@ Add these four at **Settings → Secrets and variables → Actions → New repos
 | `ANDROID_KEY_ALIAS` | `schreader` |
 | `ANDROID_KEY_PASSWORD` | same as the store password |
 
-All four values are written in `C:\Users\i2026\Documents\schreader-signing\SECRETS.txt`.
+All four values are written in `<backup-dir>\SECRETS.txt`.
 
 > **Back up that folder.** Lose the keystore and you can never publish an update to
 > people who installed an earlier APK — they would have to uninstall first. Keep a copy
@@ -95,8 +104,8 @@ Same steps as CI, on this machine:
 
 ```bash
 cd android
-export NV_KEYSTORE_FILE='C:/Users/i2026/Documents/schreader-signing/schreader-release.jks'
-export NV_KEYSTORE_PASSWORD="$(cat /c/Users/i2026/Documents/schreader-signing/.storepass)"
+export NV_KEYSTORE_FILE='<backup-dir>/schreader-release.jks'
+export NV_KEYSTORE_PASSWORD="$(cat <backup-dir>/.storepass)"
 export NV_KEY_ALIAS=schreader
 export NV_KEY_PASSWORD="$NV_KEYSTORE_PASSWORD"
 python3 tools/mirror.py
@@ -111,7 +120,7 @@ If you prefer a properties file over env vars, create `android/keystore.properti
 (gitignored):
 
 ```properties
-storeFile=C:/Users/i2026/Documents/schreader-signing/schreader-release.jks
+storeFile=<backup-dir>/schreader-release.jks
 storePassword=...
 keyAlias=schreader
 keyPassword=...

@@ -52,7 +52,7 @@ python3 .github/scripts/sync_whitelist.py --check  # 就是工作流里跑的那
 ## 一次性设置：签名密钥
 
 安卓不允许「签名不同的 APK」覆盖安装，所以每个 release 必须用**同一把**密钥签名。
-这把 keystore 放在仓库**外面**：`C:\Users\i2026\Documents\schreader-signing\schreader-release.jks`，
+这把 keystore 放在仓库**外面**：`<backup-dir>\schreader-release.jks`，
 GitHub 那边以仓库 secret 的形式拿到它。
 
 到 **Settings → Secrets and variables → Actions → New repository secret** 加这四条：
@@ -64,7 +64,7 @@ GitHub 那边以仓库 secret 的形式拿到它。
 | `ANDROID_KEY_ALIAS` | `schreader` |
 | `ANDROID_KEY_PASSWORD` | 跟密钥库密码一样 |
 
-四个值都写在 `C:\Users\i2026\Documents\schreader-signing\SECRETS.txt` 里，直接复制粘贴。
+四个值都写在 `<backup-dir>\SECRETS.txt` 里，直接复制粘贴。
 
 > **这个文件夹要备份。** keystore 丢了，装了旧版 APK 的人就永远收不到更新 ——
 > 只能先卸载再装。拷一份到 U 盘或密码管理器里。
@@ -91,8 +91,8 @@ docs/release-notes/v0.2.0.zh-CN.md   # 替换中文部分
 
 ```bash
 cd android
-export NV_KEYSTORE_FILE='C:/Users/i2026/Documents/schreader-signing/schreader-release.jks'
-export NV_KEYSTORE_PASSWORD="$(cat /c/Users/i2026/Documents/schreader-signing/.storepass)"
+export NV_KEYSTORE_FILE='<backup-dir>/schreader-release.jks'
+export NV_KEYSTORE_PASSWORD="$(cat <backup-dir>/.storepass)"
 export NV_KEY_ALIAS=schreader
 export NV_KEY_PASSWORD="$NV_KEYSTORE_PASSWORD"
 python3 tools/mirror.py
@@ -106,7 +106,7 @@ sh gradlew assembleRelease -PappVersionName=0.2.0 -PappVersionCode=200
 不想用环境变量就建 `android/keystore.properties`（已被 git 忽略）：
 
 ```properties
-storeFile=C:/Users/i2026/Documents/schreader-signing/schreader-release.jks
+storeFile=<backup-dir>/schreader-release.jks
 storePassword=...
 keyAlias=schreader
 keyPassword=...
