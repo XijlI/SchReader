@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="0; url=library.html?settings=1">
+<title>SchReader — settings</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #fbfaf7; }
+  body { display: grid; place-items: center; color: #5c6672;
+         font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  a { color: #0b5ab3; }
+</style>
+</head>
+<body>
+<p>Opening settings… <a href="library.html?settings=1">continue</a></p>
+<!--
+  Chrome's "Extension options" lands here. The settings UI lives in library.html — one
+  implementation, opened as a modal — so this page only forwards to it. A meta refresh, not a
+  script: MV3 extension pages refuse inline scripts (CSP), which silently left this page sitting
+  on "Opening settings…".
+-->
+</body>
+</html>

@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ink"
+    android:orientation="vertical">
+
+    <!-- ============ top bar: back, address, reload, favourite, favourites list ============ -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/ink"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="34dp"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:text="‹"
+            android:textColor="@color/text"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/btnForward"
+            android:layout_width="32dp"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:text="›"
+            android:textColor="@color/text"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/bg_url_field"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="4dp">
+
+            <EditText
+                android:id="@+id/urlEdit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/url_hint"
+                android:imeOptions="actionGo"
+                android:inputType="textUri"
+                android:maxLines="1"
+                android:padding="0dp"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="@color/text"
+                android:textColorHint="@color/text_faint"
+                android:textSize="12.5sp" />
+
+            <!-- page zoom: doubles as the indicator, tap for − / + -->
+            <TextView
+                android:id="@+id/btnZoom"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:minWidth="38dp"
+                android:paddingStart="3dp"
+                android:paddingEnd="5dp"
+                android:text="100%"
+                android:textColor="@color/text_faint"
+                android:textSize="10.5sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnReload"
+            android:layout_width="32dp"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:text="⟳"
+            android:textColor="@color/text_dim"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/btnStar"
+            android:layout_width="32dp"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:text="☆"
+            android:textColor="@color/gold"
+            android:textSize="19sp" />
+
+        <!-- tab count + tab switcher (one tab = "1") -->
+        <TextView
+            android:id="@+id/btnTabs"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/bg_count"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/text_dim"
+            android:textSize="12.5sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <!-- ============ web area ============ -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <WebView
+            android:id="@+id/webBrowser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <WebView
+            android:id="@+id/webReader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <!-- the app's home: library.html / search.html / settings.html, all local assets -->
+        <WebView
+            android:id="@+id/webHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="top"
+            android:indeterminate="false"
+            android:max="100"
+            android:progressTint="@color/gold"
+            android:visibility="gone" />
+
+        <!-- ============ page zoom ============ -->
+        <LinearLayout
+            android:id="@+id/zoomPanel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_pill"
+            android:elevation="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="4dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/zoomOut"
+                android:layout_width="34dp"
+                android:layout_height="32dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:text="−"
+                android:textColor="@color/text"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/zoomValue"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:minWidth="52dp"
+                android:text="100%"
+                android:textColor="@color/text"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/zoomIn"
+                android:layout_width="34dp"
+                android:layout_height="32dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/text"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/zoomReset"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:text="Reset"
+                android:textColor="@color/text_dim"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- floating reader button (native: publisher CSS cannot touch it) -->
+        <LinearLayout
+            android:id="@+id/pillHost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="76dp"
+            android:background="@drawable/bg_pill"
+            android:elevation="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="6dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="6dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:background="@drawable/bg_mark"
+                android:gravity="center"
+                android:text="R"
+                android:textColor="@color/gold"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pillLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/pill_label"
+                android:textColor="@color/text"
+                android:textSize="12.5sp" />
+        </LinearLayout>
+
+        <!-- ============ bottom navigation (slides away while you read) ============ -->
+        <LinearLayout
+            android:id="@+id/navWrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:elevation="12dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:id="@+id/bottomNav"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:background="@color/ink"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/navLibrary"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/ic_tab_library"
+                        android:tint="@color/nav_tint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:duplicateParentState="true"
+                        android:text="@string/tab_library"
+                        android:textColor="@color/nav_tint"
+                        android:textSize="10.5sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/navSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/ic_tab_search"
+                        android:tint="@color/nav_tint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:duplicateParentState="true"
+                        android:text="@string/tab_search"
+                        android:textColor="@color/nav_tint"
+                        android:textSize="10.5sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/navSettings"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/ic_tab_settings"
+                        android:tint="@color/nav_tint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:duplicateParentState="true"
+                        android:text="@string/tab_settings"
+                        android:textColor="@color/nav_tint"
+                        android:textSize="10.5sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ============ tab switcher ============ -->
+        <LinearLayout
+            android:id="@+id/tabSheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ink"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="6dp">
+
+                <TextView
+                    android:id="@+id/tabTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tabs_label"
+                    android:textColor="@color/text"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnNewTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="@string/tab_new"
+                    android:textColor="@color/gold"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/btnTabSheetClose"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="✕"
+                    android:textColor="@color/text_dim"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/tabList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="74dp" />
+            </ScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/toastMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_pill"
+            android:paddingStart="14dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/text"
+            android:textSize="12.5sp"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- bottom-nav tint: gold for the selected tab, dim for the other two. The children inherit the
+     parent row's selected state (android:duplicateParentState), so this one list drives both. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:color="@color/gold" />
+    <item android:color="@color/text_dim" />
+</selector>

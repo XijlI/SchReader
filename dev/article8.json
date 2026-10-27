@@ -1,0 +1,1104 @@
+{
+ "source": {
+  "url": "http://127.0.0.1:8799/Toward%20autonomous%20science%20with%20agentic%20artificial%20intelligence_%20Cell.html?v=1792965450",
+  "host": "127.0.0.1",
+  "adapter": "",
+  "journal": "Cell",
+  "doi": "10.1016/j.cell.2026.08.052",
+  "pdfUrl": "https://www.cell.com/cell/pdf/S0092-8674(26)01063-9.pdf"
+ },
+ "meta": {
+  "title": "Toward autonomous science with agentic artificial intelligence",
+  "subtitle": "",
+  "journal": "Cell",
+  "publisher": "Elsevier",
+  "articleType": "Article",
+  "doi": "10.1016/j.cell.2026.08.052",
+  "date": "2026-09-17",
+  "volume": "189",
+  "pages": "6574–6588",
+  "authors": [
+   "Lucie Y. Guo",
+   "Darren S.J. Ting",
+   "Xinyi Su",
+   "Alex Aliper",
+   "Alex Zhavoronkov",
+   "Daniel S.W. Ting"
+  ],
+  "affiliations": [
+   "F. M. Kirby Center, Scheie Eye Institute, University of Pennsylvania Perelman School of Medicine, Philadelphia, PA, USA",
+   "Academic Ophthalmology, Department of Inflammation and Ageing, School of Infection, Inflammation, and Immunology, College of Medicine and Health, University of Birmingham, Birmingham, UK",
+   "Birmingham and Midland Eye Centre, Sandwell and West Birmingham NHS Trust, Birmingham, UK",
+   "Singapore National Eye Center, Singapore Eye Research Institute, Singapore, Singapore",
+   "Duke-NUS Medical School, National University Singapore, Singapore, Singapore",
+   "Institute of Molecular Cell Biology, Agency for Science, Technology and Research (A∗STAR), Singapore, Singapore",
+   "Department of Ophthalmology and Centre for Innovation and Precision Eye Health, Yong Loo Lin School of Medicine, National University Hospital, Singapore, Singapore",
+   "Insilico Medicine, International Renewable Energy Agency HQ, Masdar City, Abu Dhabi, UAE",
+   "Byers Eye Institute, Stanford University, Palo Alto, CA, USA"
+  ],
+  "keywords": []
+ },
+ "abstractHtml": "Artificial intelligence (AI) in biomedicine has evolved from pattern-recognition for medical image analysis to generative models like AlphaFold that predict protein structures. Tools such as Elicit, GPT-Rosalind, and Claude Science now bridge prediction and reasoning through literature synthesis, domain-tuned models, and agentic workbenches. Three recent systems (Co-Scientist, Robin, and Biomni) demonstrated agentic AI capable of generating hypotheses, designing experiments, computational analysis, and refining reasoning through experimental feedback. This perspective traces the emergence of agentic scientific reasoning, discusses scaling laws and autonomous laboratories, and argues that AI's transformative potential is inseparable from challenges in hallucination, bias, irreproducibility, and dual use. Scientific progress will depend on responsible human-AI collaboration.</p></p>",
+ "sections": [
+  {
+   "id": "sec-summary",
+   "title": "Summary",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Artificial intelligence (AI) in biomedicine has evolved from pattern-recognition for medical image analysis to generative models like AlphaFold that predict protein structures. Tools such as Elicit, GPT-Rosalind, and Claude Science now bridge prediction and reasoning through literature synthesis, domain-tuned models, and agentic workbenches. Three recent systems (Co-Scientist, Robin, and Biomni) demonstrated agentic AI capable of generating hypotheses, designing experiments, computational analysis, and refining reasoning through experimental feedback. This perspective traces the emergence of agentic scientific reasoning, discusses scaling laws and autonomous laboratories, and argues that AI’s transformative potential is inseparable from challenges in hallucination, bias, irreproducibility, and dual use. Scientific progress will depend on responsible human-AI collaboration."
+    }
+   ]
+  },
+  {
+   "id": "sec-keywords",
+   "title": "Keywords",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "sec-introduction",
+   "title": "Introduction",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Artificial intelligence (AI) in biomedical sciences has rapidly evolved from deep learning in medical imaging analysis to generative AI that includes large language models (LLMs), vision language models, ambient AI, and multimodal AI.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"1\" href=\"#ref-1\">1</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"2\" href=\"#ref-2\">2</a></span> Convolutional neural networks (CNNs), which can process grid-structured data like images and video and extract spatial features like edges and textures, classified clinical data such as retinal images<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"3\" href=\"#ref-3\">3</a></span> and histopathology slides<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"4\" href=\"#ref-4\">4</a></span> with near-expert level accuracy by examining spatial structure in image data. Statistical models predicted protein-protein interactions from amino acid sequence and gene expression data.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"5\" href=\"#ref-5\">5</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"6\" href=\"#ref-6\">6</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"7\" href=\"#ref-7\">7</a></span> Variant callers distinguished true genetic signal from sequencing noise,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a></span> and further models learned to predict pathogenicity of uncharacterized genetic variants.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"9\" href=\"#ref-9\">9</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"10\" href=\"#ref-10\">10</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"11\" href=\"#ref-11\">11</a></span> Recently, foundation models and LLMs have demonstrated potential in supporting clinical reasoning. These advancements shared a common structure: a well-defined input mapped to a well-defined output, specified in advance by a human scientist who knew what question to ask."
+    },
+    {
+     "t": "p",
+     "html": "In 2026, papers appeared simultaneously that mark an inflection point in this trajectory (<a id=\"crosref0105\" data-fig=\"fig-ure-1\">Figure 1</a>). Gottweis and colleagues introduced Co-Scientist,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"12\" href=\"#ref-12\">12</a></span> a multi-agent system built on iterative hypothesis generation, tournament-style self-critique, and test-time compute scaling. Rather than answering a fixed question posed by a human investigator, Co-Scientist orchestrates multiple AI agents in “tournament”-style competition in which they assess two hypotheses at a time, scan the literature, and rank the hypotheses. In one validation, the system proposed drug repurposing candidates for acute myeloid leukemia (AML), including KIRA6, an inhibitor of the stress-responsive enzyme IRE1α that had not been previously proposed as a prepurposing candidate for AML; KIRA6 showed selective tumor inhibition in patient-derived cell lines, killing leukemia cells at concentrations up to 18-fold lower than those required to kill control cells. In another, it identified epigenetic targets for liver fibrosis with anti-fibrotic activity and evidence of regeneration in human hepatic organoids; in a third, it independently recapitulated a then-unpublished experimental finding on capsid-forming phage-inducible chromosomal island gene transfer in bacteria."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-ure-1"
+    },
+    {
+     "t": "p",
+     "html": "A contemporaneous multi-agent AI system, Robin, couples hypothesis generation directly to autonomous analysis of experimental data.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"13\" href=\"#ref-13\">13</a></span> Robin is composed of three collaborating agents with avian-inspired names: Crow performs shallow literature scans, Falcon performs deep dives in literature, and Finch analyzes experimental data obtained from benchside testing. Robin was asked to focus on a disease of interest: dry age-related macular degeneration (dAMD), a leading cause of severe vision loss. Robin identified and reviewed 151 papers and proposed 10 biologically relevant dAMD mechanisms, ranked them and the corresponding experimental strategies, and proposed enhancing phagocytosis by retinal pigment epithelium (RPE) as a therapeutic strategy, as well as testing drugs to enhance phagocytic capacity with patient-derived or stem cell-derived primary RPE cells. In this pipeline, (1) Crow conducted a literature review of about 400 papers and proposed 30 existing drug candidates for experimental testing; (2) Falcon then comprehensively evaluated each of these molecules, and they were ranked in an LLM-judged tournament. A human selected the top 5 candidates from this ranking and tested them experimentally, and (3) Finch then gated the raw flow cytometry data and performed statistics. Through an iterative lab-in-the-loop discovery cycle, Robin identified ripasudil and KL001 as enhancers of RPE phagocytosis. After human experimentalists validated predictions in primary human RPE cells, Robin then autonomously analyzed the resulting RNA-sequencing data and proposed the upregulation of the lipid transporter ABCA1 as a mechanistic pathway."
+    },
+    {
+     "t": "p",
+     "html": "Concurrently, Huang and colleagues introduced Biomni,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"14\" href=\"#ref-14\">14</a></span> a general-purpose AI agent (a system that can interpret and execute a wide variety of open-ended tasks across multiple domains instead of one) (<a id=\"crosref0120\" data-fig=\"fig-ure-1\">Figure 1</a>). Rather than using multiple competing agents in a tournament, Biomni is a single agent that can reason over a curated environment (i.e., Biomni-E1, which had 150 specialized biomedical tools, 105 software packages, and 59 databases from mining 2,500 publications across 25 subfields on bioRxiv). When a user query is given, Biomni uses retrieval-augmented planning (which recalls past experiences or references external data, instead of relying on pre-trained knowledge) to select relevant resources, generate a step-by-step plan, and execute each step through code. This code-as-action interface lets the agent compose workflows dynamically, without predefined templates."
+    },
+    {
+     "t": "p",
+     "html": "These three systems now go beyond retrieving or summarizing existing knowledge; they drive iterative cycles of hypothesis generation, experimental design, and data interpretation that begin to approximate aspects of human scientific reasoning itself. The authors of Robin argue that its ability to effectively generate novel, testable hypotheses by combinatorially synthesizing non-obvious connections between disparate fields is useful for finding “low-hanging fruits” that may elude human researchers with compartmentalized knowledge. This architectural diversity among these systems (multi-agent tournament versus single-agent code execution) indicates that the field is exploring multiple viable paths in building an artificial scientist."
+    },
+    {
+     "t": "p",
+     "html": "This perspective traces the arc from supervised pattern recognition through generative models to agentic scientific reasoning, examines whether scaling laws transfer from language modeling to discovery, considers the prospect of closed-loop autonomous laboratories, and highlights the scientific and ethical risks that accompany this transition. We acknowledge that this arc from pattern recognition toward autonomy represents one framing of the field’s trajectory, shaped by the recent emergence of agentic systems, but alternative narratives also exist that emphasize increasingly capable human-AI collaboration instead of autonomy or data infrastructure instead of reasoning capability. Here, we prioritize the narrative of agentic scientific reasoning because the systems that we examine (Co-Scientist, Robin, and Biomni) make the question of autonomy especially timely."
+    }
+   ]
+  },
+  {
+   "id": "sec-the-era-of-pattern-recognition",
+   "title": "The era of pattern recognition",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The first wave of biomedical AI, spanning roughly 2012 to 2020, was defined by supervised learning applied to single, well-specified tasks (<a id=\"crosref0125\" data-fig=\"fig-ure-2\">Figure 2</a>). Deep CNNs became useful in skin lesion classification and diabetic retinopathy screening,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"3\" href=\"#ref-3\">3</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"4\" href=\"#ref-4\">4</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"15\" href=\"#ref-15\">15</a></span> at least in identifying high-risk pathology that warranted referral to a specialist. In genomics, machine learning models learned to call genomic variants from short-read data with high accuracy<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a></span> and predict the pathogenicity of uncharacterized variants. In drug discovery, quantitative structure-activity relationship models predicted whether a candidate molecule would bind a given target,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"16\" href=\"#ref-16\">16</a></span> but this task still required a human medicinal chemist to have already proposed the molecule and identified the target worth pursuing. In this first era, the human investigator provided the scientific question, the relevant data, and the criteria to differentiate success from failure, and the model performed the pre-determined tasks."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-ure-2"
+    },
+    {
+     "t": "p",
+     "html": "In the field of biological structure prediction, AlphaFold,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"17\" href=\"#ref-17\">17</a></span> which first competed in the Critical Assessment of Protein Structure Prediction (CASP) in 2018 and achieved near-experimental accuracy<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"18\" href=\"#ref-18\">18</a></span> with AlphaFold2 at CASP14 in 2020, marked a transition from classification to generative modeling. For decades, predicting the three-dimensional fold of a protein from its amino acid sequence had been one of the central unsolved problems in computational biology. RoseTTAFold<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"19\" href=\"#ref-19\">19</a></span> extended the transformer paradigm with a three-track neural network integrating one-dimensional sequence, two-dimensional distance, and three-dimensional coordinate information to produce predictions approaching AlphaFold2 accuracy while running on a single workstation. ESMFold used the ESM-2 protein language model to predict structures directly from single sequences without multiple sequence alignments.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a></span> AlphaFold’s near-experimental accuracy across a substantial fraction of the proteome, combined with the decision to release predicted structures as a public resource,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"21\" href=\"#ref-21\">21</a></span> demonstrated that AI could function as a generator of biologically actionable knowledge instead of just a faster classifier of it. AlphaFold 3’s extension to protein-ligand, protein-nucleic acid, and antibody-antigen complexes broadened its impact beyond protein structural prediction.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"22\" href=\"#ref-22\">22</a></span>"
+    },
+    {
+     "t": "p",
+     "html": "AlphaFold was the most visible example of a broader shift toward generative and foundation models in biology. Protein language models such as ESM-2 learned rich representations of sequence space from billions of proteins,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a></span> which enable not only structure prediction, but also function annotation and variant effect prediction without task-specific training. Foundation models extended this paradigm to other modalities including single-cell multi-omics,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"23\" href=\"#ref-23\">23</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"24\" href=\"#ref-24\">24</a></span> while generative models for protein design (e.g., RFdiffusion<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"25\" href=\"#ref-25\">25</a></span>) and small-molecule generation moved from predicting biological entities to designing novel ones. These developments expanded the range of questions that AI can address, but each still operated within a fixed boundary defined in advance by a human. The model generated a structure, a sequence, or a molecule when asked, but did not decide what to generate, why it mattered, or what to do with the result. The agentic systems of the next era attempt to cross this boundary."
+    }
+   ]
+  },
+  {
+   "id": "sec-the-agentic-era",
+   "title": "The agentic era",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "A second wave of tools emerged that began to assist with the reasoning process itself. Literature and evidence-synthesis assistants such as Elicit<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"26\" href=\"#ref-26\">26</a></span> applied semantic search and language models to screen, extract, and synthesize findings across tens of millions of papers, accelerating systematic review. Domain-tuned reasoning models such as GPT-Rosalind, a frontier model specialized for life sciences, are designed to reason across molecules, proteins, genes, and pathways to support hypothesis generation and experiment planning. Agentic research workbenches such as Claude Science orchestrate numerous scientific databases and tools within a single environment."
+    },
+    {
+     "t": "p",
+     "html": "Co-Scientist<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"12\" href=\"#ref-12\">12</a></span> and Robin<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"13\" href=\"#ref-13\">13</a></span> are multi-agent architectures that can formulate questions themselves. They are collections of specialized model instances that take on distinct functional roles: generating candidate hypotheses, critiquing and ranking them in tournament-style competitions, retrieving and synthesizing relevant literature, and proposing concrete experimental protocols. These communicate iteratively rather than producing a single forward pass from input to output. This architecture allows the system to allocate additional computation not only to making a single answer more accurate, but to exploring a wider hypothesis space and refining candidates through self-critique before committing to a final proposal. Co-Scientist runs pairwise comparisons between hypotheses using simulated scientific debates and scoring them with an Elo-based system, which is a method for ranking competitors from pairwise comparisons originally designed for chess. Here, the “competitors” are the hypotheses, and the “matches” or “tournaments” are pairwise contests in which a Ranking agent judges which of the two hypotheses is the most promising. This tournament structure provides the selection pressure that converts generative quantity into quality, and the win/loss patterns of the different hypotheses are fed back to drive iterative improvement. This is the mechanism through which test-compute scaling can translate into better hypotheses, not just more hypotheses. This allows the system’s output to take a form that more closely resembles scientific reasoning: not a single prediction, but a ranked set of hypotheses, each accompanied by supporting evidence, an account of its novelty relative to the existing literature, and a proposed experimental path for resolving the remaining uncertainty."
+    },
+    {
+     "t": "p",
+     "html": "With Robin, the system enabled both hypothesis generation as well as data interpretation. After proposing ripasudil as a repurposing candidate for dAMD, the system did not stop at the prediction. It designed the follow-up transcriptomic experiment, and after human collaborators executed the wet-lab assay, Robin autonomously analyzed the resulting RNA-seq data and identified ABCA1 upregulation as a mechanistic pathway.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"13\" href=\"#ref-13\">13</a></span> The human collaborator still plays a substantial role in the iterative process. Several of Robin’s experimental suggestions were overridden by human scientists who judged them impractical, and the analytical agent performed less well on questions that required statistical and bioinformatic reasoning, relying heavily on human-supplied prompts. In Co-Scientist as well, a human scientist still executes the physical wet-lab experiments and retains authority to evaluate, accept, or discard the system’s proposals throughout. Neither system has yet closed the loop fully, from hypothesis through physical experimentation back to model update, without human intervention at each stage."
+    },
+    {
+     "t": "p",
+     "html": "Biomni represents a third architectural paradigm.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"14\" href=\"#ref-14\">14</a></span> Instead of having multiple agents in competition, Biomni is a single general-purpose agent that composes workflows over a single biomedical environment. Its action-discovery agent mined 2,500 publications across 25 bioRxiv subfields and yielded Biomni-E1, with specialized tools, 105 software packages, and 59 databases. Biomni uses code as its primary way to interact with scientific tools and databases; each step of a plan is expressed as executable code, and it can perform complex, multi-step procedures such as running a process repeatedly, running multiple operations simultaneously, or making decisions based on data. The agent employs adaptive planning where it formulates an initial plan grounded in biomedical knowledge, then iteratively refines it through execution to enable context-aware behavior. Where Co-Scientist’s tournament provides selection pressure that converts generative quantity to quality through pairwise competition, Biomni’s code-based system provides the ability to compose arbitrary workflows across diverse tools."
+    },
+    {
+     "t": "p",
+     "html": "A remaining gap is the connective execution layer that translates computational reasoning into physical experimentation and returns structured results to the agent. This would be the difference between an agentic co-scientist and an autonomous laboratory. General-purpose agent runtimes like OpenClaw can provide persistent agent loops capable of planning, calling tools, or executing code and could in principle drive laboratory hardware, laboratory information management systems (LIMSs), and other infrastructure under human oversight. Biomni’s integration with PyLabRobot,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"27\" href=\"#ref-27\">27</a></span> which generates executable liquid-handling protocols for Hamilton STAR robotic systems from natural-language experimental specifications, is a complementary approach to this gap of generating executable automation code rather than providing a runtime orchestration layer. These approaches start to bridge computational scientific reasoning and physical experimentation."
+    },
+    {
+     "t": "p",
+     "html": "In all systems, human curation is still important. A small fraction of candidates, chosen by human scientists from the system’s ranked output, were carried forward to bench testing. These were ranking-and-selective validation paradigms, not a comprehensive assessment of the system’s predictive accuracy. Co-Scientist explored 2,300 approved drugs across 34 cancer types for repurposing, but only a few candidates selected by humans were tested <i>in vitro</i>; 3 showed some activity, and 1 showed particular promise.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"12\" href=\"#ref-12\">12</a></span> Robin generated 30 therapeutic candidates for dAMD, tested 15 across two iterations, and confirmed 2 hits.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"13\" href=\"#ref-13\">13</a></span> Biomni’s benchmark tasks used ground-truth labels, but its open-ended case studies still involved human selection of what to test.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"14\" href=\"#ref-14\">14</a></span> These all support the value of the system-plus-human pipeline, not necessarily the autonomous system itself. When expert reviewers select which hypotheses to advance from a generated pool, the success also reflects human judgment to spot a needle in a haystack, rather than the system’s ability to prioritize correctly. Without knowing whether the experimentally validated candidates were the system’s top-ranked proposals or human overrides, and without evaluating how these systems behave when pointed at problems with no viable answer, we cannot yet assess whether these successes reflect a generalizable capability versus broad generation paired with selective human curation. This is not a criticism of the breakthroughs themselves, which appropriately focused on proving that agentic hypotheses can survive experimental validation, but it represents a methodological gap the field will likely fill as systems advance toward higher automaticity. Although Biomni-Eval1 includes direct comparisons to human expert performance on benchmark tasks with known answers, it is less known how agentic AI will perform against human experts asked to generate and rank candidates under the same constraints. Studies in natural language processing (NLP) ideation had shown that LLM-generated research ideas were judged to be more novel at the ideation stage,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"28\" href=\"#ref-28\">28</a></span> but then judged to be less exciting after execution.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"29\" href=\"#ref-29\">29</a></span> Without such rigorous comparisons, it is unclear whether newer agentic systems will outperform human scientists at hypothesis prioritization, or whether they primarily accelerate the process by generating a larger, more well-informed, or more intensely curated candidate pool from which human expertise can select."
+    },
+    {
+     "t": "p",
+     "html": "Another gap is the absence of comparison to domain-specific computational baselines. Drug repurposing is not a new problem; decades of computational biology research have produced targeted methods, such as network-based approaches that predict drug-target interactions and drug-disease proximity on the human interactome,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"30\" href=\"#ref-30\">30</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"31\" href=\"#ref-31\">31</a></span> signature matching that connects disease- and drug-induced gene expression profiles,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"32\" href=\"#ref-32\">32</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"33\" href=\"#ref-33\">33</a></span> and graph neural networks trained on drug-target interaction data.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"34\" href=\"#ref-34\">34</a></span> Head-to-head evaluation against domain-specific baselines would help to evaluate claims that agentic AI is a new paradigm for biomedical discovery. Moreover, the biological significance and novelty of the successful validations remain an open question. Tumor inhibition in patient-derived cell lines is a low bar: many compounds have shown anti-tumor activity <i>in vitro</i> that fails to translate to clinical efficacy, and many promising preclinical candidates fail in phase II or beyond.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"35\" href=\"#ref-35\">35</a></span> Anti-fibrotic activity in hepatic organoids is similarly suggestive, but far from conclusive. Along similar lines, Rho-associated protein kinase (ROCK) inhibition has long been known to be effective for enhancing RPE phagocytosis,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"36\" href=\"#ref-36\">36</a></span> and ripasudil as nominated by Robin had already been actively repurposed within ophthalmology in diabetic macular edema<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"37\" href=\"#ref-37\">37</a></span> and retinal ganglion cell neuroprotection.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"38\" href=\"#ref-38\">38</a></span> Agentic systems will continue to mature; it will soon be seen whether AI systems can robustly make novel biomedical discoveries that survive the transition through <i>in vivo</i> models and human clinical trials."
+    }
+   ]
+  },
+  {
+   "id": "sec-is-more-autonomy-better",
+   "title": "Is more autonomy better?",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The aforementioned methodological gaps raise a broader question of whether more autonomy is always desirable. In many contexts, AI may not be most helpful as autonomous investigators but as bounded reasoning components, constrained to specific decisions and interpretable in their outputs. A recent study<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"39\" href=\"#ref-39\">39</a></span> supports this alternate architecture: rather than using multi-agent architecture, the authors used three frontier LLMs (GPT-4o, Claude-3.7, and Gemini-2.5-Pro) as bounded reasoning components within a fixed, human-designed pipeline for chimeric antigen receptor (CAR)-T cell target discovery. The models optimized feature weights for a multi-criteria scoring system and nominated the most promising targets from a shortlist, each across 1,000 independent simulations. The pipeline itself (single-cell atlas construction, feature extraction from six public databases, and all experimental validation) was entirely human, and the LLMs did not generate hypotheses <i>de novo</i>, retrieve literature, or propose experiments. After glycoprotein non-metastatic melanoma protein B (GPNMB) emerged as the most frequently nominated target across all three models, the authors engineered a CAR construct and demonstrated anti-tumor activity <i>in vivo</i> across three xenograft models."
+    },
+    {
+     "t": "p",
+     "html": "Two reports from independent groups appeared contemporaneously, both validating GPNMB as a CAR-T target through non-AI approaches: a proteogenomic surfaceome screen in microphthalmia/transcription factor E (MiT/TFE)-fusion-driven sarcomas<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"40\" href=\"#ref-40\">40</a></span> and a multi-omic profiling platform in glioblastoma.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"41\" href=\"#ref-41\">41</a></span> The sarcoma study<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"40\" href=\"#ref-40\">40</a></span> reported a first-in-human clinical case (ClinicalTrials.gov: NCT07104682) in which GCAR1, the same GPNMB-directed CAR construct, produced stable disease for up to 3 months, a 52% decrease in lung lesion counts, and no cytokine release syndrome or neurotoxicity. The glioblastoma study<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"41\" href=\"#ref-41\">41</a></span> showed durable disease control beyond 160 days in orthotopic patient-derived xenograft models. The convergence of an LLM-driven pipeline and two conventional computational approaches on the same target is strong evidence for the validity of GPNMB, and this was achieved by using AI as a narrow, bounded component within an otherwise fully human-designed pipeline or by not using AI for target discovery at all. The appropriate level of autonomy is itself an empirical question, and a narrowly scoped model embedded in a human-designed pipeline can yield robust, experimentally validated discoveries without requiring end-to-end AI control."
+    },
+    {
+     "t": "p",
+     "html": "More autonomy may not necessarily drive more impactful discoveries. Recent work<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"42\" href=\"#ref-42\">42</a></span> distinguishes three modes of inference in scientific discovery: induction (finding patterns in data), deduction (deriving consequences from established premises), and abduction (the creative leap to a new explanatory hypothesis). Current AI systems are mastering induction through statistical learning and are advancing in deduction, but they arguably lack the capacity for abduction, which is the generation of genuinely novel thought rather than recombinations of existing knowledge. LLMs operate over text without sensory or physical grounding, and LLMs may be structurally incapable of creating new foundational axioms.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"42\" href=\"#ref-42\">42</a></span> However, biomedical discovery can be largely inductive, driven by large datasets rather than scarce observations, and worthwhile hypotheses can often be derived from connecting existing knowledge across domains rather than inventing entirely new axioms. Nonetheless, the most transformative biomedical discoveries usually require conceptual leaps that go beyond pattern matching in existing data. Whether current architectures can perform such leaps, or whether they require physical grounding that emerging multimodal models may provide, remains an open question."
+    }
+   ]
+  },
+  {
+   "id": "sec-scaling-laws",
+   "title": "Scaling laws",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "To evaluate increasingly capable AI co-scientists, it is helpful to consider scaling laws: the observation that AI systems tend to be more capable in predictable ways as they are trained on larger datasets, use more computing power, and contain more parameters.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"43\" href=\"#ref-43\">43</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"44\" href=\"#ref-44\">44</a></span> Early work focused on “training-time compute,” the computational resources used to build and train a model before it is deployed. Recent work has identified sub-scaling regimes in which returns diminish once training corpora saturate or become redundant.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"45\" href=\"#ref-45\">45</a></span> More recently, researchers have recognized the importance of “test-time compute,” which is the computational effort a model expends while solving a specific problem after training.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"46\" href=\"#ref-46\">46</a></span> Rather than producing an immediate answer, a model can devote additional computation to exploring alternatives, evaluating evidence, checking reasoning, and refining potential solutions. In parallel, a growing body of work demonstrates that agents can also improve over time through online adaptation, refining their own prompts, memory, and workflows across successive tasks without retraining the underlying model.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"47\" href=\"#ref-47\">47</a></span> This ability to allocate computational resources during problem-solving has emerged as a major driver of recent advances in AI reasoning and agentic systems."
+    },
+    {
+     "t": "p",
+     "html": "In a reasoning system equipped with test-time compute scaling, additional computation translates into additional deliberation: the system can explore a broader region of the hypothesis space, generate and discard more candidate solutions, and iteratively refine a proposal before committing to a final answer. This was the logic that distinguished AlphaGo’s advance over earlier game-playing systems<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"48\" href=\"#ref-48\">48</a></span> and allowed it to defeat world champion Go players. The board game Go is an enormous search space, with many possible move sequences to evaluate exhaustively. AlphaGo combined neural networks with Monte Carlo Tree Search, which involves building a decision tree through random sampling and simulations. Rather than relying on a single prediction, it searched through competing possibilities before deciding on a move. Similarly, Co-Scientist’s tournament-based, self-critique method spends computation at the moment of reasoning, instead of producing a single response in one forward pass. In both cases, improved performance arises from additional computation to evaluate alternative possibilities before committing to a decision. But AlphaGo is not an analogy for scientific discovery. Go possesses a perfect objective function of winning the game, as well as a fully specified and bounded state space. Scientific discovery has neither: there is no unambiguous signal that distinguishes a good hypothesis from a bad one prior to experimental testing, and the space of possible hypotheses is open-ended and undefined. More search in Go produces better moves because the evaluation function is ground truth, and while more search in science may produce more candidate hypotheses, it is not a guarantee that more hypotheses will lead to better science."
+    },
+    {
+     "t": "p",
+     "html": "In the pattern recognition era, a classifier trained to recognize diabetic retinopathy does not become a better scientist if given more compute at inference time; it simply applies the same fixed function more quickly. A reasoning system built around test-time search, by contrast, becomes capable of qualitatively different behavior—deliberation, self-critique, and iterative refinement—as more computation becomes available to it.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"46\" href=\"#ref-46\">46</a></span> Biomni’s adaptive planning is an alternative mechanism for the same principle: test-time compute is allocated to iterative plan refinement and code debugging, rather than tournament-style hypothesis competition. By optimizing Biomni-R0 through trial-and-error training, expanding the underlying model from 8 billion to 32 billion parameters yielded a 10% absolute improvement on the Biomni-Eval1 benchmark tasks. This shows that model scaling improves performance on bounded biomedical tasks with defined correct answers, but it does not directly establish that comparable gains will translate to open-ended hypothesis generation, where no ground-truth signal is available to guide optimization."
+    },
+    {
+     "t": "p",
+     "html": "Scaling laws in language modeling operate over a relatively smooth, well-defined space of token sequences, where more compute reliably yields more fluent and more capable output.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"43\" href=\"#ref-43\">43</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"44\" href=\"#ref-44\">44</a></span> The hypothesis space in biology is neither smooth nor well-defined: it contains decades of accumulated knowledge that is incomplete, sometimes contradictory, and unevenly distributed across domains. A system that explores more of this space is not guaranteed to find better hypotheses in it, because the relationship between search effort and hypothesis quality depends on the quality of the prior knowledge that constrains the search. In domains where the literature is sparse or unreliable (such as rare diseases, understudied organisms, non-coding regulatory biology), more searching may simply amplify noise rather than converge on truth. The tournament-based self-critique that drives refinement in systems like Co-Scientist assumes that the critic agents can reliably distinguish good hypotheses from bad ones, but if the training data for those critics is itself biased or incomplete, the tournament may converge confidently on the wrong answer rather than slowly on the right one. Biomni’s action-discovery approach introduces a related concern of recency bias: by mining only the most recent papers per bioRxiv category to refine its environment, perhaps the system would overrepresent trending methods and underrepresent foundational techniques that have faded from current discourse.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"14\" href=\"#ref-14\">14</a></span>"
+    },
+    {
+     "t": "p",
+     "html": "Many agentic systems are currently reasoning primarily from the scientific literature— the vast body of text through which humans describe and interpret the natural world. This is a powerful substrate and allows the models to synthesize findings across disciplines, identify gaps in existing knowledge, and propose connections that individual investigators may overlook. But language is an imperfect proxy for biological reality, and the scientific literature is ultimately an interpretation of experimental observations, rather than the observations themselves. Out of necessity, LLMs compress, summarize, and abstract quantitative measurements, whereas structured biological data (such as genomic sequences, protein structures, transcriptomic profiles, cellular microscopy, or functional assays) preserve information that may never be fully captured in text. A system that reasons primarily over words about proteins or pathways can connect published claims, but it has limited ability to evaluate those claims against the underlying experimental evidence from which they were derived. It remains an open question whether the scale laws that govern text generation will apply to higher-level scientific reasoning."
+    },
+    {
+     "t": "p",
+     "html": "The frontier for AI-driven scientific reasoning is in multimodal systems that ground linguistic reasoning in quantitative biological data, linking the concepts and relationships expressed in text to the sequences, structures, and measurements that constrain their interpretation. Such multimodal grounding would enable these systems to navigate not only what has been written about biology but also biology itself. Much of the quantitative content of the scientific literature is in tables and figures instead of text, and vision language models can interpret published figures and answer questions about them<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"49\" href=\"#ref-49\">49</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"50\" href=\"#ref-50\">50</a></span>; there are efforts in semantic annotation of figures and their underlying source data,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"51\" href=\"#ref-51\">51</a></span> all for turning published results into analyzable and trainable datasets. Fully autonomous robotic laboratories would offer another route to this grounding, because they generate structured, instrument-level measurements that are not mediated through narrative publication. Images, plate-reader traces, liquid-handling logs, reagent metadata, passage number, incubation history, and failed runs can all become part of the model’s memory when captured in machine-readable form. In this sense, the relevant scaling axis for scientific AI may increasingly include not only training- and test-time compute but also the rate at which grounded experimental observations can be produced, standardized, and returned to the reasoning system."
+    },
+    {
+     "t": "p",
+     "html": "In benchmarking AI-assisted science, it is helpful to consider Goodhart’s law, which states that when a measure becomes a target, it ceases to be a good measure. The scaling laws governing language models assume a simple training task: given a passage of text, the model predicts the next word, and its “loss” is a numerical score of how wrong that prediction is. The model is trained to minimize this loss, and researchers evaluate whether a model has improved by measuring this same loss. There is no gap between the training signal and true objective; therefore, scaling works cleanly because more compute reliably produces better models, as “better” is defined unambiguously. However, in scientific discovery, the true objective of generating hypotheses that lead to real discoveries can only be confirmed through experiments that often take weeks or months to execute, and even longer to replicate. In the interim, any system must optimize a proxy, such as internal consistency, literature support, and novelty scores. These proxies will be imperfect, but what will be even more problematic is that the optimization pressure will specifically favor hypotheses that score well on whatever is measurable. Therefore, the relationship between compute and meaningful discovery in science will likely be fundamentally less predictable than in domains where the objective function is self-validating."
+    }
+   ]
+  },
+  {
+   "id": "sec-toward-the-autonomous-laboratory",
+   "title": "Toward the autonomous laboratory",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Perhaps the most consequential near-term development suggested by this convergence is the autonomous, or self-driving, laboratory: a closed-loop system in which AI generates hypotheses, robotic platforms execute experiments, data are analyzed automatically, and the results are used to refine the next iteration of hypotheses generation with minimal human intervention.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"52\" href=\"#ref-52\">52</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"53\" href=\"#ref-53\">53</a></span> Self-driving laboratories are already operational in chemistry and materials science, where robotic platforms synthesize and characterize hundreds of candidate compounds under the direction of machine learning systems that continuously select the next experiment based on results from the previous iterations."
+    },
+    {
+     "t": "p",
+     "html": "The same transition is now beginning in biology, where the experimental substrate is noisier but the value of closed-loop iteration is high. A closed-loop system autonomously executed cell-based senescence assays and identified pharmacological inhibition of TRAF2- and NCK-interacting kinase (TNIK) as a senomorphic intervention, with the AI-driven robotics platform running the hypothesis-to-experiment cycle rather than a human bench scientist.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"54\" href=\"#ref-54\">54</a></span> TNIK was independently surfaced as a target by a separate target-discovery approach: TNIK is the target of rentosertib (ISM001-055), an AI-discovered and -designed candidate that has reported phase 2a results in idiopathic pulmonary fibrosis.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"55\" href=\"#ref-55\">55</a></span> Two independent pipelines, one an autonomous robotics laboratory operating on senescence phenotypes and the other a target-discovery engine operating on disease biology, converged on the same protein, which is an example of the closed hypothesis-to-experiment loop producing a hypothesis that can be tested in a clinical-stage program.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"54\" href=\"#ref-54\">54</a></span>"
+    },
+    {
+     "t": "p",
+     "html": "Co-Scientist and Robin represent partial realizations of this broader vision. The systems generated hypotheses, proposed experimental designs, and interpreted the resulting data, while human investigators performed laboratory work.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"12\" href=\"#ref-12\">12</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"13\" href=\"#ref-13\">13</a></span> Biomni extends this trajectory by generating executable wet-lab protocols: its PyLabRobot integration<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"14\" href=\"#ref-14\">14</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"27\" href=\"#ref-27\">27</a></span> produced liquid-handling code for Hamilton STAR systems (including deck configuration, error handling, and volume validation) from natural language descriptions. But the protocols are generated and executed separately, without the continuous feedback loop that defines a true autonomous laboratory."
+    },
+    {
+     "t": "p",
+     "html": "These systems represent a reorganization of the traditional division of labor in scientific research. Historically, laboratory automation has focused on repetitive physical tasks (pipetting, imaging, sequencing, liquid handling) while cognitive tasks such as hypothesis generation, experimental design and interpretation were human endeavors. These recent developments suggest that the traditional boundaries between cognitive and physical labor in science are being redrawn. Agentic AI now inverts this pattern by automating elements of scientific reasoning, even before the corresponding physical work has been fully automated. The autonomous laboratory would not simply be another form of automation, but the convergence of these two trajectories into a closed-loop system, coupling agentic reasoning systems directly to robotic experimental platforms,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"56\" href=\"#ref-56\">56</a></span> moves the human handoff between hypothesis and experimental execution. The practical mechanism for this coupling is now taking shape in the form of open agentic operating systems such as OpenClaw and OpenClaw-like runtimes. These systems provide the orchestration layer that connects language-model reasoning to liquid handlers, imagers, incubators, LIMS, and analysis pipelines, so that a proposed experiment can be scheduled, executed, and interpreted without a manual handoff at each step. The TNIK senomorphic study<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"54\" href=\"#ref-54\">54</a></span> is an early demonstration of what this coupling yields when a reasoning system and a robotic platform operate as one loop rather than as two stages separated by human transcription."
+    },
+    {
+     "t": "p",
+     "html": "The limiting factor in biological discovery has rarely been the speed at which scientists generate hypotheses; it has been the speed at which the hypotheses can be tested. <i>In silico</i>, iteration is usually rapid and inexpensive. Biology, by contrast, imposes substantial experimental cost: cells must be cultured, reagents purchased, protocols tested and optimized. Reasoning systems without rapid experimentation will remain constrained by wet-laboratory throughput. The most transformative AI systems for biology may not be ones that reason most cleverly, but the ones that iterate the fastest between each hypothesis-to-experiment cycle. On this measure, a fully autonomous robotics laboratory is the decisive variable, because it removes the human scheduling latency that separates a proposed assay from its execution. In the senescence study,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"54\" href=\"#ref-54\">54</a></span> the advantage came not from a more sophisticated hypothesis but from an agentic layer that could run, read, and re-plan cell-based assays continuously. As these orchestration layers mature and connect to standardized instrument application programming interfaces (APIs), the binding constraint shifts from reasoning quality toward the physical cycle time of the underlying biology."
+    },
+    {
+     "t": "p",
+     "html": "There are technical barriers to realizing this vision. Early autonomous biology platforms have demonstrated closed-loop experimentation in constrained settings, from Ross King’s robot scientists<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"57\" href=\"#ref-57\">57</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"58\" href=\"#ref-58\">58</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"59\" href=\"#ref-59\">59</a></span> to recent LLM-driven cell culture systems.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"60\" href=\"#ref-60\">60</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"61\" href=\"#ref-61\">61</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"62\" href=\"#ref-62\">62</a></span> Robotic platforms in materials and synthetic chemistry operate within comparatively well-defined reaction spaces and relatively predictable, binary failure modes.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"52\" href=\"#ref-52\">52</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"53\" href=\"#ref-53\">53</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"63\" href=\"#ref-63\">63</a></span> Autonomous biology would operate in a fundamentally more complex environment, often relying on living, evolving systems. Biological systems are vulnerable to experimental noise, microenvironmental fluctuations, and genetic drift. Batch effects can introduce artifacts that are difficult to distinguish from genuine biological signals,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"64\" href=\"#ref-64\">64</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"65\" href=\"#ref-65\">65</a></span> and biological systems (particularly <i>in vivo</i> animal models) exhibit intrinsic variability. These challenges will become important in autonomous closed-loop systems. A hallucinated hypothesis may waste a single experiment, but a hallucinated or erroneous interpretation may be silently incorporated into the next cycle of hypothesis generation, and errors may be propagated through the discovery process and corrupt entire trajectories of experiments. Until we build interoperable, unified data fabric capable of contextualizing biological noise, the throughput of autonomous laboratories will remain bottlenecked by the chaotic realities of live biology, not by the limits of AI reasoning."
+    },
+    {
+     "t": "p",
+     "html": "Another challenge is experimental data infrastructure. The autonomous laboratory assumes that experimental data flow cleanly from instruments to computational models based on standardized experimental protocols; in practice, biological data are often fragmented across incompatible software platforms, produced through heterogeneous or non-standardized protocols, stored in proprietary formats, and accompanied by tacit knowledge that is difficult for machines to read. Valuable experimental evidence, especially unsuccessful studies and negative results, frequently remain inaccessible to future investigators and learning systems. The compounding loop that the autonomous laboratory promises requires structured data and persistent memory that the industry has not yet fully built. Fully autonomous discovery will require the convergence of increasingly capable AI reasoning, laboratory robotics, interoperable data infrastructure, and human oversight into a unified scientific ecosystem. An open agentic operating layer could bind these components together, provided its orchestration logic is inspectable rather than proprietary. If the sequence of hypotheses, instrument calls, and data-ingestion steps is logged in a form that other groups can read and replay, then the persistent memory the autonomous laboratory requires can accumulate as a reproducible record rather than as tacit institutional knowledge."
+    },
+    {
+     "t": "p",
+     "html": "Whether the field will converge on a common orchestration standard remains to be seen. OpenClaw represents one emerging approach that provides an open agent runtime for coordinating tools, tasks, and multi-step workflows. Biomni generates and executes code that interfaces with laboratory automation through PyLabRobot.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"14\" href=\"#ref-14\">14</a></span> These approaches may prove complementary, but standardization may face practical barriers. Laboratory instruments from different manufacturers may have proprietary or incompatible control interfaces, while biological experimentation adds context-dependent variability and failure modes beyond those encountered in more constrained automated domains. Historically in genomics, convergence may coordinate incentives through community standards, such as consortia and funder policies. In the interim, the case for open orchestration frameworks may rest less on the maturity of any particular implementation than on a broader principle: as autonomous experimentation becomes more capable, inspectable and reproducible orchestration will become increasingly important for scientific transparency."
+    }
+   ]
+  },
+  {
+   "id": "sec-risks-and-challenges",
+   "title": "Risks and challenges",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "sec-hallucinations",
+   "title": "Hallucinations",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "LLMs, including those underlying current agentic scientific systems, are susceptible to hallucinations (<a id=\"crosref0490\" data-fig=\"fig-ure-3\">Figure 3</a>): they can generate plausible claims or citations that have no basis in reality.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"66\" href=\"#ref-66\">66</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"67\" href=\"#ref-67\">67</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"68\" href=\"#ref-68\">68</a></span> When AI-generated hypotheses are used to design wet-lab experiments, such errors could result in wasted reagents, unnecessary animal use, and lost research time and expenses. Many multi-agent architectures, including tournament-style self-critique frameworks such as Co-Scientist, may create an illusion of consensus. If multiple “critic” agents are instances of the same underlying model operating under similar prompts, apparent agreement may simply reflect shared biases or blind spots, rather than truly independent evaluation. Agreement among AI agents should not be interpreted as evidence of correctness. Grounding hypotheses in retrieved, verifiable sources and requiring explicit citation of primary evidence can reduce, though not eliminate, the rate at which unsupported claims enter the experimental pipeline. Experimental validation remains essential and cannot be substituted by model self-assessment. Biomni’s use of executable code may reduce some types of hallucination, by allowing code errors to be identified during execution and by deriving results directly from database queries and computational analyses, rather than from text generation alone. However, this potentially introduces a different class of error: a workflow may execute successfully while remaining scientifically inappropriate, or an agent may select an incorrect statistical test, apply a method outside its intended context, or misinterpret the output of an analytical tool. Successful execution of code still does not guarantee scientifically sound conclusions."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-ure-3"
+    },
+    {
+     "t": "p",
+     "html": "At the same time, these limitations are not unique to AI. Human scientists are likewise susceptible to cognitive biases, including confirmation bias, groupthink, publication incentives, and orthodoxies within disciplines that can shape how evidence is interpreted. Scientific progress has never relied on the infallibility of individual investigators, but rather on the self-correcting capability of the scientific enterprise. Independent replication, peer review, open debate, and competition among research groups are mechanisms through which erroneous conclusions can be identified and corrected over time. As autonomous AI systems become increasingly integrated into scientific discovery, AI-generated hypotheses should be viewed as starting points for rigorous empirical testing instead of substitutes for experimental evidence."
+    }
+   ]
+  },
+  {
+   "id": "sec-gap-between-biological-knowledge-and-reality",
+   "title": "Gap between biological knowledge and reality",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "A challenge that is distinct from hallucination is the fundamental incompleteness and context-dependence of biological knowledge itself. Even when a model generates claims faithfully grounded in the literature without fabrication, those claims may not hold in the experimental context in which a hypothesis is tested. A gene’s function may differ drastically across cell types, organisms, or disease states, and a model that synthesizes findings across various contexts may produce a hypothesis that is well supported by published evidence but empirically irrelevant in a specific tested setting. Biological systems often resist the simplified pathway representations used to describe them (such as feedback loops, compensatory mechanisms, and redundancy), and even an accurate synthesis of available knowledge may inaccurately predict how a system will respond to perturbation. Fidelity to the scientific record is not equivalent to fidelity to biological reality, which is much more complex. Internal consistency and accurate citation are necessary but insufficient conditions for a hypothesis to be biologically correct."
+    }
+   ]
+  },
+  {
+   "id": "sec-evaluation",
+   "title": "Evaluation",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The metrics by which earlier biomedical AI was assessed—sensitivity, specificity, area under the receiver operating characteristic (ROC) curve—were inherited from classification tasks with well-defined “ground truth,” in which each prediction can be compared against a known correct answer, such as an expert clinician’s diagnosis, a pathologist’s read, or a verified clinical outcome.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"3\" href=\"#ref-3\">3</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"4\" href=\"#ref-4\">4</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a></span> For scientific agentic AI, the “ground truth” must be established through the very experiments that the hypothesis motivates. This is a conceptual difference between AI for diagnosis versus AI for discovery. Diagnostic AI is fundamentally a prediction problem with known labels, whereas scientific AI is a hypothesis-generation problem in which the correctness of the claims is initially unknowable. Before experimental testing, researchers must rely on proxy indicators of quality—such as novelty, biological plausibility, and experimental tractability—to prioritize hypotheses for validation."
+    },
+    {
+     "t": "p",
+     "html": "Existing benchmarks for biomedical AI agents fall into two categories. The first evaluates analytical competence: the ability to execute well-defined computational tasks such as querying biological databases, reasoning over sequences, or prioritizing genetic variants, where each question has a known correct answer. BixBench,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"69\" href=\"#ref-69\">69</a></span> for example, assesses LLM-based agents on bioinformatics-analysis tasks with real data, and Biomni-Eval1 extends this approach to 433 queries across 10 biomedical task types with direct comparisons to human expert performance. These benchmarks are the most systematic evaluation frameworks for biomedical agents to date, but they test whether an agent can solve a given problem correctly, not necessarily whether it can decide what problems to solve. The second category would be evaluation of hypothesis generation and experimental design, and this has not yet been thoroughly benchmarked. No existing framework systematically assesses whether an agent can generate a novel hypothesis with scientific promise."
+    },
+    {
+     "t": "p",
+     "html": "A third frontier would be evaluating the full closed-loop discovery cycle. In closed-loop robotic laboratories, the unit of evaluation would be the complete autonomous cycle: hypothesis generation, experimental planning, robotic execution, assay quality control, data analysis, the decision to continue or stop, and subsequent hypothesis revision. Minimum reporting should include the number of autonomous cycles, the number of experiments attempted and successfully executed, the number of instrument or protocol failures, the number of human interventions, and the extent to which each next experiment depended on prior results. These metrics would make it possible to distinguish a genuinely autonomous discovery trajectory from a conventional wet-lab study assisted by AI at isolated points."
+    },
+    {
+     "t": "p",
+     "html": "As an initial step toward greater comparability and transparency, we propose that published studies adopt a minimum reporting standard that includes the total number of hypotheses generated, the number prioritized for experimental testing, and the number ultimately validated. The standard should also require that the full hypothesis pool and the system’s original ranking be disclosed prior to human selection, so that the contribution of autonomous prioritization can be distinguished from human curation. Consistent reporting will enable the scientific community to begin estimating the precision and yield of AI-assisted hypothesis generation."
+    }
+   ]
+  },
+  {
+   "id": "sec-reproducibility",
+   "title": "Reproducibility",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "If agentic scientific systems are to be evaluated with the same rigor expected of other research tools, we believe that publications should be required to provide sufficient methodological detail (such as prompts, agent architectures, and model versions) to enable their central claims to be independently evaluated. In experimental biology, a publication is required to provide sufficient methodological detail (including reagents, protocols, and analysis methods such as code) to enable independent replication. Comparable standards need to be set for agentic AI. This requirement extends naturally to the orchestration layer that drives autonomous laboratories. When an OpenClaw-like operating system schedules and executes physical experiments, reproducibility depends on disclosing not only prompts and model versions but also the instrument calls, parameters, error recovery, and decision logs that produced the reported results. Open, inspectable orchestration frameworks are advantageous here precisely because they allow an independent group to replay the agent’s execution trace against the same or equivalent hardware. The senescence study<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"54\" href=\"#ref-54\">54</a></span> is evidence that its closed-loop procedure can be inspected and repeated in this manner. We recognize that full code release may be impractical for systems deeply integrated with proprietary infrastructure and that an absolutist requirement could discourage industry labs from publishing in scientific journals altogether. The appropriate standard may therefore need to be tiered, requiring enough transparency for independent evaluation of central claims even when full reproducibility is not achievable. We believe that the reasoning process, not just the answer, is central to every scientific publication. If key scientific contributions of these systems lie in how they reason, rather than simply what they predict, then transparency should extend beyond the final outputs to the reasoning framework itself."
+    }
+   ]
+  },
+  {
+   "id": "sec-bias-amplification-and-the-narrowing-of-scientif",
+   "title": "Bias amplification and the narrowing of scientific breadth",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Agentic scientific systems are trained on existing biomedical literature and will inherit its strengths, as well as its limitations. They may be more likely to generate hypotheses centered on well-studied genes, pathways, and diseases than on poorly characterized biology with fewer published evidence. They may also inherit systematic imbalances within the scientific literature itself. For example, a known source of bias in biomedical research is publication bias, which is the tendency for positive results to be published more readily than negative or null results.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"70\" href=\"#ref-70\">70</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"71\" href=\"#ref-71\">71</a></span> Models trained on this literature may inadvertently reinforce these patterns, giving disproportionate weight to well-trodden paths while overlooking underexplored directions."
+    },
+    {
+     "t": "p",
+     "html": "If many research groups deploy similar agentic systems trained on similar overlapping literature and datasets, there is a risk that scientific exploration would become concentrated within similar regions of biological hypothesis space. Rather than independently generating diverse lines of inquiry, some worry that there is the risk that researchers may increasingly prioritize similar genes, pathways, and mechanisms, while reinforcing existing scientific attention rather than broadening it. Whether this will occur in practice remains to be seen. But some of the most transformative scientific advances have emerged from serendipitous or unexpected observations or unconventional hypotheses that lie outside of the prevailing paradigms.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"72\" href=\"#ref-72\">72</a></span> Historically, the most impactful ideas were often initially regarded as implausible, precisely because they conflicted with existing scientific consensus."
+    }
+   ]
+  },
+  {
+   "id": "sec-dual-use",
+   "title": "Dual use",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Agentic scientific systems capable of autonomously generating biological hypotheses, proposing mechanistic pathways, and designing experiments inevitably raise concerns about use and misuse. These same capabilities to accelerate beneficial biomedical discovery could theoretically be used to advance harmful biological research. It is, therefore, important for governance to evolve alongside technical capability.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"73\" href=\"#ref-73\">73</a></span> Robin utilizes commercially available, “off-the-shelf” LLMs that have already undergone extensive safety alignment.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"13\" href=\"#ref-13\">13</a></span> These models have been subjected to red-teaming (in which experts deliberately attempt to elicit unsafe or harmful responses), as well as RL from human feedback (RLHF), which is a training process that encourages helpful behavior while discouraging the generation of potentially dangerous content. By relying on these safety-aligned foundation models, rather than unrestricted custom language models, Robin inherits a layer of existing biosafety safeguards.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"13\" href=\"#ref-13\">13</a></span> Agentic systems capable of protocol generation and automated analysis could lower barriers to misuse; Biomni’s capability in cloning protocol generation<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"14\" href=\"#ref-14\">14</a></span> may increase the accessibility of customized genetic manipulation."
+    },
+    {
+     "t": "p",
+     "html": "Traditional dual-use risks in biotechnology have been constrained by an expertise barrier: the tacit knowledge required to design and execute dangerous experiments was acquired through years of specialized training and embedded within institutional cultures of responsibility. Biological agentic AI systems may produce harmful or operationally relevant outputs in a much higher percentage of misuse-relevant biological prompts as compared to standalone versions of the same underlying models.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"74\" href=\"#ref-74\">74</a></span> The agent’s planner may break a harmful request into individually permissible-appearing subtasks that individually pass the base model’s safety checks. Agentic LLMs can outperform the median human expert (with doctoral-level training) on tasks such as DNA fragment design and writing scripts to operate liquid-handling robots for DNA assembly.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"75\" href=\"#ref-75\">75</a></span> In wet-lab validation, scripts generated by an OpenAI o4-mini-high agent successfully assembled DNA on a laboratory robot, confirmed by whole-plasmid sequencing.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"75\" href=\"#ref-75\">75</a></span> These findings mark a shift from an earlier red-team study<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"76\" href=\"#ref-76\">76</a></span> that found no statistically significant uplift from 2023-era LLMs for biological attack planning. There is fear that the newer models may be changing this risk profile and that the architectural features of the agentic paradigms are systemically lowering the expertise barrier for misuse through task decomposition, tool integration, and iterative planning. As these models become increasingly powerful, questions of who can access them, with what scientific directions and oversight, will be as important as questions of model performance. We propose that the biomedical community adopt governance frameworks modeled on existing dual-use precedents in synthetic biology, which include institutional review for hypothesis-generation in high-consequence areas such as pathogen-related research, and audit trails for system-generated proposals in high-risk areas, similar to screening frameworks that DNA synthesis providers already apply to synthetic nucleic acid orders.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"73\" href=\"#ref-73\">73</a></span>"
+    }
+   ]
+  },
+  {
+   "id": "sec-cognitive-offloading-and-selective-deskilling",
+   "title": "Cognitive offloading and selective deskilling",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "As AI agents assume a greater share of literature synthesis, hypothesis generation, experimental design, and data interpretation, there is concern that this may influence the expertise of the scientists that utilize them. Cognitive offloading itself is not inherently problematic, since scientific progress has usually benefited from tools that reduce the cognitive and technical burden. The bigger concern is selective deskilling or “never-skilling”<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"77\" href=\"#ref-77\">77</a></span>: if scientists increasingly delegate the processes through which mechanistic intuition and judgment are developed, their own skills in these may erode. This risk is particularly relevant for trainees, whose struggles with literature, data, and failed experiments are often precisely how scientific intuition and judgment are forged. A future challenge in education will be determining which cognitive tasks can be safely offloaded and which should be deliberately effortful. After all, in scientific training as in other creative pursuits—<i>the struggle is the point.</i><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"78\" href=\"#ref-78\">78</a></span>"
+    }
+   ]
+  },
+  {
+   "id": "sec-outlook",
+   "title": "Outlook",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "We believe scientific agentic AI is developing to be a powerful extension of human scientific judgment, instead of as the replacement of human creativity. The Co-Scientist, Robin, and Biomni publications do not show that these systems possess scientific judgment in the fullest sense: the ability to weigh competing priorities, recognize limitations of available evidence, take responsibility for consequences of a line of inquiry, or to recognize when a statistically compelling result has not yet achieved scientific confidence.<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"12\" href=\"#ref-12\">12</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"13\" href=\"#ref-13\">13</a></span> What they do demonstrate is an ability to compress the cycle between research question and a testable hypothesis and execute complex analytical workflows between the experimental result and its provisional interpretation, in ways that potentially accelerate the iterative cycle on which scientific discovery has always depended. Current AI agents do not yet have the scientific intuition or intellectual courage to take the data into unexpected directions, including abandoning the original question entirely<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"79\" href=\"#ref-79\">79</a></span> or making abductive “jumps.”<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"42\" href=\"#ref-42\">42</a></span> Systems built primarily to reason through the synthesis of existing knowledge may be better suited to interpolation within established conceptual frameworks than to recognize when those frameworks should be abandoned or reformulated. Many transformative advances in science have resulted from treating an anomalous result as evidence that the underlying model may be wrong to begin with. It remains unknown whether advances in agentic AI will enable systems to recognize when an experiment’s most important implications lie outside the question it was originally designed to answer."
+    },
+    {
+     "t": "p",
+     "html": "The most powerful scientific systems of the coming decades are unlikely to consist of humans or machines operating independently, but instead of collaborative ecosystems in which each contributes complementary strengths. AI offers generative capacity: the ability to explore a hypothesis space larger than any individual investigator could survey and compress the cycle time from question to experimentally testable idea. Human scientists will continue to supply the judgment on which questions matter, the ethical values that constrain how these questions can be pursued, and the heavy weight of accountability that none of these AI systems are designed to bear. Realizing this complementary relationship will also require deliberate investment in training scientists to use, interrogate, and supervise these systems, so that human oversight remains substantive rather than nominal as the tools grow more capable."
+    },
+    {
+     "t": "p",
+     "html": "In summary, this perspective traced the history from supervised classifiers<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"3\" href=\"#ref-3\">3</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"4\" href=\"#ref-4\">4</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"9\" href=\"#ref-9\">9</a></span> to AlphaFold’s generative leap,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"18\" href=\"#ref-18\">18</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"21\" href=\"#ref-21\">21</a></span> and now to three distinct agentic paradigms: multi-agent tournament systems (Co-Scientist), multi-agent systems with autonomous data analysis (Robin), and a general-purpose agent operating through an integrated code-execution environment (Biomni). This history reflects an outward expansion of the role of AI from recognizing patterns, to predicting biological structure, to generating and evaluating hypotheses within broadly defined scientific problems. Each advance has built upon those that preceded it: today’s hypothesis-generating agents draw upon a scientific ecosystem made possible by advances such as AlphaFold, and AlphaFold itself was enabled by decades of crystallographic data that earlier classifiers helped to process and annotate. The next stage, whatever form the autonomous laboratory ultimately takes,<span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"52\" href=\"#ref-52\">52</a></span><sup>,</sup><span class=\"dropBlock reference-citations\"><a class=\"ref-chip\" data-ref=\"53\" href=\"#ref-53\">53</a></span> will likewise build upon the agentic reasoning systems emerging today. That next stage is already coming to view. The pace at which such systems become routine may depend on the emergence of open, standardized interfaces between reasoning agents and laboratory automation, to enable interoperability, reproducibility, and rapid iteration across experimental platforms. Ensuring that these technologies advance science responsibly will require more than improvements in model capability. It will require thoughtful choices about evaluation, reproducibility, governance, and preservation of scientific diversity, to ensure that increasingly capable AI will broaden the creativity, rigor, and accessibility of biomedical research."
+    },
+    {
+     "t": "p",
+     "html": "In the future, the wide adaptation of agentic AI may change which skills determine scientific success. As literature synthesis, coding, data analysis, and even hypothesis generation become increasingly automated, proficiency in these tasks may become less differentiating. Instead, advantage may shift toward scientists who can effectively direct and collaborate with AI systems: asking productive questions, interrogating outputs, and recognizing hallucinations and subtle errors. We believe that the ability to work effectively with AI may itself become a core scientific competency, and increasing automation can make deep human expertise even more valuable. As the generation of plausible hypotheses becomes increasingly accessible and inexpensive, the limiting resource will shift from producing ideas to judging and testing them. The human intuition to recognize the value of an unexpected observation will be even more important. The scientists who thrive in our agentic era will not be the ones who delegate the most tasks to AI but the ones who know best when to trust or distrust it."
+    }
+   ]
+  },
+  {
+   "id": "sec-acknowledgments",
+   "title": "Acknowledgments",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "This work was supported by grants from the National Medical Research Council, Singapore (MOH-001689-00, MOH-000655-00, and MOH-001014-00); Duke-NUS Medical School (Duke-NUS/RSF/2021/0018, 05/FY2020/EX/15-A58, and 05/FY2022/EX/66-A128); the Agency for Science, Technology and Research, Singapore (A20H4g2141 and H20C6a0032); and Research to Prevent Blindness. L.Y.G. acknowledges support from the NIH Director’s Early Independence Award (DP5 0D039444), Foundation Fighting Blindness, American Society of Gene and Cell Therapy, and NIH P30 EY001583. D.S.J.T. acknowledges support from the Medical Research Council Clinician Scientist Fellowship (UKRI2441) and Sight Research UK (SRUK) Translational Research Award (reference: TRN008_Ting_Birmingham)."
+    }
+   ]
+  },
+  {
+   "id": "sec-declaration-of-interests",
+   "title": "Declaration of interests",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "A.Z. is the CEO of Insilico Medicine, and A.A. is the president of Insilico Medicine."
+    }
+   ]
+  },
+  {
+   "id": "sec-declaration-of-generative-ai-and-ai-assisted-tec",
+   "title": "Declaration of generative AI and AI-assisted technologies in the writing process",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The authors used Claude Opus 5, GPT-5.6 Sol, and Biomni to proofread grammar and syntax, improve readability, and generate a list of technical terminology that the authors then defined in the Glossary. Any AI-assisted edits were reviewed by the authors, who take full responsibility for the content of this publication."
+    }
+   ]
+  }
+ ],
+ "figures": [
+  {
+   "id": "fig-ure-1",
+   "label": "Figure 1",
+   "captionHtml": "<div id=\"fig1-title\" class=\"figure__title\"> <span class=\"figure__title__text\">Anatomy of agentic scientific systems</span></div>",
+   "src": "https://www.cell.com/cms/10.1016/j.cell.2026.08.052/asset/ac7005d1-663a-4dae-8df1-d7a61164e801/main.assets/gr1_lrg.jpg",
+   "thumb": "https://www.cell.com/cms/10.1016/j.cell.2026.08.052/asset/ac7005d1-663a-4dae-8df1-d7a61164e801/main.assets/gr1_lrg.jpg",
+   "alt": "",
+   "href": "https://www.cell.com/cms/10.1016/j.cell.2026.08.052/asset/ac7005d1-663a-4dae-8df1-d7a61164e801/main.assets/gr1_lrg.jpg",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-ure-2",
+   "label": "Figure 2",
+   "captionHtml": "<div id=\"fig2-title\" class=\"figure__title\"> <span class=\"figure__title__text\">Evolution of AI-assisted science</span></div><div class=\"accordion\"><div></div><div></div><div id=\"fig2-content\" class=\"accordion__content\" style=\"display: none;\" data-sr-skip=\"hidden\"><div class=\"figure__caption__text__content\"><div id=\"fspara0025\" role=\"paragraph\">(A) Evolution of AI-assisted science from pattern recognition toward autonomous laboratories.</div><div id=\"fspara0040\" role=\"paragraph\">(B) A comparison of various systems on the autonomy spectrum, illustrating the respective contributions of AI and human investigators at each stage of the discovery pipeline.</div></div></div></div>",
+   "src": "https://www.cell.com/cms/10.1016/j.cell.2026.08.052/asset/6a3c01e6-b1db-45fe-850b-6268bc3d2c41/main.assets/gr2_lrg.jpg",
+   "thumb": "https://www.cell.com/cms/10.1016/j.cell.2026.08.052/asset/6a3c01e6-b1db-45fe-850b-6268bc3d2c41/main.assets/gr2_lrg.jpg",
+   "alt": "",
+   "href": "https://www.cell.com/cms/10.1016/j.cell.2026.08.052/asset/6a3c01e6-b1db-45fe-850b-6268bc3d2c41/main.assets/gr2_lrg.jpg",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-ure-3",
+   "label": "Figure 3",
+   "captionHtml": "<div id=\"fig3-title\" class=\"figure__title\"> <span class=\"figure__title__text\">Risks and proposed safeguards of agentic AI across the scientific discovery cycle</span></div>",
+   "src": "https://www.cell.com/cms/10.1016/j.cell.2026.08.052/asset/00d2eefe-af17-472c-ac5f-e92736233bf4/main.assets/gr3_lrg.jpg",
+   "thumb": "https://www.cell.com/cms/10.1016/j.cell.2026.08.052/asset/00d2eefe-af17-472c-ac5f-e92736233bf4/main.assets/gr3_lrg.jpg",
+   "alt": "",
+   "href": "https://www.cell.com/cms/10.1016/j.cell.2026.08.052/asset/00d2eefe-af17-472c-ac5f-e92736233bf4/main.assets/gr3_lrg.jpg",
+   "origin": "inline"
+  }
+ ],
+ "references": [
+  {
+   "n": 1,
+   "id": "bib1",
+   "html": "<div id=\"bib1\" class=\"citations\"><div id=\"sref1\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref1\" title=\"View in article\">1.</a></div> <div>Teo, Z.L. ∙ Thirunavukarasu, A.J. ∙ Elangovan, K. ...</div> <div><strong>Generative artificial intelligence in medicine</strong></div> <div><em>Nat. Med.</em> 2025; <strong>31</strong>:3270-3282</div> </div> </div> </div> ",
+   "text": "1. Teo, Z.L. ∙ Thirunavukarasu, A.J. ∙ Elangovan, K. ... Generative artificial intelligence in medicine Nat. Med. 2025; 31:3270-3282",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref1"
+  },
+  {
+   "n": 2,
+   "id": "bib2",
+   "html": "<div id=\"bib2\" class=\"citations\"><div id=\"sref2\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref2\" title=\"View in article\">2.</a></div> <div>Thirunavukarasu, A.J. ∙ Ting, D.S.J. ∙ Elangovan, K. ...</div> <div><strong>Large language models in medicine</strong></div> <div><em>Nat. Med.</em> 2023; <strong>29</strong>:1930-1940</div> </div> </div> </div> ",
+   "text": "2. Thirunavukarasu, A.J. ∙ Ting, D.S.J. ∙ Elangovan, K. ... Large language models in medicine Nat. Med. 2023; 29:1930-1940",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref2"
+  },
+  {
+   "n": 3,
+   "id": "bib3",
+   "html": "<div id=\"bib3\" class=\"citations\"><div id=\"sref3\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref3-1\" title=\"View in article\">3.</a></div> <div>Gulshan, V. ∙ Peng, L. ∙ Coram, M. ...</div> <div><strong>Development and Validation of a Deep Learning Algorithm for Detection of Diabetic Retinopathy in Retinal Fundus Photographs</strong></div> <div><em>JAMA.</em> 2016; <strong>316</strong>:2402-2410</div> </div> </div> </div> ",
+   "text": "3. Gulshan, V. ∙ Peng, L. ∙ Coram, M. ... Development and Validation of a Deep Learning Algorithm for Detection of Diabetic Retinopathy in Retinal Fundus Photographs JAMA. 2016; 316:2402-2410",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref3-1"
+  },
+  {
+   "n": 4,
+   "id": "bib4",
+   "html": "<div id=\"bib4\" class=\"citations\"><div id=\"sref4\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref4-1\" title=\"View in article\">4.</a></div> <div>Esteva, A. ∙ Kuprel, B. ∙ Novoa, R.A. ...</div> <div><strong>Dermatologist-level classification of skin cancer with deep neural networks</strong></div> <div><em>Nature.</em> 2017; <strong>542</strong>:115-118</div> </div> </div> </div> ",
+   "text": "4. Esteva, A. ∙ Kuprel, B. ∙ Novoa, R.A. ... Dermatologist-level classification of skin cancer with deep neural networks Nature. 2017; 542:115-118",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref4-1"
+  },
+  {
+   "n": 5,
+   "id": "bib5",
+   "html": "<div id=\"bib5\" class=\"citations\"><div id=\"sref5\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref5\" title=\"View in article\">5.</a></div> <div>Keskin, O. ∙ Tuncbag, N. ∙ Gursoy, A.</div> <div><strong>Predicting Protein-Protein Interactions from the Molecular to the Proteome Level</strong></div> <div><em>Chem. Rev.</em> 2016; <strong>116</strong>:4884-4909</div> </div> </div> </div> ",
+   "text": "5. Keskin, O. ∙ Tuncbag, N. ∙ Gursoy, A. Predicting Protein-Protein Interactions from the Molecular to the Proteome Level Chem. Rev. 2016; 116:4884-4909",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref5"
+  },
+  {
+   "n": 6,
+   "id": "bib6",
+   "html": "<div id=\"bib6\" class=\"citations\"><div id=\"sref6\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref6\" title=\"View in article\">6.</a></div> <div>Sun, T. ∙ Zhou, B. ∙ Lai, L. ...</div> <div><strong>Sequence-based prediction of protein protein interaction using a deep-learning algorithm</strong></div> <div><em>BMC Bioinf.</em> 2017; <strong>18</strong>:277</div> </div> </div> </div> ",
+   "text": "6. Sun, T. ∙ Zhou, B. ∙ Lai, L. ... Sequence-based prediction of protein protein interaction using a deep-learning algorithm BMC Bioinf. 2017; 18:277",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref6"
+  },
+  {
+   "n": 7,
+   "id": "bib7",
+   "html": "<div id=\"bib7\" class=\"citations\"><div id=\"sref7\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref7\" title=\"View in article\">7.</a></div> <div>Wang, L. ∙ Wang, H.-F. ∙ Liu, S.-R. ...</div> <div><strong>Predicting Protein-Protein Interactions from Matrix-Based Protein Sequence Using Convolution Neural Network and Feature-Selective Rotation Forest</strong></div> <div><em>Sci. Rep.</em> 2019; <strong>9</strong>:9848</div> </div> </div> </div> ",
+   "text": "7. Wang, L. ∙ Wang, H.-F. ∙ Liu, S.-R. ... Predicting Protein-Protein Interactions from Matrix-Based Protein Sequence Using Convolution Neural Network and Feature-Selective Rotation Forest Sci. Rep. 2019; 9:9848",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref7"
+  },
+  {
+   "n": 8,
+   "id": "bib8",
+   "html": "<div id=\"bib8\" class=\"citations\"><div id=\"sref8\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref8-1\" title=\"View in article\">8.</a></div> <div>Poplin, R. ∙ Chang, P.-C. ∙ Alexander, D. ...</div> <div><strong>A universal SNP and small-indel variant caller using deep neural networks</strong></div> <div><em>Nat. Biotechnol.</em> 2018; <strong>36</strong>:983-987</div> </div> </div> </div> ",
+   "text": "8. Poplin, R. ∙ Chang, P.-C. ∙ Alexander, D. ... A universal SNP and small-indel variant caller using deep neural networks Nat. Biotechnol. 2018; 36:983-987",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref8-1"
+  },
+  {
+   "n": 9,
+   "id": "bib9",
+   "html": "<div id=\"bib9\" class=\"citations\"><div id=\"sref9\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref9-1\" title=\"View in article\">9.</a></div> <div>Kircher, M. ∙ Witten, D.M. ∙ Jain, P. ...</div> <div><strong>A general framework for estimating the relative pathogenicity of human genetic variants</strong></div> <div><em>Nat. Genet.</em> 2014; <strong>46</strong>:310-315</div> </div> </div> </div> ",
+   "text": "9. Kircher, M. ∙ Witten, D.M. ∙ Jain, P. ... A general framework for estimating the relative pathogenicity of human genetic variants Nat. Genet. 2014; 46:310-315",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref9-1"
+  },
+  {
+   "n": 10,
+   "id": "bib10",
+   "html": "<div id=\"bib10\" class=\"citations\"><div id=\"sref10\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref10\" title=\"View in article\">10.</a></div> <div>Frazer, J. ∙ Notin, P. ∙ Dias, M. ...</div> <div><strong>Disease variant prediction with deep generative models of evolutionary data</strong></div> <div><em>Nature.</em> 2021; <strong>599</strong>:91-95</div> </div> </div> </div> ",
+   "text": "10. Frazer, J. ∙ Notin, P. ∙ Dias, M. ... Disease variant prediction with deep generative models of evolutionary data Nature. 2021; 599:91-95",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref10"
+  },
+  {
+   "n": 11,
+   "id": "bib11",
+   "html": "<div id=\"bib11\" class=\"citations\"><div id=\"sref11\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref11\" title=\"View in article\">11.</a></div> <div>Gao, H. ∙ Hamp, T. ∙ Ede, J. ...</div> <div><strong>The landscape of tolerated genetic variation in humans and primates</strong></div> <div><em>Science.</em> 2023; <strong>380</strong>, eabn8153</div> </div> </div> </div> ",
+   "text": "11. Gao, H. ∙ Hamp, T. ∙ Ede, J. ... The landscape of tolerated genetic variation in humans and primates Science. 2023; 380, eabn8153",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref11"
+  },
+  {
+   "n": 12,
+   "id": "bib12",
+   "html": "<div id=\"bib12\" class=\"citations\"><div id=\"sref12\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref12-1\" title=\"View in article\">12.</a></div> <div>Gottweis, J. ∙ Weng, W.-H. ∙ Daryin, A. ...</div> <div><strong>Accelerating scientific discovery with Co-Scientist</strong></div> <div><em>Nature.</em> 2026; <strong>655</strong>:487-496</div> </div> </div> </div> ",
+   "text": "12. Gottweis, J. ∙ Weng, W.-H. ∙ Daryin, A. ... Accelerating scientific discovery with Co-Scientist Nature. 2026; 655:487-496",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref12-1"
+  },
+  {
+   "n": 13,
+   "id": "bib15",
+   "html": "<div id=\"bib15\" class=\"citations\"><div id=\"sref15\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref15-1\" title=\"View in article\">13.</a></div> <div>Ghareeb, A.E. ∙ Chang, B. ∙ Mitchener, L. ...</div> <div><strong>A multi-agent system for automating scientific discovery</strong></div> <div><em>Nature.</em> 2026; <strong>655</strong>:497-505</div> </div> </div> </div> ",
+   "text": "13. Ghareeb, A.E. ∙ Chang, B. ∙ Mitchener, L. ... A multi-agent system for automating scientific discovery Nature. 2026; 655:497-505",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref15-1"
+  },
+  {
+   "n": 14,
+   "id": "bib16",
+   "html": "<div id=\"bib16\" class=\"citations\"><div id=\"sref16\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref16-1\" title=\"View in article\">14.</a></div> <div>Huang, K. ∙ Zhang, S. ∙ Wang, H. ...</div> <div><strong>Autonomous biomedical research with an artificial intelligence agent</strong></div> <div><em>Science.</em> 2026; <strong>393</strong>:eadz4351</div> </div> </div> </div> ",
+   "text": "14. Huang, K. ∙ Zhang, S. ∙ Wang, H. ... Autonomous biomedical research with an artificial intelligence agent Science. 2026; 393:eadz4351",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref16-1"
+  },
+  {
+   "n": 15,
+   "id": "bib17",
+   "html": "<div id=\"bib17\" class=\"citations\"><div id=\"sref17\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref17\" title=\"View in article\">15.</a></div> <div>Teng, C.W. ∙ Patel, S.D. ∙ Barkmeier, A.J. ...</div> <div><strong>Autonomous Artificial Intelligence in Diabetic Retinopathy Testing—Lessons Learned on Successful Health System Adoption</strong></div> <div><em>Ophthalmol. Sci.</em> 2026; <strong>6</strong>, 100935</div> </div> </div> </div> ",
+   "text": "15. Teng, C.W. ∙ Patel, S.D. ∙ Barkmeier, A.J. ... Autonomous Artificial Intelligence in Diabetic Retinopathy Testing—Lessons Learned on Successful Health System Adoption Ophthalmol. Sci. 2026; 6, 100935",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref17"
+  },
+  {
+   "n": 16,
+   "id": "bib18",
+   "html": "<div id=\"bib18\" class=\"citations\"><div id=\"sref18\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref18\" title=\"View in article\">16.</a></div> <div>Tropsha, A. ∙ Isayev, O. ∙ Varnek, A. ...</div> <div><strong>Integrating QSAR modelling and deep learning in drug discovery: the emergence of deep QSAR</strong></div> <div><em>Nat. Rev. Drug Discov.</em> 2024; <strong>23</strong>:141-155</div> </div> </div> </div> ",
+   "text": "16. Tropsha, A. ∙ Isayev, O. ∙ Varnek, A. ... Integrating QSAR modelling and deep learning in drug discovery: the emergence of deep QSAR Nat. Rev. Drug Discov. 2024; 23:141-155",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref18"
+  },
+  {
+   "n": 17,
+   "id": "bib19",
+   "html": "<div id=\"bib19\" class=\"citations\"><div id=\"sref19\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref19\" title=\"View in article\">17.</a></div> <div>Senior, A.W. ∙ Evans, R. ∙ Jumper, J. ...</div> <div><strong>Improved protein structure prediction using potentials from deep learning</strong></div> <div><em>Nature.</em> 2020; <strong>577</strong>:706-710</div> </div> </div> </div> ",
+   "text": "17. Senior, A.W. ∙ Evans, R. ∙ Jumper, J. ... Improved protein structure prediction using potentials from deep learning Nature. 2020; 577:706-710",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref19"
+  },
+  {
+   "n": 18,
+   "id": "bib20",
+   "html": "<div id=\"bib20\" class=\"citations\"><div id=\"sref20\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref20-1\" title=\"View in article\">18.</a></div> <div>Jumper, J. ∙ Evans, R. ∙ Pritzel, A. ...</div> <div><strong>Highly accurate protein structure prediction with AlphaFold</strong></div> <div><em>Nature.</em> 2021; <strong>596</strong>:583-589</div> </div> </div> </div> ",
+   "text": "18. Jumper, J. ∙ Evans, R. ∙ Pritzel, A. ... Highly accurate protein structure prediction with AlphaFold Nature. 2021; 596:583-589",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref20-1"
+  },
+  {
+   "n": 19,
+   "id": "bib21",
+   "html": "<div id=\"bib21\" class=\"citations\"><div id=\"sref21\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref21\" title=\"View in article\">19.</a></div> <div>Baek, M. ∙ DiMaio, F. ∙ Anishchenko, I. ...</div> <div><strong>Accurate prediction of protein structures and interactions using a three-track neural network</strong></div> <div><em>Science.</em> 2021; <strong>373</strong>:871-876</div> </div> </div> </div> ",
+   "text": "19. Baek, M. ∙ DiMaio, F. ∙ Anishchenko, I. ... Accurate prediction of protein structures and interactions using a three-track neural network Science. 2021; 373:871-876",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref21"
+  },
+  {
+   "n": 20,
+   "id": "bib22",
+   "html": "<div id=\"bib22\" class=\"citations\"><div id=\"sref22\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref22-1\" title=\"View in article\">20.</a></div> <div>Lin, Z. ∙ Akin, H. ∙ Rao, R. ...</div> <div><strong>Evolutionary-scale prediction of atomic-level protein structure with a language model</strong></div> <div><em>Science.</em> 2023; <strong>379</strong>:1123-1130</div> </div> </div> </div> ",
+   "text": "20. Lin, Z. ∙ Akin, H. ∙ Rao, R. ... Evolutionary-scale prediction of atomic-level protein structure with a language model Science. 2023; 379:1123-1130",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref22-1"
+  },
+  {
+   "n": 21,
+   "id": "bib23",
+   "html": "<div id=\"bib23\" class=\"citations\"><div id=\"sref23\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref23-1\" title=\"View in article\">21.</a></div> <div>Varadi, M. ∙ Anyango, S. ∙ Deshpande, M. ...</div> <div><strong>AlphaFold Protein Structure Database: massively expanding the structural coverage of protein-sequence space with high-accuracy models</strong></div> <div><em>Nucleic Acids Res.</em> 2022; <strong>50</strong>:D439-D444</div> </div> </div> </div> ",
+   "text": "21. Varadi, M. ∙ Anyango, S. ∙ Deshpande, M. ... AlphaFold Protein Structure Database: massively expanding the structural coverage of protein-sequence space with high-accuracy models Nucleic Acids Res. 2022; 50:D439-D444",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref23-1"
+  },
+  {
+   "n": 22,
+   "id": "bib24",
+   "html": "<div id=\"bib24\" class=\"citations\"><div id=\"sref24\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref24\" title=\"View in article\">22.</a></div> <div>Abramson, J. ∙ Adler, J. ∙ Dunger, J. ...</div> <div><strong>Accurate structure prediction of biomolecular interactions with AlphaFold 3</strong></div> <div><em>Nature.</em> 2024; <strong>630</strong>:493-500</div> </div> </div> </div> ",
+   "text": "22. Abramson, J. ∙ Adler, J. ∙ Dunger, J. ... Accurate structure prediction of biomolecular interactions with AlphaFold 3 Nature. 2024; 630:493-500",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref24"
+  },
+  {
+   "n": 23,
+   "id": "bib25",
+   "html": "<div id=\"bib25\" class=\"citations\"><div id=\"sref25\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref25\" title=\"View in article\">23.</a></div> <div>Cui, H. ∙ Wang, C. ∙ Maan, H. ...</div> <div><strong>scGPT: toward building a foundation model for single-cell multi-omics using generative AI</strong></div> <div><em>Nat. Methods.</em> 2024; <strong>21</strong>:1470-1480</div> </div> </div> </div> ",
+   "text": "23. Cui, H. ∙ Wang, C. ∙ Maan, H. ... scGPT: toward building a foundation model for single-cell multi-omics using generative AI Nat. Methods. 2024; 21:1470-1480",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref25"
+  },
+  {
+   "n": 24,
+   "id": "bib26",
+   "html": "<div id=\"bib26\" class=\"citations\"><div id=\"sref26\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref26\" title=\"View in article\">24.</a></div> <div>Theodoris, C.V. ∙ Xiao, L. ∙ Chopra, A. ...</div> <div><strong>Transfer learning enables predictions in network biology</strong></div> <div><em>Nature.</em> 2023; <strong>618</strong>:616-624</div> </div> </div> </div> ",
+   "text": "24. Theodoris, C.V. ∙ Xiao, L. ∙ Chopra, A. ... Transfer learning enables predictions in network biology Nature. 2023; 618:616-624",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref26"
+  },
+  {
+   "n": 25,
+   "id": "bib27",
+   "html": "<div id=\"bib27\" class=\"citations\"><div id=\"sref27\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref27\" title=\"View in article\">25.</a></div> <div>Watson, J.L. ∙ Juergens, D. ∙ Bennett, N.R. ...</div> <div><strong>De novo design of protein structure and function with RFdiffusion</strong></div> <div><em>Nature.</em> 2023; <strong>620</strong>:1089-1100</div> </div> </div> </div> ",
+   "text": "25. Watson, J.L. ∙ Juergens, D. ∙ Bennett, N.R. ... De novo design of protein structure and function with RFdiffusion Nature. 2023; 620:1089-1100",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref27"
+  },
+  {
+   "n": 26,
+   "id": "bib28",
+   "html": "<div id=\"bib28\" class=\"citations\"><div id=\"sref28\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref28\" title=\"View in article\">26.</a></div> <div>Bianchi, J. ∙ Hirt, J. ∙ Vogt, M. ...</div> <div><strong>Data Extractions Using a Large Language Model (Elicit) and Human Reviewers in Randomized Controlled Trials: A Systematic Comparison</strong></div> <div><em>Cochrane Evid. Synth. Methods.</em> 2025; <strong>3</strong>, e70033</div> </div> </div> </div> ",
+   "text": "26. Bianchi, J. ∙ Hirt, J. ∙ Vogt, M. ... Data Extractions Using a Large Language Model (Elicit) and Human Reviewers in Randomized Controlled Trials: A Systematic Comparison Cochrane Evid. Synth. Methods. 2025; 3, e70033",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref28"
+  },
+  {
+   "n": 27,
+   "id": "bib29",
+   "html": "<div id=\"bib29\" class=\"citations\"><div id=\"sref29\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref29-1\" title=\"View in article\">27.</a></div> <div>Wierenga, R.P. ∙ Golas, S.M. ∙ Ho, W. ...</div> <div><strong>PyLabRobot: An open-source, hardware-agnostic interface for liquid-handling robots and accessories</strong></div> <div><em>Device.</em> 2023; <strong>1</strong>, 100111</div> </div> </div> </div> ",
+   "text": "27. Wierenga, R.P. ∙ Golas, S.M. ∙ Ho, W. ... PyLabRobot: An open-source, hardware-agnostic interface for liquid-handling robots and accessories Device. 2023; 1, 100111",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref29-1"
+  },
+  {
+   "n": 28,
+   "id": "bib30",
+   "html": "<div id=\"bib30\" class=\"citations\"><div id=\"sref30\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref30\" title=\"View in article\">28.</a></div> <div>Si, C. ∙ Yang, D. ∙ Hashimoto, T.</div> <div><strong>Can LLMs Generate Novel Research Ideas? A Large-Scale Human Study with 100+ NLP Researchers</strong></div> <div>Preprint at <em>arXiv.</em> 2024;</div> </div> </div> </div> ",
+   "text": "28. Si, C. ∙ Yang, D. ∙ Hashimoto, T. Can LLMs Generate Novel Research Ideas? A Large-Scale Human Study with 100+ NLP Researchers Preprint at arXiv. 2024;",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref30"
+  },
+  {
+   "n": 29,
+   "id": "bib31",
+   "html": "<div id=\"bib31\" class=\"citations\"><div id=\"sref31\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref31\" title=\"View in article\">29.</a></div> <div>Si, C. ∙ Hashimoto, T. ∙ Yang, D.</div> <div><strong>The Ideation-Execution Gap: Execution Outcomes of LLM-Generated versus Human Research Ideas</strong></div> <div>Preprint at <em>arXiv.</em> 2025;</div> </div> </div> </div> ",
+   "text": "29. Si, C. ∙ Hashimoto, T. ∙ Yang, D. The Ideation-Execution Gap: Execution Outcomes of LLM-Generated versus Human Research Ideas Preprint at arXiv. 2025;",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref31"
+  },
+  {
+   "n": 30,
+   "id": "bib32",
+   "html": "<div id=\"bib32\" class=\"citations\"><div id=\"sref32\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref32\" title=\"View in article\">30.</a></div> <div>Cheng, F. ∙ Liu, C. ∙ Jiang, J. ...</div> <div><strong>Prediction of Drug-Target Interactions and Drug Repositioning via Network-Based Inference</strong></div> <div><em>PLoS Comput. Biol.</em> 2012; <strong>8</strong>, e1002503</div> </div> </div> </div> ",
+   "text": "30. Cheng, F. ∙ Liu, C. ∙ Jiang, J. ... Prediction of Drug-Target Interactions and Drug Repositioning via Network-Based Inference PLoS Comput. Biol. 2012; 8, e1002503",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref32"
+  },
+  {
+   "n": 31,
+   "id": "bib33",
+   "html": "<div id=\"bib33\" class=\"citations\"><div id=\"sref33\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref33\" title=\"View in article\">31.</a></div> <div>Guney, E. ∙ Menche, J. ∙ Vidal, M. ...</div> <div><strong>Network-based in silico drug efficacy screening</strong></div> <div><em>Nat. Commun.</em> 2016; <strong>7</strong>, 10331</div> </div> </div> </div> ",
+   "text": "31. Guney, E. ∙ Menche, J. ∙ Vidal, M. ... Network-based in silico drug efficacy screening Nat. Commun. 2016; 7, 10331",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref33"
+  },
+  {
+   "n": 32,
+   "id": "bib34",
+   "html": "<div id=\"bib34\" class=\"citations\"><div id=\"sref34\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref34\" title=\"View in article\">32.</a></div> <div>Lamb, J. ∙ Crawford, E.D. ∙ Peck, D. ...</div> <div><strong>The Connectivity Map: Using Gene-Expression Signatures to Connect Small Molecules, Genes, and Disease</strong></div> <div><em>Science.</em> 2006; <strong>313</strong>:1929-1935</div> </div> </div> </div> ",
+   "text": "32. Lamb, J. ∙ Crawford, E.D. ∙ Peck, D. ... The Connectivity Map: Using Gene-Expression Signatures to Connect Small Molecules, Genes, and Disease Science. 2006; 313:1929-1935",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref34"
+  },
+  {
+   "n": 33,
+   "id": "bib35",
+   "html": "<div id=\"bib35\" class=\"citations\"><div id=\"sref35\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref35\" title=\"View in article\">33.</a></div> <div>Subramanian, A. ∙ Narayan, R. ∙ Corsello, S.M. ...</div> <div><strong>A Next Generation Connectivity Map: L1000 Platform and the First 1,000,000 Profiles</strong></div> <div><em>Cell.</em> 2017; <strong>171</strong>:1437-1452.e17</div> </div> </div> </div> ",
+   "text": "33. Subramanian, A. ∙ Narayan, R. ∙ Corsello, S.M. ... A Next Generation Connectivity Map: L1000 Platform and the First 1,000,000 Profiles Cell. 2017; 171:1437-1452.e17",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref35"
+  },
+  {
+   "n": 34,
+   "id": "bib36",
+   "html": "<div id=\"bib36\" class=\"citations\"><div id=\"sref36\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref36\" title=\"View in article\">34.</a></div> <div>Wu, Z. ∙ Li, W. ∙ Liu, G. ...</div> <div><strong>Network-Based Methods for Prediction of Drug-Target Interactions</strong></div> <div><em>Front. Pharmacol.</em> 2018; <strong>9</strong>, 1134</div> </div> </div> </div> ",
+   "text": "34. Wu, Z. ∙ Li, W. ∙ Liu, G. ... Network-Based Methods for Prediction of Drug-Target Interactions Front. Pharmacol. 2018; 9, 1134",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref36"
+  },
+  {
+   "n": 35,
+   "id": "bib37",
+   "html": "<div id=\"bib37\" class=\"citations\"><div id=\"sref37\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref37\" title=\"View in article\">35.</a></div> <div>Waring, M.J. ∙ Arrowsmith, J. ∙ Leach, A.R. ...</div> <div><strong>An analysis of the attrition of drug candidates from four major pharmaceutical companies</strong></div> <div><em>Nat. Rev. Drug Discov.</em> 2015; <strong>14</strong>:475-486</div> </div> </div> </div> ",
+   "text": "35. Waring, M.J. ∙ Arrowsmith, J. ∙ Leach, A.R. ... An analysis of the attrition of drug candidates from four major pharmaceutical companies Nat. Rev. Drug Discov. 2015; 14:475-486",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref37"
+  },
+  {
+   "n": 36,
+   "id": "bib38",
+   "html": "<div id=\"bib38\" class=\"citations\"><div id=\"sref38\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref38\" title=\"View in article\">36.</a></div> <div>Mao, Y. ∙ Finnemann, S.C.</div> <div><strong>Acute RhoA/Rho Kinase Inhibition Is Sufficient to Restore Phagocytic Capacity to Retinal Pigment Epithelium Lacking the Engulfment Receptor MerTK</strong></div> <div><em>Cells.</em> 2021; <strong>10</strong>:1927</div> </div> </div> </div> ",
+   "text": "36. Mao, Y. ∙ Finnemann, S.C. Acute RhoA/Rho Kinase Inhibition Is Sufficient to Restore Phagocytic Capacity to Retinal Pigment Epithelium Lacking the Engulfment Receptor MerTK Cells. 2021; 10:1927",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref38"
+  },
+  {
+   "n": 37,
+   "id": "bib39",
+   "html": "<div id=\"bib39\" class=\"citations\"><div id=\"sref39\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref39\" title=\"View in article\">37.</a></div> <div>Minami, Y. ∙ Song, Y.S. ∙ Ishibazawa, A. ...</div> <div><strong>Effect of ripasudil on diabetic macular edema</strong></div> <div><em>Sci. Rep.</em> 2019; <strong>9</strong>:3703</div> </div> </div> </div> ",
+   "text": "37. Minami, Y. ∙ Song, Y.S. ∙ Ishibazawa, A. ... Effect of ripasudil on diabetic macular edema Sci. Rep. 2019; 9:3703",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref39"
+  },
+  {
+   "n": 38,
+   "id": "bib40",
+   "html": "<div id=\"bib40\" class=\"citations\"><div id=\"sref40\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref40\" title=\"View in article\">38.</a></div> <div>Yamagishi-Kimura, R. ∙ Honjo, M. ∙ Aihara, M.</div> <div><strong>Neuroprotective effect of ripasudil on retinal ganglion cells via an antioxidative mechanism</strong></div> <div><em>Jpn. J. Ophthalmol.</em> 2025; <strong>69</strong>:823-832</div> </div> </div> </div> ",
+   "text": "38. Yamagishi-Kimura, R. ∙ Honjo, M. ∙ Aihara, M. Neuroprotective effect of ripasudil on retinal ganglion cells via an antioxidative mechanism Jpn. J. Ophthalmol. 2025; 69:823-832",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref40"
+  },
+  {
+   "n": 39,
+   "id": "bib41",
+   "html": "<div id=\"bib41\" class=\"citations\"><div id=\"sref41\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref41\" title=\"View in article\">39.</a></div> <div>Baker, D.J. ∙ Frommer, L.M. ∙ Uslu, U. ...</div> <div><strong>AI-driven discovery of GPNMB CAR T cells as a multi-cancer therapy</strong></div> <div><em>Cell.</em> 2026; <strong>189</strong>:3871-3882.e12</div> </div> </div> </div> ",
+   "text": "39. Baker, D.J. ∙ Frommer, L.M. ∙ Uslu, U. ... AI-driven discovery of GPNMB CAR T cells as a multi-cancer therapy Cell. 2026; 189:3871-3882.e12",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref41"
+  },
+  {
+   "n": 40,
+   "id": "bib42",
+   "html": "<div id=\"bib42\" class=\"citations\"><div id=\"sref42\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref42-1\" title=\"View in article\">40.</a></div> <div>Zemp, F.J. ∙ Breckenridge, Z. ∙ Song, H. ...</div> <div><strong>GPNMB-directed CAR T cell therapy against MiT/TFE-family fusion-driven solid tumors</strong></div> <div><em>Nat. Cancer.</em> 2026; <strong>7</strong>:1189-1207</div> </div> </div> </div> ",
+   "text": "40. Zemp, F.J. ∙ Breckenridge, Z. ∙ Song, H. ... GPNMB-directed CAR T cell therapy against MiT/TFE-family fusion-driven solid tumors Nat. Cancer. 2026; 7:1189-1207",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref42-1"
+  },
+  {
+   "n": 41,
+   "id": "bib43",
+   "html": "<div id=\"bib43\" class=\"citations\"><div id=\"sref43\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref43-1\" title=\"View in article\">41.</a></div> <div>Savage, N. ∙ Grewal, S. ∙ Shaikh, M.V. ...</div> <div><strong>Dual tumour–myeloid targeting of glioblastoma with GPNMB CAR-T cells</strong></div> <div><em>Nature.</em> 2026; <strong>656</strong>:1013-1022</div> </div> </div> </div> ",
+   "text": "41. Savage, N. ∙ Grewal, S. ∙ Shaikh, M.V. ... Dual tumour–myeloid targeting of glioblastoma with GPNMB CAR-T cells Nature. 2026; 656:1013-1022",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref43-1"
+  },
+  {
+   "n": 42,
+   "id": "bib44",
+   "html": "<div id=\"bib44\" class=\"citations\"><div id=\"sref44\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref44-1\" title=\"View in article\">42.</a></div> <div>Zahavy, T.</div> <div><strong>Position: LLMs can’t jump</strong></div> <div><strong>Proceedings of the 43rd International Conference on Machine Learning</strong></div> <div>PMLR, 306. 2026</div> </div> </div> </div> ",
+   "text": "42. Zahavy, T. Position: LLMs can’t jump Proceedings of the 43rd International Conference on Machine Learning PMLR, 306. 2026",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref44-1"
+  },
+  {
+   "n": 43,
+   "id": "bib45",
+   "html": "<div id=\"bib45\" class=\"citations\"><div id=\"sref45\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref45-1\" title=\"View in article\">43.</a></div> <div>Kaplan, J. ∙ McCandlish, S. ∙ Henighan, T. ...</div> <div><strong>Scaling Laws for Neural Language Models</strong></div> <div>Preprint at <em>arXiv.</em> 2020;</div> </div> </div> </div> ",
+   "text": "43. Kaplan, J. ∙ McCandlish, S. ∙ Henighan, T. ... Scaling Laws for Neural Language Models Preprint at arXiv. 2020;",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref45-1"
+  },
+  {
+   "n": 44,
+   "id": "bib46",
+   "html": "<div id=\"bib46\" class=\"citations\"><div id=\"sref46\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref46-1\" title=\"View in article\">44.</a></div> <div>Hoffmann, J. ∙ Borgeaud, S. ∙ Mensch, A. ...</div> <div><strong>Training Compute-Optimal Large Language Models</strong></div> <div>Preprint at <em>arXiv.</em> 2022;</div> </div> </div> </div> ",
+   "text": "44. Hoffmann, J. ∙ Borgeaud, S. ∙ Mensch, A. ... Training Compute-Optimal Large Language Models Preprint at arXiv. 2022;",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref46-1"
+  },
+  {
+   "n": 45,
+   "id": "bib47",
+   "html": "<div id=\"bib47\" class=\"citations\"><div id=\"sref47\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref47\" title=\"View in article\">45.</a></div> <div>Chen, Z. ∙ Wang, S. ∙ Xiao, T. ...</div> <div><strong>Revisiting Scaling Laws for Language Models: The Role of Data Quality and Training Strategies</strong></div> <div><div>Che, W. ∙ Nabende, J. ∙ Shutova, E. ... (Editors)</div> </div> <div><strong>Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics</strong></div> <div>Association for Computational Linguistics, 2025; 23881-23899</div> </div> </div> </div> ",
+   "text": "45. Chen, Z. ∙ Wang, S. ∙ Xiao, T. ... Revisiting Scaling Laws for Language Models: The Role of Data Quality and Training Strategies Che, W. ∙ Nabende, J. ∙ Shutova, E. ... (Editors) Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics Association for Computational Linguistics, 2025; 23881-23899",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref47"
+  },
+  {
+   "n": 46,
+   "id": "bib48",
+   "html": "<div id=\"bib48\" class=\"citations\"><div id=\"sref48\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref48-1\" title=\"View in article\">46.</a></div> <div>Snell, C. ∙ Lee, J. ∙ Xu, K. ...</div> <div><strong>Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters</strong></div> <div>Preprint at <em>arXiv.</em> 2024;</div> </div> </div> </div> ",
+   "text": "46. Snell, C. ∙ Lee, J. ∙ Xu, K. ... Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters Preprint at arXiv. 2024;",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref48-1"
+  },
+  {
+   "n": 47,
+   "id": "bib49",
+   "html": "<div id=\"bib49\" class=\"citations\"><div id=\"sref49\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref49\" title=\"View in article\">47.</a></div> <div>Karten, S. ∙ Zhang, J. ∙ Upaa, T. ...</div> <div><strong>Continual Harness: Online Adaptation for Self-Improving Foundation Agents</strong></div> <div>Preprint at <em>arXiv.</em> 2026;</div> </div> </div> </div> ",
+   "text": "47. Karten, S. ∙ Zhang, J. ∙ Upaa, T. ... Continual Harness: Online Adaptation for Self-Improving Foundation Agents Preprint at arXiv. 2026;",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref49"
+  },
+  {
+   "n": 48,
+   "id": "bib50",
+   "html": "<div id=\"bib50\" class=\"citations\"><div id=\"sref50\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref50\" title=\"View in article\">48.</a></div> <div>Silver, D. ∙ Huang, A. ∙ Maddison, C.J. ...</div> <div><strong>Mastering the game of Go with deep neural networks and tree search</strong></div> <div><em>Nature.</em> 2016; <strong>529</strong>:484-489</div> </div> </div> </div> ",
+   "text": "48. Silver, D. ∙ Huang, A. ∙ Maddison, C.J. ... Mastering the game of Go with deep neural networks and tree search Nature. 2016; 529:484-489",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref50"
+  },
+  {
+   "n": 49,
+   "id": "bib51",
+   "html": "<div id=\"bib51\" class=\"citations\"><div id=\"sref51\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref51\" title=\"View in article\">49.</a></div> <div>Zhang, X. ∙ Wu, C. ∙ Zhao, Z. ...</div> <div><strong>Development of a large-scale medical visual question-answering dataset</strong></div> <div><em>Commun. Med.</em> 2024; <strong>4</strong>:277</div> </div> </div> </div> ",
+   "text": "49. Zhang, X. ∙ Wu, C. ∙ Zhao, Z. ... Development of a large-scale medical visual question-answering dataset Commun. Med. 2024; 4:277",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref51"
+  },
+  {
+   "n": 50,
+   "id": "bib52",
+   "html": "<div id=\"bib52\" class=\"citations\"><div id=\"sref52\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref52\" title=\"View in article\">50.</a></div> <div>Zhang, K. ∙ Zhou, R. ∙ Adhikarla, E. ...</div> <div><strong>A generalist vision–language foundation model for diverse biomedical tasks</strong></div> <div><em>Nat. Med.</em> 2024; <strong>30</strong>:3129-3141</div> </div> </div> </div> ",
+   "text": "50. Zhang, K. ∙ Zhou, R. ∙ Adhikarla, E. ... A generalist vision–language foundation model for diverse biomedical tasks Nat. Med. 2024; 30:3129-3141",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref52"
+  },
+  {
+   "n": 51,
+   "id": "bib53",
+   "html": "<div id=\"bib53\" class=\"citations\"><div id=\"sref53\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref53\" title=\"View in article\">51.</a></div> <div>Liechti, R. ∙ George, N. ∙ Götz, L. ...</div> <div><strong>SourceData: a semantic platform for curating and searching figures</strong></div> <div><em>Nat. Methods.</em> 2017; <strong>14</strong>:1021-1022</div> </div> </div> </div> ",
+   "text": "51. Liechti, R. ∙ George, N. ∙ Götz, L. ... SourceData: a semantic platform for curating and searching figures Nat. Methods. 2017; 14:1021-1022",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref53"
+  },
+  {
+   "n": 52,
+   "id": "bib54",
+   "html": "<div id=\"bib54\" class=\"citations\"><div id=\"sref54\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref54-1\" title=\"View in article\">52.</a></div> <div>Abolhasani, M. ∙ Kumacheva, E.</div> <div><strong>The rise of self-driving labs in chemical and materials sciences</strong></div> <div><em>Nat. Synth.</em> 2023; <strong>2</strong>:483-492</div> </div> </div> </div> ",
+   "text": "52. Abolhasani, M. ∙ Kumacheva, E. The rise of self-driving labs in chemical and materials sciences Nat. Synth. 2023; 2:483-492",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref54-1"
+  },
+  {
+   "n": 53,
+   "id": "bib55",
+   "html": "<div id=\"bib55\" class=\"citations\"><div id=\"sref55\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref55-1\" title=\"View in article\">53.</a></div> <div>Tom, G. ∙ Schmid, S.P. ∙ Baird, S.G. ...</div> <div><strong>Self-Driving Laboratories for Chemistry and Materials Science</strong></div> <div><em>Chem. Rev.</em> 2024; <strong>124</strong>:9633-9732</div> </div> </div> </div> ",
+   "text": "53. Tom, G. ∙ Schmid, S.P. ∙ Baird, S.G. ... Self-Driving Laboratories for Chemistry and Materials Science Chem. Rev. 2024; 124:9633-9732",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref55-1"
+  },
+  {
+   "n": 54,
+   "id": "bib56",
+   "html": "<div id=\"bib56\" class=\"citations\"><div id=\"sref56\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref56-1\" title=\"View in article\">54.</a></div> <div>Tang, Q. ∙ Xiao, D. ∙ Veviorskiy, A. ...</div> <div><strong>AI-Driven Robotics Laboratory Identifies Pharmacological TNIK Inhibition as a Potent Senomorphic Agent</strong></div> <div><em>Aging Dis.</em> 2025; <strong>17</strong>:432-451</div> </div> </div> </div> ",
+   "text": "54. Tang, Q. ∙ Xiao, D. ∙ Veviorskiy, A. ... AI-Driven Robotics Laboratory Identifies Pharmacological TNIK Inhibition as a Potent Senomorphic Agent Aging Dis. 2025; 17:432-451",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref56-1"
+  },
+  {
+   "n": 55,
+   "id": "bib81",
+   "html": "<div id=\"bib81\" class=\"citations\"><div id=\"optuoRsYXv0Ou\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-optuoRsYXv0Ou\" title=\"View in article\">55.</a></div> <div>Zhavoronkov, A. ∙ Galkin, F. ∙ Chen, S. ...</div> <div><strong>Integration of proteomic aging clocks in a phase 2a clinical trial supports simultaneous geroprotective assessment</strong></div> <div><em>Nat. Biotechnol.</em> 2026;</div> </div> </div> </div> ",
+   "text": "55. Zhavoronkov, A. ∙ Galkin, F. ∙ Chen, S. ... Integration of proteomic aging clocks in a phase 2a clinical trial supports simultaneous geroprotective assessment Nat. Biotechnol. 2026;",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-optuoRsYXv0Ou"
+  },
+  {
+   "n": 56,
+   "id": "bib57",
+   "html": "<div id=\"bib57\" class=\"citations\"><div id=\"sref57\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref57\" title=\"View in article\">56.</a></div> <div>Fushimi, K. ∙ Nakai, Y. ∙ Nishi, A. ...</div> <div><strong>Development of the autonomous lab system to support biotechnology research</strong></div> <div><em>Sci. Rep.</em> 2025; <strong>15</strong>:6648</div> </div> </div> </div> ",
+   "text": "56. Fushimi, K. ∙ Nakai, Y. ∙ Nishi, A. ... Development of the autonomous lab system to support biotechnology research Sci. Rep. 2025; 15:6648",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref57"
+  },
+  {
+   "n": 57,
+   "id": "bib58",
+   "html": "<div id=\"bib58\" class=\"citations\"><div id=\"sref58\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref58\" title=\"View in article\">57.</a></div> <div>King, R.D. ∙ Whelan, K.E. ∙ Jones, F.M. ...</div> <div><strong>Functional genomic hypothesis generation and experimentation by a robot scientist</strong></div> <div><em>Nature.</em> 2004; <strong>427</strong>:247-252</div> </div> </div> </div> ",
+   "text": "57. King, R.D. ∙ Whelan, K.E. ∙ Jones, F.M. ... Functional genomic hypothesis generation and experimentation by a robot scientist Nature. 2004; 427:247-252",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref58"
+  },
+  {
+   "n": 58,
+   "id": "bib59",
+   "html": "<div id=\"bib59\" class=\"citations\"><div id=\"sref59\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref59\" title=\"View in article\">58.</a></div> <div>King, R.D. ∙ Rowland, J. ∙ Oliver, S.G. ...</div> <div><strong>The Automation of Science</strong></div> <div><em>Science.</em> 2009; <strong>324</strong>:85-89</div> </div> </div> </div> ",
+   "text": "58. King, R.D. ∙ Rowland, J. ∙ Oliver, S.G. ... The Automation of Science Science. 2009; 324:85-89",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref59"
+  },
+  {
+   "n": 59,
+   "id": "bib60",
+   "html": "<div id=\"bib60\" class=\"citations\"><div id=\"sref60\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref60\" title=\"View in article\">59.</a></div> <div>Williams, K. ∙ Bilsland, E. ∙ Sparkes, A. ...</div> <div><strong>Cheaper faster drug development validated by the repositioning of drugs against neglected tropical diseases</strong></div> <div><em>J. R. Soc. Interface.</em> 2015; <strong>12</strong>, 20141289</div> </div> </div> </div> ",
+   "text": "59. Williams, K. ∙ Bilsland, E. ∙ Sparkes, A. ... Cheaper faster drug development validated by the repositioning of drugs against neglected tropical diseases J. R. Soc. Interface. 2015; 12, 20141289",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref60"
+  },
+  {
+   "n": 60,
+   "id": "bib61",
+   "html": "<div id=\"bib61\" class=\"citations\"><div id=\"sref61\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref61\" title=\"View in article\">60.</a></div> <div>Qiu, Y. ∙ Huang, Z. ∙ Wang, Z. ...</div> <div><strong>BioMARS: A Multi-Agent Robotic System for Autonomous Biological Experiments</strong></div> <div>Preprint at <em>arXiv.</em> 2025;</div> </div> </div> </div> ",
+   "text": "60. Qiu, Y. ∙ Huang, Z. ∙ Wang, Z. ... BioMARS: A Multi-Agent Robotic System for Autonomous Biological Experiments Preprint at arXiv. 2025;",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref61"
+  },
+  {
+   "n": 61,
+   "id": "bib62",
+   "html": "<div id=\"bib62\" class=\"citations\"><div id=\"sref62\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref62\" title=\"View in article\">61.</a></div> <div>Wang, W. ∙ Swain, S. ∙ Lee, J. ...</div> <div><strong>Agentic Lab: An Agentic-physical AI system for cell and organoid experimentation and manufacturing</strong></div> <div>Preprint at <em>bioRxiv.</em> 2025;</div> </div> </div> </div> ",
+   "text": "61. Wang, W. ∙ Swain, S. ∙ Lee, J. ... Agentic Lab: An Agentic-physical AI system for cell and organoid experimentation and manufacturing Preprint at bioRxiv. 2025;",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref62"
+  },
+  {
+   "n": 62,
+   "id": "bib63",
+   "html": "<div id=\"bib63\" class=\"citations\"><div id=\"sref63\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref63\" title=\"View in article\">62.</a></div> <div>Angers, K. ∙ Darvish, K. ∙ Yoshikawa, N. ...</div> <div><strong>RoboCulture: A Robotics Platform for Automated Biological Experimentation</strong></div> <div>Preprint at <em>arXiv.</em> 2025;</div> </div> </div> </div> ",
+   "text": "62. Angers, K. ∙ Darvish, K. ∙ Yoshikawa, N. ... RoboCulture: A Robotics Platform for Automated Biological Experimentation Preprint at arXiv. 2025;",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref63"
+  },
+  {
+   "n": 63,
+   "id": "bib64",
+   "html": "<div id=\"bib64\" class=\"citations\"><div id=\"sref64\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref64\" title=\"View in article\">63.</a></div> <div>Dai, T. ∙ Vijayakrishnan, S. ∙ Szczypiński, F.T. ...</div> <div><strong>Autonomous mobile robots for exploratory synthetic chemistry</strong></div> <div><em>Nature.</em> 2024; <strong>635</strong>:890-897</div> </div> </div> </div> ",
+   "text": "63. Dai, T. ∙ Vijayakrishnan, S. ∙ Szczypiński, F.T. ... Autonomous mobile robots for exploratory synthetic chemistry Nature. 2024; 635:890-897",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref64"
+  },
+  {
+   "n": 64,
+   "id": "bib65",
+   "html": "<div id=\"bib65\" class=\"citations\"><div id=\"sref65\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref65\" title=\"View in article\">64.</a></div> <div>Yu, Y. ∙ Mai, Y. ∙ Zheng, Y. ...</div> <div><strong>Assessing and mitigating batch effects in large-scale omics studies</strong></div> <div><em>Genome Biol.</em> 2024; <strong>25</strong>:254</div> </div> </div> </div> ",
+   "text": "64. Yu, Y. ∙ Mai, Y. ∙ Zheng, Y. ... Assessing and mitigating batch effects in large-scale omics studies Genome Biol. 2024; 25:254",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref65"
+  },
+  {
+   "n": 65,
+   "id": "bib66",
+   "html": "<div id=\"bib66\" class=\"citations\"><div id=\"sref66\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref66\" title=\"View in article\">65.</a></div> <div>Leek, J.T. ∙ Scharpf, R.B. ∙ Bravo, H.C. ...</div> <div><strong>Tackling the widespread and critical impact of batch effects in high-throughput data</strong></div> <div><em>Nat. Rev. Genet.</em> 2010; <strong>11</strong>:733-739</div> </div> </div> </div> ",
+   "text": "65. Leek, J.T. ∙ Scharpf, R.B. ∙ Bravo, H.C. ... Tackling the widespread and critical impact of batch effects in high-throughput data Nat. Rev. Genet. 2010; 11:733-739",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref66"
+  },
+  {
+   "n": 66,
+   "id": "bib67",
+   "html": "<div id=\"bib67\" class=\"citations\"><div id=\"sref67\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref67\" title=\"View in article\">66.</a></div> <div>Huang, L. ∙ Yu, W. ∙ Ma, W. ...</div> <div><strong>A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions</strong></div> <div><em>ACM Trans. Inf. Syst.</em> 2025; <strong>43</strong>:1-55</div> </div> </div> </div> ",
+   "text": "66. Huang, L. ∙ Yu, W. ∙ Ma, W. ... A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions ACM Trans. Inf. Syst. 2025; 43:1-55",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref67"
+  },
+  {
+   "n": 67,
+   "id": "bib68",
+   "html": "<div id=\"bib68\" class=\"citations\"><div id=\"sref68\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref68\" title=\"View in article\">67.</a></div> <div>Farquhar, S. ∙ Kossen, J. ∙ Kuhn, L. ...</div> <div><strong>Detecting hallucinations in large language models using semantic entropy</strong></div> <div><em>Nature.</em> 2024; <strong>630</strong>:625-630</div> </div> </div> </div> ",
+   "text": "67. Farquhar, S. ∙ Kossen, J. ∙ Kuhn, L. ... Detecting hallucinations in large language models using semantic entropy Nature. 2024; 630:625-630",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref68"
+  },
+  {
+   "n": 68,
+   "id": "bib69",
+   "html": "<div id=\"bib69\" class=\"citations\"><div id=\"sref69\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref69\" title=\"View in article\">68.</a></div> <div>Topaz, M. ∙ Roguin, N. ∙ Gupta, P. ...</div> <div><strong>Fabricated citations: an audit across 2.5 million biomedical papers</strong></div> <div><em>Lancet.</em> 2026; <strong>407</strong>:1779-1781</div> </div> </div> </div> ",
+   "text": "68. Topaz, M. ∙ Roguin, N. ∙ Gupta, P. ... Fabricated citations: an audit across 2.5 million biomedical papers Lancet. 2026; 407:1779-1781",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref69"
+  },
+  {
+   "n": 69,
+   "id": "bib70",
+   "html": "<div id=\"bib70\" class=\"citations\"><div id=\"sref70\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref70\" title=\"View in article\">69.</a></div> <div>Mitchener, L. ∙ Laurent, J.M. ∙ Andonian, A. ...</div> <div><strong>BixBench: a Comprehensive Benchmark for LLM-based Agents in Computational Biology</strong></div> <div>Preprint at <em>arXiv.</em> 2025;</div> </div> </div> </div> ",
+   "text": "69. Mitchener, L. ∙ Laurent, J.M. ∙ Andonian, A. ... BixBench: a Comprehensive Benchmark for LLM-based Agents in Computational Biology Preprint at arXiv. 2025;",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref70"
+  },
+  {
+   "n": 70,
+   "id": "bib71",
+   "html": "<div id=\"bib71\" class=\"citations\"><div id=\"sref71\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref71\" title=\"View in article\">70.</a></div> <div>Fanelli, D.</div> <div><strong>Negative results are disappearing from most disciplines and countries</strong></div> <div><em>Scientometrics.</em> 2012; <strong>90</strong>:891-904</div> </div> </div> </div> ",
+   "text": "70. Fanelli, D. Negative results are disappearing from most disciplines and countries Scientometrics. 2012; 90:891-904",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref71"
+  },
+  {
+   "n": 71,
+   "id": "bib72",
+   "html": "<div id=\"bib72\" class=\"citations\"><div id=\"sref72\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref72\" title=\"View in article\">71.</a></div> <div>Hopewell, S. ∙ Loudon, K. ∙ Clarke, M.J. ...</div> <div><strong>Publication bias in clinical trials due to statistical significance or direction of trial results</strong></div> <div><em>Cochrane Database Syst. Rev.</em> 2009; <strong>2009</strong>, MR000006</div> </div> </div> </div> ",
+   "text": "71. Hopewell, S. ∙ Loudon, K. ∙ Clarke, M.J. ... Publication bias in clinical trials due to statistical significance or direction of trial results Cochrane Database Syst. Rev. 2009; 2009, MR000006",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref72"
+  },
+  {
+   "n": 72,
+   "id": "bib73",
+   "html": "<div id=\"bib73\" class=\"citations\"><div id=\"sref73\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref73\" title=\"View in article\">72.</a></div> <div>Henderson, J.W.</div> <div><strong>The Yellow Brick Road to Penicillin: A Story of Serendipity</strong></div> <div><em>Mayo Clin. Proc.</em> 1997; <strong>72</strong>:683-687</div> </div> </div> </div> ",
+   "text": "72. Henderson, J.W. The Yellow Brick Road to Penicillin: A Story of Serendipity Mayo Clin. Proc. 1997; 72:683-687",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref73"
+  },
+  {
+   "n": 73,
+   "id": "bib74",
+   "html": "<div id=\"bib74\" class=\"citations\"><div id=\"sref74\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref74-1\" title=\"View in article\">73.</a></div> <div>Hoffmann, S.A. ∙ Diggans, J. ∙ Densmore, D. ...</div> <div><strong>Safety by design: Biosafety and biosecurity in the age of synthetic genomics</strong></div> <div><em>iScience.</em> 2023; <strong>26</strong>, 106165</div> </div> </div> </div> ",
+   "text": "73. Hoffmann, S.A. ∙ Diggans, J. ∙ Densmore, D. ... Safety by design: Biosafety and biosecurity in the age of synthetic genomics iScience. 2023; 26, 106165",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref74-1"
+  },
+  {
+   "n": 74,
+   "id": "bib75",
+   "html": "<div id=\"bib75\" class=\"citations\"><div id=\"sref75\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref75\" title=\"View in article\">74.</a></div> <div>Provatas, K.A. ∙ Self, A. ∙ Mouratidis, I. ...</div> <div><strong>BioVeil MATRIX: Uncovering and categorizing vulnerabilities of agentic biological AI scientists</strong></div> <div>Preprint at <em>arXiv.</em> 2026;</div> </div> </div> </div> ",
+   "text": "74. Provatas, K.A. ∙ Self, A. ∙ Mouratidis, I. ... BioVeil MATRIX: Uncovering and categorizing vulnerabilities of agentic biological AI scientists Preprint at arXiv. 2026;",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref75"
+  },
+  {
+   "n": 75,
+   "id": "bib76",
+   "html": "<div id=\"bib76\" class=\"citations\"><div id=\"sref76\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref76-1\" title=\"View in article\">75.</a></div> <div>Liu, A.B. ∙ Nedungadi, S. ∙ Cai, B. ...</div> <div><strong>ABC-Bench: An Agentic Bio-Capabilities Benchmark for Biosecurity</strong></div> <div>Preprint at <em>arXiv.</em> 2026;</div> </div> </div> </div> ",
+   "text": "75. Liu, A.B. ∙ Nedungadi, S. ∙ Cai, B. ... ABC-Bench: An Agentic Bio-Capabilities Benchmark for Biosecurity Preprint at arXiv. 2026;",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref76-1"
+  },
+  {
+   "n": 76,
+   "id": "bib77",
+   "html": "<div id=\"bib77\" class=\"citations\"><div id=\"sref77\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref77\" title=\"View in article\">76.</a></div> <div>Mouton, C.A. ∙ Lucas, C. ∙ Guest, E.</div> <div><strong>RAND Corporation. The Operational Risks of AI in Large-Scale Biological Attacks: Results of a Red-Team Study</strong></div> <div>RR-A2977-2 <div>Date: 2024</div> </div> </div> </div> </div> ",
+   "text": "76. Mouton, C.A. ∙ Lucas, C. ∙ Guest, E. RAND Corporation. The Operational Risks of AI in Large-Scale Biological Attacks: Results of a Red-Team Study RR-A2977-2 Date: 2024",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref77"
+  },
+  {
+   "n": 77,
+   "id": "bib78",
+   "html": "<div id=\"bib78\" class=\"citations\"><div id=\"sref78\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref78\" title=\"View in article\">77.</a></div> <div>Ke, Y. ∙ Jin, L. ∙ Ong, J.C.L. ...</div> <div><strong>AI-induced never-skilling in medical education</strong></div> <div><em>Nat. Med.</em> 2026; <strong>32</strong>:1997-2006</div> </div> </div> </div> ",
+   "text": "77. Ke, Y. ∙ Jin, L. ∙ Ong, J.C.L. ... AI-induced never-skilling in medical education Nat. Med. 2026; 32:1997-2006",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref78"
+  },
+  {
+   "n": 78,
+   "id": "bib80",
+   "html": "<div id=\"bib80\" class=\"citations\"><div id=\"optC5ZqLemLXu\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-optC5ZqLemLXu\" title=\"View in article\">78.</a></div> <div>Wang, V.</div> <div><strong>The Dartmouth. Reflection: The struggle is the point</strong></div> <div><a id=\"interref0010\" href=\"http://www.thedartmouth.com/article/2025/10/wang-reflection-the-struggle-is-the-point\" target=\"_blank\">http://www.thedartmouth.com/article/2025/10/wang-reflection-the-struggle-is-the-point</a><div>Date: 2025</div> </div> </div> </div> </div> ",
+   "text": "78. Wang, V. The Dartmouth. Reflection: The struggle is the point http://www.thedartmouth.com/article/2025/10/wang-reflection-the-struggle-is-the-pointDate: 2025",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-optC5ZqLemLXu"
+  },
+  {
+   "n": 79,
+   "id": "bib79",
+   "html": "<div id=\"bib79\" class=\"citations\"><div id=\"sref79\" class=\"citation\"><div class=\"citation-content\"><div class=\"label\"><a href=\"https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref79\" title=\"View in article\">79.</a></div> <div>Elemento, O.</div> <div><strong>AI systems devise hypotheses and ways to test them</strong></div> <div><em>Nature.</em> 2026; <strong>655</strong>:313-314</div> </div> </div> </div> ",
+   "text": "79. Elemento, O. AI systems devise hypotheses and ways to test them Nature. 2026; 655:313-314",
+   "doi": "",
+   "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#body-ref-sref79"
+  }
+ ],
+ "citationStyle": "numeric",
+ "supplementary": [
+  {
+   "label": "Supplemental information (2)",
+   "href": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9#supplementary-material",
+   "kind": "link"
+  },
+  {
+   "label": "PDF (107.72 KB)",
+   "href": "https://www.cell.com/cms/10.1016/j.cell.2026.08.052/attachment/187977d5-6e9e-4d84-aa21-a4df0c0acf73/mmc1.pdf",
+   "kind": "file"
+  },
+  {
+   "label": "PDF (1.64 MB)",
+   "href": "https://www.cell.com/cms/10.1016/j.cell.2026.08.052/attachment/33e22de4-4500-4938-830a-18b174f30aee/mmc2.pdf",
+   "kind": "file"
+  }
+ ],
+ "warnings": [],
+ "stats": {
+  "ms": 278,
+  "bodyChars": 130986,
+  "paragraphs": 55
+ }
+}

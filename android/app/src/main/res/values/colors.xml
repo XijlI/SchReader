@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ink">#14130F</color>
+    <color name="panel">#201E19</color>
+    <color name="panel_hi">#2A2721</color>
+    <color name="line">#2F2C25</color>
+    <color name="line_soft">#3A352B</color>
+    <color name="gold">#F7B705</color>
+    <color name="text">#EFE9DD</color>
+    <color name="text_dim">#A89F8F</color>
+    <color name="text_faint">#6B6557</color>
+</resources>

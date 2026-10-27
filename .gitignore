@@ -1,0 +1,35 @@
+# ---- parser samples (pages saved with Ctrl+S, "Webpage, complete") ----
+# kept on disk for local testing only — never committed
+samples/*
+!samples/README.txt
+# a page saved straight into the repo root drags this asset folder along
+*_files/
+*.download
+
+# ---- agent notes ----
+# working notes for whoever picks the repo up next: local machine paths and the
+# user's habits, so they stay on this disk instead of in the published history
+AGENTS.md
+
+# ---- android app ----
+android/local.properties
+android/.gradle/
+android/build/
+android/app/build/
+android/.idea/
+# generated at build time from extension/ — one source of truth
+android/app/src/main/assets/reader/
+android/app/src/main/assets/extractor.bundle.js
+
+# local UI screenshots taken while verifying the app on a device
+android/shots/
+android/build.log
+
+# ---- release signing (never commit a keystore) ----
+android/keystore.properties
+android/*.jks
+android/*.keystore
+
+# release artifacts built locally with .github/scripts (CI builds its own)
+dist/
+notes_preview.md

@@ -1,0 +1,693 @@
+{
+ "source": {
+  "url": "http://127.0.0.1:8799/Reductive%20genome%20evolution%20in%20Buchnera%20aphidicola%20_%20PNAS.html",
+  "host": "127.0.0.1",
+  "adapter": "",
+  "journal": "Proceedings of the National Academy of Sciences",
+  "doi": "10.1073/pnas.0235981100",
+  "pdfUrl": "https://www.pnas.org/doi/pdf/10.1073/pnas.0235981100"
+ },
+ "meta": {
+  "title": "Reductive genome evolution in Buchnera aphidicola",
+  "subtitle": "",
+  "journal": "Proceedings of the National Academy of Sciences",
+  "publisher": "Proceedings of the National Academy of Sciences",
+  "articleType": "research article",
+  "doi": "10.1073/pnas.0235981100",
+  "date": "2003-01-21",
+  "volume": "100",
+  "pages": "581–586",
+  "authors": [
+   "Roeland C. H. J. van Ham",
+   "Judith Kamerbeek",
+   "Carmen Palacios",
+   "Carolina Rausell",
+   "Federico Abascal",
+   "Ugo Bastolla",
+   "Jose M. Fernández",
+   "Luis Jiménez",
+   "Marina Postigo",
+   "Francisco J. Silva",
+   "Javier Tamames",
+   "Enrique Viguera",
+   "Amparo Latorre",
+   "Alfonso Valencia",
+   "Federico Morán",
+   "Andrés Moya"
+  ],
+  "affiliations": [
+   "Institutional Login"
+  ],
+  "keywords": [
+   "Biological Sciences",
+   "Evolution"
+  ]
+ },
+ "abstractHtml": "<div role=\"paragraph\">We have sequenced the genome of the intracellular symbiont <i>Buchnera aphidicola</i> from the aphid <i>Baizongia pistacea</i>. This strain diverged 80–150 million years ago from the common ancestor of two previously sequenced <i>Buchnera</i> strains. Here, a field-collected, nonclonal sample of insects was used as source material for laboratory procedures. As a consequence, the genome assembly unveiled intrapopulational variation, consisting of ≈1,200 polymorphic sites. Comparison of the 618-kb (kbp) genome with the two other <i>Buchnera</i> genomes revealed a nearly perfect gene-order conservation, indicating that the onset of genomic stasis coincided closely with establishment of the symbiosis with aphids, ≈200 million years ago. Extensive genome reduction also predates the synchronous diversification of <i>Buchnera</i> and its host; but, at a slower rate, gene loss continues among the extant lineages. A computational study of protein folding predicts that proteins in <i>Buchnera</i>, as well as proteins of other intracellular bacteria, are generally characterized by smaller folding efficiency compared with proteins of free living bacteria. These and other degenerative genomic features are discussed in light of compensatory processes and theoretical predictions on the long-term evolutionary fate of symbionts like <i>Buchnera</i>.</div>",
+ "sections": [
+  {
+   "id": "lead",
+   "title": "",
+   "level": 0,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Various bacteria have traded their free-living lifestyle for a permanent physical association with eukaryotic hosts. Both symbiotic and parasitic outcomes of such transitions are associated with genome size reduction in the bacterial partner (<a class=\"ref-chip\" data-ref=\"1\" href=\"#ref-1\">1</a>). Bacterial symbioses are widespread among insects, in which they are considered key to several specialized feeding behaviors and to their diversification at large (<a class=\"ref-chip\" data-ref=\"2\" href=\"#ref-2\">2</a>). A model system is the obligate association between aphids and their maternally transmitted, intracellular symbiont <i>Buchnera aphidicola</i> (<a class=\"ref-chip\" data-ref=\"3\" href=\"#ref-3\">3</a>). The bacteria support the exploitation of the poor diet of plant-phloem sap by aphids through supplementation of deficient nutrients, primarily essential amino acids (<a class=\"ref-chip\" data-ref=\"4\" href=\"#ref-4\">4</a>). <i>Buchnera</i> evolved from an enterobacterial-like ancestor 200–250 million years ago (<a class=\"ref-chip\" data-ref=\"5\" href=\"#ref-5\">5</a>), and some of its lineages have the smallest prokaryotic genomes reported to date (<a class=\"ref-chip\" data-ref=\"6\" href=\"#ref-6\">6</a>)."
+    },
+    {
+     "t": "p",
+     "html": "Here, we present the complete genome sequence of <i>B. aphidicola</i> from the aphid <i>Baizongia pistaciae</i> (BBp) and a comparison with the previously sequenced strains from <i>Acyrthosiphon pisum</i> (BAp) (<a class=\"ref-chip\" data-ref=\"7\" href=\"#ref-7\">7</a>) and <i>Schizaphis graminum</i> (BSg) (<a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a>). Phylogenetic studies have shown that the lineages leading to BBp and to the common ancestor of BAp and BSg diverged 80–150 million years ago, representing the evolutionarily most basal branching among modern <i>Buchnera</i> (<a class=\"ref-chip\" data-ref=\"5\" href=\"#ref-5\">5</a>). Our selection of the <i>Buchnera</i> strain from <i>B. pistaciae</i> for comparative analysis will therefore yield a most comprehensive view of genome evolution in <i>Buchnera</i> and of the process of genome reduction during bacterial lifestyle transition in general."
+    },
+    {
+     "t": "p",
+     "html": "In contrast to <i>A. pisum</i> and <i>S. graminum</i>, <i>B. pistaciae</i> has a complex life cycle and has never been cultured in the laboratory. <i>Buchnera</i> itself is considered unculturable (<a class=\"ref-chip\" data-ref=\"3\" href=\"#ref-3\">3</a>, <a class=\"ref-chip\" data-ref=\"4\" href=\"#ref-4\">4</a>). Insects were therefore collected from the field for isolation of the bacteria, and thus for a direct application of the whole-genome shotgun sequencing method (<a class=\"ref-chip\" data-ref=\"9\" href=\"#ref-9\">9</a>) to an environmental DNA sample."
+    }
+   ]
+  },
+  {
+   "id": "sec-materials-and-methods",
+   "title": "Materials and Methods",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "sec-sequencing-and-assembly",
+   "title": "Sequencing and Assembly.",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "<i>B. pistaciae</i> was collected from galls from a natural population on <i>Pistacia</i> trees. <i>Buchnera</i> isolation and subsequent bacterial DNA preparations were performed on samples pooled from 5–20 galls. Because the parthenogenetic offspring within a gall of <i>B. pistaciae</i> originates from a single fertilized egg, DNA preparations were expected to contain up to 20 distinct genotypes. <i>B. aphidicola</i> was purified as reported (<a class=\"ref-chip\" data-ref=\"6\" href=\"#ref-6\">6</a>). DNA was isolated using a Qiagen (Valencia, CA) genomic DNA isolation kit and by quantitative hybridization estimated to contain 55% <i>Buchnera</i> DNA. A small-insert library (1.6–2.0 kb) was generated by mechanical shearing (sonication) of genomic DNA and cloning into pUC18 following a two-step ligation method (<a class=\"ref-chip\" data-ref=\"10\" href=\"#ref-10\">10</a>) and using pulsed-field gel electrophoresis for all fragment isolations. Random shotgun sequencing was performed to an 8.9-fold sequence coverage with 8,405 <i>Buchnera</i>-derived sequences (average read length, 652 nt). This required gathering of a total of 15,777 sequences."
+    }
+   ]
+  },
+  {
+   "id": "sec-genome-analysis",
+   "title": "Genome Analysis.",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Genome assembly and editing were done with Phred, Phrap, and Consed (<a href=\"http://www.phrap.org/\">www.phrap.org</a>). Final assembly resulted in a single contig of the <i>Buchnera</i> chromosome and one small plasmid. Additional sequence reactions were performed to close 42 single-stranded gaps. Coding regions were identified using <span data-style=\"small-caps\">glimmer</span> (<a class=\"ref-chip\" data-ref=\"11\" href=\"#ref-11\">11</a>) and <span data-style=\"small-caps\">genemark</span> (<a class=\"ref-chip\" data-ref=\"12\" href=\"#ref-12\">12</a>), and transfer RNAs were predicted by TRNASCAN-SE (<a class=\"ref-chip\" data-ref=\"13\" href=\"#ref-13\">13</a>). <span data-style=\"small-caps\">blast</span> searches (<a class=\"ref-chip\" data-ref=\"14\" href=\"#ref-14\">14</a>) were used to compare sequences of predicted genes and intergenic regions against other <i>Buchnera</i> genomes and the NCBI nonredundant protein and nucleotide databases, and aided the identification of structural RNAs and pseudogenes. Sequence, annotation, and detailed methodology can be found in <i>Supporting Genome Annotation Methods</i>, which is published as supporting information on the PNAS web site, <a href=\"https://www.pnas.org/\">www.pnas.org</a>, as well as at <a href=\"http://www.pdg.cnb.uam.es/fabascal/Buch_ORFand_www\">www.pdg.cnb.uam.es/fabascal/Buch_ORFand_www</a>. Potential single-nucleotide polymorphisms (SNPs) in the assembly were automatically identified with Consed, using a Phred quality score-threshold of 30 for high-quality discrepancies. All polymorphisms were checked manually to exclude sequencing errors."
+    }
+   ]
+  },
+  {
+   "id": "sec-protein-folding-predictions",
+   "title": "Protein Folding Predictions.",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The normalized energy gap α is defined as the minimal value of the relative energy gap divided by the structural distance between the predicted optimal fold and an ensemble of alternative configurations. The predicted optimal fold was identified by aligning the query sequence with all structures in a database representative of the entire PDB and containing nearly 1,200 protein chains. We then chose the alignment corresponding to the minimal effective energy, calculated as indicated by Bastolla and colleagues (<a class=\"ref-chip\" data-ref=\"15\" href=\"#ref-15\">15</a>, <a class=\"ref-chip\" data-ref=\"16\" href=\"#ref-16\">16</a>). To reduce the complexity of the search, gaps where preassigned at the positions where they are known to occur from the alignment between the query sequence and the sequence of one of the representative structures. Apart from gap placement, the sequence information was not used for the sake of structure prediction. In all cases studied, the predicted optimal sequence coincided with the representative structure of the protein family to which the query sequence belongs. The remaining alternative structural alignments, typically some hundreds of thousands per structure, were used to estimate the energy gap."
+    },
+    {
+     "t": "p",
+     "html": "The following representative structures of protein families were present in our database (PDB ID codes are in parentheses, <a href=\"http://www.rcsb.org/pdb/\">www.rcsb.org/pdb/</a>): epsilon subunit of F1F0-ATP Synthase, atpe_ecoli (1aqt); panthetheine-phosphate adenyltransferase, coad_ecoli (1b6t); <span data-style=\"small-caps\">d</span>-ala <span data-style=\"small-caps\">d</span>-ala ligase, ddlb_ecoli (1iov); phosphocarrier protein H, pthp_ecoli (1opd), pthp_strfe (1ptf); Rnase H, rnh_ecoli (2rn2), rnh_theth (1ril); Rnase P, rnpa_bacsu (1a6f), rnpa_staau (1d6t); triosephosphate isomerase, tpis_ecoli (1tre), tpis_bacst (1btm), tpis_trybb (1tpd), tpis_leime (1amk), tpis_yeast (7tim); thioredoxin I, thio_ecoli (2trx), thi2_anasp (1thx); thioredoxin reductase, trxb_ecoli (1tde); tryptophan synthase alpha chain, trpa_salty (1a50); substrate binding domain of DnaK in complex with substrate peptide, dnak_ecoli (1dkz). The following species were compared: <i>Buchnera</i> strains from aphid hosts <i>B. pistaciae</i>, <i>S. graminum</i>, and <i>A. pisum</i>; obligate parasites <i>Borrelia burgdorferi</i>, <i>Chlamydia pneumoniae</i>, <i>Chlamydia trachomatis</i>, <i>Mycobacterium leprae</i>, <i>Mycoplasma capricolum</i>, <i>Mycoplasma genitalium</i>, <i>Mycoplasma pneumoniae</i>, <i>Rickettsia prowazekii</i>, <i>Treponema pallidum</i>, <i>Ureaplasma parvum</i>; free-living bacteria <i>Bacillus halodurans</i>, <i>Bacillus megaterium</i>, <i>Bacillus subtilis</i>, <i>Campylobacter jejuni</i>, <i>Caulobacter crescentus</i>, <i>Deinococcus radiodurans</i>, <i>Escherichia coli</i>, <i>Eubacterium acidaminophilum</i>, <i>Haemophilus influenzae</i>, <i>Helicobacter pylori</i>, <i>Lactococcus lactis</i>, <i>Listeria monocytogenes</i>, <i>Mesorhizobium loti</i>, <i>Mycobacterium smegmatis</i>, <i>Mycobacterium tuberculosis</i>, <i>Neisseria meningitidis</i>, <i>Pasteurella multocida</i>, <i>Pseudomonas aeruginosa</i>, <i>Pseudomonas putida</i>, <i>Salmonella typhimurium</i>, <i>Staphylococcus aureus</i>, <i>Streptococcus pyogenes</i>, <i>Streptomyces coelicolor</i>, <i>Synechocystis</i> sp., <i>Vibrio cholerae</i>, <i>Xylella fastidiosa</i>, and <i>Zymomonas mobilis</i>."
+    }
+   ]
+  },
+  {
+   "id": "sec-results-and-discussion",
+   "title": "Results and Discussion",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "sec-general-features-of-the-genome",
+   "title": "General Features of the Genome.",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The genome of BBp has a consensus size of 617,838 bp with an average G+C content of 25.3%, and is composed of a 615,980-bp chromosome and a 2,399-bp plasmid (Fig. <a data-fig=\"fig-ure-1\">1</a>, Table <a href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#T1\">1</a>; see Fig. 5, which is published as supporting information on the PNAS web site). The putative origin of replication, in the absence of a diagnostic cluster of DnaA boxes, was determined by GC-skew analysis and mapped to a position identical to those in other <i>Buchnera</i> and enterobacterial genomes (<a class=\"ref-chip\" data-ref=\"7\" href=\"#ref-7\">7</a>, <a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a>). We identified 544 putative genes and nine pseudogenes, all of which had database matches, and 491 (89%) of which were assigned a function. The functional set includes 507 protein-coding genes, one split ribosomal RNA operon, two structural RNAs, and 32 tRNAs specifying all 20 amino acids (Table <a href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#T1\">1</a>)."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-ure-1"
+    }
+   ]
+  },
+  {
+   "id": "sec-intrapopulational-variation",
+   "title": "Intrapopulational Variation.",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The assembly unveiled putative intrapopulational variation at 1,168 sites, including 72 length polymorphisms (indels) and 1,096 dimorphic SNPs (Table <a href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#T2\">2</a>). For the identification of polymorphisms, we used a Phred quality-score threshold of 30 for high-quality discrepancies, which corresponds to a probability of 1 in ≈3,000 that a discrepancy can be attributed to a base calling error. All SNPs were found to be dimorphic, with variants being represented on average by 6.4 reads of the “majority variant” and by 2.5 reads of the “minority variant.” The majority of polymorphisms (67%) was evidenced by more than one discrepant read per site. Although we cannot exclude the possibility that a small fraction of the observed variation was introduced through sequencing errors, it is obvious that the distribution of polymorphisms is entirely consistent with expectations based on natural, rather than experimentally introduced, variation (Table <a href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#T2\">2</a>). Firstly, intergenic regions and pseudogenes were significantly more variable in both classes of polymorphisms than coding regions, whereas pseudogenes in turn were significantly more variable than intergenic regions (binomial test, <i>P</i> &lt; 0.001). Secondly, SNPs showed a strong prevalence of transitions over transversions (5.3), a well known feature of biological sequence evolution that cannot be attributed to sequencing artifacts. The higher frequency of SNPs in pseudogenes (G+C; 23.2%) can partly be attributed to a more recent relaxation of selection against A+T mutational bias compared with intergenic regions (G+C; 15.4%). Likewise, recent relaxation of selection against deletional bias explains the significantly highest frequency of indels in pseudogenes (binomial test, <i>P</i> &lt; 0.001)."
+    },
+    {
+     "t": "p",
+     "html": "Five of a total of 13 polymorphisms that affected the reading frame of protein-coding genes were potentially deleterious and may represent genuine snapshots of gene inactivation. Indels ranged in size from 1–14 bp (average, 1.8 bp) and resulted in a variable genome size range of 128 bp. The majority of indels (86%) appeared to be the result of slipped-strand mispairing involving A/T stretches."
+    },
+    {
+     "t": "p",
+     "html": "Assuming a minimum of two distinct genotypes to explain the observed variation, we estimate that SNPs in coding regions occur at maximal frequencies of 3.2 × 10<sup>−3</sup> as synonymous substitutions per site (<i>K</i><sub>s</sub>) and of 7.2 × 10<sup>−4</sup> as nonsynonymous substitutions per site (<i>K</i><sub>a</sub>). The <i>K</i><sub>s</sub>/<i>K</i><sub>a</sub> ratio of 4.0 is smaller than previous average multilocus estimates for pairs of <i>Buchnera</i> strains (5.1–7.0; ref. <a class=\"ref-chip\" data-ref=\"17\" href=\"#ref-17\">17</a>). The lower <i>K</i><sub>s</sub>/<i>K</i><sub>a</sub> ratio may reflect fractions of both recent mutations within the population, as well as of mutations that occurred within the present generation of predominantly larval aphids and were not yet purged by selection. In general, lower <i>K</i><sub>s</sub>/<i>K</i><sub>a</sub> ratios in <i>Buchnera</i> proteins than in those of free-living bacteria are caused by an accelerated rate of nonsynonymous substitutions and are a signature of increased fixation of mildly deleterious mutations (<a class=\"ref-chip\" data-ref=\"18\" href=\"#ref-18\">18</a>)."
+    }
+   ]
+  },
+  {
+   "id": "sec-genome-comparison",
+   "title": "Genome Comparison.",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "A total of 638 genes have been identified in the genomes of BBp, BAp, and BSg (in this figure we count the gene <i>ribD</i>, which is present as a split gene in BAp and BSg, as a single gene). This set represents a most parsimonious reconstruction of the gene content of the last common, symbiotic ancestor (LCSA) of the three <i>Buchnera</i> lineages (Fig. <a data-fig=\"fig-ure-2\">2</a>; and see Table 3, which is published as supporting information on the PNAS web site). The perfect chromosomal synteny previously described for BAp and BSg (<a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a>) was found to extend to the BBp genome (Fig. <a data-fig=\"fig-ure-1\">1</a>) and hence to the phylogenetic root of <i>Buchnera</i>. Genomic stasis must thus have set in soon after the establishment of the LCSA, which makes <i>Buchnera</i> an ≈200 million-year-old, enterobacterial “gene-order fossil.” We identified only four minor rearrangements in BBp relative to BAp and BSg (Fig. <a data-fig=\"fig-ure-1\">1</a>), including two inversions (one covering genes <i>ygfZ</i>-<i>prfB</i>-<i>lysS</i>-<i>lysA</i>-<i>lgt</i>-<i>thyA</i> and one covering the single gene <i>pyrF</i>) and two translocations (involving the resident plasmids and the essential amino acid biosynthesis genes <i>trpEG</i> and <i>leuABCD</i>)."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-ure-2"
+    },
+    {
+     "t": "p",
+     "html": "Putatively functional copies of 499 genes (78% of the LCSA's gene repertoire) are present in all three genomes. A set of 139 genes (22%) accounts for differences in gene content among the species and includes genes that were entirely lost from one or more lineages, as well as genes that have lost functionality but that are still recognizable as pseudogenes (<a class=\"ref-chip\" data-ref=\"7\" href=\"#ref-7\">7</a>, <a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a>). As expected on the basis of phylogenetic relationships, the difference in functional gene content between BBp on the one hand and BAp and BSg on the other hand is substantially larger than the difference between BAp and BSg. The latter pair differs in the presence or functionality of 54 genes, and they collectively differ in 85 genes from BBp. On top of this, BBp shows 25 and 41 gene content differences with BAp and BSg, respectively (Fig. <a data-fig=\"fig-ure-2\">2</a>)."
+    },
+    {
+     "t": "p",
+     "html": "Using the parsimony criterion and the established phylogenetic relationships, a minimum of 22 genes (3.4%) can be inferred to have undergone parallel evolution. This low level of homoplasy means that the true gene content of the LCSA must have been close to our minimal estimate of 638 genes. A striking example of parallel evolution is found among the set of eight genes that were completely lost in BBp and which are present as pseudogenes in BSg, whereas functional copies are retained in BAp (fourth bar from top in Fig. <a data-fig=\"fig-ure-2\">2</a>). Six of these genes occur in two clusters on the chromosome (<i>cysDGNHI</i> and <i>cysQ</i>) and are involved in assimilatory sulfate reduction and cysteine biosynthesis."
+    },
+    {
+     "t": "p",
+     "html": "Horizontal gene acquisition in chromosomes (<a class=\"ref-chip\" data-ref=\"1\" href=\"#ref-1\">1</a>, <a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a>) has not occurred in <i>Buchnera</i> and the observed synteny therefore facilitates a most parsimonious reconstruction of the history of gene loss from the three genomes since their divergence from the LCSA. Our results indicate that most losses occurred through inactivation and disintegration of individual genes (123 of a total of 163 events). The minority of cases in which two or more adjacent genes were lost includes one large segment in BBp that covers eleven genes (<i>nlpD</i>, ψ<i>ygbB</i>, ψ<i>ygbP</i>, <i>ygbQ</i>, and <i>cysC</i>, -<i>D</i>, -<i>G</i>, -<i>N</i>, -<i>H</i>, -<i>I</i>, and -<i>J</i>). Overall, this pattern supports the hypothesis that ongoing gene loss in <i>Buchnera</i> proceeds predominantly through dispersed inactivation of single genes (<a class=\"ref-chip\" data-ref=\"19\" href=\"#ref-19\">19</a>). Most unexpectedly, however, we observed a significant clustering (χ<a class=\"ref-chip\" data-ref=\"2\" href=\"#ref-2\">2</a> test, <i>P</i> &lt; 0.002) of gene loss and inactivation toward the region containing the terminus of replication in the LCSA chromosome (Fig. <a data-fig=\"fig-ure-3\">3</a>). This suggests that gene inactivation and genome shrinkage proceed fastest from within this region in <i>Buchnera</i>, either as a result of weaker selection on genes in the proximity of the terminus or as a deleterious effect of an impaired replication machinery (see below)."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-ure-3"
+    },
+    {
+     "t": "p",
+     "html": "The reconstructed gene repertoire of the LCSA shows a massive reduction in numbers of genes across all functional categories relative to the closely related <i>E. coli</i> K-12 genome (see Fig. 6<i>A</i>, which is published as supporting information on the PNAS web site). Only four genes (<i>yba2</i>, -<i>3</i>, -<i>4</i>, and <i>aroQ</i>) are absent from the latter. Most strongly affected are regulatory and transport functions, whereas translation and metabolism of nucleotides and amino acids show more moderate shrinkage. Both the disproportionate loss of regulation and conservation of a minimal set of information processing functions are features <i>Buchnera</i> shares with other symbionts and obligate parasites (<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>–<a class=\"ref-chip\" data-ref=\"23\" href=\"#ref-23\">23</a>). Extensive loss of transport capabilities and conservation of gene content for essential amino acid biosynthetic pathways, on the other hand, are confirmed to be prime characteristics of the aphid symbiont (<a class=\"ref-chip\" data-ref=\"7\" href=\"#ref-7\">7</a>). It is possible that some of the functions lost in <i>Buchnera</i> are compensated for by the host (<a class=\"ref-chip\" data-ref=\"7\" href=\"#ref-7\">7</a>)."
+    },
+    {
+     "t": "p",
+     "html": "The integrated view of metabolism, cellular processes, and information processing in <i>Buchnera</i> previously given on the basis of the BAp genome (<a class=\"ref-chip\" data-ref=\"7\" href=\"#ref-7\">7</a>) essentially applies to the LCSA, which resembles BAp's gene content most closely. Ongoing gene loss in the lineages leading to BBp, BAp, and BSg has occurred in nearly all functional categories (see Fig. 6<i>B</i>). Several of the observed differences between the genomes are likely to be implicated in host-specific properties of life cycle dynamics or plant utilization. Examples include the loss in BBp of genes for various cofactors and vitamins, the loss of the biotin biosynthesis genes in BAp and BSg, and the convergent losses in the sulfate reduction and cysteine biosynthesis pathways in BBp and BSg. One exception to the general conservation of essential amino acid biosynthetic pathways in <i>Buchnera</i> is the loss of the ornithine pathway in BBp (<i>argA</i>, -<i>EBC</i>, and -<i>D</i>), with which it lacks the capacity to synthesize the essential amino acid arginine. Possibly a consequence of the absence of this pathway is the loss of several, physically unlinked genes involved in pyrimidine (<i>pyrC</i>, -<i>D</i>, and -<i>I</i>) and spermidine (<i>speDE</i>) metabolism."
+    }
+   ]
+  },
+  {
+   "id": "sec-replication-recombination-and-repair",
+   "title": "Replication, Recombination, and Repair.",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Perhaps the most extraordinary impact of genome reduction in the LCSA is seen in the complement of genes for replication, recombination, and repair (see Table 3). Relative to the LCSA, BBp, BAp, and BSg underwent further losses in this category of seven, two, and six genes, respectively. Homologous recombination pathways were already lost entirely in the LCSA, a condition that, together with the lack of repeated sequences in <i>Buchnera</i> (<a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a>), may explain the observed synteny of the sequenced genomes. We postulate that retention of <i>recBCD</i> in all genomes, in the absence of <i>recA</i>, may serve a general exonuclease repair function as a substitute for recombinational repair."
+    },
+    {
+     "t": "p",
+     "html": "The MutHSL methyl-directed mismatch repair system is intact in BBp, but degenerate in BAp and BSg, notably through loss of the endonuclease component <i>mutH</i>. In view of the functioning of this pathway in the closely related species <i>E. coli</i> (<a class=\"ref-chip\" data-ref=\"24\" href=\"#ref-24\">24</a>), retention of the system is puzzling, given that there is no methylation pathway present in <i>Buchnera</i>. BBp has lost the oxidative damage repair gene <i>mutT</i>, which is responsible for the removal of 8-oxo-dGTP before misincorporation into DNA. Of the six nucleoprotein encoding genes present in the LCSA and BAp, only DNA-binding protein HU-α (<i>hupA</i>) and the single-stranded DNA-binding protein (<i>ssb</i>) are retained in BBp. In addition to transcriptional regulation and chromosome structure, these proteins play an auxiliary role during replication and their absence in BBp may imply chromosomal and replicative instability. Additional losses in BBp associated with the replication machinery include type I topoisomerase activity (<i>topA</i>) and genes for primosomal proteins PriA and DnaT. The latter seem to imply the absence of a reassembly pathway for dissociating replisomes, which occur, for instance, at blocked replication forks, and are further indications of a decreased efficiency of replication in BBp."
+    },
+    {
+     "t": "p",
+     "html": "Detailed analysis of the replication genes in the three <i>Buchnera</i> genomes and in the recently published genome of the related symbiont <i>Wigglesworthia</i> of the tsetse fly (<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>) revealed remarkable truncations of the genes <i>dnaX</i> and <i>polA</i>, which encode subunits of DNA polymerase III holoenzyme (Pol III-HE) and DNA polymerase I (Pol I), respectively. All bacterial genomes sequenced to date carry an orthologue of <i>dnaX</i> that encodes either the τ subunit or both the τ and γ subunits of Pol III-HE, τ as a full-length translational product and γ as a shorter product arising from ribosomal frameshifting or transcriptional slippage of τ (<a class=\"ref-chip\" data-ref=\"25\" href=\"#ref-25\">25</a>). Subunit τ functions in dimerization of Pol III-HE and is implicated in the coordination of leading- and lagging-strand replication (<a class=\"ref-chip\" data-ref=\"26\" href=\"#ref-26\">26</a>). The truncation of <i>dnaX</i> in <i>Buchnera</i> and <i>Wigglesworthia</i> has resulted in a complete loss of τ, a condition unique among bacteria and one likely to decrease the efficiency, accuracy, and processivity of Pol III-HE (<a class=\"ref-chip\" data-ref=\"27\" href=\"#ref-27\">27</a>–<a class=\"ref-chip\" data-ref=\"29\" href=\"#ref-29\">29</a>). Further attenuation of Pol III-HE integrity compared with <i>E. coli</i> is suggested by the absence of genes encoding the θ, χ, and ψ subunits in <i>Buchnera</i> genomes. The truncation of <i>polA</i> in <i>Buchnera</i> and <i>Wigglesworthia</i> implies the loss of both the polymerase and 3′ to 5′ exonuclease (proofreading) domains of DNA polymerase I, leaving only the 5′ to 3′ exonuclease domain intact. This suggests that Pol I is retained for its role in the removal of RNA primers in replication, and that Pol III is the sole DNA polymerase active in both symbionts. In summary, <i>Buchnera</i> appears to rely on an exceptionally reduced replication, recombination, and repair machinery, an attribute that itself constitutes a major agent of genome evolution. As such, it must have contributed to accelerated sequence evolution and gene inactivation in <i>Buchnera</i>."
+    }
+   ]
+  },
+  {
+   "id": "sec-protein-stability",
+   "title": "Protein Stability.",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "One expected manifestation of genome-wide accumulation of mildly deleterious mutations is a decrease in the thermodynamic stability of encoded macromolecules. To assess the extent of this effect in <i>Buchnera</i> proteins, we compared thermodynamic parameters in 11 protein families for a set of 40 bacterial species, including the 3 <i>Buchnera</i> strains and 10 obligate intracellular parasites. A requisite for efficient protein folding is a smooth free-energy landscape (<a class=\"ref-chip\" data-ref=\"30\" href=\"#ref-30\">30</a>). A quantitative measure of this property can be obtained through the normalized energy gap (<a class=\"ref-chip\" data-ref=\"15\" href=\"#ref-15\">15</a>, <a class=\"ref-chip\" data-ref=\"31\" href=\"#ref-31\">31</a>, <a class=\"ref-chip\" data-ref=\"32\" href=\"#ref-32\">32</a>). The normalized energy gap was estimated for each protein sequence by using an effective energy function (<a class=\"ref-chip\" data-ref=\"15\" href=\"#ref-15\">15</a>, <a class=\"ref-chip\" data-ref=\"16\" href=\"#ref-16\">16</a>) and a set of nearly 1,200 protein structures, representative of the entire PDB and containing the 3D structure of at least one member of each protein family. The predicted native structure coincided in all cases with one of the known structures in the same family. In Fig. <a data-fig=\"fig-ure-4\">4</a>, we plotted the estimated energy gap α for each species, averaged over the 4–10 proteins available for that species, against the average sequence similarity to the reference structure of each protein. The correlation between these two quantities is an irrelevant artifact of our method, because the larger the sequence similarity, the better the predicted native structure will resemble the real one. Nevertheless, Fig. <a data-fig=\"fig-ure-4\">4</a> clearly shows that the estimated energy gap for <i>Buchnera</i> proteins is much smaller than one would expect on the basis of sequence similarity alone. Moreover, this result holds not only for the average gap, but also for the gap of all individual proteins. A strikingly similar pattern is observed for other bacteria with obligate intracellular lifestyles."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-ure-4"
+    },
+    {
+     "t": "p",
+     "html": "A decreased energy gap is expected to reduce the efficiency of protein folding and to cause problems of presence of intermediate states in the folding process, with consequently slow folding, limited stability of the native state, and possible misfolding and aggregation. One protein family examined is the chaperone DnaK, which belongs to a class of proteins that assist in the folding and refolding of other proteins. Chaperones are abundantly expressed and evolutionarily among the most conserved proteins in intracellular bacteria. Interestingly, the normalized energy gap of DnaK is large, not only in free-living bacteria but, as an exception to the overall pattern, also in bacteria with an intracellular lifestyle. This suggests that DnaK is subject to a relatively strong selective pressure in intracellular bacteria. A recent simulation of <i>Buchnera</i> population dynamics, using experimental populations of <i>E. coli</i> undergoing intense genetic drift, demonstrated that genome-wide deleterious mutational effects could be buffered by constitutive overexpression of the molecular chaperone GroELS (<a class=\"ref-chip\" data-ref=\"33\" href=\"#ref-33\">33</a>). In light of the present demonstration of decreased protein stability in <i>Buchnera</i> and a previous finding of its abundant expression of GroELS (<a class=\"ref-chip\" data-ref=\"34\" href=\"#ref-34\">34</a>), these data support the hypothesis that GroELS functions in a compensatory mechanism to the accumulation of destabilizing amino acid substitutions in <i>Buchnera</i> proteins (<a class=\"ref-chip\" data-ref=\"18\" href=\"#ref-18\">18</a>)."
+    }
+   ]
+  },
+  {
+   "id": "sec-conclusions",
+   "title": "Conclusions",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Following the hypothesis that the presymbiotic ancestor of <i>Buchnera</i> had a large, enterobacterial-like genome containing at least 1,800–2,400 genes (<a class=\"ref-chip\" data-ref=\"19\" href=\"#ref-19\">19</a>, <a class=\"ref-chip\" data-ref=\"35\" href=\"#ref-35\">35</a>), our comparative analysis of three <i>Buchnera</i> strains has indicated that most of the reduction in genome size (65–74%) occurred soon after the establishment of the symbiosis but before the diversification of the major lineages of extant aphids. Since their divergence from the LCSA, the genomes of BAp, BSg, and BBp underwent further reductions of 5–15%. This pattern is consistent with the view that genome size reduction associated with bacterial lifestyle transition proceeds at an exponentially decreasing pace (<a class=\"ref-chip\" data-ref=\"36\" href=\"#ref-36\">36</a>). From our analysis, a view of degenerate, rather than adaptive, genome evolution in <i>Buchnera</i> emerges. The symptoms include mutational bias, erosion of regulatory systems (regulatory genes, promoters, Shine Dalgarno sequences, transcription attenuators, and DnaA boxes), accumulation of mutations affecting protein stability, ongoing pseudogene formation and gene loss across all functional categories, a bias of gene inactivation toward the terminus of replication, and, most importantly given their exacerbating effect on mutational rates, a continued reduction of the arsenal of repair systems and of the replication machinery."
+    },
+    {
+     "t": "p",
+     "html": "Genetic isolation and small effective population size are major determinants of degenerate genome evolution in <i>Buchnera</i> (<a class=\"ref-chip\" data-ref=\"18\" href=\"#ref-18\">18</a>). In general, such populations are subject to increased genetic drift and reduced efficacy of selection and, as a result, show an irreversible accumulation of mildly deleterious mutations and a progressive loss of fitness. The predicted long-term evolutionary outcome of this process, known as Muller's ratchet, are mutational meltdown and population extinction (<a class=\"ref-chip\" data-ref=\"37\" href=\"#ref-37\">37</a>). The time scale of such a fate for symbionts like <i>Buchnera</i> will depend on a number of factors, including the strength of compensatory processes such as the stabilizing effect of chaperones on cellular proteins (<a class=\"ref-chip\" data-ref=\"33\" href=\"#ref-33\">33</a>), strengths of selection on both host and symbiont, and the exact range of important population genetic parameters like effective population size (<a class=\"ref-chip\" data-ref=\"38\" href=\"#ref-38\">38</a>). The varying extents of genome reduction revealed by the present analysis and the recent finding of <i>Buchnera</i> strains with extremely reduced genomes (<a class=\"ref-chip\" data-ref=\"6\" href=\"#ref-6\">6</a>) seem to further indicate that prolonged genomic stasis is unsustainable and a symptom of genome degeneracy. At the level of aphid hosts, the adverse effects of genomic exhaustion in <i>Buchnera</i> may also be overcome by its replacement with novel symbiotic bacteria. Indeed, a number of recent studies of facultative symbionts support the generality of a “replacement hypothesis” in insect symbioses (<a class=\"ref-chip\" data-ref=\"39\" href=\"#ref-39\">39</a>–<a class=\"ref-chip\" data-ref=\"41\" href=\"#ref-41\">41</a>)."
+    },
+    {
+     "t": "p",
+     "html": "Tamas <i>et al.</i> (<a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a>) inferred from the ≈50 million years of genomic stasis between BAp and BSg that the ecological diversification of aphids cannot be attributed to the genetic diversity of <i>Buchnera</i>. In our extension of the comparison to genomes that diverged over a period three to four times longer, approaching the origin of symbiotic <i>Buchnera</i>, we also observe that diversity in terms of gene content between basal branchings boils down to “less” rather than “different.” This is a reinforcement of the conclusions of Tamas <i>et al.</i> (<a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a>), and one that demotes <i>Buchnera</i> to a provider of only a narrow range of essential nutrients, the requirements for which are apparently very similar among aphids, despite their feeding on an evolutionarily wide range of plant species. Seen from a different angle, however, one can also emphasize that, armed with <i>Buchnera</i>, aphids met a necessary and sufficient condition for their early radiation in the niche of plant-sap feeding."
+    }
+   ]
+  },
+  {
+   "id": "sec-note",
+   "title": "Note",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "This paper was submitted directly (Track II) to the PNAS office."
+    }
+   ]
+  },
+  {
+   "id": "sec-data-availability",
+   "title": "Data Availability",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Data deposition: The sequences of the <i>B. aphidicola</i> chromosome and plasmid have been deposited in the GenBank database (accession nos. AF492591 and AF492592)."
+    }
+   ]
+  },
+  {
+   "id": "sec-acknowledgments",
+   "title": "Acknowledgments",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "We thank J. Pérez-Mercader for vision and support, and R. Gross and F. González-Candelas for reading the manuscript. This work was supported by Fondo Social Europeo, European Union; Fondo Social Europeo para el Desarrollo Regional, European Union; Comunidad Autónoma de Madrid, Spain; Comunidad Autónoma de València, Spain; Instituto Nacional de Técnica Aeroespacial, Spain; and Ministerio de Ciencia y Tecnología, Spain (Grants 2FD1997-1006 and BFM2000-1383)."
+    }
+   ]
+  },
+  {
+   "id": "sec-supporting-information",
+   "title": "Supporting Information",
+   "level": 1,
+   "blocks": []
+  }
+ ],
+ "figures": [
+  {
+   "id": "fig-ure-1",
+   "label": "Fig. 1",
+   "captionHtml": "Comparison of the linearized <i>Buchnera</i> genomes from <i>B. pistaciae</i>, <i>A. pisum</i>, and <i>S. graminum</i>. Nucleotide numbering, marked in 100 kb, starts from the respective origins of replication. Genes above and below lines are transcribed from forward and reverse strands, respectively. Blue, genes present in all genomes; black, RNAs; light green, pseudogenes; pink, inversions; orange, genes unique among the three genomes; red, genes absent only in BBp; dark green, genes absent only in BAp; violet, genes absent only in BSg; yellow, genes chromosomally encoded in BBp and plasmid encoded in BAp and BSg. Hatched lines highlight the inversions in BBp. A map of the 2.4-kb plasmid of BBp is presented in Fig. 5.",
+   "src": "http://127.0.0.1:8799/Reductive%20genome%20evolution%20in%20Buchnera%20aphidicola%20_%20PNAS_files/pq0235981001.jpeg",
+   "thumb": "http://127.0.0.1:8799/Reductive%20genome%20evolution%20in%20Buchnera%20aphidicola%20_%20PNAS_files/pq0235981001.jpeg",
+   "alt": "",
+   "href": "",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-ure-2",
+   "label": "Fig. 2",
+   "captionHtml": "Numerical comparison of the gene content of <i>Buchnera</i> BBp, BAp, and BSg genomes. Solid boxes, genes present; hatched boxes, pseudogenes; open boxes, genes absent. Asterisked numbers denote genes that were putatively lost or inactivated in parallel in independent lineages. Arrows indicate estimated divergence times (<a href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-collateral-B5\" role=\"doc-biblioref\" data-xml-rid=\"B5\" id=\"core-B5-3\">5</a>).",
+   "src": "http://127.0.0.1:8799/Reductive%20genome%20evolution%20in%20Buchnera%20aphidicola%20_%20PNAS_files/pq0235981002.jpeg",
+   "thumb": "http://127.0.0.1:8799/Reductive%20genome%20evolution%20in%20Buchnera%20aphidicola%20_%20PNAS_files/pq0235981002.jpeg",
+   "alt": "",
+   "href": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-collateral-B5",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-ure-3",
+   "label": "Fig. 3",
+   "captionHtml": "Relation between number of events of gene loss and pseudogene formation from the LCSA genome and genomic position of affected genes. The 635 chromosomally encoded genes of the reconstructed LCSA genome were numbered from the putative origin of replication onwards and arranged into 13 bins of ≈50 genes. Green bars represent total numbers per bin of deletion events from all three <i>Buchnera</i> genomes. Yellow bars represent total numbers per bin of pseudogene formation.",
+   "src": "http://127.0.0.1:8799/Reductive%20genome%20evolution%20in%20Buchnera%20aphidicola%20_%20PNAS_files/pq0235981003.jpeg",
+   "thumb": "http://127.0.0.1:8799/Reductive%20genome%20evolution%20in%20Buchnera%20aphidicola%20_%20PNAS_files/pq0235981003.jpeg",
+   "alt": "",
+   "href": "",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-ure-4",
+   "label": "Fig. 4",
+   "captionHtml": "Relation between average protein stability parameter α for 11 proteins in 40 bacterial species and their average sequence similarity to the reference structure of each protein. Bacterial lifestyles are indicated as follows: black dots, free-living bacteria and facultative pathogens; red triangles, obligate parasites; blue squares, <i>Buchnera</i> strains (see <i>Materials and Methods</i> for protein families and species included).",
+   "src": "http://127.0.0.1:8799/Reductive%20genome%20evolution%20in%20Buchnera%20aphidicola%20_%20PNAS_files/pq0235981004.jpeg",
+   "thumb": "http://127.0.0.1:8799/Reductive%20genome%20evolution%20in%20Buchnera%20aphidicola%20_%20PNAS_files/pq0235981004.jpeg",
+   "alt": "",
+   "href": "",
+   "origin": "inline"
+  }
+ ],
+ "references": [
+  {
+   "n": 1,
+   "id": "B1",
+   "html": "<div id=\"B1\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">H Ochman, N A Moran <em>Science</em> <b>292</b>, 1096–1099 (2001).</div><div class=\"external-links\"><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B1\" role=\"menu\" aria-label=\"Citations links\" style=\"display: none;\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B1-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] with genome size reduction in the bacterial partner </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B1-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] Horizontal gene acquisition in chromosomes </span></a></li></ul></div><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B1\" role=\"menu\" aria-label=\"Citations links\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"#core-B1-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] with genome size reduction in the bacterial partner </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B1-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] Horizontal gene acquisition in chromosomes </span></a></li></ul></div></div></div></div>",
+   "text": "H Ochman, N A Moran Science 292, 1096–1099 (2001).a [...] with genome size reduction in the bacterial partner b [...] Horizontal gene acquisition in chromosomes a [...] with genome size reduction in the bacterial partner b [...] Horizontal gene acquisition in chromosomes",
+   "doi": "10.1073/pnas.0235981100#core-B1-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B1-1"
+  },
+  {
+   "n": 2,
+   "id": "B2",
+   "html": "<div id=\"B2\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">P Buchner <em>Endosymbiosis of Animals with Plant Microorganisms</em> (Interscience, New York), pp. 297–332 (1965).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B2-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B2-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "P Buchner Endosymbiosis of Animals with Plant Microorganisms (Interscience, New York), pp. 297–332 (1965).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B2-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B2-1"
+  },
+  {
+   "n": 3,
+   "id": "B3",
+   "html": "<div id=\"B3\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">P Baumann, L Baumann, C Y Lai, D Rouhbakhsh, N A Moran, M A Clark <em>Annu Rev Microbiol</em> <b>49</b>, 55–94 (1995).</div><div class=\"external-links\"><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B3\" role=\"menu\" aria-label=\"Citations links\" style=\"display: none;\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B3-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] Buchnera aphidicola </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B3-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] itself is considered unculturable </span></a></li></ul></div><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B3\" role=\"menu\" aria-label=\"Citations links\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"#core-B3-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] Buchnera aphidicola </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B3-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] itself is considered unculturable </span></a></li></ul></div></div></div></div>",
+   "text": "P Baumann, L Baumann, C Y Lai, D Rouhbakhsh, N A Moran, M A Clark Annu Rev Microbiol 49, 55–94 (1995).a [...] Buchnera aphidicola b [...] itself is considered unculturable a [...] Buchnera aphidicola b [...] itself is considered unculturable",
+   "doi": "10.1073/pnas.0235981100#core-B3-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B3-1"
+  },
+  {
+   "n": 4,
+   "id": "B4",
+   "html": "<div id=\"B4\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">A E Douglas <em>Annu Rev Entomol</em> <b>43</b>, 17–37 (1998).</div><div class=\"external-links\"><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B4\" role=\"menu\" aria-label=\"Citations links\" style=\"display: none;\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B4-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] deficient nutrients, primarily essential amino acids </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B4-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] itself is considered unculturable </span></a></li></ul></div><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B4\" role=\"menu\" aria-label=\"Citations links\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"#core-B4-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] deficient nutrients, primarily essential amino acids </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B4-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] itself is considered unculturable </span></a></li></ul></div></div></div></div>",
+   "text": "A E Douglas Annu Rev Entomol 43, 17–37 (1998).a [...] deficient nutrients, primarily essential amino acids b [...] itself is considered unculturable a [...] deficient nutrients, primarily essential amino acids b [...] itself is considered unculturable",
+   "doi": "10.1073/pnas.0235981100#core-B4-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B4-1"
+  },
+  {
+   "n": 5,
+   "id": "B5",
+   "html": "<div id=\"B5\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">N A Moran, M A Munson, P Baumann, H Ishikawa <em>Proc R Soc London Ser B</em> <b>253</b>, 167–171 (1993).</div><div class=\"external-links\"><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B5\" role=\"menu\" aria-label=\"Citations links\" style=\"display: none;\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B5-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] ancestor 200–250 million years ago </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B5-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] most basal branching among modern Buchnera </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B5-3\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>c [...] lineages. Arrows indicate estimated divergence times </span></a></li></ul></div><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B5\" role=\"menu\" aria-label=\"Citations links\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"#core-B5-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] ancestor 200–250 million years ago </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B5-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] most basal branching among modern Buchnera </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B5-3\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>c [...] lineages. Arrows indicate estimated divergence times </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>d [...] lineages. Arrows indicate estimated divergence times </span></a></li></ul></div></div></div></div>",
+   "text": "N A Moran, M A Munson, P Baumann, H Ishikawa Proc R Soc London Ser B 253, 167–171 (1993).a [...] ancestor 200–250 million years ago b [...] most basal branching among modern Buchnera c [...] lineages. Arrows indicate estimated divergence times a [...] ancestor 200–250 million years ago b [...] most basal branching among modern Buchnera c [...] lineages. Arrows indicate estimated divergence times d [...] lineages. Arrows indicate estimated divergence times",
+   "doi": "10.1073/pnas.0235981100#core-B5-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B5-1"
+  },
+  {
+   "n": 6,
+   "id": "B6",
+   "html": "<div id=\"B6\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">R Gil, B Sabater-Munoz, A Latorre, F J Silva, A Moya <em>Proc Natl Acad Sci USA</em> <b>99</b>, 4454–4458 (2002).</div><div class=\"external-links\"><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B6\" role=\"menu\" aria-label=\"Citations links\" style=\"display: none;\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B6-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] have the smallest prokaryotic genomes reported to date </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B6-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] was purified as reported </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B6-3\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>c [...] strains with extremely reduced genomes </span></a></li></ul></div><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B6\" role=\"menu\" aria-label=\"Citations links\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"#core-B6-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] have the smallest prokaryotic genomes reported to date </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B6-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] was purified as reported </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B6-3\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>c [...] strains with extremely reduced genomes </span></a></li></ul></div></div></div></div>",
+   "text": "R Gil, B Sabater-Munoz, A Latorre, F J Silva, A Moya Proc Natl Acad Sci USA 99, 4454–4458 (2002).a [...] have the smallest prokaryotic genomes reported to date b [...] was purified as reported c [...] strains with extremely reduced genomes a [...] have the smallest prokaryotic genomes reported to date b [...] was purified as reported c [...] strains with extremely reduced genomes",
+   "doi": "10.1073/pnas.0235981100#core-B6-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B6-1"
+  },
+  {
+   "n": 7,
+   "id": "B7",
+   "html": "<div id=\"B7\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">S Shigenobu, H Watanabe, M Hattori, Y Sakaki, H Ishikawa <em>Nature</em> <b>407</b>, 81–86 (2000).</div><div class=\"external-links\"><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B7\" role=\"menu\" aria-label=\"Citations links\" style=\"display: none;\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B7-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] Acyrthosiphon pisum (BAp) </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B7-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] and enterobacterial genomes </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B7-3\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>c [...] as single genes for comparison </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B7-4\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>d [...] Counting one basic repeat unit of the pTrp-plasmids </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B7-5\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>e [...] but that are still recognizable as pseudogenes </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B7-6\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>f [...] to be prime characteristics of the aphid symbiont </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B7-7\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>g [...] are compensated for by the host </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B7-8\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>h [...] previously given on the basis of the BAp genome </span></a></li></ul></div><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B7\" role=\"menu\" aria-label=\"Citations links\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"#core-B7-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] Acyrthosiphon pisum (BAp) </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B7-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] and enterobacterial genomes </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B7-3\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>c [...] as single genes for comparison </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B7-4\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>d [...] Counting one basic repeat unit of the pTrp-plasmids </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B7-5\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>e [...] but that are still recognizable as pseudogenes </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B7-6\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>f [...] to be prime characteristics of the aphid symbiont </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B7-7\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>g [...] are compensated for by the host </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B7-8\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>h [...] previously given on the basis of the BAp genome </span></a></li></ul></div></div></div></div>",
+   "text": "S Shigenobu, H Watanabe, M Hattori, Y Sakaki, H Ishikawa Nature 407, 81–86 (2000).a [...] Acyrthosiphon pisum (BAp) b [...] and enterobacterial genomes c [...] as single genes for comparison d [...] Counting one basic repeat unit of the pTrp-plasmids e [...] but that are still recognizable as pseudogenes f [...] to be prime characteristics of the aphid symbiont g [...] are compensated for by the host h [...] previously given on the basis of the BAp genome a [...] Acyrthosiphon pisum (BAp) b [...] and enterobacterial genomes c [...] as single genes for comparison d [...] Counting one basic repeat unit of the pTrp-plasmids e [...] but that are still recognizable as pseudogenes f [...] to be prime characteristics of the aphid symbiont g [...] are compensated for by the host h [...] previously given on the basis of the BAp genome",
+   "doi": "10.1073/pnas.0235981100#core-B7-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B7-1"
+  },
+  {
+   "n": 8,
+   "id": "B8",
+   "html": "<div id=\"B8\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">I Tamas, L Klasson, B Canback, A K Naslund, A S Eriksson, J J Wernegreen, J P Sandstrom, N A Moran, S G Andersson <em>Science</em> <b>296</b>, 2376–2379 (2002).</div><div class=\"external-links\"><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B8\" role=\"menu\" aria-label=\"Citations links\" style=\"display: none;\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B8-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] Schizaphis graminum (BSg) </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B8-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] and enterobacterial genomes </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B8-3\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>c [...] as single genes for comparison </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B8-4\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>d [...] synteny previously described for BAp and BSg </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B8-5\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>e [...] but that are still recognizable as pseudogenes </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B8-6\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>f [...] Horizontal gene acquisition in chromosomes </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B8-7\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>g [...] with the lack of repeated sequences in Buchnera </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B8-8\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>h [...] Tamas et al. </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B8-9\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>i [...] is a reinforcement of the conclusions of Tamas et al. </span></a></li></ul></div><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B8\" role=\"menu\" aria-label=\"Citations links\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"#core-B8-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] Schizaphis graminum (BSg) </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B8-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] and enterobacterial genomes </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B8-3\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>c [...] as single genes for comparison </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B8-4\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>d [...] synteny previously described for BAp and BSg </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B8-5\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>e [...] but that are still recognizable as pseudogenes </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B8-6\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>f [...] Horizontal gene acquisition in chromosomes </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B8-7\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>g [...] with the lack of repeated sequences in Buchnera </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B8-8\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>h [...] Tamas et al. </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B8-9\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>i [...] is a reinforcement of the conclusions of Tamas et al. </span></a></li></ul></div></div></div></div>",
+   "text": "I Tamas, L Klasson, B Canback, A K Naslund, A S Eriksson, J J Wernegreen, J P Sandstrom, N A Moran, S G Andersson Science 296, 2376–2379 (2002).a [...] Schizaphis graminum (BSg) b [...] and enterobacterial genomes c [...] as single genes for comparison d [...] synteny previously described for BAp and BSg e [...] but that are still recognizable as pseudogenes f [...] Horizontal gene acquisition in chromosomes g [...] with the lack of repeated sequences in Buchnera h [...] Tamas et al. i [...] is a reinforcement of the conclusions of Tamas et al. a [...] Schizaphis graminum (BSg) b [...] and enterobacterial genomes c [...] as single genes for comparison d [...] synteny previously described for BAp and BSg e [...] but that are still recognizable as pseudogenes f [...] Horizontal gene acquisition in chromosomes g [...] with the lack of repeated sequences in Buchnera h [...] Tamas et al. i [...] is a reinforcement of the conclusions of Tamas et al.",
+   "doi": "10.1073/pnas.0235981100#core-B8-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B8-1"
+  },
+  {
+   "n": 9,
+   "id": "B9",
+   "html": "<div id=\"B9\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">C M Fraser, R D Fleischmann <em>Electrophoresis</em> <b>18</b>, 1207–1216 (1997).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B9-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B9-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "C M Fraser, R D Fleischmann Electrophoresis 18, 1207–1216 (1997).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B9-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B9-1"
+  },
+  {
+   "n": 10,
+   "id": "B10",
+   "html": "<div id=\"B10\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">R D Fleischmann, M D Adams, O White, R A Clayton, E F Kirkness, A R Kerlavage, C J Bult, J F Tomb, B A Dougherty, J M Merrick, et al. <em>Science</em> <b>269</b>, 496–512 (1995).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B10-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B10-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "R D Fleischmann, M D Adams, O White, R A Clayton, E F Kirkness, A R Kerlavage, C J Bult, J F Tomb, B A Dougherty, J M Merrick, et al. Science 269, 496–512 (1995).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B10-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B10-1"
+  },
+  {
+   "n": 11,
+   "id": "B11",
+   "html": "<div id=\"B11\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">A L Delcher, D Harmon, S Kasif, O White, S L Salzberg <em>Nucleic Acids Res</em> <b>27</b>, 4636–4641 (1999).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B11-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B11-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "A L Delcher, D Harmon, S Kasif, O White, S L Salzberg Nucleic Acids Res 27, 4636–4641 (1999).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B11-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B11-1"
+  },
+  {
+   "n": 12,
+   "id": "B12",
+   "html": "<div id=\"B12\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">M Borodovsky, J McIninch <em>Comput Chem</em> <b>17</b>, 123–133 (1993).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B12-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B12-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "M Borodovsky, J McIninch Comput Chem 17, 123–133 (1993).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B12-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B12-1"
+  },
+  {
+   "n": 13,
+   "id": "B13",
+   "html": "<div id=\"B13\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">T M Lowe, S R Eddy <em>Nucleic Acids Res</em> <b>25</b>, 955–964 (1997).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B13-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B13-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "T M Lowe, S R Eddy Nucleic Acids Res 25, 955–964 (1997).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B13-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B13-1"
+  },
+  {
+   "n": 14,
+   "id": "B14",
+   "html": "<div id=\"B14\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">S F Altschul, T L Madden, A A Schaffer, J Zhang, Z Zhang, W Miller, D J Lipman <em>Nucleic Acids Res</em> <b>25</b>, 3389–3402 (1997).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B14-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B14-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "S F Altschul, T L Madden, A A Schaffer, J Zhang, Z Zhang, W Miller, D J Lipman Nucleic Acids Res 25, 3389–3402 (1997).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B14-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B14-1"
+  },
+  {
+   "n": 15,
+   "id": "B15",
+   "html": "<div id=\"B15\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">U Bastolla, M Vendruscolo, E W Knapp <em>Proc Natl Acad Sci USA</em> <b>97</b>, 3977–3981 (2000).</div><div class=\"external-links\"><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B15\" role=\"menu\" aria-label=\"Citations links\" style=\"display: none;\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B15-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] calculated as indicated by Bastolla and colleagues </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B15-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] can be obtained through the normalized energy gap </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B15-3\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>c [...] protein sequence by using an effective energy function </span></a></li></ul></div><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B15\" role=\"menu\" aria-label=\"Citations links\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"#core-B15-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] calculated as indicated by Bastolla and colleagues </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B15-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] can be obtained through the normalized energy gap </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B15-3\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>c [...] protein sequence by using an effective energy function </span></a></li></ul></div></div></div></div>",
+   "text": "U Bastolla, M Vendruscolo, E W Knapp Proc Natl Acad Sci USA 97, 3977–3981 (2000).a [...] calculated as indicated by Bastolla and colleagues b [...] can be obtained through the normalized energy gap c [...] protein sequence by using an effective energy function a [...] calculated as indicated by Bastolla and colleagues b [...] can be obtained through the normalized energy gap c [...] protein sequence by using an effective energy function",
+   "doi": "10.1073/pnas.0235981100#core-B15-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B15-1"
+  },
+  {
+   "n": 16,
+   "id": "B16",
+   "html": "<div id=\"B16\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">U Bastolla, J Farwer, E W Knapp, M Vendruscolo <em>Proteins</em> <b>44</b>, 79–96 (2001).</div><div class=\"external-links\"><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B16\" role=\"menu\" aria-label=\"Citations links\" style=\"display: none;\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B16-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] calculated as indicated by Bastolla and colleagues </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B16-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] protein sequence by using an effective energy function </span></a></li></ul></div><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B16\" role=\"menu\" aria-label=\"Citations links\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"#core-B16-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] calculated as indicated by Bastolla and colleagues </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B16-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] protein sequence by using an effective energy function </span></a></li></ul></div></div></div></div>",
+   "text": "U Bastolla, J Farwer, E W Knapp, M Vendruscolo Proteins 44, 79–96 (2001).a [...] calculated as indicated by Bastolla and colleagues b [...] protein sequence by using an effective energy function a [...] calculated as indicated by Bastolla and colleagues b [...] protein sequence by using an effective energy function",
+   "doi": "10.1073/pnas.0235981100#core-B16-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B16-1"
+  },
+  {
+   "n": 17,
+   "id": "B17",
+   "html": "<div id=\"B17\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">M A Clark, N A Moran, P Baumann <em>Mol Biol Evol</em> <b>16</b>, 1586–1598 (1999).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B17-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B17-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "M A Clark, N A Moran, P Baumann Mol Biol Evol 16, 1586–1598 (1999).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B17-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B17-1"
+  },
+  {
+   "n": 18,
+   "id": "B18",
+   "html": "<div id=\"B18\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">N A Moran <em>Proc Natl Acad Sci USA</em> <b>93</b>, 2873–2878 (1996).</div><div class=\"external-links\"><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B18\" role=\"menu\" aria-label=\"Citations links\" style=\"display: none;\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B18-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] of increased fixation of mildly deleterious mutations </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B18-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] proteins </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B18-3\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>c [...] of degenerate genome evolution in Buchnera </span></a></li></ul></div><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B18\" role=\"menu\" aria-label=\"Citations links\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"#core-B18-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] of increased fixation of mildly deleterious mutations </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B18-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] proteins </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B18-3\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>c [...] of degenerate genome evolution in Buchnera </span></a></li></ul></div></div></div></div>",
+   "text": "N A Moran Proc Natl Acad Sci USA 93, 2873–2878 (1996).a [...] of increased fixation of mildly deleterious mutations b [...] proteins c [...] of degenerate genome evolution in Buchnera a [...] of increased fixation of mildly deleterious mutations b [...] proteins c [...] of degenerate genome evolution in Buchnera",
+   "doi": "10.1073/pnas.0235981100#core-B18-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B18-1"
+  },
+  {
+   "n": 19,
+   "id": "B19",
+   "html": "<div id=\"B19\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">F J Silva, A Latorre, A Moya <em>Trends Genet</em> <b>17</b>, 615–618 (2001).</div><div class=\"external-links\"><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B19\" role=\"menu\" aria-label=\"Citations links\" style=\"display: none;\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B19-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] through dispersed inactivation of single genes </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B19-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] genome containing at least 1,800–2,400 genes </span></a></li></ul></div><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B19\" role=\"menu\" aria-label=\"Citations links\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"#core-B19-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] through dispersed inactivation of single genes </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B19-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] genome containing at least 1,800–2,400 genes </span></a></li></ul></div></div></div></div>",
+   "text": "F J Silva, A Latorre, A Moya Trends Genet 17, 615–618 (2001).a [...] through dispersed inactivation of single genes b [...] genome containing at least 1,800–2,400 genes a [...] through dispersed inactivation of single genes b [...] genome containing at least 1,800–2,400 genes",
+   "doi": "10.1073/pnas.0235981100#core-B19-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B19-1"
+  },
+  {
+   "n": 20,
+   "id": "B20",
+   "html": "<div id=\"B20\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">L Akman, A Yamashita, H Watanabe, K Oshima, T Shiba, M Hattori, S Aksoy <em>Nat Genet</em> <b>32</b>, 402–407 (2002).</div><div class=\"external-links\"><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B20\" role=\"menu\" aria-label=\"Citations links\" style=\"display: none;\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B20-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] shares with other symbionts and obligate parasites </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B20-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] of the tsetse fly </span></a></li></ul></div><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B20\" role=\"menu\" aria-label=\"Citations links\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"#core-B20-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] shares with other symbionts and obligate parasites </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B20-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] of the tsetse fly </span></a></li></ul></div></div></div></div>",
+   "text": "L Akman, A Yamashita, H Watanabe, K Oshima, T Shiba, M Hattori, S Aksoy Nat Genet 32, 402–407 (2002).a [...] shares with other symbionts and obligate parasites b [...] of the tsetse fly a [...] shares with other symbionts and obligate parasites b [...] of the tsetse fly",
+   "doi": "10.1073/pnas.0235981100#core-B20-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B20-1"
+  },
+  {
+   "n": 21,
+   "id": "B21",
+   "html": "<div id=\"B21\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">R S Stephens, S Kalman, C Lammel, J Fan, R Marathe, L Aravind, W Mitchell, L Olinger, R L Tatusov, Q Zhao, et al. <em>Science</em> <b>282</b>, 754–759 (1998).</div></div></div>",
+   "text": "R S Stephens, S Kalman, C Lammel, J Fan, R Marathe, L Aravind, W Mitchell, L Olinger, R L Tatusov, Q Zhao, et al. Science 282, 754–759 (1998).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 22,
+   "id": "B22",
+   "html": "<div id=\"B22\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">S G Andersson, A Zomorodipour, J O Andersson, T Sicheritz-Ponten, U C Alsmark, R M Podowski, A K Naslund, A S Eriksson, H H Winkler, C G Kurland <em>Nature</em> <b>396</b>, 133–140 (1998).</div></div></div>",
+   "text": "S G Andersson, A Zomorodipour, J O Andersson, T Sicheritz-Ponten, U C Alsmark, R M Podowski, A K Naslund, A S Eriksson, H H Winkler, C G Kurland Nature 396, 133–140 (1998).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 23,
+   "id": "B23",
+   "html": "<div id=\"B23\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">C M Fraser, J D Gocayne, O White, M D Adams, R A Clayton, R D Fleischmann, C J Bult, A R Kerlavage, G Sutton, J M Kelley, et al. <em>Science</em> <b>270</b>, 397–403 (1995).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B23-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B23-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "C M Fraser, J D Gocayne, O White, M D Adams, R A Clayton, R D Fleischmann, C J Bult, A R Kerlavage, G Sutton, J M Kelley, et al. Science 270, 397–403 (1995).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B23-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B23-1"
+  },
+  {
+   "n": 24,
+   "id": "B24",
+   "html": "<div id=\"B24\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">W D Rupp <em>Escherichia coli and Salmonella: Cellular and Molecular Biology</em>, ed F C Neidhardt (Am. Soc. Microbiol. Press, Washington, DC), pp. 2277–2294 (1996).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B24-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B24-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "W D Rupp Escherichia coli and Salmonella: Cellular and Molecular Biology, ed F C Neidhardt (Am. Soc. Microbiol. Press, Washington, DC), pp. 2277–2294 (1996).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B24-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B24-1"
+  },
+  {
+   "n": 25,
+   "id": "B25",
+   "html": "<div id=\"B25\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">K J Marians <em>Escherichia coli and Salmonella: Cellular and Molecular Biology</em>, ed F C Neidhardt (Am. Soc. Microbiol. Press, Washington, DC), pp. 749–764 (1996).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B25-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B25-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "K J Marians Escherichia coli and Salmonella: Cellular and Molecular Biology, ed F C Neidhardt (Am. Soc. Microbiol. Press, Washington, DC), pp. 749–764 (1996).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B25-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B25-1"
+  },
+  {
+   "n": 26,
+   "id": "B26",
+   "html": "<div id=\"B26\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">S Kim, H G Dallmann, C S McHenry, K J Marians <em>J Biol Chem</em> <b>271</b>, 21406–21412 (1996).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B26-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B26-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "S Kim, H G Dallmann, C S McHenry, K J Marians J Biol Chem 271, 21406–21412 (1996).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B26-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B26-1"
+  },
+  {
+   "n": 27,
+   "id": "B27",
+   "html": "<div id=\"B27\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">J Liu, L Xu, S J Sandler, K J Marians <em>Proc Natl Acad Sci USA</em> <b>96</b>, 3552–3555 (1999).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B27-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B27-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "J Liu, L Xu, S J Sandler, K J Marians Proc Natl Acad Sci USA 96, 3552–3555 (1999).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B27-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B27-1"
+  },
+  {
+   "n": 28,
+   "id": "B28",
+   "html": "<div id=\"B28\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">S Kim, H G Dallmann, C S McHenry, K J Marians <em>Cell</em> <b>84</b>, 643–650 (1996).</div></div></div>",
+   "text": "S Kim, H G Dallmann, C S McHenry, K J Marians Cell 84, 643–650 (1996).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 29,
+   "id": "B29",
+   "html": "<div id=\"B29\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">H G Dallmann, S Kim, A E Pritchard, K J Marians, C S McHenry <em>J Biol Chem</em> <b>75</b>, 15512–15519 (2000).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B29-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B29-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "H G Dallmann, S Kim, A E Pritchard, K J Marians, C S McHenry J Biol Chem 75, 15512–15519 (2000).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B29-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B29-1"
+  },
+  {
+   "n": 30,
+   "id": "B30",
+   "html": "<div id=\"B30\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">J D Bryngelson, P G Wolynes <em>Proc Natl Acad Sci USA</em> <b>84</b>, 7524–7528 (1987).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B30-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B30-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "J D Bryngelson, P G Wolynes Proc Natl Acad Sci USA 84, 7524–7528 (1987).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B30-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B30-1"
+  },
+  {
+   "n": 31,
+   "id": "B31",
+   "html": "<div id=\"B31\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">A M Gutin, V I Abkevich, E I Shakhnovich <em>Proc Natl Acad Sci USA</em> <b>92</b>, 1282–1286 (1995).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B31-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B31-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "A M Gutin, V I Abkevich, E I Shakhnovich Proc Natl Acad Sci USA 92, 1282–1286 (1995).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B31-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B31-1"
+  },
+  {
+   "n": 32,
+   "id": "B32",
+   "html": "<div id=\"B32\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">U Bastolla, H E Roman, M Vendruscolo <em>J Theor Biol</em> <b>200</b>, 49–64 (1999).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B32-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B32-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "U Bastolla, H E Roman, M Vendruscolo J Theor Biol 200, 49–64 (1999).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B32-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B32-1"
+  },
+  {
+   "n": 33,
+   "id": "B33",
+   "html": "<div id=\"B33\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">M A Fares, M X Ruiz-González, A Moya, S F Elena, E Barrio <em>Nature</em> <b>417</b>, 398 (2002).</div><div class=\"external-links\"><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B33\" role=\"menu\" aria-label=\"Citations links\" style=\"display: none;\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B33-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] overexpression of the molecular chaperone GroELS </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B33-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] stabilizing effect of chaperones on cellular proteins </span></a></li></ul></div><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B33\" role=\"menu\" aria-label=\"Citations links\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"#core-B33-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] overexpression of the molecular chaperone GroELS </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B33-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] stabilizing effect of chaperones on cellular proteins </span></a></li></ul></div></div></div></div>",
+   "text": "M A Fares, M X Ruiz-González, A Moya, S F Elena, E Barrio Nature 417, 398 (2002).a [...] overexpression of the molecular chaperone GroELS b [...] stabilizing effect of chaperones on cellular proteins a [...] overexpression of the molecular chaperone GroELS b [...] stabilizing effect of chaperones on cellular proteins",
+   "doi": "10.1073/pnas.0235981100#core-B33-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B33-1"
+  },
+  {
+   "n": 34,
+   "id": "B34",
+   "html": "<div id=\"B34\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">P Baumann, L Baumann, M A Clark <em>Curr Microbiol</em> <b>32</b>, 279–285 (1996).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B34-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B34-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "P Baumann, L Baumann, M A Clark Curr Microbiol 32, 279–285 (1996).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B34-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B34-1"
+  },
+  {
+   "n": 35,
+   "id": "B35",
+   "html": "<div id=\"B35\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">Moran, N. A. &amp; Mira, A. (2001) <i>Genome Biol.</i><b>2,</b> research0054.1–12.</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B35-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B35-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "Moran, N. A. & Mira, A. (2001) Genome Biol.2, research0054.1–12.Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B35-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B35-1"
+  },
+  {
+   "n": 36,
+   "id": "B36",
+   "html": "<div id=\"B36\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">N A Moran <em>Cell</em> <b>108</b>, 583–586 (2002).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B36-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B36-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "N A Moran Cell 108, 583–586 (2002).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B36-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B36-1"
+  },
+  {
+   "n": 37,
+   "id": "B37",
+   "html": "<div id=\"B37\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">M Lynch, R Bürger, D Butcher, W Gabriel <em>J Hered</em> <b>84</b>, 339–344 (1993).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B37-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B37-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "M Lynch, R Bürger, D Butcher, W Gabriel J Hered 84, 339–344 (1993).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B37-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B37-1"
+  },
+  {
+   "n": 38,
+   "id": "B38",
+   "html": "<div id=\"B38\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">C Rispe, N A Moran <em>Am Nat</em> <b>156</b>, 425–441 (2000).</div><div class=\"external-links\"><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B38\" role=\"menu\" aria-label=\"Citations links\" style=\"display: none;\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B38-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] Counting one basic repeat unit of the pTrp-plasmids </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B38-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] genetic parameters like effective population size </span></a></li></ul></div><div class=\"to-citation__accordion no-separator\" id=\"to-citation__accordion-B38\" role=\"menu\" aria-label=\"Citations links\"><ul role=\"none\"><li role=\"none\"><a class=\"to-citation\" href=\"#core-B38-1\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>a [...] Counting one basic repeat unit of the pTrp-plasmids </span></a></li><li role=\"none\"><a class=\"to-citation\" href=\"#core-B38-2\" target=\"_self\" role=\"menuitem\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>b [...] genetic parameters like effective population size </span></a></li></ul></div></div></div></div>",
+   "text": "C Rispe, N A Moran Am Nat 156, 425–441 (2000).a [...] Counting one basic repeat unit of the pTrp-plasmids b [...] genetic parameters like effective population size a [...] Counting one basic repeat unit of the pTrp-plasmids b [...] genetic parameters like effective population size",
+   "doi": "10.1073/pnas.0235981100#core-B38-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B38-1"
+  },
+  {
+   "n": 39,
+   "id": "B39",
+   "html": "<div id=\"B39\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">T Fukatsu, H Ishikawa <em>J Insect Physiol</em> <b>38</b>, 765–773 (1992).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B39-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B39-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "T Fukatsu, H Ishikawa J Insect Physiol 38, 765–773 (1992).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B39-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B39-1"
+  },
+  {
+   "n": 40,
+   "id": "B40",
+   "html": "<div id=\"B40\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">N A Moran, P Baumann <em>Trends Ecol Evol</em> <b>9</b>, 15–20 (1994).</div></div></div>",
+   "text": "N A Moran, P Baumann Trends Ecol Evol 9, 15–20 (1994).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 41,
+   "id": "B41",
+   "html": "<div id=\"B41\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">C D von Dohlen, S Kohler, S T Alsop, W R McManus <em>Nature</em> <b>412</b>, 433–436 (2001).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B41-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B41-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "C D von Dohlen, S Kohler, S T Alsop, W R McManus Nature 412, 433–436 (2001).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B41-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B41-1"
+  },
+  {
+   "n": 42,
+   "id": "B42",
+   "html": "<div id=\"B42\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">L Baumann, P Baumann, N A Moran, J Sandstrom, M L Thao <em>J Mol Evol</em> <b>48</b>, 77–85 (1999).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B42-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B42-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "L Baumann, P Baumann, N A Moran, J Sandstrom, M L Thao J Mol Evol 48, 77–85 (1999).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B42-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B42-1"
+  },
+  {
+   "n": 43,
+   "id": "B43",
+   "html": "<div id=\"B43\" class=\"citations\"><div class=\"citation\"><div class=\"citation-content\">C Y Lai, L Baumann, P Baumann <em>Proc Natl Acad Sci USA</em> <b>91</b>, 3819–3823 (1994).</div><div class=\"external-links\"><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"#core-B43-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div><div class=\"to-citation__wrapper\"><a class=\"to-citation\" href=\"https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B43-1\" target=\"_self\"><i class=\"icon-return\" aria-hidden=\"true\"></i><span>Go to reference</span></a></div></div></div></div>",
+   "text": "C Y Lai, L Baumann, P Baumann Proc Natl Acad Sci USA 91, 3819–3823 (1994).Go to referenceGo to reference",
+   "doi": "10.1073/pnas.0235981100#core-B43-1",
+   "url": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#core-B43-1"
+  }
+ ],
+ "citationStyle": "numeric",
+ "supplementary": [
+  {
+   "label": "Supporting Information",
+   "href": "https://www.pnas.org/doi/full/10.1073/pnas.0235981100#supplementary-materials",
+   "kind": "link"
+  },
+  {
+   "label": "Download, PDF (2.43 MB)",
+   "href": "https://www.pnas.org/doi/suppl/10.1073/pnas.0235981100/suppl_file/5981fig5.pdf",
+   "kind": "file"
+  }
+ ],
+ "warnings": [],
+ "stats": {
+  "ms": 297,
+  "bodyChars": 68450,
+  "paragraphs": 28
+ }
+}

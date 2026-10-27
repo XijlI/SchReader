@@ -1,0 +1,185 @@
+{
+ "source": {
+  "url": "http://127.0.0.1:8799/dev/fixtures/elsevier-like.html?v=1792956135",
+  "host": "127.0.0.1",
+  "adapter": "",
+  "journal": "Journal of Synthetic Testing",
+  "doi": "10.9999/jst.2026.0042",
+  "pdfUrl": "https://example.org/jst/0042.pdf"
+ },
+ "meta": {
+  "title": "Synthetic wheat lines show heritable changes in root architecture under mild drought",
+  "subtitle": "",
+  "journal": "Journal of Synthetic Testing",
+  "publisher": "",
+  "articleType": "Research article",
+  "doi": "10.9999/jst.2026.0042",
+  "date": "2026-03-14",
+  "volume": "112",
+  "pages": "45–58",
+  "authors": [
+   "Maria Alvarez",
+   "Chidi Okonkwo",
+   "Joris van der Berg"
+  ],
+  "affiliations": [
+   "1Department of Plant Sciences, Example University, Exampletown, EX1 2AB, UK. 2Institute of Soil Ecology, Example Institute, Sample City, EX3 4CD, UK."
+  ],
+  "keywords": []
+ },
+ "abstractHtml": "\n    \n    <p>Root system architecture determines water capture in dry soils. We grew 240 recombinant inbred\n      lines under two watering regimes and measured rooting depth, lateral root density and xylem vessel\n      diameter. Lines carrying the <i>RtA1</i> allele showed a 19% increase in deep-root fraction under\n      mild drought, and this difference persisted across two seasons. Transcript profiling of root tips\n      identified a small module of 34 genes whose expression tracked the deep-root phenotype.</p>\n  ",
+ "sections": [
+  {
+   "id": "sec-1-introduction",
+   "title": "1. Introduction",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Wheat yields under rain-fed conditions depend strongly on how quickly roots reach subsoil water.\n        Breeding for deep roots has been attempted for decades with mixed success<sup><a class=\"ref-chip\" data-ref=\"1\" href=\"#ref-1\">1</a></sup>,\n        in part because root traits are difficult to phenotype at scale<sup><a class=\"ref-chip\" data-ref=\"2\" href=\"#ref-2\">2</a></sup>.\n        Recent work suggests that relatively few loci control the partitioning of root mass with depth<sup><a class=\"ref-chip\" data-ref=\"3\" href=\"#ref-3\">3</a>,\n        <a class=\"ref-chip\" data-ref=\"4\" href=\"#ref-4\">4</a></sup>."
+    },
+    {
+     "t": "p",
+     "html": "Here we combine a field trial, a controlled-environment experiment and transcript profiling to ask\n        whether a single allele at the <i>RtA1</i> locus is sufficient to shift root mass downward without a\n        yield penalty."
+    }
+   ]
+  },
+  {
+   "id": "sec-2-results",
+   "title": "2. Results",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Across both watering regimes, rooting depth at anthesis ranged from 41 to 96 cm\n        (<a class=\"fig-link\" data-fig=\"fig-1\">Fig. 1</a>a). The distribution was bimodal in the drought treatment and unimodal in the well-watered\n        treatment (<a class=\"fig-link\" data-fig=\"fig-1\">Fig. 1</a>b). Lines grouped by <i>RtA1</i> genotype differed in the deep-root fraction\n        (<a class=\"fig-link\" data-fig=\"fig-2\">Fig. 2</a>)."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-1"
+    },
+    {
+     "t": "p",
+     "html": "Transcript profiling of the top 2 cm of root identified 34 genes differentially expressed between\n        genotype classes, of which 21 were also differentially expressed in the second season\n        (Supplementary Table 3)."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-2"
+    }
+   ]
+  },
+  {
+   "id": "sec-3-discussion",
+   "title": "3. Discussion",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Our results are consistent with a model in which the <i>RtA1</i> allele alters the timing of\n        lateral root initiation rather than the total number of lateral roots<sup><a class=\"ref-chip\" data-ref=\"5\" href=\"#ref-5\">5</a></sup>.\n        The absence of a yield penalty in the drought treatment is encouraging, although the trial covered\n        only two seasons."
+    },
+    {
+     "t": "p",
+     "html": "Several caveats apply. Phenotyping was destructive, so we could not follow individual roots over\n        time. The transcript module is correlative, and the causal variant remains to be identified."
+    }
+   ]
+  },
+  {
+   "id": "sec-4-methods",
+   "title": "4. Methods",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "sec-4-1-field-trial",
+   "title": "4.1 Field trial",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Seeds were sown in October 2024 and 2025 in a randomised block design with four replicates. Plots\n        received either ambient rainfall or a rain-out shelter from stem elongation onward."
+    }
+   ]
+  },
+  {
+   "id": "sec-4-2-root-sampling",
+   "title": "4.2 Root sampling",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Roots were sampled with a 6 cm diameter auger to 100 cm depth in 10 cm increments, washed over a\n        2 mm sieve and scanned at 600 dpi."
+    }
+   ]
+  }
+ ],
+ "figures": [
+  {
+   "id": "fig-1",
+   "label": "Fig. 1",
+   "captionHtml": "\n           Rooting depth distributions at anthesis.\n          (a) Depth by line, sorted within treatment. (b) Density of depth in the two watering regimes.\n          Dashed lines mark the 60 cm threshold used throughout.\n        ",
+   "src": "http://127.0.0.1:8799/dev/fixtures/figs/fig1.png",
+   "thumb": "http://127.0.0.1:8799/dev/fixtures/figs/fig1.png",
+   "alt": "Rooting depth distributions",
+   "href": "",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-2",
+   "label": "Fig. 2",
+   "captionHtml": "\n           Deep-root fraction by <i>RtA1</i> genotype in both seasons.\n          Boxes show median and interquartile range; points are individual lines.\n        ",
+   "src": "http://127.0.0.1:8799/dev/fixtures/figs/fig2.png",
+   "thumb": "http://127.0.0.1:8799/dev/fixtures/figs/fig2.png",
+   "alt": "Deep root fraction by genotype",
+   "href": "",
+   "origin": "inline"
+  }
+ ],
+ "references": [
+  {
+   "n": 1,
+   "id": "bibr1",
+   "html": " Smith, J. A. &amp; Lee, K. Deep rooting in cereals: a review. <i>Field Crops Res.</i> <b>201</b>, 12–29 (2018).",
+   "text": "Smith, J. A. & Lee, K. Deep rooting in cereals: a review. Field Crops Res. 201, 12–29 (2018).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 2,
+   "id": "bibr2",
+   "html": " Duarte, P. et al. High-throughput root phenotyping platforms. <i>Plant Methods</i> <b>14</b>, 88 (2018).",
+   "text": "Duarte, P. et al. High-throughput root phenotyping platforms. Plant Methods 14, 88 (2018).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 3,
+   "id": "bibr3",
+   "html": " Nakamura, R. et al. Quantitative trait loci for root angle in wheat. <i>Theor. Appl. Genet.</i> <b>133</b>, 1001–1015 (2020).",
+   "text": "Nakamura, R. et al. Quantitative trait loci for root angle in wheat. Theor. Appl. Genet. 133, 1001–1015 (2020).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 4,
+   "id": "bibr4",
+   "html": " Haddad, Y. &amp; Osei, B. Genetic control of root mass partitioning. <i>J. Exp. Bot.</i> <b>72</b>, 4410–4423 (2021).",
+   "text": "Haddad, Y. & Osei, B. Genetic control of root mass partitioning. J. Exp. Bot. 72, 4410–4423 (2021).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 5,
+   "id": "bibr5",
+   "html": " Ivanova, S. Lateral root initiation timing and soil water. <i>New Phytol.</i> <b>231</b>, 77–90 (2021).",
+   "text": "Ivanova, S. Lateral root initiation timing and soil water. New Phytol. 231, 77–90 (2021).",
+   "doi": "",
+   "url": ""
+  }
+ ],
+ "supplementary": [],
+ "warnings": [],
+ "stats": {
+  "ms": 11,
+  "bodyChars": 3722,
+  "paragraphs": 8
+ }
+}

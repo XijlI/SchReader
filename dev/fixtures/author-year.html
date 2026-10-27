@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Test article — author/year citations</title>
+<!-- SYNTHETIC TEST FIXTURE. Not a real paper: hand-written markup that mimics a Wiley /
+     ecological-journal article using AUTHOR-YEAR citations, so the name-year linker can be
+     exercised (Wiley itself is behind Cloudflare for automated browsers). -->
+<meta name="citation_title" content="Synthetic symbiont survey shows host-driven turnover in aphid endosymbionts">
+<meta name="citation_journal_title" content="Journal of Synthetic Ecology">
+<meta name="citation_author" content="Abbot, Philippa A.">
+<meta name="citation_author" content="Degnan, Patrick H.">
+<meta name="citation_doi" content="10.9999/jse.2005.02744">
+<meta name="citation_publication_date" content="2005/09/19">
+<meta name="citation_volume" content="11">
+<meta name="citation_firstpage" content="2649">
+<meta name="citation_lastpage" content="2660">
+<meta name="citation_article_type" content="Review">
+<link rel="stylesheet" href="fixture.css">
+</head>
+<body>
+<nav class="site-nav"><a href="/">Home</a> <a href="/search">Search</a></nav>
+<main>
+  <div class="article-header">
+    <p class="journal-line"><a href="/jse">Journal of Synthetic Ecology</a></p>
+    <h1>Synthetic symbiont survey shows host-driven turnover in aphid endosymbionts</h1>
+    <p class="byline">Philippa A. Abbot, Patrick H. Degnan</p>
+    <p class="affiliations">Department of Synthetic Ecology, Example University, Exampletown, EX1 2AB, UK.</p>
+    <p class="dates">First published: 19 September 2005</p>
+  </div>
+
+  <div class="abstract author" id="abstract">
+    <h2>Abstract</h2>
+    <p>Endosymbiont communities of aphids were surveyed across 41 host species. Turnover between host
+      clades was higher than turnover within clades, consistent with host-driven selection rather than
+      vertical transmission alone.</p>
+  </div>
+
+  <div id="body" class="Body">
+    <section>
+      <h2>Introduction</h2>
+      <p>Early surveys of aphid endosymbionts established that a single obligate partner dominates each
+        host species (Abbot &amp; Moran 2002). Subsequent work extended this to secondary symbionts, which
+        are patchily distributed (Moran et al. 2003). Two competing explanations remain: strict vertical
+        transmission, or frequent horizontal acquisition followed by host filtering (Abbot 2002;
+        Degnan &amp; Moran 2004).</p>
+      <p>A third possibility is that symbiont lineages turn over on the same time scale as host
+        diversification, which would make the two signals indistinguishable in cross-sectional data.</p>
+    </section>
+
+    <section>
+      <h2>Materials and methods</h2>
+      <p>Aphids were collected from 41 host plant species over three seasons. Diagnostic PCR was used to
+        type each colony, following the protocol of Abbot and Moran (2002), with the modification
+        described by Moran et al. (2003).</p>
+      <h3>Statistical analysis</h3>
+      <p>Turnover was partitioned with a beta-diversity decomposition (Degnan 2005).</p>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <p>Of 612 colonies typed, 588 carried the expected obligate symbiont. Secondary symbiont carriage
+        varied from 4% to 71% between host clades (Fig. 1). Turnover between clades exceeded within-clade
+        turnover in every season, a pattern also visible in the pooled data (Fig. 2).</p>
+
+      <figure class="figure">
+        <div class="figure-image"><img src="figs/fig1.png" alt="Carriage rates by host clade"></div>
+        <div class="caption">
+          <span class="label">Fig. 1</span> Secondary symbiont carriage rates across host clades.
+          Bars show the proportion of colonies carrying at least one secondary symbiont.
+        </div>
+      </figure>
+
+      <p>The relationship between clade age and turnover was weak, which is difficult to reconcile with
+        a purely co-speciating model (Moran et al. 2003).</p>
+
+      <figure class="figure">
+        <div class="figure-image"><img src="figs/fig2.png" alt="Between vs within clade turnover"></div>
+        <div class="caption">
+          <span class="label">Fig. 2</span> Between-clade and within-clade turnover in three sampling
+          seasons.
+        </div>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Discussion</h2>
+      <p>Our results favour host filtering over strict co-speciation (Abbot &amp; Moran 2002; Degnan
+        &amp; Moran 2004). The weak age signal is consistent with rapid turnover of facultative partners.</p>
+    </section>
+  </div>
+
+  <section class="references" id="references">
+    <h2>References</h2>
+    <ol class="references">
+      <li id="b1">Abbot PA, Moran NA (2002) Extremely low levels of genetic polymorphism in
+        endosymbionts (Buchnera) of aphids. <i>Journal of Synthetic Ecology</i>, 11, 2649–2660.
+        doi:10.9999/jse.2002.01646</li>
+      <li id="b2">Moran NA, Degnan PH, Santos SR et al. (2003) The players in a mutualistic symbiosis.
+        <i>Proceedings of Synthetic Biology</i>, 100, 14543–14548. doi:10.9999/psb.2003.001</li>
+      <li id="b3">Degnan PH, Moran NA (2004) Evolutionary genetics of a defensive facultative symbiont.
+        <i>Journal of Synthetic Ecology</i>, 13, 121–131. doi:10.9999/jse.2004.02112</li>
+      <li id="b4">Degnan PH (2005) Partitioning beta diversity in host-associated communities.
+        <i>Methods in Synthetic Ecology</i>, 2, 44–59. doi:10.9999/mse.2005.0044</li>
+    </ol>
+  </section>
+</main>
+</body>
+</html>

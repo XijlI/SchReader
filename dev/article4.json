@@ -1,0 +1,167 @@
+{
+ "source": {
+  "url": "http://127.0.0.1:8799/dev/fixtures/author-year.html?v=1792958340",
+  "host": "127.0.0.1",
+  "adapter": "",
+  "journal": "Journal of Synthetic Ecology",
+  "doi": "10.9999/jse.2005.02744",
+  "pdfUrl": ""
+ },
+ "meta": {
+  "title": "Synthetic symbiont survey shows host-driven turnover in aphid endosymbionts",
+  "subtitle": "",
+  "journal": "Journal of Synthetic Ecology",
+  "publisher": "",
+  "articleType": "Review",
+  "doi": "10.9999/jse.2005.02744",
+  "date": "2005-09-19",
+  "volume": "11",
+  "pages": "2649–2660",
+  "authors": [
+   "Philippa A. Abbot",
+   "Patrick H. Degnan"
+  ],
+  "affiliations": [
+   "Department of Synthetic Ecology, Example University, Exampletown, EX1 2AB, UK."
+  ],
+  "keywords": []
+ },
+ "abstractHtml": "\n    \n    <p>Endosymbiont communities of aphids were surveyed across 41 host species. Turnover between host\n      clades was higher than turnover within clades, consistent with host-driven selection rather than\n      vertical transmission alone.</p>\n  ",
+ "sections": [
+  {
+   "id": "sec-introduction",
+   "title": "Introduction",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Early surveys of aphid endosymbionts established that a single obligate partner dominates each\n        host species <a class=\"ref-chip ny\" data-ref=\"1\" data-ny=\"1\" href=\"#ref-1\">(Abbot &amp; Moran 2002)</a>. Subsequent work extended this to secondary symbionts, which\n        are patchily distributed <a class=\"ref-chip ny\" data-ref=\"2\" data-ny=\"1\" href=\"#ref-2\">(Moran et al. 2003)</a>. Two competing explanations remain: strict vertical\n        transmission, or frequent horizontal acquisition followed by host filtering <a class=\"ref-chip ny\" data-ref=\"1\" data-ny=\"1\" href=\"#ref-1\">(Abbot 2002</a>;\n        <a class=\"ref-chip ny\" data-ref=\"3\" data-ny=\"1\" href=\"#ref-3\">Degnan &amp; Moran 2004)</a>."
+    },
+    {
+     "t": "p",
+     "html": "A third possibility is that symbiont lineages turn over on the same time scale as host\n        diversification, which would make the two signals indistinguishable in cross-sectional data."
+    }
+   ]
+  },
+  {
+   "id": "sec-materials-and-methods",
+   "title": "Materials and methods",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Aphids were collected from 41 host plant species over three seasons. Diagnostic PCR was used to\n        type each colony, following the protocol of <a class=\"ref-chip ny\" data-ref=\"1\" data-ny=\"1\" href=\"#ref-1\">Abbot and Moran (2002)</a>, with the modification\n        described by <a class=\"ref-chip ny\" data-ref=\"2\" data-ny=\"1\" href=\"#ref-2\">Moran et al. (2003)</a>."
+    }
+   ]
+  },
+  {
+   "id": "sec-statistical-analysis",
+   "title": "Statistical analysis",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Turnover was partitioned with a beta-diversity decomposition <a class=\"ref-chip ny\" data-ref=\"4\" data-ny=\"1\" href=\"#ref-4\">(Degnan 2005)</a>."
+    }
+   ]
+  },
+  {
+   "id": "sec-results",
+   "title": "Results",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Of 612 colonies typed, 588 carried the expected obligate symbiont. Secondary symbiont carriage\n        varied from 4% to 71% between host clades (<a class=\"fig-link\" data-fig=\"fig-1\">Fig. 1</a>). Turnover between clades exceeded within-clade\n        turnover in every season, a pattern also visible in the pooled data (<a class=\"fig-link\" data-fig=\"fig-2\">Fig. 2</a>)."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-1"
+    },
+    {
+     "t": "p",
+     "html": "The relationship between clade age and turnover was weak, which is difficult to reconcile with\n        a purely co-speciating model <a class=\"ref-chip ny\" data-ref=\"2\" data-ny=\"1\" href=\"#ref-2\">(Moran et al. 2003)</a>."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-2"
+    }
+   ]
+  },
+  {
+   "id": "sec-discussion",
+   "title": "Discussion",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Our results favour host filtering over strict co-speciation <a class=\"ref-chip ny\" data-ref=\"1\" data-ny=\"1\" href=\"#ref-1\">(Abbot &amp; Moran 2002</a>; <a class=\"ref-chip ny\" data-ref=\"3\" data-ny=\"1\" href=\"#ref-3\">Degnan &amp; Moran 2004)</a>. The weak age signal is consistent with rapid turnover of facultative partners."
+    }
+   ]
+  }
+ ],
+ "figures": [
+  {
+   "id": "fig-1",
+   "label": "Fig. 1",
+   "captionHtml": "\n           Secondary symbiont carriage rates across host clades.\n          Bars show the proportion of colonies carrying at least one secondary symbiont.\n        ",
+   "src": "http://127.0.0.1:8799/dev/fixtures/figs/fig1.png",
+   "thumb": "http://127.0.0.1:8799/dev/fixtures/figs/fig1.png",
+   "alt": "Carriage rates by host clade",
+   "href": "",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-2",
+   "label": "Fig. 2",
+   "captionHtml": "\n           Between-clade and within-clade turnover in three sampling\n          seasons.\n        ",
+   "src": "http://127.0.0.1:8799/dev/fixtures/figs/fig2.png",
+   "thumb": "http://127.0.0.1:8799/dev/fixtures/figs/fig2.png",
+   "alt": "Between vs within clade turnover",
+   "href": "",
+   "origin": "inline"
+  }
+ ],
+ "references": [
+  {
+   "n": 1,
+   "id": "b1",
+   "html": "Abbot PA, Moran NA (2002) Extremely low levels of genetic polymorphism in\n        endosymbionts (Buchnera) of aphids. <i>Journal of Synthetic Ecology</i>, 11, 2649–2660.\n        doi:10.9999/jse.2002.01646",
+   "text": "Abbot PA, Moran NA (2002) Extremely low levels of genetic polymorphism in endosymbionts (Buchnera) of aphids. Journal of Synthetic Ecology, 11, 2649–2660. doi:10.9999/jse.2002.01646",
+   "doi": "10.9999/jse.2002.01646",
+   "url": ""
+  },
+  {
+   "n": 2,
+   "id": "b2",
+   "html": "Moran NA, Degnan PH, Santos SR et al. (2003) The players in a mutualistic symbiosis.\n        <i>Proceedings of Synthetic Biology</i>, 100, 14543–14548. doi:10.9999/psb.2003.001",
+   "text": "Moran NA, Degnan PH, Santos SR et al. (2003) The players in a mutualistic symbiosis. Proceedings of Synthetic Biology, 100, 14543–14548. doi:10.9999/psb.2003.001",
+   "doi": "10.9999/psb.2003.001",
+   "url": ""
+  },
+  {
+   "n": 3,
+   "id": "b3",
+   "html": "Degnan PH, Moran NA (2004) Evolutionary genetics of a defensive facultative symbiont.\n        <i>Journal of Synthetic Ecology</i>, 13, 121–131. doi:10.9999/jse.2004.02112",
+   "text": "Degnan PH, Moran NA (2004) Evolutionary genetics of a defensive facultative symbiont. Journal of Synthetic Ecology, 13, 121–131. doi:10.9999/jse.2004.02112",
+   "doi": "10.9999/jse.2004.02112",
+   "url": ""
+  },
+  {
+   "n": 4,
+   "id": "b4",
+   "html": "Degnan PH (2005) Partitioning beta diversity in host-associated communities.\n        <i>Methods in Synthetic Ecology</i>, 2, 44–59. doi:10.9999/mse.2005.0044",
+   "text": "Degnan PH (2005) Partitioning beta diversity in host-associated communities. Methods in Synthetic Ecology, 2, 44–59. doi:10.9999/mse.2005.0044",
+   "doi": "10.9999/mse.2005.0044",
+   "url": ""
+  }
+ ],
+ "citationStyle": "name-year",
+ "supplementary": [],
+ "warnings": [],
+ "stats": {
+  "ms": 6,
+  "bodyChars": 2900,
+  "paragraphs": 7
+ }
+}

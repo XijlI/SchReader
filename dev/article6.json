@@ -1,0 +1,904 @@
+{
+ "source": {
+  "url": "http://127.0.0.1:8799/Molecular%20Ecology%20_%20Molecular%20Genetics%20Journal%20_%20Wiley%20Online%20Library.html",
+  "host": "127.0.0.1",
+  "adapter": "",
+  "journal": "Molecular Ecology",
+  "doi": "10.1111/j.1365-294X.2005.02744.x",
+  "pdfUrl": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1365-294X.2005.02744.x"
+ },
+ "meta": {
+  "title": "Functional genomics of Buchnera and the ecology of aphid hosts",
+  "subtitle": "",
+  "journal": "Molecular Ecology",
+  "publisher": "John Wiley & Sons, Ltd",
+  "articleType": "Article",
+  "doi": "10.1111/j.1365-294X.2005.02744.x",
+  "date": "2006-04-01",
+  "volume": "15",
+  "pages": "1251–1261",
+  "authors": [
+   "NANCY A. MORAN",
+   "PATRICK H. DEGNAN"
+  ],
+  "affiliations": [
+   "Department of Ecology and Evolutionary Biology, University of Arizona, Tucson, Arizona 85721, USA"
+  ],
+  "keywords": [
+   "bacteria",
+   "bacteriocyte",
+   "insects",
+   "nutrition",
+   "phloem-feeding",
+   "symbiosis"
+  ]
+ },
+ "abstractHtml": "\n      <section class=\"article-section article-section__abstract\" lang=\"en\" data-lang=\"en\" lang-name=\"English\" id=\"section-1-en\" style=\"\">\n         \n         <div class=\"article-section__content en main\">\n            \n            <p>In many animal groups, mutualistic bacterial symbionts play a central role in host ecology, by provisioning rare nutrients and thus enabling specialization on restricted diets. Among such symbionts, genomic studies are most advanced for <i>Buchnera</i>, the obligate symbiont of aphids, which feed on phloem sap. The contents of the highly reduced <i>Buchnera</i> genomes have verified its role in aphid nutrition. Comparisons of <i>Buchnera</i> gene sets indicate ongoing, irreversible gene losses that are expected to affect aphid nutritional needs. Furthermore, almost all regulatory genes have been eliminated, raising the question of whether and how gene expression responds to environmental change. Microarray studies on genome-wide expression indicate that <i>Buchnera</i> has evolved some constitutive changes in gene expression: homologues of heat stress genes have elevated transcript levels in <i>Buchnera</i> (relative to other bacteria) even in the absence of stress. Additionally, the microarray results indicate that responses to heat stress and to amino acid availability are both few and modest. Observed responses are consistent with control by the few ancestral regulators retained in the genome. Initial studies on the role of host genes in mediating the symbiosis reveal distinctive expression patterns in host cells harbouring <i>Buchnera</i>. In the near future, a complete genome of pea aphid will accelerate progress in understanding the functional integration of aphid and <i>Buchnera</i> genomes. Although information for other insect symbioses is relatively limited, studies on symbionts of carpenter ants and tsetse flies indicate many similarities to <i>Buchnera</i>.</p>\n            </div>\n      </section>\n   ",
+ "sections": [
+  {
+   "id": "ss1-title",
+   "title": "Historical background",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Many invertebrates possess endosymbiotic bacteria that are vertically transmitted from mother to progeny and that live in specialized organs. In his overview of animal symbioses, <a class=\"ref-chip ny\" data-ref=\"13\" data-ny=\"1\" href=\"#ref-13\">Buchner (1965</a>) referred to these as ‘primary’ symbionts and proposed that their main function was to provision nutrients that were limiting in the diet of their hosts. In insects, such nutritional limitations are expected for a number of groups that have evolved specialized feeding habits, such as use of plant sap or vertebrate blood as the sole food. A variety of experimental studies, involving removal of native symbionts and/or manipulation of diets have provided support for nutrient provisioning by symbionts, especially for insect symbioses (e.g. <a class=\"ref-chip ny\" data-ref=\"20\" data-ny=\"1\" href=\"#ref-20\">Douglas &amp; Prosser 1992</a>; <a class=\"ref-chip ny\" data-ref=\"54\" data-ny=\"1\" href=\"#ref-54\">Sasaki &amp; Ishikawa 1995</a>; <a class=\"ref-chip ny\" data-ref=\"22\" data-ny=\"1\" href=\"#ref-22\">Febvay et al. 1999</a>)."
+    },
+    {
+     "t": "p",
+     "html": "The use of molecular phylogenetic data has given robust confirmation to Buchner's general view that associations between insects and their primary symbionts extend into the deep evolutionary past, dating to the origins of major groups such as aphids, psyllids, leafhoppers, carpenter ants, and others. Repeatedly, such studies have revealed congruence between phylogenies of insect host and primary symbiont, corroborating that symbionts were important players in the diversification of insect groups that are dominant elements in modern terrestrial ecosystems. Thus, symbiosis was a prerequisite for the colonization of many specialized ecological niches and for the evolution of groups such as the sap-feeding and blood-feeding insects."
+    },
+    {
+     "t": "p",
+     "html": "In recent years, the emergence of genomics has expanded our understanding of symbiotic associations of insects and bacteria. Because bacterial genomes are compact and rich in information regarding metabolic capabilities, the sequencing of complete genomes is relatively cost-effective. By providing a complete catalogue of genes and pathways present in organisms, the sequences themselves give a direct means of assessing functional contributions of symbionts to hosts. Genome sequences provide the foundation for the analyses of the transcriptome or proteome and provide the potential for assessing how symbiont functions are regulated in the context of the host environment."
+    },
+    {
+     "t": "p",
+     "html": "The focus of this review is the best-studied insect–symbiont system, that of <i>Buchnera aphidicola</i> and its aphid hosts. Three genome sequences and several studies of genome-wide gene expression have been published. We summarize these results and relate them to some earlier, pre-genomics observations on aphid feeding and ecology. Together, these results suggest a role of <i>Buchnera</i> in both the expansion of aphid ranges and in constraints on their geographical and host-plant distributions. Additionally, we compare results from <i>Buchnera</i> genomes to those from two other ancient bacteriocyte-associated insect symbionts for which genome sequences are available."
+    }
+   ]
+  },
+  {
+   "id": "ss2-title",
+   "title": "Gene content and genome sizes of symbionts",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The first studies of symbiont gene content related to function in insect hosts were those of Baumann and coworkers, who cloned and sequenced fragments of the <i>Buchnera</i> chromosome from the aphid host <i>Schizaphis graminum</i> (<a class=\"ref-chip ny\" data-ref=\"7\" data-ny=\"1\" href=\"#ref-7\">Baumann et al. 1995</a>). They documented the presence of pathways for several essential amino acids, confirming and extending previous evidence for a role of <i>Buchnera</i> in provisioning hosts with these nutrients. Most aphids feed exclusively on phloem sap, which contains limited amounts of essential amino acids; that is, the amino acids used in proteins that animals cannot synthesize themselves. These pathways are very well studied in bacteria, particularly in the model system of <i>Escherichia coli</i>. The close relationship between <i>Buchnera</i> and <i>E</i>. <i>coli</i>, and the clearly defined homology of their genes, was a major advantage in interpreting the new sequence data from <i>Buchnera</i>."
+    },
+    {
+     "t": "p",
+     "html": "By the time the first <i>Buchnera</i> genome was published for the pea aphid <i>Acyrthosiphon pisum</i> (<a class=\"ref-chip ny\" data-ref=\"56\" data-ny=\"1\" href=\"#ref-56\">Shigenobu et al. 2000</a>), it was known that <i>Buchnera</i> possessed genes for biosynthesis of most essential amino acids and that several of these genes (for synthesis of tryptophan, isoleucine, valine, leucine, and histidine) were transcribed (<a class=\"ref-chip ny\" data-ref=\"7\" data-ny=\"1\" href=\"#ref-7\">Baumann et al. 1995, 1999</a>). Complete genome sequences are the only means of confidently showing what genes are <i>absent</i> from a genome, and the first <i>Buchnera</i> genome sequence was perhaps most notable for revealing which genes had been eliminated. These included most of those required for the synthesis of the nonessential amino acids, i.e. the amino acids that animal, such as the aphid hosts, can make themselves. This selective retention of particular biosynthetic genes demonstrated a striking complementarity between host and symbiont metabolic capabilities."
+    },
+    {
+     "t": "p",
+     "html": "Bacterial genomes are tightly packed with genes, indicating that superfluous DNA is rapidly eliminated during evolution of bacterial lineages (<a class=\"ref-chip ny\" data-ref=\"35\" data-ny=\"1\" href=\"#ref-35\">Mira et al. 2001</a>; <a class=\"ref-chip ny\" data-ref=\"33\" data-ny=\"1\" href=\"#ref-33\">Lerat et al. 2005</a>). In symbiont genomes (and those of small genome pathogens), the loss of DNA is extreme, implying strongly that genes that are retained with intact reading frames are functionally significant to the organism. Other indicators are consistent with this inference: for example, different genes of a particular biosynthetic pathway are typically all lost or all retained, even when the genes are positioned in different parts of the chromosome."
+    },
+    {
+     "t": "p",
+     "html": "Remarkably, the <i>Buchnera</i> gene set is a subset of that of <i>E</i>. <i>coli</i> and closely related bacteria. This fact suggests that, at least in the case of <i>Buchnera</i>, becoming symbiotic did not depend on acquiring novel genes. However, the <i>Buchnera</i> genome is highly derived and highly reduced, making it impossible to determine whether some genes enabling host invasion were involved in early stages of the symbiosis. Subsequent co-adaptation with the host genome may have rendered symbiont invasion genes obsolete. Some symbionts showing younger associations with insects, exemplified by <i>Sodalis</i> of tsetse flies, primary symbionts of <i>Sitophilus</i> weevils, and secondary symbionts of aphids, possess Type III Secretion Systems (<a class=\"ref-chip ny\" data-ref=\"14\" data-ny=\"1\" href=\"#ref-14\">Dale et al. 2001, 2002, 2005</a>; <a href=\"https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-294X.2005.02744.x?casa_token=-7hDGo5OT60AAAAA%3AtyY3ZADqxWwnjGh_C-deBOpzzUQnemKPiCzQ4T3UCO7QCmKZ8c1OVynZv8PI8_JxddHnxFP7Ix_z2vE#b200\" class=\"scrollableLink\">Moran <i>et al.</i> in press</a>), similar to those used by pathogenic bacteria to invade host cells. The underlying genes are known to be horizontally transferred in many cases, and their acquisition could be a step in the original evolution of an intracellular lifestyle. In <i>Buchnera</i> and other specialized symbionts, early utilization of such a system might be obscured by subsequent evolution of host mechanisms for ensuring infection of bacteriocytes (the cells housing the symbionts) and by ongoing reduction of the symbiont genome."
+    },
+    {
+     "t": "p",
+     "html": "The extent to which genome contents of insect symbionts can be extended to infer metabolic capabilities is illustrated by the detailed analysis of <a class=\"ref-chip ny\" data-ref=\"68\" data-ny=\"1\" href=\"#ref-68\">Zientz et al. (2004</a>), which elucidates the metabolic implications of the genomes of <i>Buchnera</i>, <i>Blochmannia</i> and <i>Wigglesworthia</i>."
+    }
+   ]
+  },
+  {
+   "id": "ss3-title",
+   "title": "Polyploidy",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Many symbionts, including <i>Buchnera</i>, have very large cell size: for example, the roughly spherical <i>Buchnera</i> cells are 3 µ in diameter and thus about 15× the volume of an <i>E. coli</i> cell. In <i>Buchnera</i> at least, this increase in volume is accompanied by amplification of the genome. In <i>Acyrthosiphon pisum</i>, individual <i>Buchnera</i> cells contain from 50 to over 100 chromosome copies, with the degree of amplification varying with life cycle stage (<a class=\"ref-chip ny\" data-ref=\"27\" data-ny=\"1\" href=\"#ref-27\">Komaki &amp; Ishikawa 1999, 2000</a>). The functional significance of the polyploidy is not clear: it may allow higher productivity per cell and it is presumably linked to the regulation of symbiont numbers within bacteriocytes, since it indicates a change in the coordination between chromosome replication and cell division."
+    }
+   ]
+  },
+  {
+   "id": "ss4-title",
+   "title": "Plasmid location of nutrient biosynthetic genes",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "A remarkable early discovery was the finding that <i>trpEG</i>, the genes encoding the enzyme for the rate-limiting step of tryptophan biosynthesis, were encoded as tandem repeats on a plasmid and present in multiple copies relative to chromosomal genes in the <i>Buchnera</i> of many aphid species (<a class=\"ref-chip ny\" data-ref=\"31\" data-ny=\"1\" href=\"#ref-31\">Lai et al. 1994</a>). Soon after, the genes for leucine biosynthesis were shown to occur on a different type of plasmid (<a class=\"ref-chip ny\" data-ref=\"11\" data-ny=\"1\" href=\"#ref-11\">Bracho et al. 1995</a>). The two plasmids show different replication mechanisms and originated independently. The plasmid bearing the <i>trpEG</i> genes consist of a tandemly repeated unit of about 3.6&nbsp;kb, with each unit containing an origin of replication containing binding sites for DnaA protein, similar to that on the chromosome of <i>Buchnera</i> and other related bacteria; the plasmid bearing the <i>leu</i> genes has its own replication proteins and is related to incompatibility plasmids in <i>Salmonella</i> and other bacteria. The amino acid biosynthetic genes occur on plasmids only in some <i>Buchnera</i> lineages. Plasmid-borne copies were acquired from the ancestral <i>Buchnera</i> chromosome and not from external sources (as for some plasmid-borne genes in bacteria) (<a class=\"ref-chip ny\" data-ref=\"50\" data-ny=\"1\" href=\"#ref-50\">Rouhbakhsh et al. 1996</a>)."
+    },
+    {
+     "t": "p",
+     "html": "Overproduction and export of newly synthesized amino acids is a process distinctive of symbionts. Thus, <i>Buchnera</i> is highly unusual among bacteria in needing to overproduce tryptophan and leucine and is also unique in the amplification of the underlying genes and their location on plasmids. Presumably the two features are related: the unusual genomic arrangements most likely evolved as a means of increasing or regulating the expression of genes underlying these biosynthetic processes, to enable better provisioning of the end products to the hosts (<a class=\"ref-chip ny\" data-ref=\"31\" data-ny=\"1\" href=\"#ref-31\">Lai et al. 1994</a>)."
+    },
+    {
+     "t": "p",
+     "html": "The initial interpretations of the plasmid position of these biosynthetic genes has been complicated by several additional findings. First, as mentioned, the <i>Buchnera</i> chromosome itself is present as many copies per cell, so plasmid-borne genes could be present in either more or fewer copies relative to single copy chromosomal genes. Both situations have been observed (<a class=\"ref-chip ny\" data-ref=\"60\" data-ny=\"1\" href=\"#ref-60\">Thao et al. 1998</a>; <a class=\"ref-chip ny\" data-ref=\"48\" data-ny=\"1\" href=\"#ref-48\">Plague et al. 2003</a>). Second, some of the genes on the plasmid are inactivated, sometimes highly truncated and sometimes only carrying small frame shifts and differing only slightly from intact copies (<a class=\"ref-chip ny\" data-ref=\"32\" data-ny=\"1\" href=\"#ref-32\">Lai et al. 1996</a>; <a class=\"ref-chip ny\" data-ref=\"62\" data-ny=\"1\" href=\"#ref-62\">Wernegreen &amp; Moran 2000</a>). The latter are discernable only through cloning and individual sequencing of many copies from individual insects. In fact, <i>trpEG</i> pseudogenes, coexisting with intact copies, have been found in every species in which cloning and sequencing efforts were detailed enough to detect them. Thus, the extent of amplification of functionally relevant (intact and transcribed) copies is not easily determined. This obscures the meaning of studies of <i>trpEG</i> copy number in which numbers are determined by hybridization to a probe or by quantitative PCR, without extensive cloning (e.g. <a class=\"ref-chip ny\" data-ref=\"9\" data-ny=\"1\" href=\"#ref-9\">Birkle et al. 2002, 2004</a>)."
+    },
+    {
+     "t": "p",
+     "html": "The number of copies of the plasmid-borne genes relative to chromosomal ones tends to be constant within a species but can differ considerably between species, ranging from less than 1 (e.g. <a class=\"ref-chip ny\" data-ref=\"48\" data-ny=\"1\" href=\"#ref-48\">Plague et al. 2003</a>) to 24 (<a class=\"ref-chip ny\" data-ref=\"60\" data-ny=\"1\" href=\"#ref-60\">Thao et al. 1998</a>). Some intraspecific variation has been identified as well. Furthermore, the movement of <i>trpEG</i> and <i>leuABCD</i> to a plasmid location occurred only once or very few times in evolution (<a class=\"ref-chip ny\" data-ref=\"52\" data-ny=\"1\" href=\"#ref-52\">Sabater-Muñoz et al. 2004</a>), implying that the selection for plasmid location occurred in a common ancestor of a very large radiation of aphids that includes most modern species and a wide variety of feeding habits. Persistence of the plasmid arrangement does not indicate that it remains universally advantageous, but only that most rearrangements are not tolerated in <i>Buchnera</i> genomes. This is suggested by the fact that <i>Buchnera</i> chromosomes are extremely static, showing a lower incidence of rearrangements relative to sequence divergence, than any other bacterial group (<a class=\"ref-chip ny\" data-ref=\"59\" data-ny=\"1\" href=\"#ref-59\">Tamas et al. 2002</a>; <a href=\"https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-294X.2005.02744.x?casa_token=-7hDGo5OT60AAAAA%3AtyY3ZADqxWwnjGh_C-deBOpzzUQnemKPiCzQ4T3UCO7QCmKZ8c1OVynZv8PI8_JxddHnxFP7Ix_z2vE#b27\" class=\"scrollableLink\">van Ham <i>et&nbsp;al</i>. 2003</a>). Thus, once the genes were transferred to the plasmid, they may persist there even if the original benefit of the plasmid location is removed."
+    }
+   ]
+  },
+  {
+   "id": "ss5-title",
+   "title": "Loss of genes and pathways",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Although gene order and orientation have been stable for more than 100 million years (Myr) of <i>Buchnera</i> evolution, comparison of the three available genome sequences reveals ongoing deletions and inactivation of ancestral genes in each lineage (<a class=\"ref-chip ny\" data-ref=\"59\" data-ny=\"1\" href=\"#ref-59\">Tamas et al. 2002</a>; <a href=\"https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-294X.2005.02744.x?casa_token=-7hDGo5OT60AAAAA%3AtyY3ZADqxWwnjGh_C-deBOpzzUQnemKPiCzQ4T3UCO7QCmKZ8c1OVynZv8PI8_JxddHnxFP7Ix_z2vE#b27\" class=\"scrollableLink\">van Ham <i>et&nbsp;al</i>. 2003</a>). Furthermore, some of the observed gene losses are expected to impact host ecology. For example, <i>Buchnera</i> of <i>Schizaphis graminum</i> possesses degenerate copies of the genes underlying incorporation of inorganic sulphur; the coding regions for several of the required enzymes are disrupted by stop codons and deletions, suggesting recent inactivation (<a class=\"ref-chip ny\" data-ref=\"59\" data-ny=\"1\" href=\"#ref-59\">Tamas et al. 2002</a>). Because grasses, the host plants of <i>S. graminum</i>, contain high amounts of sulphur-containing organic compounds, they are likely to ingest homocysteine or related sulphur-containing intermediates, enabling the production of methionine and cysteine without incorporation of inorganic sulphur. Similar losses have occurred in two of the sequenced genomes; e.g. <i>Buchnera</i> of <i>Baizongia</i> lacks the pathway for arginine and pantothenate biosynthesis, whereas it retains genes underlying biotin biosynthesis that are eliminated from genomes of the <i>Buchnera</i> of both <i>S</i>. <i>graminum</i> and <i>Acyrthosiphon pisum</i> (<a href=\"https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-294X.2005.02744.x?casa_token=-7hDGo5OT60AAAAA%3AtyY3ZADqxWwnjGh_C-deBOpzzUQnemKPiCzQ4T3UCO7QCmKZ8c1OVynZv8PI8_JxddHnxFP7Ix_z2vE#b27\" class=\"scrollableLink\">van Ham <i>et&nbsp;al</i>. 2003</a>)."
+    },
+    {
+     "t": "p",
+     "html": "Such inactivations are the likely explanation for strain-specific dietary requirements in aphids. A review of aphid nutritional physiology (<a class=\"ref-chip ny\" data-ref=\"57\" data-ny=\"1\" href=\"#ref-57\">Srivastava 1987</a>) summarizes earlier studies of dietary requirements for amino acids and concludes that aphids ‘appear to constitute a rare group where different insect populations within one species differ in their requirement for essential amino acids.’ For example, certain <i>A</i>. <i>pisum</i> biotypes (representing individual clonal isolates with distinctive host plant use) have dietary requirements for particular essential amino acids, including arginine, phenylalanine, tryptophan and valine, based on studies of aphids with intact symbionts (<a class=\"ref-chip ny\" data-ref=\"58\" data-ny=\"1\" href=\"#ref-58\">Srivastava et al. 1985</a>; <a class=\"ref-chip ny\" data-ref=\"57\" data-ny=\"1\" href=\"#ref-57\">Srivastava 1987</a>). The ability of sulphate to spare the requirement for sulphur-containing amino acids was another variable in dietary requirements of <i>A</i>. <i>pisum</i> genotypes (<a class=\"ref-chip ny\" data-ref=\"57\" data-ny=\"1\" href=\"#ref-57\">Srivastava 1987</a>). Additionally, <i>Aphis fabae</i> clones grown on defined diets differ in their amino acid requirements, with individual clones (with symbionts intact) requiring histidine, methionine, threonine, or valine for optimal growth (<a class=\"ref-chip ny\" data-ref=\"65\" data-ny=\"1\" href=\"#ref-65\">Wilkinson &amp; Douglas 2003</a>). These observations strongly suggest that <i>Buchnera</i> inhabiting particular aphid lineages differ in biosynthetic capabilities due to mutational inactivation of particular pathways."
+    },
+    {
+     "t": "p",
+     "html": "Because <i>Buchnera</i> genomes show no cases of gene uptake, such loss of function is almost certainly irreversible, at least once a pathway is inactivated by more than one mutation. An implication is that <i>Buchnera</i> acts as a potential constraint on the long-term ecological diversification of aphid hosts. For example, loss of the pathway for sulphur fixation implies that <i>S</i>. <i>graminum</i> is now destined to remain on grasses, or other hosts with sufficient sources of fixed sulphur, for its entire evolutionary future (<a class=\"ref-chip ny\" data-ref=\"59\" data-ny=\"1\" href=\"#ref-59\">Tamas et al. 2002</a>). The extent of such inactivations as a basis for polymorphism within a species is not clear from the genomic sequences. For <i>S</i>. <i>graminum</i> and <i>A</i>. <i>pisum</i>, the <i>Buchnera</i> genomes were sequenced for a single aphid genotype. For <i>Buchnera</i> of <i>Baizongia pistaciae</i>, a population sample was used, and the resulting genomic sequence revealed five polymorphic sites that may represent snapshots of recent gene inactivations."
+    },
+    {
+     "t": "p",
+     "html": "Thus, several lines of evidence indicate that <i>Buchnera</i> genome evolution results in the ongoing loss of capabilities for provisioning hosts and never in the acquisition of new capabilities. It may appear puzzling that symbionts lose capabilities that might benefit their mutualistic hosts. Because plants, and plant parts, vary in phloem content of amino acids (<a class=\"ref-chip ny\" data-ref=\"53\" data-ny=\"1\" href=\"#ref-53\">Sandström &amp; Moran 1999</a>; <a class=\"ref-chip ny\" data-ref=\"30\" data-ny=\"1\" href=\"#ref-30\">Koyama et al. 2004</a>), aphid colonies living on a particular plant may experience local relaxation of selection for retention of the corresponding <i>Buchnera</i> pathway. Furthermore, the mutational target resulting in inactivation of the pathway can be quite large, especially for the longer pathways requiring more enzymes, increasing the likelihood of loss during a particular period of relaxed selection. The fact that <i>Buchnera</i> of major aphid lineages retain capacity for biosynthesis of most or all of the essential amino acids implies that losses of particular pathways are deleterious in the longer run and generally lead to lineage extinction."
+    }
+   ]
+  },
+  {
+   "id": "ss6-title",
+   "title": "Transfer of bacterial genes to host genome?",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Full genome sequences of animals and plants have produced recent revelations regarding the large extent of gene transfer from ancestral organelles to the nuclear genome (<a class=\"ref-chip ny\" data-ref=\"34\" data-ny=\"1\" href=\"#ref-34\">Martin 2003</a>). <i>Buchnera</i> resembles organelles in many ways, including ancient derivation from a free-living bacterium, obligate residence within the host cytoplasm, and large-scale genome reduction, raising the possibility that <i>Buchnera</i> has also transferred genes to the host genome. But, in contrast to mitochondria and chloroplasts, it is not apparent that <i>Buchnera</i> must import gene products from its host for the processes underlying its own replication; the gene inventories from the completed genomes indicate that it retains its own polymerases and other basic cellular machinery. In fact, aside from the retention of nutrition-provisioning genes, the genome reduction in <i>Buchnera</i> is similar to that observed in obligate pathogens with small genomes, such as mycoplasmas and rickettsiae, organisms that are horizontally transferred among hosts and that are generally deleterious. All of these organisms are parasites in the sense of requiring host metabolic products, but the genome reduction of the pathogens implies that extensive gene loss can occur without dependence on products of genes transferred from symbionts to the host genome. (Selection on hosts would not maintain genes for the benefit of pathogens.)"
+    },
+    {
+     "t": "p",
+     "html": "One reason that <i>Buchnera</i> and similar mutualistic symbionts of animals might differ from organelles in the extent of gene transfer to the host germ line is that the obstacles to such transfer are more formidable. Whereas mitochondria and chloroplasts originated in single-celled ancestors, enabling close proximity between their genomes and host nuclear genomes, <i>Buchnera</i> is confined to non-germ-line cells except for brief stages in the life cycle following egg infection. Despite these caveats, gene transfer cannot be excluded as a possibility. Indeed, transfer to the host nucleus of a chromosomal segment of a <i>Wolbachia</i> symbiont appears to have occurred in a beetle (<a class=\"ref-chip ny\" data-ref=\"29\" data-ny=\"1\" href=\"#ref-29\">Kondo et al. 2002</a>), indicating that such events are possible. The sequencing of the <i>Acyrthosiphon pisum</i> genome, expected within the near future, will largely answer this question, at least for the case of <i>Buchnera</i>."
+    }
+   ]
+  },
+  {
+   "id": "ss7-title",
+   "title": "Gene expression",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Reduced bacterial genomes typically possess very few regulatory genes, and this generalization extends to <i>Buchnera</i>, which retains only about five of the more than 200 regulatory genes found in <i>E. coli</i>. Additionally, the organization of transcription units is highly disrupted by the loss of genes and by rearrangements (<a class=\"ref-chip ny\" data-ref=\"38\" data-ny=\"1\" href=\"#ref-38\">Moran &amp; Mira 2001</a>). Finally, the distinctive biology of symbionts, which live in a relatively constant environment and which overproduce some metabolic products for hosts, is expected to impose distinctive selection pressures on gene regulation. In most bacteria, such as the well-characterized <i>E. coli</i>, genes are transcribed in discrete transcription units (operons) with a high level of independence of expression, choreographed by a large set of regulatory elements, including both proteins and RNAs. In contrast, <i>Buchnera</i> does not show clearly defined transcriptional terminators, and the binding sites for the generalized sigma-70 promoter, required for initiation of transcription for most genes, are not readily distinguished."
+    },
+    {
+     "t": "p",
+     "html": "Although the inability to culture <i>Buchnera</i> makes genetic manipulations impossible, analysis of gene expression patterns is possible, using RNA extracted from aphids and symbionts. The full genome sequences for <i>Buchnera</i> have allowed the examination of global gene expression levels using gene microarrays. Such studies, summarized below, can reveal the extent to which <i>Buchnera</i> responds to ecologically realistic environmental change."
+    }
+   ]
+  },
+  {
+   "id": "ss8-title",
+   "title": "Changes in constitutive expression — heat shock genes",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "An early puzzle in <i>Buchnera</i> biology was the extremely high levels of a protein that was initially named ‘symbionin’ and hypothesized to play a central role in the aphid–bacterial interaction (<a class=\"ref-chip ny\" data-ref=\"26\" data-ny=\"1\" href=\"#ref-26\">Ishikawa 1982</a>). Later, once sequencing was available, symbionin was determined to be GroEL protein (orthologue of HSP60), a chaperonin that is universally distributed and that functions in the folding of new and destabilized proteins (<a class=\"ref-chip ny\" data-ref=\"46\" data-ny=\"1\" href=\"#ref-46\">Ohtaka et al. 1992</a>). This protein comprises about 10% of <i>Buchnera</i> protein under non-stress conditions (<a class=\"ref-chip ny\" data-ref=\"6\" data-ny=\"1\" href=\"#ref-6\">Baumann et al. 1996</a>), a level equivalent to that in <i>E</i>. <i>coli</i> under the most elevated state, as induced by heat or other stresses that cause proteins to destabilize. Furthermore, full genome microarrays have revealed that most of the 20 homologues of heat shock genes retained in the <i>Buchnera</i> genome are overexpressed constitutively compared to their levels in other bacteria (<a class=\"ref-chip ny\" data-ref=\"41\" data-ny=\"1\" href=\"#ref-41\">Moran et al. 2003</a>; <a class=\"ref-chip ny\" data-ref=\"64\" data-ny=\"1\" href=\"#ref-64\">Wilcox et al. 2003</a>; <a data-fig=\"fig-ure-1o\">Fig.&nbsp;1</a>). Together, these gene products are involved in recycling and refolding proteins that have become degraded. The overexpression of this set of genes, which are dispersed on the <i>Buchnera</i> chromosome, indicates a general compensation for problems with protein stability (<a class=\"ref-chip ny\" data-ref=\"64\" data-ny=\"1\" href=\"#ref-64\">Wilcox et al. 2003</a>). Because <i>Buchnera</i> shows accumulation of mutations effecting amino acid changes throughout the genome, due to relaxed selection or ineffective selection resulting from small genetic population size, this constitutive overexpression is best explained as a compensatory adaptation to mutational destabilization of proteins (<a class=\"ref-chip ny\" data-ref=\"37\" data-ny=\"1\" href=\"#ref-37\">Moran 1996</a>). Experiments in <i>E</i>. <i>coli</i> and other organisms demonstrate that overexpression of GroEL and other chaperonins can mask mutations that would otherwise be deleterious (e.g. <a class=\"ref-chip ny\" data-ref=\"51\" data-ny=\"1\" href=\"#ref-51\">Rutherford &amp; Lindquist 1998</a>; <a class=\"ref-chip ny\" data-ref=\"21\" data-ny=\"1\" href=\"#ref-21\">Fares et al. 2002</a>)."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-ure-1o"
+    }
+   ]
+  },
+  {
+   "id": "ss9-title",
+   "title": "Reduction in regulatory mechanisms controlling transcription",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "As noted above, an observation applying to all highly reduced bacterial genomes and to the <i>Buchnera</i> genomes in particular, is the extensive loss of regulatory genes. Inspection of the genome sequence does not reveal any obvious new regulatory mechanisms, but these would likely not be recognizable and might be expected in view of the fact that <i>Buchnera</i> has co-evolved with hosts for over 100 Myr."
+    },
+    {
+     "t": "p",
+     "html": "Full genome microarrays for <i>Buchnera</i>, consisting of individually amplified double-stranded DNA sequences, allow direct evaluation of global transcriptional responses to environmental challenges. To date, these studies have been carried out for two kinds of changes that routinely affect naturally occurring aphids and their <i>Buchnera</i>: heat stress and fluctuations in the composition of dietary amino acids. Both studies indicate that transcriptional responses are few and consist only of ancestral responses that have been retained."
+    },
+    {
+     "t": "p",
+     "html": "Responses to heat shock indicate that, in addition to overexpression under non-stress conditions, <i>Buchnera</i> of <i>Schizaphis graminum</i> does retain a modest heat shock response involving a global heat shock regulator and four promoters affecting expression of six genes (<a data-fig=\"fig-ure-1o\">Fig.&nbsp;1</a>, <a class=\"ref-chip ny\" data-ref=\"64\" data-ny=\"1\" href=\"#ref-64\">Wilcox et al. 2003</a>). The regulatory mechanisms appear to be the same as in <i>E</i>. <i>coli</i>, and the consensus heat shock promoter is the same. As mentioned, most of the heat shock gene homologues have lost heat shock promoters and are overexpressed constitutively."
+    },
+    {
+     "t": "p",
+     "html": "For considerations of host nutritional ecology, the expression of <i>Buchnera</i>'s amino acid biosynthetic genes is of particular interest. Amino acid profiles in phloem differ among plant species and also among growth stages of individual plants (e.g. <a class=\"ref-chip ny\" data-ref=\"53\" data-ny=\"1\" href=\"#ref-53\">Sandström &amp; Moran 1999</a>; <a class=\"ref-chip ny\" data-ref=\"30\" data-ny=\"1\" href=\"#ref-30\">Koyama et al. 2004</a>), implying fluctuations in the need for different biosynthetic contributions by <i>Buchnera.</i> In <i>E. coli</i> and related bacteria, these pathways have a total of 16 different specific transcriptional regulators. <i>Buchnera</i> of <i>S</i>. <i>graminum</i> retains only one of these, <i>metR</i>, which is a regulator of <i>metE</i>, underlying methionine synthesis; in <i>Buchnera</i> of <i>Acyrthosiphonpisum</i>, <i>metR</i> is inactivated through several frame shifts and a large deletion. Experiments manipulating amino acid levels in the plants and aphids showed that transcript levels of these genes lack responses that are statistically significant and substantial (greater than twofold), with the striking exception of <i>metE</i> (<a data-fig=\"fig-ure-2o\">Fig.&nbsp;2</a>; <a class=\"ref-chip ny\" data-ref=\"42\" data-ny=\"1\" href=\"#ref-42\">Moran et al. 2005</a>). The <i>metE</i> transcript was significantly up-regulated with the addition of several nonessential amino acids, which may be equivalent for <i>Buchnera</i> physiology due to interconversions in aphid tissues (<a class=\"ref-chip ny\" data-ref=\"42\" data-ny=\"1\" href=\"#ref-42\">Moran et al. 2005</a>). Experiments using reverse transcriptase quantitative PCR confirmed that <i>metE</i> expression is most sensitive to levels of homocysteine, demonstrated to be a co-activator of <i>metR</i> in <i>E</i>. <i>coli</i>. Furthermore, the response was completely lacking in <i>Buchnera</i> of <i>A</i>. <i>pisum</i>, in which <i>metR</i> is degraded."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-ure-2o"
+    },
+    {
+     "t": "p",
+     "html": "Thus, <i>Buchnera</i> has lost almost all mechanisms for regulating transcript levels of genes underlying amino acid biosynthesis in response to amino acid pools. Moreover, it has not invented new ones during the course of its evolution in aphid hosts, at least none with substantial effects on transcript levels. In <i>Buchnera</i> of <i>S</i>. <i>graminum</i>, the only strong response to amino acid fluctuations is dependent on the single retained regulator (<i>metR</i>), and even that system is missing from both of the other sequenced <i>Buchnera</i> genomes (<a href=\"https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-294X.2005.02744.x?casa_token=-7hDGo5OT60AAAAA%3AtyY3ZADqxWwnjGh_C-deBOpzzUQnemKPiCzQ4T3UCO7QCmKZ8c1OVynZv8PI8_JxddHnxFP7Ix_z2vE#b27\" class=\"scrollableLink\">van Ham <i>et&nbsp;al</i>. 2003</a>)."
+    },
+    {
+     "t": "p",
+     "html": "The few regulatory genes that <i>Buchnera</i> retains may control shifts in gene expression corresponding to different stages of its life cycle within hosts. A period of rapid division and distinctive gene expression appears to follow colonization of a new host embryo (<a class=\"ref-chip ny\" data-ref=\"65\" data-ny=\"1\" href=\"#ref-65\">Wilkinson et al. 2003</a>), and later growth of the <i>Buchnera</i> population closely tracks growth of the host (<a class=\"ref-chip ny\" data-ref=\"5\" data-ny=\"1\" href=\"#ref-5\">Baumann &amp; Baumann 1994</a>). These observations indicate that distinct phases do occur in the <i>Buchnera</i> life cycle, and these are expected to correspond to distinct phases of gene expression. Homologues of <i>himA (</i>encoding Integration Host Factor) are intact in all three <i>Buchnera</i> genomes; in other bacteria, this gene is involved in detecting changes in the cellular environment and switching gene expression accordingly. In <i>Buchnera</i>, <i>himA</i> may be involved in the switch between life cycle stages, such as replicative stages and vegetative stages, during which cells are metabolizing and producing nutrients for hosts but not dividing."
+    },
+    {
+     "t": "p",
+     "html": "The overall picture of gene expression is that it is relatively static, compared to free-living bacteria. Additionally, transcription units are less clearly defined. For example, heat shock increases transcription of heat shock genes as well as downstream sequences, even when the downstream genes are on the complementary strand (<a class=\"ref-chip ny\" data-ref=\"64\" data-ny=\"1\" href=\"#ref-64\">Wilcox et al. 2003</a>)."
+    }
+   ]
+  },
+  {
+   "id": "ss10-title",
+   "title": "Population biology of nutrient-provisioning genes",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Analyses of <i>Buchnera</i> genomes and gene sequences are consistent with the occurrence of elevated levels of genetic drift (<a class=\"ref-chip ny\" data-ref=\"37\" data-ny=\"1\" href=\"#ref-37\">Moran 1996</a>; <a href=\"https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-294X.2005.02744.x?casa_token=-7hDGo5OT60AAAAA%3AtyY3ZADqxWwnjGh_C-deBOpzzUQnemKPiCzQ4T3UCO7QCmKZ8c1OVynZv8PI8_JxddHnxFP7Ix_z2vE#b27\" class=\"scrollableLink\">van Ham <i>et&nbsp;al</i>. 2003</a>; <a class=\"ref-chip ny\" data-ref=\"49\" data-ny=\"1\" href=\"#ref-49\">Rispe et al. 2004</a>). In particular, sequence analyses consistently indicate rapid sequence evolution. However, polymorphism in <i>Buchnera</i> genes within host species is extremely low, as is polymorphism in aphid nuclear genes. Low intraspecific polymorphism reflects the typical population structure of aphids, which are clonal during most of their life cycle, highly mobile and subject to large-scale bottlenecks within a geographical region (<a class=\"ref-chip ny\" data-ref=\"23\" data-ny=\"1\" href=\"#ref-23\">Funk et al. 2001</a>; <a class=\"ref-chip ny\" data-ref=\"1\" data-ny=\"1\" href=\"#ref-1\">Abbot &amp; Moran 2002</a>)."
+    },
+    {
+     "t": "p",
+     "html": "Shifts in selection on the pathways underlying amino acid production are suggested by the few studies comparing closely related species. For example, <i>Diuraphis</i> species that differ in the extent of damage inflicted on host grasses also differ in the presence of pseudogenes for tryptophan biosynthesis (<a class=\"ref-chip ny\" data-ref=\"62\" data-ny=\"1\" href=\"#ref-62\">Wernegreen &amp; Moran 2000</a>). Also, <i>Buchnera</i> of the genus <i>Uroleucon</i> appear to have undergone relaxation of selection on some amino acid biosynthetic pathways, with elevated sequence evolution and the appearance of pseudogenes in some lineages (<a class=\"ref-chip ny\" data-ref=\"62\" data-ny=\"1\" href=\"#ref-62\">Wernegreen et al. 2000</a>). These comparisons of closely related species provide a picture of the initial stages of gene and pathway loss, leading to major differences in content of provisioning abilities between divergent lineages, as revealed by the complete genome sequences (<a class=\"ref-chip ny\" data-ref=\"59\" data-ny=\"1\" href=\"#ref-59\">Tamas et al. 2002</a>; <a href=\"https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-294X.2005.02744.x?casa_token=-7hDGo5OT60AAAAA%3AtyY3ZADqxWwnjGh_C-deBOpzzUQnemKPiCzQ4T3UCO7QCmKZ8c1OVynZv8PI8_JxddHnxFP7Ix_z2vE#b27\" class=\"scrollableLink\">van Ham <i>et&nbsp;al</i>. 2003</a>)."
+    }
+   ]
+  },
+  {
+   "id": "ss11-title",
+   "title": "Genomics on the host side",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The functioning of an intimate symbiont such as <i>Buchnera</i> cannot be understood without addressing, at the molecular level, its integration within hosts. This aspect has been relatively neglected until recently, due to the lack of information on the aphid genome. However, one recent study has addressed coordination of aphid gene expression with that of <i>Buchnera</i>. <a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Nakabachi et al. (2005</a>) characterized transcripts that were differentially expressed in <i>Acyrthosiphon pisum</i> bacteriocytes. The findings reinforce the view of the bacteriocyte as a factory for amino acid metabolism, requiring the coordination of host and symbiont contributions. Aphid genes with high transcript levels in bacteriocytes relative to other tissues included those underlying processes of amino acid transamination, catabolism and transport. Other up-regulated genes included homologues of genes encoding transporters and lysozymes that act to degrade bacterial cell walls. These findings may be relevant to outstanding mysteries regarding <i>Buchnera</i> function: how small molecules are moved between host and symbiont, as required for the nutritional exchange which has been demonstrated in physiological studies, and how symbiont numbers are regulated. The <i>Buchnera</i> genome lacks most homologues of genes encoding transporters, including ones used by related bacteria to move amino acids across cell walls. Gene expression profiles obtained for bacteriocytes raises the possibility that host transporters interact with bacterial membranes so as to effect movement of amino acids or other metabolites."
+    },
+    {
+     "t": "p",
+     "html": "Recent studies have begun to shed light on the gene expression underlying specification of the bacteriocytes during early development (<a class=\"ref-chip ny\" data-ref=\"12\" data-ny=\"1\" href=\"#ref-12\">Braendle et al. 2003</a>). These data indicate that the <i>Buchnera</i> inoculum is a major feature of early embryogenesis. Bacteriocytes are determined and colonized at an early stage, and no further host cells are recruited to this role later."
+    },
+    {
+     "t": "p",
+     "html": "These developmental specializations presumably reflect a long history of co-evolution. The most plausible view is that aphids acquired these symbionts only once, early in their evolution, enabling them to exploit a novel ecological niche, phloem-feeding on vascular plants. Such a lifestyle would be untenable without symbionts, due to nutritional inadequacies. Co-adaptation on the part of the aphids subsequently rendered them dependent on <i>Buchnera</i> for reasons other than the nutritional dependence that was the original basis for the association. In modern aphids, early development is disrupted if <i>Buchnera</i> is removed using antibiotics, and even nutritional supplementation does not remove the requirement for <i>Buchnera</i> during embryonic development (<a class=\"ref-chip ny\" data-ref=\"13\" data-ny=\"1\" href=\"#ref-13\">Buchner 1965</a>; <a class=\"ref-chip ny\" data-ref=\"19\" data-ny=\"1\" href=\"#ref-19\">Douglas 1998</a>). Thus, the hosts require the symbionts, even as they lose capabilities to provide nutrients and to regulate production of these nutrients in response to host needs. Mutations in the aphid genome can also affect essential processes, but these can be restored by sex and recombination, whereas the dependence on a mutation-prone, asexual genome may constitute a major limitation on aphid evolution. Possibly secondary symbionts sometimes replace nutritional functions of <i>Buchnera</i>; however, known contributions of secondary symbionts are not nutrient related (<a class=\"ref-chip ny\" data-ref=\"36\" data-ny=\"1\" href=\"#ref-36\">Montllor et al. 2002</a>; <a class=\"ref-chip ny\" data-ref=\"47\" data-ny=\"1\" href=\"#ref-47\">Oliver et al. 2003</a>)."
+    },
+    {
+     "t": "p",
+     "html": "The planned sequencing of the <i>A</i>. <i>pisum</i> genome will vastly accelerate understanding of how host and symbiont genomes function together. A particularly unknown arena is that of the host immune system which must be modulated to allow the proliferation of bacteria within the host body. Additionally, the regulation of symbiont numbers must be controlled in some manner by the host; as yet, the mechanisms are unknown."
+    }
+   ]
+  },
+  {
+   "id": "ss12-title",
+   "title": "Comparisons to other bacteriocyte-associated symbionts",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Building on the success and insights provided by studies of the aphid–<i>Buchnera</i> association, genomic approaches have been applied to several other associations of insects with intracellular bacteria. To date, three more full genome sequences have been completed for two of these symbionts, <i>Blochmannia</i> species, from carpenter ants, and <i>Wigglesworthia glossinidius</i>, from tsetse flies (<a class=\"ref-chip ny\" data-ref=\"2\" data-ny=\"1\" href=\"#ref-2\">Akman et al. 2002</a>; <a class=\"ref-chip ny\" data-ref=\"24\" data-ny=\"1\" href=\"#ref-24\">Gil et al. 2003</a>; <a class=\"ref-chip ny\" data-ref=\"18\" data-ny=\"1\" href=\"#ref-18\">Degnan et al. 2005</a>). Remarkably similar patterns of genome evolution have occurred in all three symbiont lineages (<i>Buchnera, Blochmannia</i> and <i>Wigglesworthia</i>); these include drastic reductions in genome size and gene content, extreme AT bias, and elevated rates of nucleotide substitutions. The repeated emergence of these features in these and other intracellular mutualists and pathogens suggests that prolonged intracellular associations enforce similar shifts in selective pressures and population structure."
+    },
+    {
+     "t": "p",
+     "html": "The precise evolutionary steps underlying reductive genome evolution in these symbionts are still unclear; however, growing evidence suggests that an innate deletional bias of bacterial genomes combined with the proliferation of repeat elements (e.g. transposons) facilitate the process (<a class=\"ref-chip ny\" data-ref=\"35\" data-ny=\"1\" href=\"#ref-35\">Mira et al. 2001</a>; <a class=\"ref-chip ny\" data-ref=\"39\" data-ny=\"1\" href=\"#ref-39\">Moran &amp; Plague 2004</a>). As a result of these processes, genomes of both <i>Wigglesworthia</i> and <i>Blochmannia</i> have shrunk to less than one-fifth the size of that of <i>E</i>. <i>coli</i>. As is typical in small genome bacteria, all three groups retain a core set of metabolic proteins; in fact, 331 genes, or slightly over half of the genes of each genome, are shared between <i>Buchnera, Blochmannia,</i> and <i>Wigglesworthia</i>. Each symbiont also contains genes not found in the other two."
+    },
+    {
+     "t": "p",
+     "html": "Both sequenced <i>Blochmannia</i> genomes retain a suite of essential amino acid biosynthetic pathways similar to that of <i>Buchnera</i>, as well as the pathways involved in the production of several additional cofactors, and urea degradation (<a data-fig=\"fig-ure-3o\">Fig.&nbsp;3</a>; for a review see <a class=\"ref-chip ny\" data-ref=\"68\" data-ny=\"1\" href=\"#ref-68\">Zientz et al. 2004</a>). In contrast, <i>Wigglesworthia</i> has lost nearly all amino acid biosynthetic capabilities but retains the genes involved in producing a number of cofactors including B complex vitamins (e.g. thiamine, biotin, pyridoxine; <a data-fig=\"fig-ure-3o\">Fig.&nbsp;3</a>). Neither <i>Blochmannia</i> strain retains any plasmids, and the single plasmid found in <i>Wigglesworthia</i> does not encode any genes known to be involved in either amino acid or cofactor biosynthesis (<i>rep</i>, <i>speG</i>, <i>traT</i>, <i>ybbK</i>, <i>yggB</i>, <i>ibp</i>; <a class=\"ref-chip ny\" data-ref=\"2\" data-ny=\"1\" href=\"#ref-2\">Akman et al. 2002</a>). The nutritional contribution of the latter endosymbiont to the tsetse hosts is consistent with the composition of mammalian blood, which is rich in protein but poor in such vitamins (<a class=\"ref-chip ny\" data-ref=\"45\" data-ny=\"1\" href=\"#ref-45\">Nogge 1981</a>). Many carpenter ants (<i>Camponotus</i>, <i>Colobopsis</i>, and <i>Polyrhachis</i>) are omnivorous; thus, <i>Blochmannia’</i>s contribution of essential amino acids and cofactors is somewhat unexpected. Their metabolic contribution might be significant for temporary phases of larval or pupal development or for seasonal periods during which ants are heavily dependent on plant exudates (<a class=\"ref-chip ny\" data-ref=\"17\" data-ny=\"1\" href=\"#ref-17\">Degnan et al. 2004</a>; <a class=\"ref-chip ny\" data-ref=\"67\" data-ny=\"1\" href=\"#ref-67\">Wolschin et al. 2004</a>)."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-ure-3o"
+    },
+    {
+     "t": "p",
+     "html": "The recent completion of the <i>Blochmannia pennsylvanicus</i> genome has permitted comparison within and between two phylogenetically and compositionally unique symbiont lineages (<i>Bl. pennsylvanicus–Bl. floridanus</i> and <i>Buchnera</i> of the three aphid species; <a class=\"ref-chip ny\" data-ref=\"18\" data-ny=\"1\" href=\"#ref-18\">Degnan et al. 2005</a>). As in the three <i>Buchnera</i> genomes, <i>Bl. pennsylvanicus</i> and <i>Bl. floridanus</i> exhibit complete conservation of gene order, differences in gene content are strictly due to irreversible gene losses, and <i>Blochmannia</i> shows extremely high rates of protein evolution. These parallels reinforce conclusions from studies on <i>Buchnera</i> regarding the processes involved in genome erosion of obligate intracellular bacteria. In particular, the dramatic reduction in genome size appears to have occurred very early in both symbioses, in part as a result of relaxed selection on metabolic pathways that are redundant in the host cell."
+    },
+    {
+     "t": "p",
+     "html": "Some differences in genome content probably reflect biological differences among these three symbiont groups. Phylogenetic analyses indicate different ages of their obligate host associations of <i>Buchnera, Blochmannia</i>, and <i>Wigglesworthia</i> (150–250 Myr, 30–40 Myr, and 50–100 Myr, respectively; <a class=\"ref-chip ny\" data-ref=\"40\" data-ny=\"1\" href=\"#ref-40\">Moran et al. 1993</a>; <a class=\"ref-chip ny\" data-ref=\"2\" data-ny=\"1\" href=\"#ref-2\">Akman et al. 2002</a>; <a class=\"ref-chip ny\" data-ref=\"17\" data-ny=\"1\" href=\"#ref-17\">Degnan et al. 2004</a>). Also, <i>Wigglesworthia</i> and <i>Blochmannia</i> both exist freely in the host cell cytoplasm and retain a rodlike morphology (<a class=\"ref-chip ny\" data-ref=\"3\" data-ny=\"1\" href=\"#ref-3\">Aksoy 1995</a>; <a class=\"ref-chip ny\" data-ref=\"55\" data-ny=\"1\" href=\"#ref-55\">Sauer et al. 2000</a>), in contrast to <i>Buchnera,</i> which is large, spherical and surrounded by a host-derived membrane. <i>Blochmannia</i> and <i>Wigglesworthia</i> cells have been observed to be quite long (12–30&nbsp;µm and 5–9&nbsp;µm, respectively), although polyploidy has not yet been noted."
+    },
+    {
+     "t": "p",
+     "html": "The wealth of genomic data for the symbionts has generated interest in transcriptional analyses of the host insects. Transcriptome and full genome analyses are underway for the tsetse fly, vector for African trypanosomes (&gt;&nbsp;60&nbsp;000 ESTs for <i>Glossinia moristans</i>; <a class=\"ref-chip ny\" data-ref=\"4\" data-ny=\"1\" href=\"#ref-4\">Aksoy et al. 2005</a>), and limited expression data are becoming available for carpenter ants (<a class=\"ref-chip ny\" data-ref=\"25\" data-ny=\"1\" href=\"#ref-25\">Goodisman et al. 2005</a>)."
+    }
+   ]
+  },
+  {
+   "id": "ss13-title",
+   "title": "Conclusions",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Genomic studies of <i>Buchnera</i> reveal small genomes that have lost and continue to lose many capabilities, including those for provisioning hosts and for regulating gene expression. This genetic erosion must occur in the context of ongoing co-adaptation by hosts, the nature of which has yet to be characterized. One of the most intriguing of the many remaining issues regarding the functional genomics of symbiosis is the question of how host gene products interact with symbionts to compensate for gene losses and to integrate symbiont functions into the mutualistic system. For example, we do not know the answer to the question of whether different <i>Buchnera</i> lineages could be transferred among divergent species of aphids successfully or whether symbionts and hosts show specialized co-adaptation that would prevent such transfer. In the next few years, we can hope for major advances in this relatively unknown area, due to the planned completion of the genome of the model host species, <i>Acyrthosiphon pisum</i>."
+    },
+    {
+     "t": "p",
+     "html": "Nancy Moran and Patrick Degnan both study the genomics of bacterial symbiosis in animals. The main study systems are aphids and other sap-feeding insects. These insects contain a variety of heritable bacteria, which affect host nutrition, resistance to natural enemies, and tolerance to thermal stress."
+    }
+   ]
+  }
+ ],
+ "figures": [
+  {
+   "id": "fig-ure-1o",
+   "label": "Figure 1O",
+   "captionHtml": "\n                  <div class=\"figure__caption__header\"><div class=\"figure-extra\"><a href=\"https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-294X.2005.02744.x?casa_token=-7hDGo5OT60AAAAA%3AtyY3ZADqxWwnjGh_C-deBOpzzUQnemKPiCzQ4T3UCO7QCmKZ8c1OVynZv8PI8_JxddHnxFP7Ix_z2vE#\" class=\"open-figure-link\">Open in figure viewer</a><a href=\"https://onlinelibrary.wiley.com/action/downloadFigures?id=f1&amp;partId=&amp;doi=10.1111%2Fj.1365-294X.2005.02744.x\" class=\"ppt-figure-link\"><span>PowerPoint</span></a></div>\n                  </div>\n                  <div class=\"figure__caption figure__caption-text\">\n                     <p>Response of transcriptome of <i>Buchnera</i> of <i>Schizaphis graminum</i> to severe heat stress, from <a href=\"https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-294X.2005.02744.x?casa_token=-7hDGo5OT60AAAAA%3AtyY3ZADqxWwnjGh_C-deBOpzzUQnemKPiCzQ4T3UCO7QCmKZ8c1OVynZv8PI8_JxddHnxFP7Ix_z2vE#b40\" class=\"scrollableLink\">Wilcox <i>et&nbsp;al</i>. (2003</a>). (A) The average fold-change induced in <i>Buchnera</i> (dark grey) is much less than that induced by heat stress in the set of homologous genes in <i>Escherichia coli</i> (light grey); only a few <i>Buchnera</i> genes show significant increases. Variance in gene expression values is significantly lower in <i>Buchnera</i> than in <i>E</i>. <i>coli</i> (**<i>P&nbsp;&lt;</i>&nbsp;0.00001). (B) The normalized distribution of transcript abundance under non-stress (dark grey) and heat stress (light grey) for <i>Buchnera</i> genes. Most of the homologues of heat shock genes show high expression even under non-stress conditions (shaded tail indicates &gt;&nbsp;90th percentile; see list in box). Only a few of these show significant increases in response to heat stress (gene names in bold in second box).</p>\n                     </div>\n               ",
+   "src": "http://127.0.0.1:8799/Molecular%20Ecology%20_%20Molecular%20Genetics%20Journal%20_%20Wiley%20Online%20Library_files/mec_2744_f1.gif",
+   "thumb": "http://127.0.0.1:8799/Molecular%20Ecology%20_%20Molecular%20Genetics%20Journal%20_%20Wiley%20Online%20Library_files/mec_2744_f1.gif",
+   "alt": "Details are in the caption following the image",
+   "href": "http://127.0.0.1:8799/Molecular%20Ecology%20_%20Molecular%20Genetics%20Journal%20_%20Wiley%20Online%20Library_files/mec_2744_f1.gif",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-ure-2o",
+   "label": "Figure 2O",
+   "captionHtml": "\n                  <div class=\"figure__caption__header\"><div class=\"figure-extra\"><a href=\"https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-294X.2005.02744.x?casa_token=-7hDGo5OT60AAAAA%3AtyY3ZADqxWwnjGh_C-deBOpzzUQnemKPiCzQ4T3UCO7QCmKZ8c1OVynZv8PI8_JxddHnxFP7Ix_z2vE#\" class=\"open-figure-link\">Open in figure viewer</a><a href=\"https://onlinelibrary.wiley.com/action/downloadFigures?id=f2&amp;partId=&amp;doi=10.1111%2Fj.1365-294X.2005.02744.x\" class=\"ppt-figure-link\"><span>PowerPoint</span></a></div>\n                  </div>\n                  <div class=\"figure__caption figure__caption-text\">\n                     <p>Relative transcript levels in <i>Buchnera</i> of <i>Schizaphis graminum</i> in response to manipulation of individual amino acids in aphid hosts. Values are from microarrays (<a href=\"https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-294X.2005.02744.x?casa_token=-7hDGo5OT60AAAAA%3AtyY3ZADqxWwnjGh_C-deBOpzzUQnemKPiCzQ4T3UCO7QCmKZ8c1OVynZv8PI8_JxddHnxFP7Ix_z2vE#b44\" class=\"scrollableLink\">Moran <i>et&nbsp;al</i>. 2005</a>). The genes that are negatively regulated in <i>Escherichia coli</i> as a result of adding the end product amino acid are shown in bold type. The only substantial response is limited to <i>metE</i> which shows higher transcript levels in response to added arginine. *Similar response is seen to glutamic acid and glutamine.</p>\n                     </div>\n               ",
+   "src": "http://127.0.0.1:8799/Molecular%20Ecology%20_%20Molecular%20Genetics%20Journal%20_%20Wiley%20Online%20Library_files/mec_2744_f2.gif",
+   "thumb": "http://127.0.0.1:8799/Molecular%20Ecology%20_%20Molecular%20Genetics%20Journal%20_%20Wiley%20Online%20Library_files/mec_2744_f2.gif",
+   "alt": "Details are in the caption following the image",
+   "href": "http://127.0.0.1:8799/Molecular%20Ecology%20_%20Molecular%20Genetics%20Journal%20_%20Wiley%20Online%20Library_files/mec_2744_f2.gif",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-ure-3o",
+   "label": "Figure 3O",
+   "captionHtml": "\n                  <div class=\"figure__caption__header\"><div class=\"figure-extra\"><a href=\"https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-294X.2005.02744.x?casa_token=-7hDGo5OT60AAAAA%3AtyY3ZADqxWwnjGh_C-deBOpzzUQnemKPiCzQ4T3UCO7QCmKZ8c1OVynZv8PI8_JxddHnxFP7Ix_z2vE#\" class=\"open-figure-link\">Open in figure viewer</a><a href=\"https://onlinelibrary.wiley.com/action/downloadFigures?id=f3&amp;partId=&amp;doi=10.1111%2Fj.1365-294X.2005.02744.x\" class=\"ppt-figure-link\"><span>PowerPoint</span></a></div>\n                  </div>\n                  <div class=\"figure__caption figure__caption-text\">\n                     <p>Presence of amino acid and vitamin pathways in the genomes of <i>Buchnera</i> (aphid symbiont), <i>Blochmannia</i> (carpenter ant symbiont) and <i>Wigglesworthia</i> (tsetse fly symbiont), based on complete genome sequences. Pathway is indicated as present in <i>Buchnera</i> or <i>Blochmannia</i> if it is intact in at least one of their respective sequenced genomes.</p>\n                     </div>\n               ",
+   "src": "http://127.0.0.1:8799/Molecular%20Ecology%20_%20Molecular%20Genetics%20Journal%20_%20Wiley%20Online%20Library_files/mec_2744_f3.gif",
+   "thumb": "http://127.0.0.1:8799/Molecular%20Ecology%20_%20Molecular%20Genetics%20Journal%20_%20Wiley%20Online%20Library_files/mec_2744_f3.gif",
+   "alt": "Details are in the caption following the image",
+   "href": "http://127.0.0.1:8799/Molecular%20Ecology%20_%20Molecular%20Genetics%20Journal%20_%20Wiley%20Online%20Library_files/mec_2744_f3.gif",
+   "origin": "inline"
+  }
+ ],
+ "references": [
+  {
+   "n": 1,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Abbot PA</span>, \n<span class=\"author\">Moran NA</span> (<span class=\"pubYear\">2002</span>) <span class=\"articleTitle\">Extremely low levels of genetic polymorphism in endosymbionts (<i>Buchnera</i>) of aphids</span>. \n<i class=\"journalTitle\">Molecular Ecology</i>,  <span class=\"vol\">11</span>,  <span class=\"pageFirst\">2649</span>–<span class=\"pageLast\">2660</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1046/j.1365-294X.2002.01646.x</span></div>",
+   "text": "Abbot PA, Moran NA (2002) Extremely low levels of genetic polymorphism in endosymbionts (Buchnera) of aphids. Molecular Ecology, 11, 2649–2660. 10.1046/j.1365-294X.2002.01646.x",
+   "doi": "10.1046/j.1365-294X.2002.01646.x",
+   "url": ""
+  },
+  {
+   "n": 2,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Akman L</span>, \n<span class=\"author\">Yamashita A</span>, \n<span class=\"author\">Watanabe H</span> <i>et al.</i> (<span class=\"pubYear\">2002</span>) <span class=\"articleTitle\">Genome sequence of the endocellular obligate symbiont of tsetse flies, <i>Wigglesworthia glossinidia</i></span>. \n<i class=\"journalTitle\">Nature Genetics</i>,  <span class=\"vol\">32</span>,  <span class=\"pageFirst\">402</span>–<span class=\"pageLast\">407</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1038/ng986</span></div>",
+   "text": "Akman L, Yamashita A, Watanabe H et al. (2002) Genome sequence of the endocellular obligate symbiont of tsetse flies, Wigglesworthia glossinidia. Nature Genetics, 32, 402–407. 10.1038/ng986",
+   "doi": "10.1038/ng986",
+   "url": ""
+  },
+  {
+   "n": 3,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Aksoy S</span> (<span class=\"pubYear\">1995</span>) <span class=\"articleTitle\"><i>Wigglesworthia</i> gen. nov. and <i>Wigglesworthia glossinidia</i> sp. nov., taxa consisting of the mycetocyte-associated, primary endosymbionts of tsetse flies</span>. \n<i class=\"journalTitle\">International Journal of Systematic Bacteriology</i>,  <span class=\"vol\">45</span>,  <span class=\"pageFirst\">848</span>–<span class=\"pageLast\">851</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1099/00207713-45-4-848</span></div>",
+   "text": "Aksoy S (1995) Wigglesworthia gen. nov. and Wigglesworthia glossinidia sp. nov., taxa consisting of the mycetocyte-associated, primary endosymbionts of tsetse flies. International Journal of Systematic Bacteriology, 45, 848–851. 10.1099/00207713-45-4-848",
+   "doi": "10.1099/00207713-45-4-848",
+   "url": ""
+  },
+  {
+   "n": 4,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Aksoy S</span>, \n<span class=\"author\">Berriman M</span>, \n<span class=\"author\">Hall N</span> <i>et al.</i> (<span class=\"pubYear\">2005</span>) <span class=\"articleTitle\">A case for a <i>Glossina</i> genome project</span>. \n<i class=\"journalTitle\">Trends in Parasitology</i>,  <span class=\"vol\">21</span>,  <span class=\"pageFirst\">107</span>–<span class=\"pageLast\">111</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1016/j.pt.2005.01.006</span></div>",
+   "text": "Aksoy S, Berriman M, Hall N et al. (2005) A case for a Glossina genome project. Trends in Parasitology, 21, 107–111. 10.1016/j.pt.2005.01.006",
+   "doi": "10.1016/j.pt.2005.01.006",
+   "url": ""
+  },
+  {
+   "n": 5,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Baumann L</span>, \n<span class=\"author\">Baumann P</span> (<span class=\"pubYear\">1994</span>) <span class=\"articleTitle\">Growth-kinetics of the endosymbiont <i>Buchnera aphidicola</i> in the aphid <i>Schizaphis graminum</i></span>. \n<i class=\"journalTitle\">Applied and Environmental Microbiology</i>,  <span class=\"vol\">60</span>,  <span class=\"pageFirst\">3440</span>–<span class=\"pageLast\">3443</span>.\n\n                     ",
+   "text": "Baumann L, Baumann P (1994) Growth-kinetics of the endosymbiont Buchnera aphidicola in the aphid Schizaphis graminum. Applied and Environmental Microbiology, 60, 3440–3443.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 6,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Baumann P</span>, \n<span class=\"author\">Baumann L</span>, \n<span class=\"author\">Clark MA</span> (<span class=\"pubYear\">1996</span>) <span class=\"articleTitle\">Levels of <i>Buchnera aphidicola</i> chaperonin GroEL during growth of the aphid <i>Schizaphis graminum</i></span>. \n<i class=\"journalTitle\">Current Microbiology</i>,  <span class=\"vol\">32</span>,  <span class=\"pageFirst\">279</span>–<span class=\"pageLast\">285</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1007/s002849900050</span></div>",
+   "text": "Baumann P, Baumann L, Clark MA (1996) Levels of Buchnera aphidicola chaperonin GroEL during growth of the aphid Schizaphis graminum. Current Microbiology, 32, 279–285. 10.1007/s002849900050",
+   "doi": "10.1007/s002849900050",
+   "url": ""
+  },
+  {
+   "n": 7,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Baumann P</span>, \n<span class=\"author\">Baumann L</span>, \n<span class=\"author\">Lai CY</span>, \n<span class=\"author\">Rouhbakhsh D</span>, \n<span class=\"author\">Moran NA</span>, \n<span class=\"author\">Clark MA</span> (<span class=\"pubYear\">1995</span>) <span class=\"articleTitle\">Genetics, physiology, and evolutionary relationships of the genus <i>Buchnera</i>: intracellular symbionts of aphids</span>. \n<i class=\"journalTitle\">Annual Review of Microbiology</i>,  <span class=\"vol\">49</span>,  <span class=\"pageFirst\">55</span>–<span class=\"pageLast\">94</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1146/annurev.mi.49.100195.000415</span></div>",
+   "text": "Baumann P, Baumann L, Lai CY, Rouhbakhsh D, Moran NA, Clark MA (1995) Genetics, physiology, and evolutionary relationships of the genus Buchnera: intracellular symbionts of aphids. Annual Review of Microbiology, 49, 55–94. 10.1146/annurev.mi.49.100195.000415",
+   "doi": "10.1146/annurev.mi.49.100195.000415",
+   "url": ""
+  },
+  {
+   "n": 8,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Baumann L</span>, \n<span class=\"author\">Baumann P</span>, \n<span class=\"author\">Thao ML</span> (<span class=\"pubYear\">1999</span>) <span class=\"articleTitle\">Detection of the messenger RNA transcribed from genes encoding enzymes of amino acid biosynthesis in <i>Buchnera aphidicola</i> (endosymbiont of aphids)</span>. \n<i class=\"journalTitle\">Current Microbiology</i>,  <span class=\"vol\">38</span>,  <span class=\"pageFirst\">135</span>–<span class=\"pageLast\">136</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1007/s002849900417</span></div>",
+   "text": "Baumann L, Baumann P, Thao ML (1999) Detection of the messenger RNA transcribed from genes encoding enzymes of amino acid biosynthesis in Buchnera aphidicola (endosymbiont of aphids). Current Microbiology, 38, 135–136. 10.1007/s002849900417",
+   "doi": "10.1007/s002849900417",
+   "url": ""
+  },
+  {
+   "n": 9,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Birkle LM</span>, \n<span class=\"author\">Minto LB</span>, \n<span class=\"author\">Douglas AE</span> (<span class=\"pubYear\">2002</span>) <span class=\"articleTitle\">Relating genotype and phenotype for tryptophan synthesis in an aphid-bacterial symbiosis</span>. \n<i class=\"journalTitle\">Physiological Entomology</i>,  <span class=\"vol\">27</span>,  <span class=\"pageFirst\">302</span>–<span class=\"pageLast\">306</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1046/j.1365-3032.2002.00301.x</span></div>",
+   "text": "Birkle LM, Minto LB, Douglas AE (2002) Relating genotype and phenotype for tryptophan synthesis in an aphid-bacterial symbiosis. Physiological Entomology, 27, 302–306. 10.1046/j.1365-3032.2002.00301.x",
+   "doi": "10.1046/j.1365-3032.2002.00301.x",
+   "url": ""
+  },
+  {
+   "n": 10,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Birkle LM</span>, \n<span class=\"author\">Minto LB</span>, \n<span class=\"author\">Walters KFA</span>, \n<span class=\"author\">Douglas AE</span> (<span class=\"pubYear\">2004</span>) <span class=\"articleTitle\">Microbial genotype and insect fitness in an aphid-bacterial symbiosis</span>. \n<i class=\"journalTitle\">Functional Ecology</i>,  <span class=\"vol\">18</span>,  <span class=\"pageFirst\">598</span>–<span class=\"pageLast\">604</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1111/j.0269-8463.2004.00871.x</span></div>",
+   "text": "Birkle LM, Minto LB, Walters KFA, Douglas AE (2004) Microbial genotype and insect fitness in an aphid-bacterial symbiosis. Functional Ecology, 18, 598–604. 10.1111/j.0269-8463.2004.00871.x",
+   "doi": "10.1111/j.0269-8463.2004.00871.x",
+   "url": ""
+  },
+  {
+   "n": 11,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Bracho AM</span>, \n<span class=\"author\">Martinez-Torres D</span>, \n<span class=\"author\">Moya A</span>, \n<span class=\"author\">Latorre A</span> (<span class=\"pubYear\">1995</span>) <span class=\"articleTitle\">Discovery and molecular characterization of a plasmid localized in <i>Buchnera</i> sp., bacterial endosymbiont of the aphid <i>Rhopalosiphum padi</i></span>. \n<i class=\"journalTitle\">Journal of Molecular Evolution</i>,  <span class=\"vol\">41</span>,  <span class=\"pageFirst\">67</span>–<span class=\"pageLast\">73</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1007/BF00174042</span></div>",
+   "text": "Bracho AM, Martinez-Torres D, Moya A, Latorre A (1995) Discovery and molecular characterization of a plasmid localized in Buchnera sp., bacterial endosymbiont of the aphid Rhopalosiphum padi. Journal of Molecular Evolution, 41, 67–73. 10.1007/BF00174042",
+   "doi": "10.1007/BF00174042",
+   "url": ""
+  },
+  {
+   "n": 12,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Braendle C</span>, \n<span class=\"author\">Miura T</span>, \n<span class=\"author\">Bickel R</span> <i>et al.</i> (<span class=\"pubYear\">2003</span>) <span class=\"articleTitle\">Developmental origin and evolution of bacteriocytes in the aphid-<i>Buchnera</i> symbiosis</span>. \n<i class=\"journalTitle\">PLoS Biology</i>,  <span class=\"vol\">1</span>,  <span class=\"pageFirst\">70</span>–<span class=\"pageLast\">76</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1371/journal.pbio.0000021</span></div>",
+   "text": "Braendle C, Miura T, Bickel R et al. (2003) Developmental origin and evolution of bacteriocytes in the aphid-Buchnera symbiosis. PLoS Biology, 1, 70–76. 10.1371/journal.pbio.0000021",
+   "doi": "10.1371/journal.pbio.0000021",
+   "url": ""
+  },
+  {
+   "n": 13,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Buchner P</span> (<span class=\"pubYear\">1965</span>)  <span class=\"bookTitle\">Endosymbiosis of Animals with Plant Microorganisms</span>. Interscience, New York.\n\n                     ",
+   "text": "Buchner P (1965) Endosymbiosis of Animals with Plant Microorganisms. Interscience, New York.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 14,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Dale C</span>, \n<span class=\"author\">Young SA</span>, \n<span class=\"author\">Haydon DT</span>, \n<span class=\"author\">Welburn SC</span> (<span class=\"pubYear\">2001</span>) <span class=\"articleTitle\">The insect endosymbiont <i>Sodalis glossinidius</i> utilizes a type III secretion system for cell invasion</span>. \n<i class=\"journalTitle\">Proceedings of the National Academy of Sciences, USA</i>,  <span class=\"vol\">98</span>,  <span class=\"pageFirst\">1883</span>–<span class=\"pageLast\">1888</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1073/pnas.98.4.1883</span></div>",
+   "text": "Dale C, Young SA, Haydon DT, Welburn SC (2001) The insect endosymbiont Sodalis glossinidius utilizes a type III secretion system for cell invasion. Proceedings of the National Academy of Sciences, USA, 98, 1883–1888. 10.1073/pnas.98.4.1883",
+   "doi": "10.1073/pnas.98.4.1883",
+   "url": ""
+  },
+  {
+   "n": 15,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Dale C</span>, \n<span class=\"author\">Jones T</span>, \n<span class=\"author\">Pontes M</span> (<span class=\"pubYear\">2005</span>) <span class=\"articleTitle\">Degenerative evolution and functional diversification of type-III secretion systems in the insect endosymbiont <i>Sodalis glossinidius</i></span>. \n<i class=\"journalTitle\">Molecular Biology and Evolution</i>,  <span class=\"vol\">22</span>,  <span class=\"pageFirst\">758</span>–<span class=\"pageLast\">766</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1093/molbev/msi061</span></div>",
+   "text": "Dale C, Jones T, Pontes M (2005) Degenerative evolution and functional diversification of type-III secretion systems in the insect endosymbiont Sodalis glossinidius. Molecular Biology and Evolution, 22, 758–766. 10.1093/molbev/msi061",
+   "doi": "10.1093/molbev/msi061",
+   "url": ""
+  },
+  {
+   "n": 16,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Dale C</span>, \n<span class=\"author\">Plague GR</span>, \n<span class=\"author\">Wang B</span>, \n<span class=\"author\">Ochman H</span>, \n<span class=\"author\">Moran NA</span> (<span class=\"pubYear\">2002</span>) <span class=\"articleTitle\">Type III secretion systems and the evolution of mutualistic endosymbiosis</span>. \n<i class=\"journalTitle\">Proceedings of the National Academy of Sciences, USA</i>,  <span class=\"vol\">99</span>,  <span class=\"pageFirst\">12397</span>–<span class=\"pageLast\">12402</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1073/pnas.182213299</span></div>",
+   "text": "Dale C, Plague GR, Wang B, Ochman H, Moran NA (2002) Type III secretion systems and the evolution of mutualistic endosymbiosis. Proceedings of the National Academy of Sciences, USA, 99, 12397–12402. 10.1073/pnas.182213299",
+   "doi": "10.1073/pnas.182213299",
+   "url": ""
+  },
+  {
+   "n": 17,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Degnan PH</span>, \n<span class=\"author\">Lazarus AB</span>, \n<span class=\"author\">Brock C</span>, \n<span class=\"author\">Wernegreen JJ</span> (<span class=\"pubYear\">2004</span>) <span class=\"articleTitle\">Host–symbiont stability and fast evolutionary rates in an ant–bacterium association: Cospeciation of <i>Camponotu</i>s species and their endosymbionts, <i>Candidatus</i> Blochmannia</span>. \n<i class=\"journalTitle\">Systematic Biology</i>,  <span class=\"vol\">53</span>,  <span class=\"pageFirst\">95</span>–<span class=\"pageLast\">110</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1080/10635150490264842</span></div>",
+   "text": "Degnan PH, Lazarus AB, Brock C, Wernegreen JJ (2004) Host–symbiont stability and fast evolutionary rates in an ant–bacterium association: Cospeciation of Camponotus species and their endosymbionts, Candidatus Blochmannia. Systematic Biology, 53, 95–110. 10.1080/10635150490264842",
+   "doi": "10.1080/10635150490264842",
+   "url": ""
+  },
+  {
+   "n": 18,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Degnan PH</span>, \n<span class=\"author\">Lazarus AB</span>, \n<span class=\"author\">Wernegreen JJ</span> (<span class=\"pubYear\">2005</span>) <span class=\"articleTitle\">Genome sequence of <i>Blochmannia pennsylvanicus</i> indicates parallel trends in genome evolution among bacterial mutualists of insects</span>. \n<i class=\"journalTitle\">Genome Research</i>,  <span class=\"vol\">15</span>,  <span class=\"pageFirst\">1023</span>–<span class=\"pageLast\">1033</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1101/gr.3771305</span></div>",
+   "text": "Degnan PH, Lazarus AB, Wernegreen JJ (2005) Genome sequence of Blochmannia pennsylvanicus indicates parallel trends in genome evolution among bacterial mutualists of insects. Genome Research, 15, 1023–1033. 10.1101/gr.3771305",
+   "doi": "10.1101/gr.3771305",
+   "url": ""
+  },
+  {
+   "n": 19,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Douglas AE</span> (<span class=\"pubYear\">1998</span>) <span class=\"articleTitle\">Nutritional interaction in insect-microbial symbioses: aphids and their symbiotic bacteria <i>Buchnera</i></span>. \n<i class=\"journalTitle\">Annual Review of Entomology</i>,  <span class=\"vol\">43</span>,  <span class=\"pageFirst\">17</span>–<span class=\"pageLast\">37</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1146/annurev.ento.43.1.17</span></div>",
+   "text": "Douglas AE (1998) Nutritional interaction in insect-microbial symbioses: aphids and their symbiotic bacteria Buchnera. Annual Review of Entomology, 43, 17–37. 10.1146/annurev.ento.43.1.17",
+   "doi": "10.1146/annurev.ento.43.1.17",
+   "url": ""
+  },
+  {
+   "n": 20,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Douglas AE</span>, \n<span class=\"author\">Prosser WA</span> (<span class=\"pubYear\">1992</span>) <span class=\"articleTitle\">Synthesis of the essential amino acid tryptophan in the pea aphid (<i>Acyrthosiphon pisum</i>) symbiosis</span>. \n<i class=\"journalTitle\">Journal of Insect Physiology</i>,  <span class=\"vol\">38</span>,  <span class=\"pageFirst\">565</span>–<span class=\"pageLast\">568</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1016/0022-1910(92)90107-O</span></div>",
+   "text": "Douglas AE, Prosser WA (1992) Synthesis of the essential amino acid tryptophan in the pea aphid (Acyrthosiphon pisum) symbiosis. Journal of Insect Physiology, 38, 565–568. 10.1016/0022-1910(92)90107-O",
+   "doi": "10.1016/0022-1910(92)90107-O",
+   "url": ""
+  },
+  {
+   "n": 21,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Fares MA</span>, \n<span class=\"author\">Ruiz-Gonzalez MX</span>, \n<span class=\"author\">Moya A</span>, \n<span class=\"author\">Elena SF</span>, \n<span class=\"author\">Barrio E</span> (<span class=\"pubYear\">2002</span>) <span class=\"articleTitle\">Endosymbiotic bacteria: GroEL buffers against deleterious mutations</span>. \n<i class=\"journalTitle\">Nature</i>,  <span class=\"vol\">417</span>,  <span class=\"pageFirst\">398</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1038/417398a</span></div>",
+   "text": "Fares MA, Ruiz-Gonzalez MX, Moya A, Elena SF, Barrio E (2002) Endosymbiotic bacteria: GroEL buffers against deleterious mutations. Nature, 417, 398. 10.1038/417398a",
+   "doi": "10.1038/417398a",
+   "url": ""
+  },
+  {
+   "n": 22,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Febvay G</span>, \n<span class=\"author\">Rahbe Y</span>, \n<span class=\"author\">Rynkiewicz M</span>, \n<span class=\"author\">Guillaud J</span>, \n<span class=\"author\">Bonnot G</span> (<span class=\"pubYear\">1999</span>) <span class=\"articleTitle\">Fate of dietary sucrose and neosynthesis of amino acids in the pea aphid, <i>Acyrthosiphon pisum</i>, reared on different diets</span>. \n<i class=\"journalTitle\">Journal of Experimental Biology</i>,  <span class=\"vol\">202</span>,  <span class=\"pageFirst\">2639</span>–<span class=\"pageLast\">2652</span>.\n\n                     ",
+   "text": "Febvay G, Rahbe Y, Rynkiewicz M, Guillaud J, Bonnot G (1999) Fate of dietary sucrose and neosynthesis of amino acids in the pea aphid, Acyrthosiphon pisum, reared on different diets. Journal of Experimental Biology, 202, 2639–2652.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 23,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Funk DJ</span>, \n<span class=\"author\">Wernegreen JJ</span>, \n<span class=\"author\">Moran NA</span> (<span class=\"pubYear\">2001</span>) <span class=\"articleTitle\">Intraspecific variation in symbiont genomes: Bottlenecks and the aphid–<i>Buchnera</i> association</span>. \n<i class=\"journalTitle\">Genetics</i>,  <span class=\"vol\">157</span>,  <span class=\"pageFirst\">477</span>–<span class=\"pageLast\">489</span>.\n\n                     ",
+   "text": "Funk DJ, Wernegreen JJ, Moran NA (2001) Intraspecific variation in symbiont genomes: Bottlenecks and the aphid–Buchnera association. Genetics, 157, 477–489.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 24,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Gil R</span>, \n<span class=\"author\">Silva FJ</span>, \n<span class=\"author\">Zientz E</span> <i>et al.</i> (<span class=\"pubYear\">2003</span>) <span class=\"articleTitle\">The genome sequence of <i>Blochmannia floridanus</i>: comparative analysis of reduced genomes</span>. \n<i class=\"journalTitle\">Proceedings of the National Academy of Sciences, USA</i>,  <span class=\"vol\">100</span>,  <span class=\"pageFirst\">9388</span>–<span class=\"pageLast\">9393</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1073/pnas.1533499100</span></div>",
+   "text": "Gil R, Silva FJ, Zientz E et al. (2003) The genome sequence of Blochmannia floridanus: comparative analysis of reduced genomes. Proceedings of the National Academy of Sciences, USA, 100, 9388–9393. 10.1073/pnas.1533499100",
+   "doi": "10.1073/pnas.1533499100",
+   "url": ""
+  },
+  {
+   "n": 25,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Goodisman MAD</span>, \n<span class=\"author\">Isoe J</span>, \n<span class=\"author\">Wheeler DE</span>, \n<span class=\"author\">Wells MA</span> (<span class=\"pubYear\">2005</span>) <span class=\"articleTitle\">Evolution of insect metamorphosis: a microarray–based study of larval and adult gene expression in the ant <i>Camponotus festinatus</i></span>. \n<i class=\"journalTitle\">Evolution</i>,  <span class=\"vol\">59</span>,  <span class=\"pageFirst\">858</span>–<span class=\"pageLast\">870</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1111/j.0014-3820.2005.tb01759.x</span></div>",
+   "text": "Goodisman MAD, Isoe J, Wheeler DE, Wells MA (2005) Evolution of insect metamorphosis: a microarray–based study of larval and adult gene expression in the ant Camponotus festinatus. Evolution, 59, 858–870. 10.1111/j.0014-3820.2005.tb01759.x",
+   "doi": "10.1111/j.0014-3820.2005.tb01759.x",
+   "url": ""
+  },
+  {
+   "n": 26,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Ishikawa H</span> (<span class=\"pubYear\">1982</span>) <span class=\"articleTitle\">Host–symbiont interactions in the protein-synthesis in the pea aphid, <i>Acyrthosiphon pisum</i></span>. \n<i class=\"journalTitle\">Insect Biochemistry</i>,  <span class=\"vol\">12</span>,  <span class=\"pageFirst\">613</span>–<span class=\"pageLast\">622</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1016/0020-1790(82)90048-8</span></div>",
+   "text": "Ishikawa H (1982) Host–symbiont interactions in the protein-synthesis in the pea aphid, Acyrthosiphon pisum. Insect Biochemistry, 12, 613–622. 10.1016/0020-1790(82)90048-8",
+   "doi": "10.1016/0020-1790(82)90048-8",
+   "url": ""
+  },
+  {
+   "n": 27,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Komaki K</span>, \n<span class=\"author\">Ishikawa H</span> (<span class=\"pubYear\">1999</span>) <span class=\"articleTitle\">Intracellular bacterial symbionts of aphids possess many genomic copies per bacterium</span>. \n<i class=\"journalTitle\">Journal of Molecular Evolution</i>,  <span class=\"vol\">48</span>,  <span class=\"pageFirst\">717</span>–<span class=\"pageLast\">722</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1007/PL00006516</span></div>",
+   "text": "Komaki K, Ishikawa H (1999) Intracellular bacterial symbionts of aphids possess many genomic copies per bacterium. Journal of Molecular Evolution, 48, 717–722. 10.1007/PL00006516",
+   "doi": "10.1007/PL00006516",
+   "url": ""
+  },
+  {
+   "n": 28,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Komaki K</span>, \n<span class=\"author\">Ishikawa H</span> (<span class=\"pubYear\">2000</span>) <span class=\"articleTitle\">Genomic copy number of intracellular bacterial symbionts of aphids varies in response to developmental stage and morph of their host</span>. \n<i class=\"journalTitle\">Insect Biochemistry and Molecular Biology</i>,  <span class=\"vol\">30</span>,  <span class=\"pageFirst\">253</span>–<span class=\"pageLast\">258</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1016/S0965-1748(99)00125-3</span></div>",
+   "text": "Komaki K, Ishikawa H (2000) Genomic copy number of intracellular bacterial symbionts of aphids varies in response to developmental stage and morph of their host. Insect Biochemistry and Molecular Biology, 30, 253–258. 10.1016/S0965-1748(99)00125-3",
+   "doi": "10.1016/S0965-1748(99)00125-3",
+   "url": ""
+  },
+  {
+   "n": 29,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Kondo N</span>, \n<span class=\"author\">Nikoh N</span>, \n<span class=\"author\">Ijichi N</span>, \n<span class=\"author\">Shimada M</span>, \n<span class=\"author\">Fukatsu T</span> (<span class=\"pubYear\">2002</span>) <span class=\"articleTitle\">Genome fragment of <i>Wolbachia</i> endosymbiont transferred to X chromosome of host insect</span>. \n<i class=\"journalTitle\">Proceedings of the National Academy of Sciences, USA</i>,  <span class=\"vol\">99</span>,  <span class=\"pageFirst\">14280</span>–<span class=\"pageLast\">14285</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1073/pnas.222228199</span></div>",
+   "text": "Kondo N, Nikoh N, Ijichi N, Shimada M, Fukatsu T (2002) Genome fragment of Wolbachia endosymbiont transferred to X chromosome of host insect. Proceedings of the National Academy of Sciences, USA, 99, 14280–14285. 10.1073/pnas.222228199",
+   "doi": "10.1073/pnas.222228199",
+   "url": ""
+  },
+  {
+   "n": 30,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Koyama Y</span>, \n<span class=\"author\">Yao I</span>, \n<span class=\"author\">Akimoto SI</span> (<span class=\"pubYear\">2004</span>) <span class=\"articleTitle\">Aphid galls accumulate high concentrations of amino acids: a support for the nutrition hypothesis for gall formation</span>. \n<i class=\"journalTitle\">Entomologia Experimentalis et Applicata</i>,  <span class=\"vol\">113</span>,  <span class=\"pageFirst\">35</span>–<span class=\"pageLast\">44</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1111/j.0013-8703.2004.00207.x</span></div>",
+   "text": "Koyama Y, Yao I, Akimoto SI (2004) Aphid galls accumulate high concentrations of amino acids: a support for the nutrition hypothesis for gall formation. Entomologia Experimentalis et Applicata, 113, 35–44. 10.1111/j.0013-8703.2004.00207.x",
+   "doi": "10.1111/j.0013-8703.2004.00207.x",
+   "url": ""
+  },
+  {
+   "n": 31,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Lai CY</span>, \n<span class=\"author\">Baumann L</span>, \n<span class=\"author\">Baumann P</span> (<span class=\"pubYear\">1994</span>) <span class=\"articleTitle\">Amplification of <i>trpEG</i>: adaptation of <i>Buchnera aphidicola</i> to an endosymbiotic association with aphids</span>. \n<i class=\"journalTitle\">Proceedings of the National Academy of Sciences, USA</i>,  <span class=\"vol\">91</span>,  <span class=\"pageFirst\">3819</span>–<span class=\"pageLast\">3823</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1073/pnas.91.9.3819</span></div>",
+   "text": "Lai CY, Baumann L, Baumann P (1994) Amplification of trpEG: adaptation of Buchnera aphidicola to an endosymbiotic association with aphids. Proceedings of the National Academy of Sciences, USA, 91, 3819–3823. 10.1073/pnas.91.9.3819",
+   "doi": "10.1073/pnas.91.9.3819",
+   "url": ""
+  },
+  {
+   "n": 32,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Lai CY</span>, \n<span class=\"author\">Baumann P</span>, \n<span class=\"author\">Moran N</span> (<span class=\"pubYear\">1996</span>) <span class=\"articleTitle\">The endosymbiont (<i>Buchnera</i>) of the aphid <i>Diuraphis noxia</i> contains plasmids consisting of <i>trpEG</i> and tandem repeats of <i>trpEG</i> pseudogenes</span>. \n<i class=\"journalTitle\">Applied and Environmental Microbiology</i>,  <span class=\"vol\">62</span>,  <span class=\"pageFirst\">332</span>–<span class=\"pageLast\">339</span>.\n\n                     ",
+   "text": "Lai CY, Baumann P, Moran N (1996) The endosymbiont (Buchnera) of the aphid Diuraphis noxia contains plasmids consisting of trpEG and tandem repeats of trpEG pseudogenes. Applied and Environmental Microbiology, 62, 332–339.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 33,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Lerat E</span>, \n<span class=\"author\">Daubin V</span>, \n<span class=\"author\">Ochman H</span>, \n<span class=\"author\">Moran NA</span> (<span class=\"pubYear\">2005</span>) <span class=\"articleTitle\">Evolutionary origins of genomic repertoires in bacteria</span>. \n<i class=\"journalTitle\">PLoS Biology</i>,  <span class=\"vol\">3</span>,  <span class=\"pageFirst\">e130</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1371/journal.pbio.0030130</span></div>",
+   "text": "Lerat E, Daubin V, Ochman H, Moran NA (2005) Evolutionary origins of genomic repertoires in bacteria. PLoS Biology, 3, e130. 10.1371/journal.pbio.0030130",
+   "doi": "10.1371/journal.pbio.0030130",
+   "url": ""
+  },
+  {
+   "n": 34,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Martin W</span> (<span class=\"pubYear\">2003</span>) <span class=\"articleTitle\">Gene transfer from organelles to the nucleus: frequent and in big chunks</span>. \n<i class=\"journalTitle\">Proceedings of the National Academy of Sciences, USA</i>,  <span class=\"vol\">100</span>,  <span class=\"pageFirst\">8612</span>–<span class=\"pageLast\">8614</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1073/pnas.1633606100</span></div>",
+   "text": "Martin W (2003) Gene transfer from organelles to the nucleus: frequent and in big chunks. Proceedings of the National Academy of Sciences, USA, 100, 8612–8614. 10.1073/pnas.1633606100",
+   "doi": "10.1073/pnas.1633606100",
+   "url": ""
+  },
+  {
+   "n": 35,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Mira A</span>, \n<span class=\"author\">Ochman H</span>, \n<span class=\"author\">Moran NA</span> (<span class=\"pubYear\">2001</span>) <span class=\"articleTitle\">Deletional bias and the evolution of bacterial genomes</span>. \n<i class=\"journalTitle\">Trends in Genetics</i>,  <span class=\"vol\">17</span>,  <span class=\"pageFirst\">589</span>–<span class=\"pageLast\">596</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1016/S0168-9525(01)02447-7</span></div>",
+   "text": "Mira A, Ochman H, Moran NA (2001) Deletional bias and the evolution of bacterial genomes. Trends in Genetics, 17, 589–596. 10.1016/S0168-9525(01)02447-7",
+   "doi": "10.1016/S0168-9525(01)02447-7",
+   "url": ""
+  },
+  {
+   "n": 36,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Montllor CB</span>, \n<span class=\"author\">Maxmen A</span>, \n<span class=\"author\">Purcell AH</span> (<span class=\"pubYear\">2002</span>) <span class=\"articleTitle\">Facultative bacterial endosymbionts benefit pea aphids <i>Acyrthosiphon pisum</i> under heat stress</span>. \n<i class=\"journalTitle\">Ecological Entomology</i>,  <span class=\"vol\">27</span>,  <span class=\"pageFirst\">189</span>–<span class=\"pageLast\">195</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1046/j.1365-2311.2002.00393.x</span></div>",
+   "text": "Montllor CB, Maxmen A, Purcell AH (2002) Facultative bacterial endosymbionts benefit pea aphids Acyrthosiphon pisum under heat stress. Ecological Entomology, 27, 189–195. 10.1046/j.1365-2311.2002.00393.x",
+   "doi": "10.1046/j.1365-2311.2002.00393.x",
+   "url": ""
+  },
+  {
+   "n": 37,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Moran NA</span> (<span class=\"pubYear\">1996</span>) <span class=\"articleTitle\">Accelerated evolution and Muller's ratchet in endosymbiotic bacteria</span>. \n<i class=\"journalTitle\">Proceedings of the National Academy of Sciences, USA</i>,  <span class=\"vol\">93</span>,  <span class=\"pageFirst\">2873</span>–<span class=\"pageLast\">2878</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1073/pnas.93.7.2873</span></div>",
+   "text": "Moran NA (1996) Accelerated evolution and Muller's ratchet in endosymbiotic bacteria. Proceedings of the National Academy of Sciences, USA, 93, 2873–2878. 10.1073/pnas.93.7.2873",
+   "doi": "10.1073/pnas.93.7.2873",
+   "url": ""
+  },
+  {
+   "n": 38,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Moran NA</span>, \n<span class=\"author\">Mira A</span> (<span class=\"pubYear\">2001</span>) <span class=\"articleTitle\">The process of genome shrinkage in the obligate symbiont, <i>Buchnera aphidicola</i></span>. \n<i class=\"journalTitle\">Genome Biology</i>,  <span class=\"vol\">2</span>,  <span class=\"pageFirst\">research0054.1</span>–<span class=\"pageLast\">0054</span>.12.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1186/gb-2001-2-12-research0054</span></div>",
+   "text": "Moran NA, Mira A (2001) The process of genome shrinkage in the obligate symbiont, Buchnera aphidicola. Genome Biology, 2, research0054.1–0054.12. 10.1186/gb-2001-2-12-research0054",
+   "doi": "10.1186/gb-2001-2-12-research0054",
+   "url": ""
+  },
+  {
+   "n": 39,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Moran NA</span>, \n<span class=\"author\">Plague GR</span> (<span class=\"pubYear\">2004</span>) <span class=\"articleTitle\">Genomic changes following host restriction in bacteria</span>. \n<i class=\"journalTitle\">Current Opinion in Genetics and Development</i>,  <span class=\"vol\">14</span>,  <span class=\"pageFirst\">627</span>–<span class=\"pageLast\">633</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1016/j.gde.2004.09.003</span></div>",
+   "text": "Moran NA, Plague GR (2004) Genomic changes following host restriction in bacteria. Current Opinion in Genetics and Development, 14, 627–633. 10.1016/j.gde.2004.09.003",
+   "doi": "10.1016/j.gde.2004.09.003",
+   "url": ""
+  },
+  {
+   "n": 40,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Moran NA</span>, \n<span class=\"author\">Munson MA</span>, \n<span class=\"author\">Baumann P</span>, \n<span class=\"author\">Ishikawa H</span> (<span class=\"pubYear\">1993</span>) <span class=\"articleTitle\">A molecular clock in endosymbiotic bacteria is calibrated using the insect hosts</span>. \n<i class=\"journalTitle\">Proceedings of the Royal Society of London. Series B, Biological Sciences</i>,  <span class=\"vol\">253</span>,  <span class=\"pageFirst\">167</span>–<span class=\"pageLast\">171</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1098/rspb.1993.0098</span></div>",
+   "text": "Moran NA, Munson MA, Baumann P, Ishikawa H (1993) A molecular clock in endosymbiotic bacteria is calibrated using the insect hosts. Proceedings of the Royal Society of London. Series B, Biological Sciences, 253, 167–171. 10.1098/rspb.1993.0098",
+   "doi": "10.1098/rspb.1993.0098",
+   "url": ""
+  },
+  {
+   "n": 41,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Moran NA</span>, \n<span class=\"author\">Plague G</span>, \n<span class=\"author\">Sandström J</span>, \n<span class=\"author\">Wilcox JL</span> (<span class=\"pubYear\">2003</span>) <span class=\"articleTitle\">A genomic perspective on nutrient-provisioning by bacterial symbionts of insects</span>. \n<i class=\"journalTitle\">Proceedings of the National Academy of Sciences, USA</i>, (<span class=\"citedIssue\">Colloquium Issue</span>),  <span class=\"vol\">100</span>,  <span class=\"pageFirst\">14543</span>–<span class=\"pageLast\">14548</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1073/pnas.2135345100</span></div>",
+   "text": "Moran NA, Plague G, Sandström J, Wilcox JL (2003) A genomic perspective on nutrient-provisioning by bacterial symbionts of insects. Proceedings of the National Academy of Sciences, USA, (Colloquium Issue), 100, 14543–14548. 10.1073/pnas.2135345100",
+   "doi": "10.1073/pnas.2135345100",
+   "url": ""
+  },
+  {
+   "n": 42,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Moran NA</span>, \n<span class=\"author\">Dunbar HE</span>, \n<span class=\"author\">Wilcox JL</span> (<span class=\"pubYear\">2005</span>) <span class=\"articleTitle\">Regulation of transcription in a reduced bacterial genome: nutrient-provisioning genes of the obligate symbiont, <i>Buchnera aphidicola</i></span>. \n<i class=\"journalTitle\">Journal of Bacteriology</i>,  <span class=\"vol\">187</span>,  <span class=\"pageFirst\">4229</span>–<span class=\"pageLast\">4237</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1128/JB.187.12.4229-4237.2005</span></div>",
+   "text": "Moran NA, Dunbar HE, Wilcox JL (2005) Regulation of transcription in a reduced bacterial genome: nutrient-provisioning genes of the obligate symbiont, Buchnera aphidicola. Journal of Bacteriology, 187, 4229–4237. 10.1128/JB.187.12.4229-4237.2005",
+   "doi": "10.1128/JB.187.12.4229-4237.2005",
+   "url": ""
+  },
+  {
+   "n": 43,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Moran NA</span>, \n<span class=\"author\">Degnan PH</span>, \n<span class=\"author\">Santos SR</span>, \n<span class=\"author\">Dunbar HE</span>, \n<span class=\"author\">Ochman H</span> (<span class=\"pubYear\">2005</span>)  <span class=\"otherTitle\">The players in a mutualistic symbiosis: Insects, bacteria, viruses and virulence genes</span>. \n <span class=\"otherTitle\">Proceedings of the National Academy of Sciences</span>, USA (in press).\n\n                     ",
+   "text": "Moran NA, Degnan PH, Santos SR, Dunbar HE, Ochman H (2005) The players in a mutualistic symbiosis: Insects, bacteria, viruses and virulence genes. Proceedings of the National Academy of Sciences, USA (in press).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 44,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Nakabachi A</span>, \n<span class=\"author\">Shigenobu S</span>, \n<span class=\"author\">Sakazume N</span> <i>et al.</i> (<span class=\"pubYear\">2005</span>) <span class=\"articleTitle\">Transcriptome analysis of the aphid bacteriocyte, the symbiotic host cell that harbors an endocellular mutualistic bacterium, <i>Buchnera</i></span>. \n<i class=\"journalTitle\">Proceedings of the National Academy of Sciences, USA</i>,  <span class=\"vol\">102</span>,  <span class=\"pageFirst\">5477</span>–<span class=\"pageLast\">5482</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1073/pnas.0409034102</span></div>",
+   "text": "Nakabachi A, Shigenobu S, Sakazume N et al. (2005) Transcriptome analysis of the aphid bacteriocyte, the symbiotic host cell that harbors an endocellular mutualistic bacterium, Buchnera. Proceedings of the National Academy of Sciences, USA, 102, 5477–5482. 10.1073/pnas.0409034102",
+   "doi": "10.1073/pnas.0409034102",
+   "url": ""
+  },
+  {
+   "n": 45,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Nogge G</span> (<span class=\"pubYear\">1981</span>) <span class=\"articleTitle\">Significance of symbionts for the maintenance of an optimal nutritional state for successful reproduction in hematophagous arthropods</span>. \n<i class=\"journalTitle\">Parasitology</i>,  <span class=\"vol\">82</span>,  <span class=\"pageFirst\">101</span>–<span class=\"pageLast\">104</span>.\n\n                     ",
+   "text": "Nogge G (1981) Significance of symbionts for the maintenance of an optimal nutritional state for successful reproduction in hematophagous arthropods. Parasitology, 82, 101–104.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 46,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Ohtaka C</span>, \n<span class=\"author\">Nakamura H</span>, \n<span class=\"author\">Ishikawa H</span> (<span class=\"pubYear\">1992</span>) <span class=\"articleTitle\">Structures of chaperonins from an intracellular symbiont and their functional expression in <i>Escherichia coli groE</i> mutants</span>. \n<i class=\"journalTitle\">Journal of Bacteriology</i>,  <span class=\"vol\">174</span>,  <span class=\"pageFirst\">1869</span>–<span class=\"pageLast\">1874</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1128/jb.174.6.1869-1874.1992</span></div>",
+   "text": "Ohtaka C, Nakamura H, Ishikawa H (1992) Structures of chaperonins from an intracellular symbiont and their functional expression in Escherichia coli groE mutants. Journal of Bacteriology, 174, 1869–1874. 10.1128/jb.174.6.1869-1874.1992",
+   "doi": "10.1128/jb.174.6.1869-1874.1992",
+   "url": ""
+  },
+  {
+   "n": 47,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Oliver KM</span>, \n<span class=\"author\">Russell JA</span>, \n<span class=\"author\">Moran NA</span>, \n<span class=\"author\">Hunter MS</span> (<span class=\"pubYear\">2003</span>) <span class=\"articleTitle\">Facultative bacterial symbionts in aphids confer resistance to parasitic wasps</span>. \n<i class=\"journalTitle\">Proceedings of the National Academy of Sciences, USA</i>,  <span class=\"vol\">100</span>,  <span class=\"pageFirst\">1803</span>–<span class=\"pageLast\">1807</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1073/pnas.0335320100</span></div>",
+   "text": "Oliver KM, Russell JA, Moran NA, Hunter MS (2003) Facultative bacterial symbionts in aphids confer resistance to parasitic wasps. Proceedings of the National Academy of Sciences, USA, 100, 1803–1807. 10.1073/pnas.0335320100",
+   "doi": "10.1073/pnas.0335320100",
+   "url": ""
+  },
+  {
+   "n": 48,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Plague GR</span>, \n<span class=\"author\">Dale C</span>, \n<span class=\"author\">Moran NA</span> (<span class=\"pubYear\">2003</span>) <span class=\"articleTitle\">Low and homogeneous copy number of plasmid-borne symbiont genes affecting host nutrition in <i>Buchnera aphidicola</i> of the aphid <i>Uroleucon ambrosiae</i></span>. \n<i class=\"journalTitle\">Molecular Ecology</i>,  <span class=\"vol\">12</span>,  <span class=\"pageFirst\">1095</span>–<span class=\"pageLast\">1100</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1046/j.1365-294X.2003.01782.x</span></div>",
+   "text": "Plague GR, Dale C, Moran NA (2003) Low and homogeneous copy number of plasmid-borne symbiont genes affecting host nutrition in Buchnera aphidicola of the aphid Uroleucon ambrosiae. Molecular Ecology, 12, 1095–1100. 10.1046/j.1365-294X.2003.01782.x",
+   "doi": "10.1046/j.1365-294X.2003.01782.x",
+   "url": ""
+  },
+  {
+   "n": 49,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Rispe C</span>, \n<span class=\"author\">Delmotte F</span>, \n<span class=\"author\">Van Ham RCHJ</span>, \n<span class=\"author\">Moya A</span> (<span class=\"pubYear\">2004</span>) <span class=\"articleTitle\">Mutational and selective pressures on codon and amino acid usage in <i>Buchnera</i>, endosymbiotic bacteria of aphids</span>. \n<i class=\"journalTitle\">Genome Research</i>,  <span class=\"vol\">14</span>,  <span class=\"pageFirst\">44</span>–<span class=\"pageLast\">53</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1101/gr.1358104</span></div>",
+   "text": "Rispe C, Delmotte F, Van Ham RCHJ, Moya A (2004) Mutational and selective pressures on codon and amino acid usage in Buchnera, endosymbiotic bacteria of aphids. Genome Research, 14, 44–53. 10.1101/gr.1358104",
+   "doi": "10.1101/gr.1358104",
+   "url": ""
+  },
+  {
+   "n": 50,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Rouhbakhsh D</span>, \n<span class=\"author\">Lai CY</span>, \n<span class=\"author\">Von Dohlen CD</span> <i>et al.</i> (<span class=\"pubYear\">1996</span>) <span class=\"articleTitle\">The tryptophan biosynthetic pathway of aphid endosymbionts (<i>Buchnera</i>): genetics and evolution of plasmid-associated <i>trpEG</i> within the Aphididae</span>. \n<i class=\"journalTitle\">Journal of Molecular Evolution</i>,  <span class=\"vol\">42</span>,  <span class=\"pageFirst\">414</span>–<span class=\"pageLast\">421</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1007/BF02498635</span></div>",
+   "text": "Rouhbakhsh D, Lai CY, Von Dohlen CD et al. (1996) The tryptophan biosynthetic pathway of aphid endosymbionts (Buchnera): genetics and evolution of plasmid-associated trpEG within the Aphididae. Journal of Molecular Evolution, 42, 414–421. 10.1007/BF02498635",
+   "doi": "10.1007/BF02498635",
+   "url": ""
+  },
+  {
+   "n": 51,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Rutherford SL</span>, \n<span class=\"author\">Lindquist S</span> (<span class=\"pubYear\">1998</span>) <span class=\"articleTitle\">Hsp90 as a capacitor for morphological evolution</span>. \n<i class=\"journalTitle\">Nature</i>,  <span class=\"vol\">396</span>,  <span class=\"pageFirst\">336</span>–<span class=\"pageLast\">342</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1038/24550</span></div>",
+   "text": "Rutherford SL, Lindquist S (1998) Hsp90 as a capacitor for morphological evolution. Nature, 396, 336–342. 10.1038/24550",
+   "doi": "10.1038/24550",
+   "url": ""
+  },
+  {
+   "n": 52,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Sabater-Muñoz B</span>, \n<span class=\"author\">Van Ham RC</span>, \n<span class=\"author\">Moya A</span>, \n<span class=\"author\">Silva FJ</span>, \n<span class=\"author\">Latorre A</span> (<span class=\"pubYear\">2004</span>) <span class=\"articleTitle\">Evolution of the leucine gene cluster in <i>Buchnera aphidicola</i>: insights from chromosomal versions of the cluster</span>. \n<i class=\"journalTitle\">Journal of Bacteriology</i>,  <span class=\"vol\">186</span>,  <span class=\"pageFirst\">2646</span>–<span class=\"pageLast\">1654</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1128/JB.186.9.2646-2654.2004</span></div>",
+   "text": "Sabater-Muñoz B, Van Ham RC, Moya A, Silva FJ, Latorre A (2004) Evolution of the leucine gene cluster in Buchnera aphidicola: insights from chromosomal versions of the cluster. Journal of Bacteriology, 186, 2646–1654. 10.1128/JB.186.9.2646-2654.2004",
+   "doi": "10.1128/JB.186.9.2646-2654.2004",
+   "url": ""
+  },
+  {
+   "n": 53,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Sandström J</span>, \n<span class=\"author\">Moran NA</span> (<span class=\"pubYear\">1999</span>) <span class=\"articleTitle\">How nutritionally imbalanced is phloem sap for aphids?</span> \n                     <i class=\"journalTitle\">Entomologia Experimentalis et Applicata</i>,  <span class=\"vol\">91</span>,  <span class=\"pageFirst\">203</span>–<span class=\"pageLast\">210</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1046/j.1570-7458.1999.00485.x</span></div>",
+   "text": "Sandström J, Moran NA (1999) How nutritionally imbalanced is phloem sap for aphids? Entomologia Experimentalis et Applicata, 91, 203–210. 10.1046/j.1570-7458.1999.00485.x",
+   "doi": "10.1046/j.1570-7458.1999.00485.x",
+   "url": ""
+  },
+  {
+   "n": 54,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Sasaki T</span>, \n<span class=\"author\">Ishikawa H</span> (<span class=\"pubYear\">1995</span>) <span class=\"articleTitle\">Production of essential amino-acids from glutamate by mycetocyte symbionts of the pea aphid, <i>Acyrthosiphon pisum</i></span>. \n<i class=\"journalTitle\">Journal of Insect Physiology</i>,  <span class=\"vol\">41</span>,  <span class=\"pageFirst\">41</span>–<span class=\"pageLast\">46</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1016/0022-1910(94)00080-Z</span></div>",
+   "text": "Sasaki T, Ishikawa H (1995) Production of essential amino-acids from glutamate by mycetocyte symbionts of the pea aphid, Acyrthosiphon pisum. Journal of Insect Physiology, 41, 41–46. 10.1016/0022-1910(94)00080-Z",
+   "doi": "10.1016/0022-1910(94)00080-Z",
+   "url": ""
+  },
+  {
+   "n": 55,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Sauer C</span>, \n<span class=\"author\">Stackebrandt E</span>, \n<span class=\"author\">Gadau J</span>, \n<span class=\"author\">Hölldobler B</span>, \n<span class=\"author\">Gross R</span> (<span class=\"pubYear\">2000</span>) <span class=\"articleTitle\">Systematic relationships and cospeciation of bacterial endosymbionts and their carpenter ant host species: proposal of the new taxon <i>Candidatus</i> Blochmannia gen. nov</span>. \n<i class=\"journalTitle\">International Journal of Systematic and Evolutionary Microbiology</i>,  <span class=\"vol\">50</span>,  <span class=\"pageFirst\">1877</span>–<span class=\"pageLast\">1886</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1099/00207713-50-5-1877</span></div>",
+   "text": "Sauer C, Stackebrandt E, Gadau J, Hölldobler B, Gross R (2000) Systematic relationships and cospeciation of bacterial endosymbionts and their carpenter ant host species: proposal of the new taxon Candidatus Blochmannia gen. nov. International Journal of Systematic and Evolutionary Microbiology, 50, 1877–1886. 10.1099/00207713-50-5-1877",
+   "doi": "10.1099/00207713-50-5-1877",
+   "url": ""
+  },
+  {
+   "n": 56,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Shigenobu S</span>, \n<span class=\"author\">Watanabe H</span>, \n<span class=\"author\">Hattori M</span>, \n<span class=\"author\">Sakaki Y</span>, \n<span class=\"author\">Ishikawa H</span> (<span class=\"pubYear\">2000</span>) <span class=\"articleTitle\">Genome sequence of the endocellular bacterial symbiont of aphids <i>Buchnera</i> sp. APS</span>. \n<i class=\"journalTitle\">Nature</i>,  <span class=\"vol\">407</span>,  <span class=\"pageFirst\">81</span>–<span class=\"pageLast\">86</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1038/35024074</span></div>",
+   "text": "Shigenobu S, Watanabe H, Hattori M, Sakaki Y, Ishikawa H (2000) Genome sequence of the endocellular bacterial symbiont of aphids Buchnera sp. APS. Nature, 407, 81–86. 10.1038/35024074",
+   "doi": "10.1038/35024074",
+   "url": ""
+  },
+  {
+   "n": 57,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Srivastava PN</span> (<span class=\"pubYear\">1987</span>)  <span class=\"chapterTitle\">Nutritional physiology</span>. In:  <span class=\"bookTitle\">World Crop Pests</span>,  <span class=\"vol\">Vol. 2A</span>,\n\t\t\t\t\tAphids, Their Biology, Natural Enemies and Control\n\t\t\t\t\t(eds \n <span class=\"editor\">AK Minks</span>, \n <span class=\"editor\">P Harrewijn</span>), pp.  <span class=\"pageFirst\">99</span>–<span class=\"pageLast\">122</span>. Elsevier, Amsterdam.\n\n                     ",
+   "text": "Srivastava PN (1987) Nutritional physiology. In: World Crop Pests, Vol. 2A, Aphids, Their Biology, Natural Enemies and Control (eds AK Minks, P Harrewijn), pp. 99–122. Elsevier, Amsterdam.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 58,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Srivastava PN</span>, \n<span class=\"author\">Gao Y</span>, \n<span class=\"author\">Levesque J</span>, \n<span class=\"author\">Auclair JL</span> (<span class=\"pubYear\">1985</span>) <span class=\"articleTitle\">Differences in amino acid requirements between 2 biotypes of the pea aphid, <i>Acyrthosiphon pisum</i></span>. \n<i class=\"journalTitle\">Canadian Journal of Zoology</i>,  <span class=\"vol\">63</span>,  <span class=\"pageFirst\">603</span>–<span class=\"pageLast\">606</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1139/z85-087</span></div>",
+   "text": "Srivastava PN, Gao Y, Levesque J, Auclair JL (1985) Differences in amino acid requirements between 2 biotypes of the pea aphid, Acyrthosiphon pisum. Canadian Journal of Zoology, 63, 603–606. 10.1139/z85-087",
+   "doi": "10.1139/z85-087",
+   "url": ""
+  },
+  {
+   "n": 59,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Tamas I</span>, \n<span class=\"author\">Klasson L</span>, \n<span class=\"author\">Näslund K</span> <i>et al.</i> (<span class=\"pubYear\">2002</span>) <span class=\"articleTitle\">Fifty million years of genomic stasis in endosymbiotic bacteria</span>. \n<i class=\"journalTitle\">Science</i>,  <span class=\"vol\">296</span>,  <span class=\"pageFirst\">2376</span>–<span class=\"pageLast\">2379</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1126/science.1071278</span></div>",
+   "text": "Tamas I, Klasson L, Näslund K et al. (2002) Fifty million years of genomic stasis in endosymbiotic bacteria. Science, 296, 2376–2379. 10.1126/science.1071278",
+   "doi": "10.1126/science.1071278",
+   "url": ""
+  },
+  {
+   "n": 60,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Thao ML</span>, \n<span class=\"author\">Baumann L</span>, \n<span class=\"author\">Baumann P</span>, \n<span class=\"author\">Moran NA</span> (<span class=\"pubYear\">1998</span>) <span class=\"articleTitle\">Endosymbionts (<i>Buchnera</i>) from the aphids <i>Schizaphis graminum</i> and <i>Diuraphis noxia</i> have different copy numbers of the plasmid containing the leucine biosynthetic genes</span>. \n<i class=\"journalTitle\">Current Microbiology</i>,  <span class=\"vol\">36</span>,  <span class=\"pageFirst\">238</span>–<span class=\"pageLast\">240</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1007/s002849900301</span></div>",
+   "text": "Thao ML, Baumann L, Baumann P, Moran NA (1998) Endosymbionts (Buchnera) from the aphids Schizaphis graminum and Diuraphis noxia have different copy numbers of the plasmid containing the leucine biosynthetic genes. Current Microbiology, 36, 238–240. 10.1007/s002849900301",
+   "doi": "10.1007/s002849900301",
+   "url": ""
+  },
+  {
+   "n": 61,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Van Ham RC</span>, \n<span class=\"author\">Kamerbeek J</span>, \n<span class=\"author\">Palacios C</span> <i>et al.</i> (<span class=\"pubYear\">2003</span>) <span class=\"articleTitle\">Reductive genome evolution <i>Buchnera aphidicola</i></span>. \n<i class=\"journalTitle\">Proceedings of the National Academy of Sciences, USA</i>,  <span class=\"vol\">100</span>,  <span class=\"pageFirst\">581</span>–<span class=\"pageLast\">586</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1073/pnas.0235981100</span></div>",
+   "text": "Van Ham RC, Kamerbeek J, Palacios C et al. (2003) Reductive genome evolution Buchnera aphidicola. Proceedings of the National Academy of Sciences, USA, 100, 581–586. 10.1073/pnas.0235981100",
+   "doi": "10.1073/pnas.0235981100",
+   "url": ""
+  },
+  {
+   "n": 62,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Wernegreen JJ</span>, \n<span class=\"author\">Moran NA</span> (<span class=\"pubYear\">2000</span>) <span class=\"articleTitle\">Decay of mutualistic potential in aphid endosymbionts through silencing of biosynthetic loci: <i>Buchnera</i> of <i>Diuraphis</i></span>. \n<i class=\"journalTitle\">Proceedings of the Royal Society of London. Series B, Biological Sciences</i>,  <span class=\"vol\">267</span>,  <span class=\"pageFirst\">1423</span>–<span class=\"pageLast\">1431</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1098/rspb.2000.1159</span></div>",
+   "text": "Wernegreen JJ, Moran NA (2000) Decay of mutualistic potential in aphid endosymbionts through silencing of biosynthetic loci: Buchnera of Diuraphis. Proceedings of the Royal Society of London. Series B, Biological Sciences, 267, 1423–1431. 10.1098/rspb.2000.1159",
+   "doi": "10.1098/rspb.2000.1159",
+   "url": ""
+  },
+  {
+   "n": 63,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Wernegreen JJ</span>, \n<span class=\"author\">Richardson AO</span>, \n<span class=\"author\">Moran NA</span> (<span class=\"pubYear\">2000</span>) <span class=\"articleTitle\">Parallel acceleration of evolutionary rates in symbiont genes underlying host nutrition</span>. \n<i class=\"journalTitle\">Molecular Phylogenetics and Evolution</i>,  <span class=\"vol\">19</span>,  <span class=\"pageFirst\">479</span>–<span class=\"pageLast\">495</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1006/mpev.2001.0929</span></div>",
+   "text": "Wernegreen JJ, Richardson AO, Moran NA (2000) Parallel acceleration of evolutionary rates in symbiont genes underlying host nutrition. Molecular Phylogenetics and Evolution, 19, 479–495. 10.1006/mpev.2001.0929",
+   "doi": "10.1006/mpev.2001.0929",
+   "url": ""
+  },
+  {
+   "n": 64,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Wilcox JL</span>, \n<span class=\"author\">Dunbar HE</span>, \n<span class=\"author\">Wolfinger RD</span>, \n<span class=\"author\">Moran NA</span> (<span class=\"pubYear\">2003</span>) <span class=\"articleTitle\">Consequences of reductive evolution for gene expression in an obligate endosymbiont</span>. \n<i class=\"journalTitle\">Molecular Microbiology</i>,  <span class=\"vol\">48</span>,  <span class=\"pageFirst\">1491</span>–<span class=\"pageLast\">1500</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1046/j.1365-2958.2003.03522.x</span></div>",
+   "text": "Wilcox JL, Dunbar HE, Wolfinger RD, Moran NA (2003) Consequences of reductive evolution for gene expression in an obligate endosymbiont. Molecular Microbiology, 48, 1491–1500. 10.1046/j.1365-2958.2003.03522.x",
+   "doi": "10.1046/j.1365-2958.2003.03522.x",
+   "url": ""
+  },
+  {
+   "n": 65,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Wilkinson TL</span>, \n<span class=\"author\">Douglas AE</span> (<span class=\"pubYear\">2003</span>) <span class=\"articleTitle\">Phloem amino acids and the host plant range of the polyphagous aphid, <i>Aphis fabae</i></span>. \n<i class=\"journalTitle\">Entomologia Experimentalis et Applicata</i>,  <span class=\"vol\">106</span>,  <span class=\"pageFirst\">103</span>–<span class=\"pageLast\">113</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1046/j.1570-7458.2003.00014.x</span></div>",
+   "text": "Wilkinson TL, Douglas AE (2003) Phloem amino acids and the host plant range of the polyphagous aphid, Aphis fabae. Entomologia Experimentalis et Applicata, 106, 103–113. 10.1046/j.1570-7458.2003.00014.x",
+   "doi": "10.1046/j.1570-7458.2003.00014.x",
+   "url": ""
+  },
+  {
+   "n": 66,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Wilkinson TL</span>, \n<span class=\"author\">Fukatsu T</span>, \n<span class=\"author\">Ishikawa H</span> (<span class=\"pubYear\">2003</span>) <span class=\"articleTitle\">Transmission of symbiotic bacteria <i>Buchnera</i> to parthenogenetic embryos in the aphid <i>Acyrthosiphon pisum</i> (Hemiptera: Aphidoidea)</span>. \n<i class=\"journalTitle\">Arthropod Structure and Development</i>,  <span class=\"vol\">32</span>,  <span class=\"pageFirst\">241</span>–<span class=\"pageLast\">245</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1016/S1467-8039(03)00036-7</span></div>",
+   "text": "Wilkinson TL, Fukatsu T, Ishikawa H (2003) Transmission of symbiotic bacteria Buchnera to parthenogenetic embryos in the aphid Acyrthosiphon pisum (Hemiptera: Aphidoidea). Arthropod Structure and Development, 32, 241–245. 10.1016/S1467-8039(03)00036-7",
+   "doi": "10.1016/S1467-8039(03)00036-7",
+   "url": ""
+  },
+  {
+   "n": 67,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Wolschin F</span>, \n<span class=\"author\">Hölldobler B</span>, \n<span class=\"author\">Gross R</span>, \n<span class=\"author\">Zientz E</span> (<span class=\"pubYear\">2004</span>) <span class=\"articleTitle\">Replication of the endosymbiotic bacterium <i>Blochmannia floridanus</i> is correlated with the developmental and reproductive stages of its ant host</span>. \n<i class=\"journalTitle\">Applied and Environmental Microbiology</i>,  <span class=\"vol\">70</span>,  <span class=\"pageFirst\">4096</span>–<span class=\"pageLast\">4102</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1128/AEM.70.7.4096-4102.2004</span></div>",
+   "text": "Wolschin F, Hölldobler B, Gross R, Zientz E (2004) Replication of the endosymbiotic bacterium Blochmannia floridanus is correlated with the developmental and reproductive stages of its ant host. Applied and Environmental Microbiology, 70, 4096–4102. 10.1128/AEM.70.7.4096-4102.2004",
+   "doi": "10.1128/AEM.70.7.4096-4102.2004",
+   "url": ""
+  },
+  {
+   "n": 68,
+   "id": "",
+   "html": "\n                     <span class=\"author\">Zientz E</span>, \n<span class=\"author\">Dandekar T</span>, \n<span class=\"author\">Gross R</span> (<span class=\"pubYear\">2004</span>) <span class=\"articleTitle\">Metabolic interdependence of obligate intracellular bacteria and their insect hosts</span>. \n<i class=\"journalTitle\">Microbiology and Molecular Biology Reviews</i>,  <span class=\"vol\">68</span>,  <span class=\"pageFirst\">745</span>–<span class=\"pageLast\">770</span>.\n\n                     <div class=\"extra-links getFTR\"><span class=\"hidden data-doi\">10.1128/MMBR.68.4.745-770.2004</span></div>",
+   "text": "Zientz E, Dandekar T, Gross R (2004) Metabolic interdependence of obligate intracellular bacteria and their insect hosts. Microbiology and Molecular Biology Reviews, 68, 745–770. 10.1128/MMBR.68.4.745-770.2004",
+   "doi": "10.1128/MMBR.68.4.745-770.2004",
+   "url": ""
+  }
+ ],
+ "citationStyle": "name-year",
+ "supplementary": [],
+ "warnings": [],
+ "stats": {
+  "ms": 139,
+  "bodyChars": 59133,
+  "paragraphs": 44
+ }
+}

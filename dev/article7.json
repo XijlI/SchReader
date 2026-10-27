@@ -1,0 +1,1125 @@
+{
+ "source": {
+  "url": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20%28Hemiptera_%20Aphididae%29%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect.html",
+  "host": "127.0.0.1",
+  "adapter": "",
+  "journal": "Molecular Phylogenetics and Evolution",
+  "doi": "10.1016/j.ympev.2013.03.016",
+  "pdfUrl": "https://www.sciencedirect.com/science/article/pii/S1055790313001176/pdfft?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c&md5=b928e9231d432f1c0bf3576a03ca77a4&pid=1-s2.0-S1055790313001176-main.pdf"
+ },
+ "meta": {
+  "title": "Reconstructing the phylogeny of aphids (Hemiptera: Aphididae) using DNA of the obligate symbiont Buchnera aphidicola",
+  "subtitle": "",
+  "journal": "Molecular Phylogenetics and Evolution",
+  "publisher": "Academic Press",
+  "articleType": "Full-length article",
+  "doi": "10.1016/j.ympev.2013.03.016",
+  "date": "2013-07-01",
+  "volume": "68",
+  "pages": "42–54",
+  "authors": [
+   "Eva Nováková",
+   "Václav Hypša",
+   "Joanne Klein",
+   "Robert G. Foottit",
+   "Carol D. von Dohlen",
+   "Nancy A. Moran"
+  ],
+  "affiliations": [],
+  "keywords": [
+   "Aphid",
+   "Evolution",
+   "Buchnera",
+   "Phylogeny",
+   "Informative markers"
+  ]
+ },
+ "abstractHtml": "<div class=\"abstract author-highlights\" id=\"ab010\" lang=\"en\"><h2 class=\"section-title u-h4 u-margin-l-top u-margin-xs-bottom\">Highlights</h2><div class=\"abstract author\" id=\"as010\"><div class=\"u-margin-s-bottom\" id=\"sp0010\"><ul class=\"list\"><li class=\"react-xocs-list-item\"><span class=\"list-label\">•</span><span class=\"list-content\"><div class=\"u-margin-s-bottom\" id=\"p0215\">We proposed and evaluated an alternative approach for generating an <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/aphididae\" class=\"topic-link\">aphid</a> phylogeny.</div></span></li><li class=\"react-xocs-list-item\"><span class=\"list-label\">•</span><span class=\"list-content\"><div class=\"u-margin-s-bottom\" id=\"p0220\">We reconstructed phylogenetic relationships within Aphididae based on 255 sequences derived from <em>Buchnera</em><span> <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/symbion\" class=\"topic-link\">symbionts</a>.</span></div></span></li><li class=\"react-xocs-list-item\"><span class=\"list-label\">•</span><span class=\"list-content\"><div class=\"u-margin-s-bottom\" id=\"p0225\">We showed that symbiont derived DNA yields informative phylogenetic signal and is a useful source of data.</div></span></li></ul></div></div></div><div class=\"abstract author\" id=\"ab015\" lang=\"en\"><div class=\"abstract author\" id=\"as015\"><div class=\"u-margin-s-bottom\" id=\"sp0015\">Reliable phylogenetic reconstruction, as a framework for evolutionary inference, may be difficult to achieve in some groups of organisms. Particularly for lineages that experienced rapid diversification, lack of sufficient information may lead to inconsistent and unstable results and a low degree of resolution. Coincidentally, such rapidly diversifying taxa are often among the biologically most interesting groups. Aphids provide such an example. Due to rapid adaptive diversification, they feature variability in many interesting biological traits, but consequently they are also a challenging group in which to resolve phylogeny. Particularly within the family Aphididae, many interesting evolutionary questions remain unanswered due to phylogenetic uncertainties. In this study, we show that molecular data derived from the symbiotic bacteria of the genus <em>Buchnera</em> can provide a more powerful tool than the aphid-derived sequences. We analyze 255 <em>Buchnera</em><span> gene sequences from 70 host <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/hemiptera\" class=\"topic-link\">aphid</a> species and compare the resulting trees to the phylogenies previously retrieved from aphid sequences, only. We find that the host and symbiont data do not conflict for any major phylogenetic conclusions. Also, we demonstrate that the symbiont-derived phylogenies support some previously questionable relationships and provide new insights into aphid phylogeny and evolution.</span></div></div></div><div class=\"abstract graphical\" id=\"ab005\" lang=\"en\"><div class=\"abstract author\" id=\"as005\"><h3 class=\"u-h4 u-margin-m-top u-margin-xs-bottom\" id=\"st095\">Graphical abstract</h3><div class=\"u-margin-s-bottom\" id=\"sp0005\"><span class=\"display\"><figure class=\"figure text-xs\" id=\"f0030\"><span><img src=\"http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx1.jpg\" height=\"200\" alt=\"\"><ol class=\"u-margin-s-bottom\"><li><a class=\"anchor download-link u-font-sans anchor-primary\" href=\"http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx1.jpg\" target=\"_blank\" download=\"\" title=\"Download full-size image\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Download: <span class=\"download-link-title\">Download full-size image</span></span></span></a></li></ol></span></figure></span></div></div></div>",
+ "sections": [
+  {
+   "id": "st005",
+   "title": "1. Introduction",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "<span>Aphids form a distinctive insect clade that features considerable variability in interesting biological traits, such as the presence of many distinct, yet genetically identical, forms of females during the life cycle (polyphenism), alternation of sexual and asexual reproduction, sterile soldier <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/morphs\" class=\"topic-link\">morphs</a>, and seasonal alternation between unrelated groups of host plants. These traits vary among species, reflecting a long evolutionary history of biogeographical expansions and contractions and codiversification with plant hosts. Understanding the evolution of these traits thus requires a reliable phylogeny as a framework for particular evolutionary hypotheses. However, except for a few generally accepted aspects, studies on </span><a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/hemiptera\" class=\"topic-link\">aphid</a> phylogeny have not yet produced a clear picture of many relationships within this group."
+    },
+    {
+     "t": "p",
+     "html": "<span>Earlier attempts to reconstruct <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/aphididae\" class=\"topic-link\">aphid</a> phylogeny using morphology resulted in conflicting evolutionary scenarios (</span><a class=\"ref-chip ny\" data-ref=\"20\" data-ny=\"1\" href=\"#ref-20\">Heie, 1987</a>, <a class=\"ref-chip ny\" data-ref=\"63\" data-ny=\"1\" href=\"#ref-63\">Wojciechowski, 1992</a>). While an overall picture describing three distinct groups with either viviparous (Aphididae) or oviparous (Adelgidae and Phylloxeridae) parthenogenetic females was generally accepted, the phylogeny of the most diverse group, the Aphididae, remained unclear. More recent efforts have applied DNA sequence data to the reconstruction of Aphididae phylogeny. An emergent problem with such data is a lack of sufficient phylogenetic signal, mostly ascribed to a rapid adaptive radiation within Aphididae (<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#b0310\" name=\"bb0310\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"b0310\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">von Dohlen and Moran, 2000</span></span></a>, <a class=\"ref-chip ny\" data-ref=\"29\" data-ny=\"1\" href=\"#ref-29\">Martínez-Torres et al., 2001</a>). Recently, this difficulty has been partly compensated by combining data from nuclear and mitochondrial genes (<a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Ortiz-Rivas and Martínez-Torres, 2010</a><span>); however, even this extended source of information leaves many relationships within Aphididae unresolved, and several evolutionary questions unanswered. Some questions concern the number of origins of particular aspects of biology. For example, three tribes with similar life cycles that include dwarf sexual forms lacking <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/mouthparts\" class=\"topic-link\">mouthparts</a> (Eriosomatini, Fordini, Pemphigini) have been traditionally classified together in the Eriosomatinae (formerly Pemphiginae) (</span><a class=\"ref-chip ny\" data-ref=\"19\" data-ny=\"1\" href=\"#ref-19\">Heie, 1980</a>, <a class=\"ref-chip ny\" data-ref=\"48\" data-ny=\"1\" href=\"#ref-48\">Remaudière and Remaudière, 1997</a>). Furthermore, mainly on the basis of shared life cycle characteristics, Eriosomatinae, Hormaphidinae, and Anoeciinae have been hypothesized to share a most recent common ancestor (<a class=\"ref-chip ny\" data-ref=\"20\" data-ny=\"1\" href=\"#ref-20\">Heie, 1987</a><span><span>). Most molecular phylogenies fail to support these ideas, however, because they recover Eriosomatinae as paraphyletic, and position Eriosomatinae, Hormaphidinae, and Anoeciinae as unrelated <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/lineages\" class=\"topic-link\">lineages</a><span>. Other biological questions that could be illuminated by improved phylogenetic reconstruction concern whether the common ancestor of extant Aphididae fed on <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/gymnosperm\" class=\"topic-link\">gymnosperms</a> or </span></span><a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/angiosperm\" class=\"topic-link\">angiosperms</a>, and whether transitions between these major plant groups were accompanied by changes in diversification rates.</span>"
+    },
+    {
+     "t": "p",
+     "html": "Inclusion of additional markers with appropriate information capacity, as well as additional taxa to bisect long terminal branches, are useful approaches to resolving ambiguous nodes of a rapid radiation (<a class=\"ref-chip ny\" data-ref=\"62\" data-ny=\"1\" href=\"#ref-62\">Whitfield and Lockhart, 2007</a><span><span>). Nuclear gene markers would be the obvious, potentially informative additions for reconstructing the late Cretacous radiation of Aphididae. However, due to the possibility of paralogy, designation of orthologous nuclear sequences across a broad selection of species could require extensive experimental work. This is particularly relevant for aphids, because a vast amount of <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/gene-duplication\" class=\"topic-link\">gene duplication</a> affecting more than 2000 </span><a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/multigene-family\" class=\"topic-link\">gene families</a> was confirmed within the </span><span><em><a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/acyrthosiphon-pisum\" title=\"Learn more about Acyrthosiphon pisum from ScienceDirect's AI-generated Topic Pages\" class=\"topic-link\">Acyrthosiphon pisum</a></em></span> genome (<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#b0300\" name=\"bb0300\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"b0300\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">The International Aphid Genomics Consortium, 2010</span></span></a>). This extensive duplication of nuclear genes has been ongoing during aphid evolution, resulting in complex gene trees in which orthologs and paralogs are difficult to distinguish and the species phylogeny is obscured (e.g., <a class=\"ref-chip ny\" data-ref=\"50\" data-ny=\"1\" href=\"#ref-50\">Rispe et al., 2008</a>; <a class=\"ref-chip ny\" data-ref=\"43\" data-ny=\"1\" href=\"#ref-43\">Nováková and Moran, 2012</a>)."
+    },
+    {
+     "t": "p",
+     "html": "Aphids fortunately possess an additional source of inherited genetic material apart from their own genomes, in the form of obligate, maternally transferred, and highly derived bacterial mutualists. The association between aphids and bacteria of the genus <em>Buchnera</em> is one of the most extensively studied symbiotic systems since <a class=\"ref-chip ny\" data-ref=\"5\" data-ny=\"1\" href=\"#ref-5\">Buchner (1953)</a> suggested their mutualistic association. As in many other mutualistic relationships, the bacteria supply essential nutrients to their hosts, which in turn provide a stable environment for their bacterial partners. Genomic studies have revealed that particular amino acids, vitamins and sterols are supplemented by <em>Buchnera</em> (<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#b0005\" name=\"bb0005\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"b0005\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Akman Gunduz and Douglas, 2009</span></span></a>, <a class=\"ref-chip ny\" data-ref=\"35\" data-ny=\"1\" href=\"#ref-35\">Moran et al., 2005</a>, <a class=\"ref-chip ny\" data-ref=\"32\" data-ny=\"1\" href=\"#ref-32\">Moran and Degnan, 2006</a>, <a class=\"ref-chip ny\" data-ref=\"38\" data-ny=\"1\" href=\"#ref-38\">Moya et al., 2008</a>, <a class=\"ref-chip ny\" data-ref=\"18\" data-ny=\"1\" href=\"#ref-18\">Hansen and Moran, 2011</a>). <em>Buchnera</em><span> is one of numerous groups of insect-associated <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/symbion\" class=\"topic-link\">symbionts</a> for which evidence supports a long-term, strict cospeciation with the host (</span><a class=\"ref-chip ny\" data-ref=\"33\" data-ny=\"1\" href=\"#ref-33\">Moran et al., 1993</a>, <a class=\"ref-chip ny\" data-ref=\"34\" data-ny=\"1\" href=\"#ref-34\">Moran et al., 1995</a>, <a class=\"ref-chip ny\" data-ref=\"7\" data-ny=\"1\" href=\"#ref-7\">Clark et al., 2000</a>). The acquisition of <em>Buchnera</em> symbionts by aphids is thought to have been a single event that took place by 150–200 MYA and was followed by cospeciation (<a class=\"ref-chip ny\" data-ref=\"33\" data-ny=\"1\" href=\"#ref-33\">Moran et al., 1993</a>, <a class=\"ref-chip ny\" data-ref=\"29\" data-ny=\"1\" href=\"#ref-29\">Martínez-Torres et al., 2001</a>). Due to this close evolutionary association, the symbiont and host phylogenies mirror each other for deeper evolutionary divergences. Thus, symbiont-derived data in principle can be used to reconstruct the evolutionary history of hosts."
+    },
+    {
+     "t": "p",
+     "html": "Such an approach is appealing, because the small and simple genomes of symbionts may be an easier source of suitable sequences for phylogenetic analysis. This idea has been considered for some other insect-symbiont associations. For example, <a class=\"ref-chip ny\" data-ref=\"25\" data-ny=\"1\" href=\"#ref-25\">Kölsch and Pedersen (2009)</a><span> suggested using <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/endosymbiont\" class=\"topic-link\">endosymbionts</a> for elucidating unresolved questions of reed beetle phylogeny. In addition to resolving host relationships, endosymbiont genes have been used for calculating divergence times in their hosts (e.g., </span><span><em><a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/cryptocercus\" title=\"Learn more about Cryptocercus from ScienceDirect's AI-generated Topic Pages\" class=\"topic-link\">Cryptocercus</a></em></span> woodroaches (<a class=\"ref-chip ny\" data-ref=\"28\" data-ny=\"1\" href=\"#ref-28\">Maekawa et al., 2005</a>)). <em>Buchnera</em> genomes consist of single-copy genes, most of which are shared across different <em>Buchnera</em> genomes (<a class=\"ref-chip ny\" data-ref=\"37\" data-ny=\"1\" href=\"#ref-37\">Moran et al., 2009</a><span>); thus, they lack the complications presented by gene duplication and paralogy. Bacterial genomes possess several additional advantages, such as <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/haploidy\" class=\"topic-link\">haploidy</a> and absence of introns. Attempts to infer aphid and </span><em>Buchnera</em> phylogenies in a common framework have been undertaken several times (e.g., <a class=\"ref-chip ny\" data-ref=\"39\" data-ny=\"1\" href=\"#ref-39\">Munson et al., 1991</a>, <a class=\"ref-chip ny\" data-ref=\"33\" data-ny=\"1\" href=\"#ref-33\">Moran et al., 1993</a>, <a class=\"ref-chip ny\" data-ref=\"29\" data-ny=\"1\" href=\"#ref-29\">Martínez-Torres et al., 2001</a>), mainly with the aim of testing phylogenetic correspondence of host and symbiont. Only a few studies were focused explicitly on reconstructing aphid phylogeny using <em>Buchnera</em> markers; these included analyses performed on <span><em><a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/uroleucon\" title=\"Learn more about Uroleucon from ScienceDirect's AI-generated Topic Pages\" class=\"topic-link\">Uroleucon</a></em></span>, <em>Brachycaudus</em>, and <em>Mollitrichosiphum</em> species (<a class=\"ref-chip ny\" data-ref=\"7\" data-ny=\"1\" href=\"#ref-7\">Clark et al., 2000</a>, <a class=\"ref-chip ny\" data-ref=\"23\" data-ny=\"1\" href=\"#ref-23\">Jousselin et al., 2009</a>, <a class=\"ref-chip ny\" data-ref=\"27\" data-ny=\"1\" href=\"#ref-27\">Liu et al., 2013</a>). All three studies ruled out the possibility of occasional horizontal transfers, even between closely related aphids sharing the same host plant. Even within species, phylogenies based on <em>Buchnera</em> genes are congruent with those based on mitochondrial sequences, confirming that this symbiont is strictly maternally inherited (<a class=\"ref-chip ny\" data-ref=\"45\" data-ny=\"1\" href=\"#ref-45\">Peccoud et al., 2009</a>, <a class=\"ref-chip ny\" data-ref=\"12\" data-ny=\"1\" href=\"#ref-12\">Funk et al., 2000</a>). Within an individual aphid, <em>Buchnera</em> genes also have higher copy number than aphid nuclear genes, so that <em>Buchnera</em> genes are relatively easy to amplify. DNA of <em>Buchnera</em> symbionts thus serves as a useful source of information for inferring aphid phylogeny. However, phylogenetic studies using <em>Buchnera</em> genes so far have been limited by sparse sampling across aphid taxa, and especially by taxonomic bias towards the subfamily Aphidinae."
+    },
+    {
+     "t": "p",
+     "html": "In this study, we use <em>Buchnera</em>-derived sequences of five genes (<em>groEL</em>, <em>trpB</em>, <em>dnaB</em>, <em>ilvD</em><span> and 16S rDNA) from an extended taxonomic set to reconstruct phylogenetic relationships within the Aphididae. We then compare the resulting topologies to those reported from recent multilocus analyses of aphid-derived genes. We focus mainly on the most problematic questions in aphid evolution, such as <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/monophyly\" class=\"topic-link\">monophyly</a> of individual subfamilies/tribes and their relationships, variation in DNA substitution rates, and rooting of the Aphididae tree. We show that symbiont genes yield informative phylogenetic signal and have several methodological advantages.</span>"
+    }
+   ]
+  },
+  {
+   "id": "st010",
+   "title": "2. Materials and methods",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "st015",
+   "title": "2.1. Sample collection",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "<span>Our study was designed to reconstruct evolutionary relationships among a wide diversity of <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/hemiptera\" class=\"topic-link\">aphids</a><span>, represented by a broad sample of most major Aphididae taxa. The collection includes 70 species from 15 of 25 subfamilies and 25 of 36 tribes recognized in the most recent, comprehensive classifications of <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/aphididae\" class=\"topic-link\">aphids</a> (</span></span><a class=\"ref-chip ny\" data-ref=\"48\" data-ny=\"1\" href=\"#ref-48\">Remaudière and Remaudière, 1997</a>, <a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#b0345\" name=\"bb0345\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"b0345\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Nieto Nafría et al., 1997</span></span></a>) (<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#s0105\" name=\"bs0105\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"s0105\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Table S1</span></span></a>)."
+    }
+   ]
+  },
+  {
+   "id": "st020",
+   "title": "2.2. DNA extraction, primer design and sequencing",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "<span>For all species, several individuals were pooled and homogenized, and <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/genomic-dna\" class=\"topic-link\">genomic DNA</a> was extracted using QIAamp DNA Micro Kit (Qiagen). In efforts to compile sufficient data for a reliable phylogenetic reconstruction, we aimed to amplify five </span><em>Buchnera</em><span>-derived genes, namely 16S <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/ribosomal-dna\" class=\"topic-link\">rDNA</a>, </span><em>groEL</em>, <em>trpB</em>, <em>dnaB</em>, and <em>ilvD</em>. To confirm the aphid host species identification, the sequence of the aphid mitochondrial gene COI was obtained for each sample."
+    },
+    {
+     "t": "p",
+     "html": "Three primer pairs allowing for nine combinations were designed for each of the targeted <em>Buchnera</em> genes, except for 16S rDNA. Pairs of highly degenerate primers, corresponding to the coding region of <em>groEL</em>, <em>trpB</em>, and <em>dnaB</em> genes, were designed according to alignments of partial sequences available in GenBank using Primaclade software (<a class=\"ref-chip ny\" data-ref=\"13\" data-ny=\"1\" href=\"#ref-13\">Gadberry et al., 2005</a>). Primers for <em>ilvD</em> were designed in CLC Genomic Workbench (CLC bio A/S) based on an alignment of <em>Buchnera</em> genome sequences, with the reverse primers corresponding to a highly conserved region of the flanking tRNA. Primers for amplifying the 16S rDNA gene and aphid mitochondrial gene COI were from previous studies (<a class=\"ref-chip ny\" data-ref=\"10\" data-ny=\"1\" href=\"#ref-10\">Folmer et al., 1994</a>, <a class=\"ref-chip ny\" data-ref=\"17\" data-ny=\"1\" href=\"#ref-17\">Hajibabaei et al., 2006</a>, <a class=\"ref-chip ny\" data-ref=\"39\" data-ny=\"1\" href=\"#ref-39\">Munson et al., 1991</a>, <a class=\"ref-chip ny\" data-ref=\"30\" data-ny=\"1\" href=\"#ref-30\">Mateos et al., 2006</a>). More detailed information on primer pairs, including the sequence and the length of amplified regions, is summarized in <a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#s0105\" name=\"bs0105\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"s0105\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Table S2</span></span></a>."
+    },
+    {
+     "t": "p",
+     "html": "<span>To amplify PCR products from diverse aphid <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/lineages\" class=\"topic-link\">lineages</a>, we used the two best-performing primer pairs for each gene (</span><a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#s0105\" name=\"bs0105\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"s0105\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Table S2</span></span></a><span>). In the case of the 16S rRNA gene, primers 10F and 35R were used to detect the presence of secondary <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/symbion\" class=\"topic-link\">symbionts</a> commonly associated with aphids (</span><a class=\"ref-chip ny\" data-ref=\"11\" data-ny=\"1\" href=\"#ref-11\">Fukatsu and Ishikawa, 1993</a>, <a class=\"ref-chip ny\" data-ref=\"56\" data-ny=\"1\" href=\"#ref-56\">Sandström et al., 2001</a>, <a class=\"ref-chip ny\" data-ref=\"55\" data-ny=\"1\" href=\"#ref-55\">Russell et al., 2003</a>). This primer pair spans roughly a 1600&nbsp;bp region of the 16S-23S rRNA operon in most bacterial genomes. However, in the reduced genomes of <em>Buchnera</em>, genes encoding 16S rRNA and 23S rRNA are widely separated on the chromosome (<a class=\"ref-chip ny\" data-ref=\"40\" data-ny=\"1\" href=\"#ref-40\">Munson et al., 1993</a><span>). Thus, in contrast to almost all other bacteria, the 10F/35R primer pair does not produce an <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/amplicon\" class=\"topic-link\">amplicon</a> in </span><em>Buchnera</em>. According to results of the first amplification, the product of the reaction using the universal 16S rRNA primer pair (10F and 1507R, amplifying most of the 16S rRNA gene) was directly sequenced or was subcloned to enable separation of the <em>Buchnera</em> and secondary symbiont sequences."
+    },
+    {
+     "t": "p",
+     "html": "To recover <em>Buchnera</em> 16S rDNA sequences in samples with positive 10F/35R primed products indicating presence of other bacteria, amplicons of successful 10F/1507R PCRs were subcloned into Promega pGEM-T Easy vectors. On average, three transformant colonies from each species were picked and their inserts amplified by colony PCR using T7 and SP6 primers. Products of colony PCR as well as PCR products for <em>groEL</em>, <em>trpB</em>, <em>dnaB</em>, <em>ilvD</em>, and the mitochondrial COI gene were Sanger-sequenced in both directions on an ABI3700 sequencer at the Yale University DNA sequencing service. Resulting reads were assembled into a single contig using CLC Genomic Workbench (CLC bio A/S) and manually curated to remove base-calling errors. Except for two sequences of <em>dnaB</em> amplified from Greenideinae species, bidirectional sequencing did not show any variability. Ambigious positions in <em>dnaB</em> were replaced with an “N”."
+    }
+   ]
+  },
+  {
+   "id": "st025",
+   "title": "2.3. Alignments and phylogenetic analysis",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Accession numbers of the sequences obtained in this study and those retrieved from GenBank for the phylogenetic analyses are listed in <a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#s0105\" name=\"bs0105\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"s0105\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Table S3</span></span></a>. Matrices for individual genes were compiled from the data obtained in this study and from data retrieved from GenBank, including corresponding <em>Buchnera</em> sequences and sequences for selected outgroup taxa. Outgroup sequences were chosen from the <em>Ishikawaella capsulata</em> genome (<a class=\"ref-chip ny\" data-ref=\"21\" data-ny=\"1\" href=\"#ref-21\">Hosokawa et al., 2006</a>), which shows the lowest pairwise divergence from <em>Buchnera</em>, as well as other members of the Gammaproteobacteria, including <span><em><a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/serratia\" title=\"Learn more about Serratia from ScienceDirect's AI-generated Topic Pages\" class=\"topic-link\">Serratia</a></em><em> symbiotica</em></span>, <span><span><a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/salmonella-enterica-subsp-enterica\" class=\"topic-link\">Salmonella enterica</a></span></span>, and <em>Escherichia coli.</em> Complete datasets for <em>groEL</em>, <em>trpB</em>, <em>dnaB</em>, and <em>ilvD</em> were aligned using the ClustalW algorithm as implemented in SeaView software (<a class=\"ref-chip ny\" data-ref=\"14\" data-ny=\"1\" href=\"#ref-14\">Gouy et al., 2010</a>). 16S rDNA sequences were aligned in server-based program MAFFT, <a class=\"anchor anchor-primary\" href=\"http://mafft.cbrc.jp/alignment/server/index.html\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">http://mafft.cbrc.jp/alignment/server/index.html</span><svg focusable=\"false\" viewBox=\"0 0 8 8\" height=\"20\" aria-label=\"Opens in new window\" class=\"icon icon-arrow-up-right-tiny arrow-external-link\"><path d=\"M1.12949 2.1072V1H7V6.85795H5.89111V2.90281L0.784057 8L0 7.21635L5.11902 2.1072H1.12949Z\"></path></svg></span></a>, using the Q-INS-i algorithm with default parameters, which allows for a more accurate alignment of variable loops of the rRNA molecule. The raw alignments were manually corrected in SeaView (<a class=\"ref-chip ny\" data-ref=\"14\" data-ny=\"1\" href=\"#ref-14\">Gouy et al., 2010</a>) and further processed in GBlocks (<a class=\"ref-chip ny\" data-ref=\"6\" data-ny=\"1\" href=\"#ref-6\">Castresana, 2000</a>) to remove unreliably aligned positions."
+    },
+    {
+     "t": "p",
+     "html": "The resulting matrices were analyzed using maximum likelihood (ML) and Bayesian inference (BI). To account for the possibility of unreconcilable substitutional saturation in complete datasests, all sequences were analyzed using only the first two codon positions versus all three codon positions for DNA-based analyses, and were also analyzed using amino acid translations for protein-coding genes. The evolutionary models best fitting the data, as well as parameters for ML analyses, were selected using programs jModelTest (<a class=\"ref-chip ny\" data-ref=\"47\" data-ny=\"1\" href=\"#ref-47\">Posada, 2008</a>) and ProtTest 3 (<a class=\"ref-chip ny\" data-ref=\"9\" data-ny=\"1\" href=\"#ref-9\">Darriba et al., 2011</a>). ML analyses and 100 bootstrap replicates were performed for all nucleotide and protein matrices with PhyML 3.0 (<a class=\"ref-chip ny\" data-ref=\"16\" data-ny=\"1\" href=\"#ref-16\">Guindon and Gascuel, 2003</a>) with substitution models and parameters estimated from the data. Bayesian analyses were performed with the closest approximation of best-fit evolutionary models (<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#t0005\" name=\"bt0005\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"t0005\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Table 1</span></span></a>) as implemented in MrBayes 3.1.2 (<a class=\"ref-chip ny\" data-ref=\"53\" data-ny=\"1\" href=\"#ref-53\">Ronquist and Huelsenbeck, 2003</a>) in two independent runs with four chains. The analyses were run for three to twelve million generations with tree sampling every 100 generations. Exploration of MCMC convergence and burn-in determination was based on values of the average standard deviation of split frequencies, potential scale reduction factor (PSRF), and the log likelihood of the cold chain. Burn-in corresponded to 20–25% of the sampled trees. All the presented topologies are majority-rule consensus trees calculated from the post-burn-in tree samples."
+    },
+    {
+     "t": "p",
+     "html": "<span class=\"label\">Table 1</span>. Basic characteristics of matrices and specification of the evolutionary models used in ML and BI analyses."
+    },
+    {
+     "t": "table",
+     "label": "",
+     "html": "<thead><tr class=\"rowsep-1 valign-top\"><th scope=\"col\" class=\"align-left\">Alignment designation</th><th scope=\"col\" class=\"align-left\">Number of taxa</th><th scope=\"col\" class=\"align-char\">Number of characters</th><th scope=\"col\" class=\"align-char\">Variable characters</th><th scope=\"col\" class=\"align-left\">Selected model AICc</th><th scope=\"col\" class=\"align-left\">Mr. Bayes</th></tr></thead><tbody><tr class=\"valign-top\"><td class=\"align-left\">trpB</td><td class=\"align-left\">60</td><td class=\"align-char\">489</td><td class=\"align-char\">311</td><td class=\"align-left\">GTR&nbsp;+&nbsp;I&nbsp;+&nbsp;Γ</td><td class=\"align-left\">GTR&nbsp;+&nbsp;I&nbsp;+&nbsp;Γ</td></tr><tr class=\"valign-top\"><td class=\"align-left\">dnaB</td><td class=\"align-left\">52</td><td class=\"align-char\">1209</td><td class=\"align-char\">677</td><td class=\"align-left\">GTR&nbsp;+&nbsp;I&nbsp;+&nbsp;Γ</td><td class=\"align-left\">GTR&nbsp;+&nbsp;I&nbsp;+&nbsp;Γ</td></tr><tr class=\"valign-top\"><td class=\"align-left\">groEL</td><td class=\"align-left\">85</td><td class=\"align-char\">1135</td><td class=\"align-char\">666</td><td class=\"align-left\">GTR&nbsp;+&nbsp;I&nbsp;+&nbsp;Γ</td><td class=\"align-left\">GTR&nbsp;+&nbsp;I&nbsp;+&nbsp;Γ</td></tr><tr class=\"valign-top\"><td class=\"align-left\">ilvD</td><td class=\"align-left\">77</td><td class=\"align-char\">801</td><td class=\"align-char\">520</td><td class=\"align-left\">GTR&nbsp;+&nbsp;Γ</td><td class=\"align-left\">GTR&nbsp;+&nbsp;Γ</td></tr><tr class=\"valign-top\"><td class=\"align-left\">16S rRNA</td><td class=\"align-left\">65</td><td class=\"align-char\">1494</td><td class=\"align-char\">1087</td><td class=\"align-left\">GTR&nbsp;+&nbsp;Γ</td><td class=\"align-left\">GTR&nbsp;+&nbsp;Γ</td></tr><tr class=\"valign-top\"><td class=\"align-left\">COI</td><td class=\"align-left\">71</td><td class=\"align-char\">690</td><td class=\"align-char\">283</td><td class=\"align-left\">TIM2&nbsp;+&nbsp;Γ</td><td class=\"align-left\">GTR&nbsp;+&nbsp;Γ</td></tr><tr class=\"valign-top\"><td class=\"align-left\">trpB_dnaB_groEL_ilvD_16S</td><td class=\"align-left\">94</td><td class=\"align-char\">5079</td><td class=\"align-char\">2700</td><td class=\"align-left\">TIM3&nbsp;+&nbsp;Γ</td><td class=\"align-left\">GTR&nbsp;+&nbsp;Γ</td></tr><tr class=\"valign-top\"><td class=\"align-left\">trpB_dnaB_groEL_ilvD_1st2nd</td><td class=\"align-left\">94</td><td class=\"align-char\">2390</td><td class=\"align-char\">1021</td><td class=\"align-left\">GTR&nbsp;+&nbsp;I&nbsp;+&nbsp;Γ</td><td class=\"align-left\">GTR&nbsp;+&nbsp;I&nbsp;+&nbsp;Γ</td></tr><tr class=\"valign-top\"><td class=\"align-left\">trpB_dnaB_groEL_ilvD_AA</td><td class=\"align-left\">94</td><td class=\"align-char\">1195</td><td class=\"align-char\">662</td><td class=\"align-left\">MtREV&nbsp;+&nbsp;I&nbsp;+&nbsp;Γ&nbsp;+&nbsp;F</td><td class=\"align-left\">WAG&nbsp;+&nbsp;I&nbsp;+&nbsp;Γ</td></tr></tbody>"
+    },
+    {
+     "t": "p",
+     "html": "The approximately unbiased (AU) test (<a class=\"ref-chip ny\" data-ref=\"57\" data-ny=\"1\" href=\"#ref-57\">Shimodaira and Hasegawa, 2001</a><span>) was used to compare topologies in two ways. First, we used the AU test to determine whether hypothetical alternative topologies were significantly different from those retrieved by our analyses based on individual genes. In particular, we tested the monophyly/paraphyly of the subfamily Eriosomatinae. Second, we evaluated robustness of the phylogenetic signal by applying the AU test to the best ML topology for each gene and a topology with an obvious introduced artifact, i.e., <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/polyphyly\" class=\"topic-link\">polyphyly</a> of Aphidinae. To obtain the alternative topologies, we constrained particular artifacts and constructed the tree under the ML criterion in PAUP</span><sup>*</sup> 4.0 (<a class=\"ref-chip ny\" data-ref=\"58\" data-ny=\"1\" href=\"#ref-58\">Swofford, 2003</a>). To optimize computational demands for these analyses, we compiled simplified matrices for each gene consisting of one representative for each cluster consistently found in all ML and BI derived topologies (not shown). Significant differences between likelihood site patterns for each topology pair were tested using CONSEL version 0.1i (<a class=\"ref-chip ny\" data-ref=\"57\" data-ny=\"1\" href=\"#ref-57\">Shimodaira and Hasegawa, 2001</a><span>). The results of the AU tests were used to identify the set of genes with sufficient information for phylogenetic inference (i.e., rejecting the artificial topology). Two concatenated matrices were constructed from the selected genes. The protein concatenate comprised <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/amino-acid-sequence\" class=\"topic-link\">amino acid sequences</a> of the coding regions for </span><em>groEL</em>, <em>dnaB</em>, <em>trpB</em>, and <em>ilvD</em>. The nucleotide concatenate also included 16S rRNA sequences. Both of the matrices were analyzed as described above."
+    }
+   ]
+  },
+  {
+   "id": "st030",
+   "title": "2.4. Tests of heterogeneity in evolutionary rates of symbiont genes",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "In <em>Buchnera</em><span> genes, rates of evolution at sites under purifying selection, such as nonsynonymous sites in protein-coding genes, are affected by the host <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/population-size\" class=\"topic-link\">population size</a> and by the number of cells transferred from mother to offspring (</span><a class=\"ref-chip ny\" data-ref=\"49\" data-ny=\"1\" href=\"#ref-49\">Rispe and Moran, 2000</a>). In addition to providing new data useful for inferring aphid phylogeny, our <em>Buchnera</em> dataset provides the opportunity to assess whether symbiont population structure differs among aphid taxa. Differences among aphid groups in life cycles, ecology, and transmission of symbionts are expected to produce different levels of purifying selection, leading to rate heterogeneity among aphid groups. Specifically, we tested for differences among groups in the rate of evolution at nonsynonymous sites (d<em>N</em>) relative to the rate at synonymous sites (d<em>S</em>)."
+    },
+    {
+     "t": "p",
+     "html": "We computed d<em>N</em>/d<em>S</em> for pairs of sister taxa in each lineage. Average d<em>N</em>/d<em>S</em> values were then compared among subfamilies, and the data were tested for the presence of statistically deviant values using Dixon’s Q test (<a class=\"ref-chip ny\" data-ref=\"54\" data-ny=\"1\" href=\"#ref-54\">Rorabacher, 1991</a>). Because d<em>N</em>/d<em>S</em> ratios are meaningless if changes at synonymous sites are saturated, the saturation index for synonymous positions was determined for each dataset, as calculated in DAMBE (<a class=\"ref-chip ny\" data-ref=\"64\" data-ny=\"1\" href=\"#ref-64\">Xia and Xie, 2001</a>), with a proportion of invariable positions assessed in JModelTest (<a class=\"ref-chip ny\" data-ref=\"47\" data-ny=\"1\" href=\"#ref-47\">Posada, 2008</a>). Both saturation pattern tests and d<em>N</em>/d<em>S</em> calculations were performed only with the sites available for all analyzed taxa. These analyses were not performed for subfamilies represented by a single species or by a single pair of species."
+    }
+   ]
+  },
+  {
+   "id": "st035",
+   "title": "2.5. Long branch attraction (LBA)",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Preliminary results indicated that some relationships may have been affected by LBA, i.e., artifactual clustering of rapidly evolving taxa regardless of their true relationship (for review see <a class=\"ref-chip ny\" data-ref=\"3\" data-ny=\"1\" href=\"#ref-3\">Bergsten, 2005</a>). We focused on Aphidinae, where clustering of <em>Aspidophorodon longicaudus</em>, <em>Capitophorus hudsonicus</em> and two <em>Pterocomma</em><span> species would, if confirmed, contradict <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/monophyly\" class=\"topic-link\">monophyly</a> of the tribes Macrosiphini and Pterocommatini. We first tested for effects of LBA on positions of </span><em>A. longicaudus</em> and <em>C. hudsonicus</em> in the context of the entire tree, particularly their possible affinity to long-branched taxa of long-branched lineages from other subfamilies (e.g., Saltusaphidinae, Calaphidinae). Additional analyses were performed exclusively within Aphidinae between the four taxa mentioned above. For each analysis, a single branch was removed from the Aphidinae data sets."
+    }
+   ]
+  },
+  {
+   "id": "st040",
+   "title": "3. Results",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "st045",
+   "title": "3.1. Datasets",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Altogether, this study generated 255 new sequences from 70 <em>Buchnera</em> lineages. Characteristics of the resulting alignments are detailed in <a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#t0005\" name=\"bt0005\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"t0005\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Table 1</span></span></a>. Because individual single-gene matrices differ in taxon sampling, all of the concatenated matrices are partially incomplete. Missing sequences were either not available in GenBank (for taxa from previous studies), or, for our samples, we were not able to amplify the genes due to PCR failures, most likely caused by substitutions in the primer sites, loss of the gene or even possible absence of <em>Buchnera</em> in certain samples. For example, a PCR failure apparently related to primer specificity was experienced for combinations of <em>dnaB</em> primers, which failed to amplify sequences for all samples from Calaphidinae and Saltusaphidinae subfamilies. Also, only a few representatives of the subfamily Lachninae yielded PCR products for <em>trpB</em>."
+    },
+    {
+     "t": "p",
+     "html": "Individual matrices of the protein-coding genes contained comparable proportions of variable characters, with the largest proportion found in <em>trpB</em> and <em>ilvD</em> (64% and 65%, respectively; <a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#t0005\" name=\"bt0005\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"t0005\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Table 1</span></span></a>). AU tests with constrained topologies indicated different strengths of phylogenetic signal for different matrices. Sequences for <em>trpB</em>, <em>groEL</em>, <em>ilvD</em> and the 16S rRNA gene contained sufficient information to reject all of the tested artificial topologies (see Section <a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#s0010\" name=\"bs0010\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"s0010\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">2</span></span></a>). For the <em>dnaB</em> dataset, the test was significant only when a major topological artifact was introduced (data not shown). In contrast, the mitochondrial COI dataset contained few informative characters (<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#t0005\" name=\"bt0005\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"t0005\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Table 1</span></span></a>), and the AU tests were repeatedly insignificant. This dataset was therefore not used for phylogenetic inference; COI sequences were used only to verify species determination based on nucleotide similarity with sequences already available in several copies in GenBank. COI sequences recovered in this study shared similarity above 99% with GenBank homologs from the same species, and thus as redundant records were not deposited in the database."
+    },
+    {
+     "t": "p",
+     "html": "Nucleotide composition, measured as % GC content, varied by 10% across taxa. The lowest GC levels were found in <em>Buchnera</em> from <em>Pseudoregma koshuensis</em>, which averaged 27.7% for protein-coding genes. A bias towards higher AT content was also observed in <em>Buchnera</em> sequences from Drepanosiphinae, Greenideinae and Lachninae. On the contrary, most of the <em>Buchnera</em> sequences isolated from Macrosiphini showed a higher GC content, averaging 34.0% for coding genes."
+    }
+   ]
+  },
+  {
+   "id": "st050",
+   "title": "3.2. Phylogenetic analyses of single-gene matrices",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "<span>For all genes, analyses restricted to first and second codon positions yielded results similar to those obtained from full <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/nucleotide-sequence\" class=\"topic-link\">nucleotide sequences</a>. However, measures of statistical support (i.e. bootstrap and posterior probabilities) as well as phylogenetic resolution became weaker with decreasing number of positions (i.e., complete DNA sequence, two positions only, and translation into amino acids). This result, together with tests based on a few amino acid matrices (results not shown), indicates that </span><a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/amino-acid-sequence\" class=\"topic-link\">amino acid sequences</a> would yield only poorly supported and largely unresolved topologies. Consequently, amino acid sequences were not used in the single-gene matrices."
+    },
+    {
+     "t": "p",
+     "html": "All topologies derived from the single-gene datasets placed most aphid species into clades corresponding to tribes of the current classification. For higher taxonomic levels, results were less conclusive, and branch support values were weaker. However, monophyly of Aphidinae, Lachninae, Greenideinae and Chaitophorinae was recovered across different analyses and was well supported. The topology inferred from the <em>ilvD</em> single-gene matrix (the dataset with the highest proportion of informative sites) is shown in <a class=\"anchor anchor-primary\" name=\"bf0005\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"f0005\" data-fig=\"fig-1\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Fig. 1</span></span></a>. Within Aphidinae, Aphidini was monophyletic; however, two species of Macrosiphini, <em>Aspidophorodon longicaudus</em> and <em>Capitophorus hudsonicus</em>, grouped with <em>Pterocomma</em> in most of the single-gene analyses. This grouping was recovered repeatedly in all LBA-avoiding tests, performed on a simplified dataset with one of the long branches removed in each analysis (an example topology shown in <a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#s0105\" name=\"bs0105\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"s0105\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Fig. S1</span></span></a>)."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-1"
+    },
+    {
+     "t": "p",
+     "html": "Monophyly of Hormaphidinae was recovered only in ML analysis of the <em>trpB</em> dataset. Two tribes, Hormaphidini and Cerataphidini, did not form a monophyletic group in any other single-gene analysis. Sequences derived from <em>Pseudoregma koshuensis</em> (Hormaphidinae: Cerataphidini) had the lowest GC content and clustered artifactually with other sequences of markedly biased nucleotide content. For instance, in the <em>dnaB</em> based topology, <em>Pseudoregma</em> fell within the same cluster as Greenideinae and Lachninae, which displayed the lowest GC content values for <em>dnaB</em> (<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#s0105\" name=\"bs0105\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"s0105\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Figs. S2 and S3</span></span></a>). The same pattern was found in the <em>ilvD</em> dataset, where <em>Pseudoregma</em> clustered as a close relative to significantly AT-biased sequences of the subfamily Drepanosiphinae (<a class=\"anchor anchor-primary\" name=\"bf0005\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"f0005\" data-fig=\"fig-1\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Fig. 1</span></span></a>). Similar to results in <a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Ortiz-Rivas and Martínez-Torres (2010)</a>, Hormaphidini and Thelaxinae were supported as sister taxa. This relationship was supported by all analyses based on single genes, except for <em>ilvD</em>."
+    },
+    {
+     "t": "p",
+     "html": "In most single-gene analyses, Calaphidinae was paraphyletic with respect to Saltusaphidinae. The only exception was the topology derived from <em>trpB</em> (<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#s0105\" name=\"bs0105\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"s0105\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Fig. S4</span></span></a>), in which Saltusaphidinae was not represented and Calaphidinae was monophyletic. In contrast to the results of <a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Ortiz-Rivas and Martínez-Torres (2010)</a>, none of our single-gene derived topologies supported monophyly of Drepanosiphidae <em>sensu</em> <a class=\"ref-chip ny\" data-ref=\"19\" data-ny=\"1\" href=\"#ref-19\">Heie (1980)</a>, i.e., including Calaphidinae, Chaitophorinae and Drepanosiphinae."
+    },
+    {
+     "t": "p",
+     "html": "Eriosomatinae was polyphyletic or paraphyletic in all single-gene analyses. For <em>ilvD</em>-derived topologies, Fordini and Pemphigini formed a monophyletic group while Eriosomatini species were placed at a distant position (<a class=\"anchor anchor-primary\" name=\"bf0005\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"f0005\" data-fig=\"fig-1\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Fig. 1</span></span></a>). A similar result was previously reported for aphid nuclear gene-derived topologies by <a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Ortiz-Rivas and Martínez-Torres (2010)</a>. All other single-gene analyses recovered topologies in which the tribes were distant from each other (e.g., <a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#s0105\" name=\"bs0105\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"s0105\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Figs. S2 and S4</span></span></a>). However, when a constraint of Eriosomatinae monophyly was tested on individual gene sets, all AU test values were not significant; thus, the monophyly of Eriosomatinae could not be confidently rejected (<em>p</em>&nbsp;=&nbsp;0.08–0.47)."
+    },
+    {
+     "t": "p",
+     "html": "In most of the rooted single-gene topologies, Pemphigini formed the sister group to all other taxa. However, branching of the other deep nodes was inconsistent, varying with datasets and analytical methods, particularly for subfamilies represented by a single specimen, namely <em>Tamalia coweni</em> (Tamalinae), <em>Anoecia oenotherae</em> (Anoecinae), <em>Neophyllaphis totarae</em> (Neophyllaphidinae) and <em>Mindarus obliquus</em> (Mindarinae). The overall topological characteristics sorted into three different arrangements. The first supported three distinct lineages: Pemphigini, a monophyletic Aphidinae&nbsp;+&nbsp;Calaphidinae, and a cluster composed of all remaining subfamilies and tribes. In the other two scenarios, aphid diversity was distributed into two major clusters, either Aphidinae versus a lineage of all other taxa, or (Aphidinae&nbsp;+&nbsp;Calaphidinae) versus a lineage of all remaining taxa."
+    }
+   ]
+  },
+  {
+   "id": "st055",
+   "title": "3.3. Phylogenetic analyses of concatenated data sets",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "In order to test the potential impact of data incompleteness in concatenated matrices, an additional <em>groEL&nbsp;+&nbsp;trpB</em> dataset was constructed from the taxa for which sequences of both genes were available. These genes were chosen because they were available for the largest number of taxa. The topology obtained from both BI and ML corresponded to the scenario described above with Aphidinae versus a lineage of all other taxa, and did not differ substantially from the results obtained from analyses of the incomplete concatenated matrices."
+    },
+    {
+     "t": "p",
+     "html": "Similarly to the single-gene topologies, most results from concatenated datasets placed Pemphigini as sister to the remaining taxa. Two main types of topology were repeatedly retrieved from the concatenated data. While most BI analyses tended to produce topologies with three main clusters, e.g. Pemphigini, Aphidinae&nbsp;+&nbsp;Calaphidinae, and a clade comprising the rest of taxa (<a class=\"anchor anchor-primary\" name=\"bf0010\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"f0010\" data-fig=\"fig-2\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Figs. 2</span></span></a> and <a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#f0015\" name=\"bf0015\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"f0015\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">3</span></span></a>), a few ML analyses supported grouping into two major lineages with one consisting exclusively of the subfamily Aphidinae (not shown)."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-2"
+    },
+    {
+     "t": "figure",
+     "fid": "fig-3"
+    },
+    {
+     "t": "p",
+     "html": "The topologies recovered in this study are partially congruent with the recently published aphid phylogeny inferred from two nuclear and one mitochondrial genes (<a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Ortiz-Rivas and Martínez-Torres, 2010</a>). The overall similarity between the aphid-derived and <em>Buchnera</em>-derived trees provides sufficient background for detailed comparisions and evaluation of particular phylogenetic and evolutionary patterns. <a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Ortiz-Rivas and Martínez-Torres (2010)</a> recovered three major aphid clusters, namely Lachninae, a clade containing Eriosomatinae&nbsp;+&nbsp;Anoeciinae&nbsp;+&nbsp;Thelaxinae&nbsp;+&nbsp;Hormaphidinae&nbsp;+&nbsp;Mindarinae, and a clade containing Aphidinae&nbsp;+&nbsp;Calaphidinae&nbsp;+&nbsp;Drepanosiphinae&nbsp;+&nbsp;Chaitophorinae. Lachninae formed the sister group to a lineage comprising the latter two clades in their results. In contrast, we consistently recovered Pemphigini as the sister group to a lineage including all other taxa (<a class=\"anchor anchor-primary\" name=\"bf0010\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"f0010\" data-fig=\"fig-2\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Fig. 2</span></span></a>, <a class=\"anchor anchor-primary\" name=\"bf0015\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"f0015\" data-fig=\"fig-3\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Fig. 3</span></span></a>, <a class=\"anchor anchor-primary\" name=\"bf0020\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"f0020\" data-fig=\"fig-4\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Fig. 4</span></span></a>). None of our analyses produced a topology in which Lachninae branched from the base of the tree, although this position was not rejected by the AU tests. Furthermore, only the ML analysis based on concatenation of nucleotides for 1st and 2nd positions produced a cluster containing Aphidinae&nbsp;+&nbsp;Calaphidinae&nbsp;+&nbsp;Drepanosiphinae&nbsp;+&nbsp;Chaitophorinae, as in <a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Ortiz-Rivas and Martínez-Torres (2010)</a>. In this topology, the cluster also included Saltusaphidinae and Phyllaphidinae, which were not sampled by <a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Ortiz-Rivas and Martínez-Torres (2010)</a>. For other recovered topologies, only the close relationship between Aphidinae and Calaphidinae was highly supported. Thus, the third cluster from the Ortiz-Rivas and Martínez-Torres study, Eriosomatinae&nbsp;+&nbsp;Anoeciinae&nbsp;+&nbsp;Thelaxinae&nbsp;+&nbsp;Hormaphidinae&nbsp;+&nbsp;Mindarinae, was never recovered (<a class=\"anchor anchor-primary\" name=\"bf0010\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"f0010\" data-fig=\"fig-2\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Fig. 2</span></span></a>, <a class=\"anchor anchor-primary\" name=\"bf0015\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"f0015\" data-fig=\"fig-3\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Fig. 3</span></span></a>, <a class=\"anchor anchor-primary\" name=\"bf0020\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"f0020\" data-fig=\"fig-4\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Fig. 4</span></span></a>)."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-4"
+    },
+    {
+     "t": "p",
+     "html": "Similar to the topologies derived from aphid genes (<a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Ortiz-Rivas and Martínez-Torres, 2010</a>), we obtained only low support for several deep nodes (<a class=\"anchor anchor-primary\" name=\"bf0010\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"f0010\" data-fig=\"fig-2\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Fig. 2</span></span></a>). Particularly, the position of the subfamilies represented by a single specimen, namely <em>Tamalia coweni</em> (Tamalinae), <em>Anoecia oenotherae</em> (Anoecinae), and <em>Neophyllaphis totarae</em> (Neophyllaphidinae) appeared to be unstable under different analysis settings. Bootstrap support for topologies calculated under the ML criterion was low, possibly due to the incompleteness of concatenated matrices (<a class=\"anchor anchor-primary\" name=\"bf0020\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"f0020\" data-fig=\"fig-4\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Fig. 4</span></span></a>)."
+    },
+    {
+     "t": "p",
+     "html": "Because the outgroups selected for all analyses are relatively distant to <em>Buchnera</em>, unrooted analyses (i.e. analyses excluding outgroups) were also performed with concatenated datasets to avoid potentially misleading information introduced by very distant sequences. An example of topologies consistently retrieved, regardless of method or gene composition of concatenates, is shown in <a class=\"anchor anchor-primary\" name=\"bf0025\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"f0025\" data-fig=\"fig-5\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Fig. 5</span></span></a>. Taxa in this unrooted trichotomy fell into three main clusters: (1) Lachninae, (2) Neophyllaphidinae, Chaitophorinae, Anoeciinae, Cerataphidini, Drepanosiphinae, Thelaxinae, Greenideinae, and (3) Aphidinae, Calaphidinae, Saltusaphidinae, Phyllaphidinae, Tamalinae, Hormaphidini, Eriosomatinae (paraphyletic). A close relationship between Aphidinae&nbsp;+&nbsp;<span>Calaphidinae is highly supported, as is <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/paraphyly\" class=\"topic-link\">paraphyly</a> of Hormaphidinae (Hormaphidini and Cerataphidini positioned in two different clusters).</span>"
+    },
+    {
+     "t": "figure",
+     "fid": "fig-5"
+    }
+   ]
+  },
+  {
+   "id": "st060",
+   "title": "3.4. Tests of heterogeneity in evolutionary rate of symbiont genes",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Comparisons of average d<em>N</em>/d<em>S</em> indicated heterogeneity in evolutionary rates across subfamilies and tribes. Elevated values of d<em>N</em>/d<em>S</em> were found for Calaphidinae, Chaitophorinae, Greenideinae and Saltusaphidinae (<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#t0010\" name=\"bt0010\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"t0010\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Table 2</span></span></a><span>), all groups with simple life cycles containing few distinct female <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/morphs\" class=\"topic-link\">morphs</a> and narrow host-plant ranges. Rates at nonsynonymous sites were not elevated in the Lachninae, nor in Aphidini, Pemphigini, or Hormaphidinae, which include species with complex, host-alternating life cycles.</span>"
+    },
+    {
+     "t": "p",
+     "html": "<span class=\"label\">Table 2</span>. Saturation pattern and evolutionary rates found for major aphid lineages."
+    },
+    {
+     "t": "table",
+     "label": "",
+     "html": "<thead><tr class=\"rowsep-1 valign-top\"><th scope=\"col\" class=\"align-left\">Lineage</th><th scope=\"col\" class=\"align-left\">Iss<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#tblfn1\" name=\"btblfn1\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"tblfn1\"><span class=\"anchor-text-container\"><span class=\"anchor-text\"><sup>a</sup></span></span></a> all sites</th><th scope=\"col\" class=\"align-left\">Iss.c<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#tblfn2\" name=\"btblfn2\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"tblfn2\"><span class=\"anchor-text-container\"><span class=\"anchor-text\"><sup>b</sup></span></span></a> all sites</th><th scope=\"col\" class=\"align-left\">Iss<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#tblfn1\" name=\"btblfn1\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"tblfn1\"><span class=\"anchor-text-container\"><span class=\"anchor-text\"><sup>a</sup></span></span></a> resolved sites</th><th scope=\"col\" class=\"align-left\">Iss.c<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#tblfn2\" name=\"btblfn2\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"tblfn2\"><span class=\"anchor-text-container\"><span class=\"anchor-text\"><sup>b</sup></span></span></a> resolved sites</th><th scope=\"col\" class=\"align-left\">Iss.c<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#tblfn3\" name=\"btblfn3\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"tblfn3\"><span class=\"anchor-text-container\"><span class=\"anchor-text\"><sup>c</sup></span></span></a></th><th scope=\"col\" class=\"align-left\">d<em>N</em>/d<em>S</em> average</th></tr></thead><tbody><tr class=\"valign-top\"><td class=\"align-left\">Aphidinae</td><td class=\"align-left\">0.6124</td><td class=\"align-left\">0.8006</td><td class=\"align-left\">0.1488</td><td class=\"align-left\">0.7577</td><td class=\"align-left\">0.4817</td><td class=\"align-left\">0.0646</td></tr><tr class=\"valign-top\"><td class=\"align-left\">Calaphidinae</td><td class=\"align-left\">0.7304</td><td class=\"align-left\">0.8112</td><td class=\"align-left\">0.2120</td><td class=\"align-left\">0.7282</td><td class=\"align-left\">0.5740</td><td class=\"align-left\">0.1263<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#tblfn4\" name=\"btblfn4\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"tblfn4\"><span class=\"anchor-text-container\"><span class=\"anchor-text\"><sup>d</sup></span></span></a></td></tr><tr class=\"valign-top\"><td class=\"align-left\">Fordini</td><td class=\"align-left\">1.0924</td><td class=\"align-left\">0.8426</td><td class=\"align-left\">0.1680</td><td class=\"align-left\">0.8368</td><td class=\"align-left\">0.8310</td><td class=\"align-left\">0.0691</td></tr><tr class=\"valign-top\"><td class=\"align-left\">Greenideinae</td><td class=\"align-left\">0.7071</td><td class=\"align-left\">0.8305</td><td class=\"align-left\">0.1358</td><td class=\"align-left\">0.8081</td><td class=\"align-left\">0.7079</td><td class=\"align-left\">0.1191<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#tblfn4\" name=\"btblfn4\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"tblfn4\"><span class=\"anchor-text-container\"><span class=\"anchor-text\"><sup>d</sup></span></span></a></td></tr><tr class=\"valign-top\"><td class=\"align-left\">Hormaphidinae</td><td class=\"align-left\">0.5282</td><td class=\"align-left\">0.8426</td><td class=\"align-left\">0.1825</td><td class=\"align-left\">0.8402</td><td class=\"align-left\">0.8391</td><td class=\"align-left\">0.0864</td></tr><tr class=\"valign-top\"><td class=\"align-left\">Chaitophorinae</td><td class=\"align-left\">1.1997</td><td class=\"align-left\">0.8426</td><td class=\"align-left\">0.1447</td><td class=\"align-left\">0.8229</td><td class=\"align-left\">0.8133</td><td class=\"align-left\">0.1053<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#tblfn4\" name=\"btblfn4\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"tblfn4\"><span class=\"anchor-text-container\"><span class=\"anchor-text\"><sup>d</sup></span></span></a></td></tr><tr class=\"valign-top\"><td class=\"align-left\">Lachninae</td><td class=\"align-left\">0.6455</td><td class=\"align-left\">0.8267</td><td class=\"align-left\">0.1816</td><td class=\"align-left\">0.7626</td><td class=\"align-left\">0.6145</td><td class=\"align-left\">0.0609</td></tr><tr class=\"valign-top\"><td class=\"align-left\">Pemphigini</td><td class=\"align-left\">0.7388</td><td class=\"align-left\">0.8426</td><td class=\"align-left\">0.1902</td><td class=\"align-left\">0.8252</td><td class=\"align-left\">0.8152</td><td class=\"align-left\">0.0558</td></tr><tr class=\"valign-top\"><td class=\"align-left\">Saltusaphidinae</td><td class=\"align-left\">1.0317</td><td class=\"align-left\">0.8405</td><td class=\"align-left\">0.1530</td><td class=\"align-left\">0.8067</td><td class=\"align-left\">0.7985</td><td class=\"align-left\">0.1362<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#tblfn4\" name=\"btblfn4\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"tblfn4\"><span class=\"anchor-text-container\"><span class=\"anchor-text\"><sup>d</sup></span></span></a></td></tr><tr class=\"valign-top\"><td class=\"align-left\">Thelaxinae</td><td class=\"align-left\">0.5449</td><td class=\"align-left\">0.8426</td><td class=\"align-left\">0.2386</td><td class=\"align-left\">0.8418</td><td class=\"align-left\">0.8445</td><td class=\"align-left\">0.0886</td></tr></tbody>"
+    },
+    {
+     "t": "p",
+     "html": "Index of substitution saturation (Iss) calculated using DAMBE software."
+    },
+    {
+     "t": "p",
+     "html": "Critical Iss values for calculations including all sites and resolved sites only."
+    },
+    {
+     "t": "p",
+     "html": "Iss.c<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#tblfn3\" name=\"btblfn3\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"tblfn3\"><span class=\"anchor-text-container\"><span class=\"anchor-text\"><sup>c</sup></span></span></a> stands for critical Iss values calculated for an asymmetrical tree."
+    }
+   ]
+  },
+  {
+   "id": "st065",
+   "title": "4. Discussion",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "st070",
+   "title": "4.1. Phylogenetic inference: comparison of Buchnera and aphid data",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The results obtained here show that the <em>Buchnera</em> genes selected for this study are useful sources of data for corroboration or rejection of particular phylogenetic hypotheses, although they cannot completely resolve aphid phylogeny. Here we summarize how our results compare to the most recent phylogeny for Aphididae based on aphid genes (<a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Ortiz-Rivas and Martínez-Torres, 2010</a>). First, relationships strongly supported by both <em>Buchnera</em> and aphid sequences include monophyly of individual tribes and monophyly of Lachninae. Second, relationships congruent with those from aphid genes but more strongly supported by <em>Buchnera</em> sequences include paraphyly of Macrosiphini with respect to Pterocommatini and monophyly of Aphidinae (including Aphidini, Macrosiphini, Pterocommatini). Third, relationships incongruent between analyses based on <em>Buchnera</em><span> versus aphid genes, with neither providing strong or stable resolution, were concentrated at the deeper nodes. An example is the monophyly versus <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/polyphyly\" class=\"topic-link\">polyphyly</a> of Eriosomatinae: while Fordini was repeatedly recovered as a sister group to Eriosomatini in </span><em>Buchnera-</em> based topologies, the aphid data supported a sister relationship of Fordini and Pemphigini. Other instances of unstable resolution by either aphid or <em>Buchnera</em> genes involve relationships between Calaphidinae and Aphidinae, and among the Calaphidinae, Chaitophorinae, and Drepanosiphinae, and relationships between Anoeciinae and Mindarinae. Most notably, we did not find any clear example of strongly supported discrepancies between analyses based on aphid genes versus <em>Buchnera</em> genes. We note that differences or lack of differences between the studies also could be affected by the differences in taxon sampling."
+    },
+    {
+     "t": "p",
+     "html": "This overview demonstrates that, despite particular differences among the many trees recovered in this study and in <a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Ortiz-Rivas and Martínez-Torres (2010)</a>, both data sources are highly congruent for strongly supported relationships, even though they may differ for weakly supported nodes. This suggests that the inconclusiveness of previous studies based on aphid DNA reflects real evolutionary processes (e.g., rapid diversification in some lineages) rather than methodological artifacts."
+    },
+    {
+     "t": "p",
+     "html": "Apart from a general assessment of the suitability of <em>Buchnera</em> data for resolving aphid phylogeny, our study also found unexpected relationships, suggesting the need for taxonomic reassessment in some groups. For example, two genera classified as Macrosiphini, <em>Aspidophorodon longicaudus</em> and <em>Capitophorus hudsonicus</em>, grouped significantly with <em>Pterocomma</em> (Pterocommatini) rather than with other Macrosiphini, thus rendering Macrosiphini paraphyletic. Clustering of these three species was supported by analyses of single-gene topologies and by concatenated matrices. Furthermore, a possible effect of LBA on the position of these taxa was tested and discounted, suggesting that their relationship reflects evolutionary history rather than phylogenetic artifact. A previous study (<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#b0315\" name=\"bb0315\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"b0315\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">von Dohlen et al., 2006</span></span></a>) also recovered a paraphyletic Macrosiphini, due to the sister relationship of <em>Pterocomma</em> with <em>Cavariella</em> (a genus not included in the present study); a later study (<a class=\"ref-chip ny\" data-ref=\"24\" data-ny=\"1\" href=\"#ref-24\">Kim et al., 2011</a><span>) duplicated this finding. Together, these studies indicate the need for a re-examination and probable <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/taxonomic-revisions\" class=\"topic-link\">taxonomic revision</a> of Macrosiphini and Pterocommatini.</span>"
+    },
+    {
+     "t": "p",
+     "html": "Some of the relationships found in this study have implications for the evolution of host-plant relationships and other interesting features of aphid biology. One example concerns Lachninae. <a class=\"ref-chip ny\" data-ref=\"42\" data-ny=\"1\" href=\"#ref-42\">Normark (2000)</a> found previously that Tramini was nested within Lachnini, rendering the latter tribe paraphyletic. Our analysis recovers the same pattern using <em>Buchnera</em> genes, and with high support. Not only do these results indicate that the tribal classification does not reflect phylogeny, they have implications for the interpretation of feeding strategies within Lachninae. <a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Ortiz-Rivas and Martínez-Torres, 2010</a><span><span> proposed that a single transition from <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/gymnosperm\" class=\"topic-link\">gymnosperm</a> hosts to </span><a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/angiosperm\" class=\"topic-link\">angiosperms</a> may have occured in an ancestor of Lachnini</span>&nbsp;+&nbsp;Tramini, with Eulachnini retaining the ancestral state of gymnosperm feeding. However, they acknowledged that this scenario was not fully supported by their data, because a lineage comprising Lachnini&nbsp;+&nbsp;Tramini was only rarely present in their trees. The nesting of Tramini within Lachnini, supported strongly by our data, is compatible with the hypothesis of a single transition between gymnosperms and angiosperms within the Lachninae. Another example of a phylogenetic result with implications for the evolutionary history of host plant associations concerns the position of Saltusaphidinae. This subfamily was recovered previously as nested within Calaphidinae (<a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#b0310\" name=\"bb0310\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"b0310\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">von Dohlen and Moran, 2000</span></span></a><span>); with greater taxon sampling in our study, this nested position was even more strongly supported. This relationship suggests that ancestors of sedge- and rush-feeding Saltusaphidinae shifted directly from feeding on trees (as in extant Calaphidinae) to feeding on herbaceous <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/monocotyledon\" class=\"topic-link\">monocots</a>. In contrast, most other aphid species living on herbaceous plants seem to have acquired these hosts through a host-alternating intermediate life-cycle stage including both trees and herbs (</span><a class=\"ref-chip ny\" data-ref=\"31\" data-ny=\"1\" href=\"#ref-31\">Moran, 1992</a>)."
+    },
+    {
+     "t": "p",
+     "html": "One final example of a phylogenetic result with implications for the evolution of an unusual phenotype relates to the monophyly versus paraphyly of Eriosomatinae, whose members all produce dwarf sexual forms. Two of the three tribes (Eriosomatini and Fordini) are supported as sister groups, with weak support based on the aphid data (<a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Ortiz-Rivas and Martínez-Torres, 2010</a>) and considerably stronger support in our analyses. The third tribe (Pemphigini) does not cluster with Eriosomatini&nbsp;+&nbsp;Fordini. Thus, both <em>Buchnera</em> and aphid data suggest that dwarf non-feeding sexuals may have originated twice, through convergent adaptation to the host plant-alternating life style. A more thorough understanding of the evolution of this puzzling morph (i.e. multiple origins versus repeated losses) could be investigated further with more phylogenetic studies and/or developmental data. While several other topological aspects presented here may influence interpretation of the evolution of host-plant associations or life cycles if proven correct, the resolution and support of the deeper nodes are too weak for definite conclusions."
+    }
+   ]
+  },
+  {
+   "id": "st075",
+   "title": "4.2. Rooting the Buchnera tree",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The phylogenies derived from <em>Buchnera</em> sequences and aphid sequences appear to contradict one another regarding placement of the root node. In analyses based on aphid genes, the root was placed between Lachninae and all other taxa in all presented trees (<a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Ortiz-Rivas and Martínez-Torres, 2010</a>). In contrast, in the <em>Buchnera</em>-derived topologies, the root is positioned between Pemphigini and all other taxa in most cases. However, the AU tests indicate that this root position cannot be considered as the only possibility. AU tests were not able to reject a root located between any of the four proposed clusters (including between Lachninae and other taxa). This incongruence and uncertainty may reflect the different taxon sampling and outgroups used in the two studies. While for the <em>Buchnera</em>-based analyses the best available outgroup was the phylogenetically distant <em>Ishikawaella capsulata</em> symbiont, the aphid-based reconstructions could be rooted with more closely related taxa, e.g., <em>Daktulosphaira</em><span> in <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/phylloxeridae\" class=\"topic-link\">Phylloxeridae</a>. However, it is clear that neither study reliably identifies the root.</span>"
+    }
+   ]
+  },
+  {
+   "id": "st080",
+   "title": "4.3. Tests of heterogeneity in evolutionary rate of symbiont genes",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The d<em>N</em>/d<em>S</em> calculations reveal higher values for <em>Buchnera</em> of aphid groups with simple life cycles and restricted to living on trees, except for Saltusaphidinae, which lives on sedges but is derived from within tree-feeding Calaphidinae. These aphid groups are often considered to represent the ancestral aphid life cycle, involving fewer distinct female morphs and only a single host-plant group. Higher d<em>N</em>/d<em>S</em><span> due to reduced efficacy of purifying selection is expected when the aphid <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/population-size\" class=\"topic-link\">population size</a> is smaller or when the number of symbiont cells inoculating each progeny is smaller (</span><a class=\"ref-chip ny\" data-ref=\"49\" data-ny=\"1\" href=\"#ref-49\">Rispe and Moran, 2000</a>). A previous phylogenetic study based on aphid genes (<a class=\"ref-chip ny\" data-ref=\"44\" data-ny=\"1\" href=\"#ref-44\">Ortiz-Rivas and Martínez-Torres, 2010</a>) presented analyses of rate differences using relative-rate tests as implemented in RRTree (<a class=\"ref-chip ny\" data-ref=\"52\" data-ny=\"1\" href=\"#ref-52\">Robinson-Rechavi and Huchon, 2000</a>). Those results cannot be meaningfully compared to the d<em>N</em>/d<em>S</em> results for <em>Buchnera</em>, as relative rate tests are designed to detect changes in rates between a test lineage and related lineages, whereas d<em>N</em>/d<em>S</em> comparisons reveal changes in efficacy of purifying selection on different branches. We do not report RRTree analyses because the method is prone to several errors, particularly when the closest known outgroup is distant (<a class=\"ref-chip ny\" data-ref=\"4\" data-ny=\"1\" href=\"#ref-4\">Bromham et al., 2000</a>, <a class=\"ref-chip ny\" data-ref=\"51\" data-ny=\"1\" href=\"#ref-51\">Robinson et al., 1998</a>), as is the case for <em>I. capsulat</em>a (<a class=\"ref-chip ny\" data-ref=\"21\" data-ny=\"1\" href=\"#ref-21\">Hosokawa et al., 2006</a>)."
+    }
+   ]
+  },
+  {
+   "id": "st085",
+   "title": "5. Conclusion",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The results obtained from <em>Buchnera</em>-derived sequences confirm the overall suitability of this source of phylogenetic information, and further suggest that <em>Buchnera</em> genes may outperform host genes for solving particular phylogenetic problems. A potential drawback that must be considered when using these markers is the well-known tendency of symbiont sequences to suffer from various phylogenetic artifacts, mostly due to LBA and compositional bias. However, in many animal groups, these issues also affect mitochondrial and nuclear sequences; in aphids in particular, most nuclear genes are affected by extensive paralogy. Fortunately, new computational techniques are in development that can avoid artifacts due to LBA and compositional bias, provided that sufficient amounts of data are available (<a class=\"ref-chip ny\" data-ref=\"26\" data-ny=\"1\" href=\"#ref-26\">Lartillot et al., 2009</a>; <a class=\"ref-chip ny\" data-ref=\"22\" data-ny=\"1\" href=\"#ref-22\">Husník et al., 2011</a>)."
+    },
+    {
+     "t": "p",
+     "html": "<span>Codiversification with obligate bacterial symbionts has now been documented for many invertebrate taxa, including a wide range of insects such as <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/cockroach\" class=\"topic-link\">cockroaches</a><span>, ants, <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/glossinidae\" class=\"topic-link\">tsetse flies</a><span>, <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/curculionidae\" class=\"topic-link\">weevils</a>, lice, and almost all insect groups feeding on plant sap (</span></span></span><a class=\"ref-chip ny\" data-ref=\"2\" data-ny=\"1\" href=\"#ref-2\">Allen et al., 2007</a>, <a class=\"ref-chip ny\" data-ref=\"8\" data-ny=\"1\" href=\"#ref-8\">Conord et al., 2008</a>, <a class=\"ref-chip ny\" data-ref=\"36\" data-ny=\"1\" href=\"#ref-36\">Moran et al., 2008</a><span>), as well as a diversity of other animal clades such as marine <a href=\"https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/platyhelminth\" class=\"topic-link\">flatworms</a> and some marine clams (</span><a class=\"ref-chip ny\" data-ref=\"15\" data-ny=\"1\" href=\"#ref-15\">Gruber-Vodicka et al., 2011</a>, <a class=\"ref-chip ny\" data-ref=\"46\" data-ny=\"1\" href=\"#ref-46\">Peek et al., 1998</a>). Considering the rapidly expanding bacterial genome databases, symbiont-derived data are likely to become a powerful tool for reconstructing host phylogenies in these strictly cospeciating associations."
+    }
+   ]
+  },
+  {
+   "id": "st135",
+   "title": "Acknowledgments",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "We thank S. Aoki, T. Fukatsu, U. Kurosu, J. Ortego, D. A. J. Teulon and E. Maw for donating samples. This work was supported by the United States National Science Foundation (DEB-0723472, DEB-1106195 to N.A.M.). E.N. was supported on a Fulbright fellowship and by the Grant Agency of the University of South Bohemia (135/2010/P) and the Grant Agency of the Czech Republic (206/09/H026). C.D.v.D. was supported by the Utah Agricultural Experiment Station; approved as journal paper #8462."
+    }
+   ]
+  },
+  {
+   "id": "st145",
+   "title": "Appendix A. Supplementary material",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "<span class=\"display\"><figure class=\"figure text-xs\" id=\"f0035\" data-sr-figure=\"fig-supplementary-figure-2\"><span><img src=\"http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx2.jpg\" height=\"599\" alt=\"\" aria-describedby=\"cn040\"><ol class=\"u-margin-s-bottom\"><li><a class=\"anchor download-link u-font-sans anchor-primary\" href=\"http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx2.jpg\" download=\"\" title=\"Download full-size image\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Download: <span class=\"download-link-title\">Download full-size image</span></span></span></a></li></ol></span><span class=\"captions text-s\"><span id=\"cn040\"><p id=\"sp0055\"><span class=\"label\">Supplementary Figure 2</span>. Fig. S1. An example topology resulting from LBA-avoiding analyses. In this case, sequences of Capitophorus hudsonicus were removed. Numbers designate posterior probabilities.</p></span></span></figure></span><span class=\"display\"><figure class=\"figure text-xs\" id=\"f0040\" data-sr-figure=\"fig-supplementary-figure-3\"><span><img src=\"http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx3.jpg\" height=\"1081\" alt=\"\" aria-describedby=\"cn045\"><ol class=\"u-margin-s-bottom\"><li><a class=\"anchor download-link u-font-sans anchor-primary\" href=\"http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx3.jpg\" download=\"\" title=\"Download full-size image\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Download: <span class=\"download-link-title\">Download full-size image</span></span></span></a></li></ol></span><span class=\"captions text-s\"><span id=\"cn045\"><p id=\"sp0060\"><span class=\"label\">Supplementary Figure 3</span>. Fig. S2. BI topology based on dnaB dataset. Solid vertical lines refer to monophyletic tribes and subfamilies. Dashed vertical lines designate paraphyletic taxa. The values at nodes show posterior probability support.</p></span></span></figure></span><span class=\"display\"><figure class=\"figure text-xs\" id=\"f0045\" data-sr-figure=\"fig-supplementary-figure-4\"><span><img src=\"http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx4.jpg\" height=\"305\" alt=\"\" aria-describedby=\"cn050\"><ol class=\"u-margin-s-bottom\"><li><a class=\"anchor download-link u-font-sans anchor-primary\" href=\"http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx4.jpg\" download=\"\" title=\"Download full-size image\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Download: <span class=\"download-link-title\">Download full-size image</span></span></span></a></li></ol></span><span class=\"captions text-s\"><span id=\"cn050\"><p id=\"sp0065\"><span class=\"label\">Supplementary Figure 4</span>. Fig. S3. GC content of dnaB sequences.</p></span></span></figure></span><span class=\"display\"><figure class=\"figure text-xs\" id=\"f0050\" data-sr-figure=\"fig-supplementary-figure-5\"><span><img src=\"http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx5.jpg\" height=\"1090\" alt=\"\" aria-describedby=\"cn055\"><ol class=\"u-margin-s-bottom\"><li><a class=\"anchor download-link u-font-sans anchor-primary\" href=\"http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx5.jpg\" download=\"\" title=\"Download full-size image\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Download: <span class=\"download-link-title\">Download full-size image</span></span></span></a></li></ol></span><span class=\"captions text-s\"><span id=\"cn055\"><p id=\"sp0070\"><span class=\"label\">Supplementary Figure 5</span>. Fig. S4. BI topology based on trpB dataset. Solid vertical lines refer to monophyletic tribes and subfamilies. Dashed vertical lines designate paraphyletic taxa.</p></span></span></figure></span><span class=\"display\"><span class=\"e-component e-component-mmc1\" id=\"m0005\"><span class=\"article-attachment u-margin-xs-bottom\"><a class=\"anchor download-link u-font-sans anchor-primary anchor-icon-left anchor-with-icon\" href=\"https://ars.els-cdn.com/content/image/1-s2.0-S1055790313001176-mmc1.docx\" download=\"\" title=\"Download Word document (31KB)\"><svg focusable=\"false\" viewBox=\"0 0 92 128\" height=\"20\" width=\"20\" class=\"icon icon-text-document\"><path d=\"M1 10v108h57.22L91 85.09V10H1m80 70.96L54.07 108H11V20h70v60.96zM43 100h10V80h20V70H43v30M25 32h42v10H25V32zm0 18h42v10H25V50z\"></path></svg><span class=\"anchor-text-container\"><span class=\"anchor-text\">Download: <span class=\"download-link-title\">Download Word document (31KB)</span></span></span></a></span><span class=\"captions text-s\"><span id=\"cn060\"><p id=\"sp0075\"><span class=\"label\">Supplementary data 1</span>. Table S1. Aphid samples collected for this study.</p></span></span></span></span><span class=\"display\"><span class=\"e-component e-component-mmc2\" id=\"m0010\"><span class=\"article-attachment u-margin-xs-bottom\"><a class=\"anchor download-link u-font-sans anchor-primary anchor-icon-left anchor-with-icon\" href=\"https://ars.els-cdn.com/content/image/1-s2.0-S1055790313001176-mmc2.docx\" download=\"\" title=\"Download Word document (15KB)\"><svg focusable=\"false\" viewBox=\"0 0 92 128\" height=\"20\" width=\"20\" class=\"icon icon-text-document\"><path d=\"M1 10v108h57.22L91 85.09V10H1m80 70.96L54.07 108H11V20h70v60.96zM43 100h10V80h20V70H43v30M25 32h42v10H25V32zm0 18h42v10H25V50z\"></path></svg><span class=\"anchor-text-container\"><span class=\"anchor-text\">Download: <span class=\"download-link-title\">Download Word document (15KB)</span></span></span></a></span><span class=\"captions text-s\"><span id=\"cn065\"><p id=\"sp0080\"><span class=\"label\">Supplementary data 2</span>. Table S2. Primers used for amplification of selected genes.</p></span></span></span></span><span class=\"display\"><span class=\"e-component e-component-mmc3\" id=\"m0015\"><span class=\"article-attachment u-margin-xs-bottom\"><a class=\"anchor download-link u-font-sans anchor-primary anchor-icon-left anchor-with-icon\" href=\"https://ars.els-cdn.com/content/image/1-s2.0-S1055790313001176-mmc3.docx\" download=\"\" title=\"Download Word document (30KB)\"><svg focusable=\"false\" viewBox=\"0 0 92 128\" height=\"20\" width=\"20\" class=\"icon icon-text-document\"><path d=\"M1 10v108h57.22L91 85.09V10H1m80 70.96L54.07 108H11V20h70v60.96zM43 100h10V80h20V70H43v30M25 32h42v10H25V32zm0 18h42v10H25V50z\"></path></svg><span class=\"anchor-text-container\"><span class=\"anchor-text\">Download: <span class=\"download-link-title\">Download Word document (30KB)</span></span></span></a></span><span class=\"captions text-s\"><span id=\"cn070\"><p id=\"sp0085\"><span class=\"label\">Supplementary data 3</span>. Table S3. Analyzed sequences and their accession numbers.</p></span></span></span></span>"
+    },
+    {
+     "t": "figure",
+     "fid": "fig-supplementary-figure-2"
+    },
+    {
+     "t": "figure",
+     "fid": "fig-supplementary-figure-3"
+    },
+    {
+     "t": "figure",
+     "fid": "fig-supplementary-figure-4"
+    },
+    {
+     "t": "figure",
+     "fid": "fig-supplementary-figure-5"
+    },
+    {
+     "t": "p",
+     "html": "<span class=\"label\">Supplementary data 1</span>. Table S1. Aphid samples collected for this study."
+    },
+    {
+     "t": "p",
+     "html": "<span class=\"label\">Supplementary data 2</span>. Table S2. Primers used for amplification of selected genes."
+    },
+    {
+     "t": "p",
+     "html": "<span class=\"label\">Supplementary data 3</span>. Table S3. Analyzed sequences and their accession numbers."
+    }
+   ]
+  }
+ ],
+ "figures": [
+  {
+   "id": "fig-ure-1",
+   "label": "Fig. 1",
+   "captionHtml": "",
+   "src": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx1.jpg",
+   "thumb": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx1.jpg",
+   "alt": "",
+   "href": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx1.jpg",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-1",
+   "label": "Fig. 1",
+   "captionHtml": "<span id=\"cn005\"><p id=\"sp0020\">. BI topology based on ilvD dataset. Solid vertical lines refer to monophyletic tribes and subfamilies. Dashed vertical lines designate paraphyletic taxa. The branch of Pseudoregma koshuensis is scaled to ½ of its actual length. The values at nodes show posterior probability support.</p></span>",
+   "src": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-gr1.jpg",
+   "thumb": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-gr1.jpg",
+   "alt": "",
+   "href": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-gr1.jpg",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-2",
+   "label": "Fig. 2",
+   "captionHtml": "<span id=\"cn010\"><p id=\"sp0025\">. BI topology based on the concatenated matrix including 1st and 2nd codon positions. Thicker lines designate branches with a posterior probability above 95%. Solid vertical lines refer to monophyletic subfamilies. Dashed vertical line designates paraphyletic/polyphyletic taxa.</p></span>",
+   "src": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-gr2.jpg",
+   "thumb": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-gr2.jpg",
+   "alt": "",
+   "href": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-gr2.jpg",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-supplementary-figure-2",
+   "label": "Supplementary Figure 2",
+   "captionHtml": "<span id=\"cn040\"><p id=\"sp0055\">. Fig. S1. An example topology resulting from LBA-avoiding analyses. In this case, sequences of Capitophorus hudsonicus were removed. Numbers designate posterior probabilities.</p></span>",
+   "src": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx2.jpg",
+   "thumb": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx2.jpg",
+   "alt": "",
+   "href": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx2.jpg",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-3",
+   "label": "Fig. 3",
+   "captionHtml": "<span id=\"cn015\"><p id=\"sp0030\">. A combined BI topology constructed to maximize the information content of amino acid and nucleotide data. The overall tree is based on concatenated amino acids, and the relationships within Aphidini, Macrosiphini and Pterocomatini are based on concatenated nucleotide sequences corresponding to the same matrix (including all three codon positions). Solid vertical lines refer to monophyletic subfamilies.</p></span>",
+   "src": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-gr3.jpg",
+   "thumb": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-gr3.jpg",
+   "alt": "",
+   "href": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-gr3.jpg",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-supplementary-figure-3",
+   "label": "Supplementary Figure 3",
+   "captionHtml": "<span id=\"cn045\"><p id=\"sp0060\">. Fig. S2. BI topology based on dnaB dataset. Solid vertical lines refer to monophyletic tribes and subfamilies. Dashed vertical lines designate paraphyletic taxa. The values at nodes show posterior probability support.</p></span>",
+   "src": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx3.jpg",
+   "thumb": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx3.jpg",
+   "alt": "",
+   "href": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx3.jpg",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-4",
+   "label": "Fig. 4",
+   "captionHtml": "<span id=\"cn020\"><p id=\"sp0035\">. ML topology based on the concatenated amino acid matrix. Bootstrap support values above 70% are shown. Solid vertical lines refer to monophyletic subfamilies. Dashed vertical lines designate paraphyletic/polyphyletic taxa.</p></span>",
+   "src": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-gr4.jpg",
+   "thumb": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-gr4.jpg",
+   "alt": "",
+   "href": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-gr4.jpg",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-supplementary-figure-4",
+   "label": "Supplementary Figure 4",
+   "captionHtml": "<span id=\"cn050\"><p id=\"sp0065\">. Fig. S3. GC content of dnaB sequences.</p></span>",
+   "src": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx4.jpg",
+   "thumb": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx4.jpg",
+   "alt": "",
+   "href": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx4.jpg",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-5",
+   "label": "Fig. 5",
+   "captionHtml": "<span id=\"cn025\"><p id=\"sp0040\">. Unrooted BI topology based on the concatenated matrix including 1st and 2nd codon positions. Three main clusters are defined (shaded areas) to facilitate comparison with the <a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#b0230\" name=\"bb0230\" data-sd-ui-side-panel-opener=\"true\" data-xocs-content-type=\"reference\" data-xocs-content-id=\"b0230\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">Ortiz-Rivas and Martínez-Torres (2010)</span></span></a> scheme, and are resolved as a trichotomy in this unrooted analysis. Solid lines refer to monophyletic taxa. Dashed lines designate paraphyletic/polyphyletic taxa. Numbers are posterior probabilities.</p></span>",
+   "src": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-gr5.jpg",
+   "thumb": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-gr5.jpg",
+   "alt": "",
+   "href": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-gr5.jpg",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-supplementary-figure-5",
+   "label": "Supplementary Figure 5",
+   "captionHtml": "<span id=\"cn055\"><p id=\"sp0070\">. Fig. S4. BI topology based on trpB dataset. Solid vertical lines refer to monophyletic tribes and subfamilies. Dashed vertical lines designate paraphyletic taxa.</p></span>",
+   "src": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx5.jpg",
+   "thumb": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx5.jpg",
+   "alt": "",
+   "href": "http://127.0.0.1:8799/Reconstructing%20the%20phylogeny%20of%20aphids%20(Hemiptera_%20Aphididae)%20using%20DNA%20of%20the%20obligate%20symbiont%20Buchnera%20aphidicola%20-%20ScienceDirect_files/1-s2.0-S1055790313001176-fx5.jpg",
+   "origin": "inline"
+  }
+ ],
+ "references": [
+  {
+   "n": 1,
+   "id": "ref-id-b0005",
+   "html": "<span class=\"reference\" id=\"h0005\"><div class=\"contribution\"><div class=\"authors u-font-sans\">E. Akman Gunduz, A.E. Douglas</div> <div id=\"ref-id-h0005\" class=\"title text-m\">Symbiotic bacteria enable insect to use a nutritionally inadequate diet</div> </div> <div class=\"host u-font-sans\">Proc. Biol. Sci., 276 (2009), pp. 987-991</div> </span>",
+   "text": "E. Akman Gunduz, A.E. Douglas Symbiotic bacteria enable insect to use a nutritionally inadequate diet Proc. Biol. Sci., 276 (2009), pp. 987-991",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 2,
+   "id": "ref-id-b0010",
+   "html": "<span class=\"reference\" id=\"h0010\"><div class=\"contribution\"><div class=\"authors u-font-sans\">J.M. Allen, D.L. Reed, M.A. Perotti, H.R. Braig</div> <div id=\"ref-id-h0010\" class=\"title text-m\">Evolutionary relationships of “Candidatus Riesia spp.”, endosymbiotic enterobacteriaceae living within hematophagous primate lice</div> </div> <div class=\"host u-font-sans\">Appl. Environ. Microbiol., 73 (2007), pp. 1659-1664</div> </span>",
+   "text": "J.M. Allen, D.L. Reed, M.A. Perotti, H.R. Braig Evolutionary relationships of “Candidatus Riesia spp.”, endosymbiotic enterobacteriaceae living within hematophagous primate lice Appl. Environ. Microbiol., 73 (2007), pp. 1659-1664",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 3,
+   "id": "ref-id-b0015",
+   "html": "<span class=\"reference\" id=\"h0015\"><div class=\"contribution\"><div class=\"authors u-font-sans\">J. Bergsten</div> <div id=\"ref-id-h0015\" class=\"title text-m\">A review of long-branch attraction</div> </div> <div class=\"host u-font-sans\">Cladistics, 21 (2005), pp. 163-193</div> </span>",
+   "text": "J. Bergsten A review of long-branch attraction Cladistics, 21 (2005), pp. 163-193",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 4,
+   "id": "ref-id-b0020",
+   "html": "<span class=\"reference\" id=\"h0020\"><div class=\"contribution\"><div class=\"authors u-font-sans\">L. Bromham, D. Penny, A. Rambaut, M.D. Hendy</div> <div id=\"ref-id-h0020\" class=\"title text-m\">The power of relative rates tests depends on the data</div> </div> <div class=\"host u-font-sans\">J. Mol. Evol., 50 (2000), pp. 296-301</div> </span>",
+   "text": "L. Bromham, D. Penny, A. Rambaut, M.D. Hendy The power of relative rates tests depends on the data J. Mol. Evol., 50 (2000), pp. 296-301",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 5,
+   "id": "ref-id-b0025",
+   "html": "<span class=\"reference\" id=\"h0025\"><div class=\"contribution\"><div class=\"authors u-font-sans\">P. Buchner</div> <div id=\"ref-id-h0025\" class=\"title text-m\">Endosymbiose der Tiere mit pflanzlichen Mikroorganismen</div> </div> <div class=\"host u-font-sans\">Birkhäuser, Basel, Stuttgart (1953)</div> <div class=\"comment\">771pp</div> </span>",
+   "text": "P. Buchner Endosymbiose der Tiere mit pflanzlichen Mikroorganismen Birkhäuser, Basel, Stuttgart (1953) 771pp",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 6,
+   "id": "ref-id-b0030",
+   "html": "<span class=\"reference\" id=\"h0030\"><div class=\"contribution\"><div class=\"authors u-font-sans\">J. Castresana</div> <div id=\"ref-id-h0030\" class=\"title text-m\">Selection of conserved blocks from multiple alignments for their use in phylogenetic analysis</div> </div> <div class=\"host u-font-sans\">Mol. Biol. Evol., 17 (2000), pp. 540-552</div> </span>",
+   "text": "J. Castresana Selection of conserved blocks from multiple alignments for their use in phylogenetic analysis Mol. Biol. Evol., 17 (2000), pp. 540-552",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 7,
+   "id": "ref-id-b0035",
+   "html": "<span class=\"reference\" id=\"h0035\"><div class=\"contribution\"><div class=\"authors u-font-sans\">M.A. Clark, N.A. Moran, P. Baumann, J.J. Wernegreen</div> <div id=\"ref-id-h0035\" class=\"title text-m\">Cospeciation between bacterial endosymbionts (<em>Buchnera</em>) and a recent radiation of aphids (<em>Uroleucon</em>) and pitfalls of testing for phylogenetic congruence</div> </div> <div class=\"host u-font-sans\">Evolution, 54 (2000), pp. 517-525</div> </span>",
+   "text": "M.A. Clark, N.A. Moran, P. Baumann, J.J. Wernegreen Cospeciation between bacterial endosymbionts (Buchnera) and a recent radiation of aphids (Uroleucon) and pitfalls of testing for phylogenetic congruence Evolution, 54 (2000), pp. 517-525",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 8,
+   "id": "ref-id-b0040",
+   "html": "<span class=\"reference\" id=\"h0040\"><div class=\"contribution\"><div class=\"authors u-font-sans\">C. Conord, L. Despres, A. Vallier, S. Balmand, C. Miquel, S. Zundel, G. Lemperiere, A. Heddi</div> <div id=\"ref-id-h0040\" class=\"title text-m\">Long-term evolutionary stability of bacterial endosymbiosis in Curculionoidea: additional evidence of symbiont replacement in the Dryophthoridae family</div> </div> <div class=\"host u-font-sans\">Mol. Biol. Evol., 25 (2008), pp. 859-868</div> </span>",
+   "text": "C. Conord, L. Despres, A. Vallier, S. Balmand, C. Miquel, S. Zundel, G. Lemperiere, A. Heddi Long-term evolutionary stability of bacterial endosymbiosis in Curculionoidea: additional evidence of symbiont replacement in the Dryophthoridae family Mol. Biol. Evol., 25 (2008), pp. 859-868",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 9,
+   "id": "ref-id-b0045",
+   "html": "<span class=\"reference\" id=\"h0045\"><div class=\"contribution\"><div class=\"authors u-font-sans\">D. Darriba, G.L. Taboada, R. Doallo, D. Posada</div> <div id=\"ref-id-h0045\" class=\"title text-m\">ProtTest 3: fast selection of best-fit models of protein evolution</div> </div> <div class=\"host u-font-sans\">Bioinformatics, 27 (2011), pp. 1164-1165</div> </span>",
+   "text": "D. Darriba, G.L. Taboada, R. Doallo, D. Posada ProtTest 3: fast selection of best-fit models of protein evolution Bioinformatics, 27 (2011), pp. 1164-1165",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 10,
+   "id": "ref-id-b0055",
+   "html": "<span class=\"reference\" id=\"h0055\"><div class=\"contribution\"><div class=\"authors u-font-sans\">O. Folmer, M. Black, W. Hoeh, R. Lutz, R. Vrijenhoek</div> <div id=\"ref-id-h0055\" class=\"title text-m\">DNA primers for amplification of mitochondrial cytochrome c oxidase subunit I from diverse metazoan invertebrates</div> </div> <div class=\"host u-font-sans\">Mol. Mar. Biol. Biotechnol., 3 (1994), pp. 294-297</div> </span>",
+   "text": "O. Folmer, M. Black, W. Hoeh, R. Lutz, R. Vrijenhoek DNA primers for amplification of mitochondrial cytochrome c oxidase subunit I from diverse metazoan invertebrates Mol. Mar. Biol. Biotechnol., 3 (1994), pp. 294-297",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 11,
+   "id": "ref-id-b0065",
+   "html": "<span class=\"reference\" id=\"h0065\"><div class=\"contribution\"><div class=\"authors u-font-sans\">T. Fukatsu, H. Ishikawa</div> <div id=\"ref-id-h0065\" class=\"title text-m\">Occurrence of Chaperonin 60 and Chaperonin 10 in primary and secondary bacterial symbionts of aphids: Implications for the evolution of an endosymbiotic system in aphids</div> </div> <div class=\"host u-font-sans\">J. Mol. Evol., 36 (1993), pp. 568-577</div> </span>",
+   "text": "T. Fukatsu, H. Ishikawa Occurrence of Chaperonin 60 and Chaperonin 10 in primary and secondary bacterial symbionts of aphids: Implications for the evolution of an endosymbiotic system in aphids J. Mol. Evol., 36 (1993), pp. 568-577",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 12,
+   "id": "ref-id-b0070",
+   "html": "<span class=\"reference\" id=\"h0070\"><div class=\"contribution\"><div class=\"authors u-font-sans\">D.J. Funk, L. Helbling, J.J. Wernegreen, N.A. Moran</div> <div id=\"ref-id-h0070\" class=\"title text-m\">Intraspecific phylogenetic congruence among multiple symbiont genomes</div> </div> <div class=\"host u-font-sans\">Proc. Biol. Sci., 267 (2000), pp. 2517-2521</div> </span>",
+   "text": "D.J. Funk, L. Helbling, J.J. Wernegreen, N.A. Moran Intraspecific phylogenetic congruence among multiple symbiont genomes Proc. Biol. Sci., 267 (2000), pp. 2517-2521",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 13,
+   "id": "ref-id-b9005",
+   "html": "<span class=\"reference\" id=\"h9005\"><div class=\"contribution\"><div class=\"authors u-font-sans\">M.D. Gadberry, S.T. Malcomber, A.N. Doust, E.A. Kellogg</div> <div id=\"ref-id-h9005\" class=\"title text-m\">Primaclade - a flexible tool to find conserved PCR primers across multiple species</div> </div> <div class=\"host u-font-sans\">Bioinformatics, 21 (2005), pp. 1263-1264</div> </span>",
+   "text": "M.D. Gadberry, S.T. Malcomber, A.N. Doust, E.A. Kellogg Primaclade - a flexible tool to find conserved PCR primers across multiple species Bioinformatics, 21 (2005), pp. 1263-1264",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 14,
+   "id": "ref-id-b0075",
+   "html": "<span class=\"reference\" id=\"h0075\"><div class=\"contribution\"><div class=\"authors u-font-sans\">M. Gouy, S. Guindon, O. Gascuel</div> <div id=\"ref-id-h0075\" class=\"title text-m\">SeaView version 4: a multiplatform graphical user interface for sequence alignment and phylogenetic tree building</div> </div> <div class=\"host u-font-sans\">Mol. Biol. Evol., 27 (2010), pp. 221-224</div> </span>",
+   "text": "M. Gouy, S. Guindon, O. Gascuel SeaView version 4: a multiplatform graphical user interface for sequence alignment and phylogenetic tree building Mol. Biol. Evol., 27 (2010), pp. 221-224",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 15,
+   "id": "ref-id-b0080",
+   "html": "<span class=\"reference\" id=\"h0080\"><div class=\"contribution\"><div class=\"authors u-font-sans\">H.R. Gruber-Vodicka, U. Dirks, N. Leisch, C. Baranyi, K. Stoecker, S. Bulgheresi, N.R. Heindl, M. Horn, C. Lott, A. Loy, M. Wagner, J. Ott</div> <div id=\"ref-id-h0080\" class=\"title text-m\"><em>Paracatenula</em>, an ancient symbiosis between thiotrophic Alphaproteobacteria and catenulid flatworms</div> </div> <div class=\"host u-font-sans\">Proc. Natl. Acad. Sci. USA, 108 (2011), pp. 12078-12083</div> </span>",
+   "text": "H.R. Gruber-Vodicka, U. Dirks, N. Leisch, C. Baranyi, K. Stoecker, S. Bulgheresi, N.R. Heindl, M. Horn, C. Lott, A. Loy, M. Wagner, J. Ott Paracatenula, an ancient symbiosis between thiotrophic Alphaproteobacteria and catenulid flatworms Proc. Natl. Acad. Sci. USA, 108 (2011), pp. 12078-12083",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 16,
+   "id": "ref-id-b0085",
+   "html": "<span class=\"reference\" id=\"h0085\"><div class=\"contribution\"><div class=\"authors u-font-sans\">S. Guindon, O. Gascuel</div> <div id=\"ref-id-h0085\" class=\"title text-m\">A simple, fast, and accurate algorithm to estimate large phylogenies by maximum likelihood</div> </div> <div class=\"host u-font-sans\">Syst. Biol., 52 (2003), pp. 696-704</div> </span>",
+   "text": "S. Guindon, O. Gascuel A simple, fast, and accurate algorithm to estimate large phylogenies by maximum likelihood Syst. Biol., 52 (2003), pp. 696-704",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 17,
+   "id": "ref-id-b0090",
+   "html": "<span class=\"reference\" id=\"h0090\"><div class=\"contribution\"><div class=\"authors u-font-sans\">M. Hajibabaei, D.H. Janzen, J.M. Burns, W. Hallwachs, P.D.N. Hebert</div> <div id=\"ref-id-h0090\" class=\"title text-m\">DNA barcodes distinguish species of tropical Lepidoptera</div> </div> <div class=\"host u-font-sans\">Proc. Natl. Acad. Sci. USA, 103 (2006), pp. 968-971</div> </span>",
+   "text": "M. Hajibabaei, D.H. Janzen, J.M. Burns, W. Hallwachs, P.D.N. Hebert DNA barcodes distinguish species of tropical Lepidoptera Proc. Natl. Acad. Sci. USA, 103 (2006), pp. 968-971",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 18,
+   "id": "ref-id-b0095",
+   "html": "<span class=\"reference\" id=\"h0095\"><div class=\"contribution\"><div class=\"authors u-font-sans\">A.K. Hansen, N.A. Moran</div> <div id=\"ref-id-h0095\" class=\"title text-m\">Aphid genome expression reveals host symbiont cooperation in the production of amino acids</div> </div> <div class=\"host u-font-sans\">Proc. Natl. Acad. Sci. USA, 108 (2011), pp. 2849-2854</div> </span>",
+   "text": "A.K. Hansen, N.A. Moran Aphid genome expression reveals host symbiont cooperation in the production of amino acids Proc. Natl. Acad. Sci. USA, 108 (2011), pp. 2849-2854",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 19,
+   "id": "ref-id-b0335",
+   "html": "<span class=\"reference\" id=\"h0310\"><div class=\"contribution\"><div class=\"authors u-font-sans\">O.E. Heie</div> <div id=\"ref-id-h0310\" class=\"title text-m\">The Aphidoidea (Hemiptera) of Fennoscandia and Denmark. I. General Part. The families Mindaridae, Hormaphididae, Thelaxidae, Anoeciidae, and Pemphigidae</div> </div> <div class=\"host u-font-sans\">Scandinavian Science Press Ltd., Klampenborg, Denmark (1980)</div> </span>",
+   "text": "O.E. Heie The Aphidoidea (Hemiptera) of Fennoscandia and Denmark. I. General Part. The families Mindaridae, Hormaphididae, Thelaxidae, Anoeciidae, and Pemphigidae Scandinavian Science Press Ltd., Klampenborg, Denmark (1980)",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 20,
+   "id": "ref-id-b0340",
+   "html": "<span class=\"reference\" id=\"h0315\"><div class=\"contribution\"><div class=\"authors u-font-sans\">O.E. Heie</div> <div id=\"ref-id-h0315\" class=\"title text-m\">Palaeontology and phylogeny</div> </div> <div class=\"host u-font-sans\">A.K. Minks, P. Harrewijn (Eds.), Aphids: Their biology, Natural Enemies, and Control, vol. 2A, Elsevier, Amsterdam (1987)</div> </span>",
+   "text": "O.E. Heie Palaeontology and phylogeny A.K. Minks, P. Harrewijn (Eds.), Aphids: Their biology, Natural Enemies, and Control, vol. 2A, Elsevier, Amsterdam (1987)",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 21,
+   "id": "ref-id-b0110",
+   "html": "<span class=\"reference\" id=\"h0100\"><div class=\"contribution\"><div class=\"authors u-font-sans\">T. Hosokawa, Y. Kikuchi, N. Nikoh, M. Shimada, T. Fukatsu</div> <div id=\"ref-id-h0100\" class=\"title text-m\">Strict host-symbiont cospeciation and reductive genome evolution in insect gut bacteria”</div> </div> <div class=\"host u-font-sans\">PLoS Biol., 4 (2006), p. e337</div> </span>",
+   "text": "T. Hosokawa, Y. Kikuchi, N. Nikoh, M. Shimada, T. Fukatsu Strict host-symbiont cospeciation and reductive genome evolution in insect gut bacteria” PLoS Biol., 4 (2006), p. e337",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 22,
+   "id": "ref-id-b0115",
+   "html": "<span class=\"reference\" id=\"h0105\"><div class=\"contribution\"><div class=\"authors u-font-sans\">F. Husník, T. Chrudimský, V. Hypša</div> <div id=\"ref-id-h0105\" class=\"title text-m\">Multiple origin of endosymbiosis within the Enterobacteriaceae (gamma-Proteobacteria): convergency of complex phylogenetic approaches</div> </div> <div class=\"host u-font-sans\">BMC Biol., 9 (2011), p. 87</div> </span>",
+   "text": "F. Husník, T. Chrudimský, V. Hypša Multiple origin of endosymbiosis within the Enterobacteriaceae (gamma-Proteobacteria): convergency of complex phylogenetic approaches BMC Biol., 9 (2011), p. 87",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 23,
+   "id": "ref-id-b0120",
+   "html": "<span class=\"reference\" id=\"h0110\"><div class=\"contribution\"><div class=\"authors u-font-sans\">E. Jousselin, Y. Desdevises, A.C. D’Acier</div> <div id=\"ref-id-h0110\" class=\"title text-m\">Fine-scale cospeciation between <em>Brachycaudus</em> and <em>Buchnera aphidicola</em>: bacterial genome helps define species and evolutionary relationships in aphids</div> </div> <div class=\"host u-font-sans\">Proc. R. Soc. Biol. Sci., 276 (2009), pp. 187-196</div> </span>",
+   "text": "E. Jousselin, Y. Desdevises, A.C. D’Acier Fine-scale cospeciation between Brachycaudus and Buchnera aphidicola: bacterial genome helps define species and evolutionary relationships in aphids Proc. R. Soc. Biol. Sci., 276 (2009), pp. 187-196",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 24,
+   "id": "ref-id-b0125",
+   "html": "<span class=\"reference\" id=\"h0115\"><div class=\"contribution\"><div class=\"authors u-font-sans\">H. Kim, S. Lee, Y. Jang</div> <div id=\"ref-id-h0115\" class=\"title text-m\">Macroevolutionary patterns in the aphidini aphids (Hemiptera: Aphididae): diversification, host association, and biogeographic origins</div> </div> <div class=\"host u-font-sans\">PLoS ONE, 6 (2011), p. e24749</div> </span>",
+   "text": "H. Kim, S. Lee, Y. Jang Macroevolutionary patterns in the aphidini aphids (Hemiptera: Aphididae): diversification, host association, and biogeographic origins PLoS ONE, 6 (2011), p. e24749",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 25,
+   "id": "ref-id-b0130",
+   "html": "<span class=\"reference\" id=\"h0120\"><div class=\"contribution\"><div class=\"authors u-font-sans\">G. Kölsch, B.V. Pedersen</div> <div id=\"ref-id-h0120\" class=\"title text-m\">Can the tight co-speciation between reed beetles (Col., Crysomelidae, Donaciinae) and their bacterial endosymbionts providing cocoon material clarify the deeper phylogeny of the hosts?</div> </div> <div class=\"host u-font-sans\">Mol. Phylogen. Evol., 54 (2009), pp. 810-821</div> </span>",
+   "text": "G. Kölsch, B.V. Pedersen Can the tight co-speciation between reed beetles (Col., Crysomelidae, Donaciinae) and their bacterial endosymbionts providing cocoon material clarify the deeper phylogeny of the hosts? Mol. Phylogen. Evol., 54 (2009), pp. 810-821",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 26,
+   "id": "ref-id-b9010",
+   "html": "<span class=\"reference\" id=\"h9010\"><div class=\"contribution\"><div class=\"authors u-font-sans\">N. Lartillot, T. Lepage, S. Blanquart</div> <div id=\"ref-id-h9010\" class=\"title text-m\">PhyloBayes 3: a Bayesian software package for phylogenetic reconstruction and molecular dating</div> </div> <div class=\"host u-font-sans\">Bioinformatics, 25 (2009), pp. 2286-2288</div> </span>",
+   "text": "N. Lartillot, T. Lepage, S. Blanquart PhyloBayes 3: a Bayesian software package for phylogenetic reconstruction and molecular dating Bioinformatics, 25 (2009), pp. 2286-2288",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 27,
+   "id": "ref-id-b0140",
+   "html": "<span class=\"reference\" id=\"h0130\"><div class=\"contribution\"><div class=\"authors u-font-sans\">L. Liu, X.L. Huang, R.L. Zhang, L.Y. Jiang, G.X. Qiao</div> <div id=\"ref-id-h0130\" class=\"title text-m\">Phylogenetic congruence between <em>Mollitrichosiphum</em> (Aphididae: Greenideinae) and <em>Buchnera</em> indicates insect-bacteria parallel evolution</div> </div> <div class=\"host u-font-sans\">Syst. Entomol., 38 (2013), pp. 81-92</div> </span>",
+   "text": "L. Liu, X.L. Huang, R.L. Zhang, L.Y. Jiang, G.X. Qiao Phylogenetic congruence between Mollitrichosiphum (Aphididae: Greenideinae) and Buchnera indicates insect-bacteria parallel evolution Syst. Entomol., 38 (2013), pp. 81-92",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 28,
+   "id": "ref-id-b0145",
+   "html": "<span class=\"reference\" id=\"h0135\"><div class=\"contribution\"><div class=\"authors u-font-sans\">K. Maekawa, Y.C. Park, N. Lo</div> <div id=\"ref-id-h0135\" class=\"title text-m\">Phylogeny of endosymbiont bacteria harbored by the woodroach <em>Cryptocercus</em> spp. (Cryptocercidae: Blattaria): molecular clock evidence for a late cretaceous-early tertiary split of Asian and American lineages</div> </div> <div class=\"host u-font-sans\">Mol. Phylogenet. Evol., 36 (2005), pp. 728-733</div> <div class=\"ReferenceLinks u-font-sans\" lang=\"en\" data-aa-region=\"reference-links\"><a class=\"anchor pdf link anchor-primary anchor-icon-left anchor-with-icon\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790305001107/pdfft?md5=2609afac2b82295bc7de58cd6984f4ef&amp;pid=1-s2.0-S1055790305001107-main.pdf\" target=\"_blank\" rel=\"nofollow\" aria-describedby=\"ref-id-h0135\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View PDF</span></span></a><a class=\"anchor link anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790305001107\" aria-describedby=\"ref-id-h0135\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View article</span></span></a></div> </span>",
+   "text": "K. Maekawa, Y.C. Park, N. Lo Phylogeny of endosymbiont bacteria harbored by the woodroach Cryptocercus spp. (Cryptocercidae: Blattaria): molecular clock evidence for a late cretaceous-early tertiary split of Asian and American lineages Mol. Phylogenet. Evol., 36 (2005), pp. 728-733 View PDFView article",
+   "doi": "",
+   "url": "https://www.sciencedirect.com/science/article/pii/S1055790305001107/pdfft?md5=2609afac2b82295bc7de58cd6984f4ef&pid=1-s2.0-S1055790305001107-main.pdf"
+  },
+  {
+   "n": 29,
+   "id": "ref-id-b0155",
+   "html": "<span class=\"reference\" id=\"h0145\"><div class=\"contribution\"><div class=\"authors u-font-sans\">D. Martínez-Torres, C. Buades, A. Latorre, A. Moya</div> <div id=\"ref-id-h0145\" class=\"title text-m\">Molecular systematics of aphids and their primary endosymbionts</div> </div> <div class=\"host u-font-sans\">Mol. Phylogenet. Evol., 20 (2001), pp. 437-449</div> <div class=\"ReferenceLinks u-font-sans\" lang=\"en\" data-aa-region=\"reference-links\"><a class=\"anchor pdf link anchor-primary anchor-icon-left anchor-with-icon\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790301909832/pdf?md5=2f1d6c64963908d64444cd977cd4df6c&amp;pid=1-s2.0-S1055790301909832-main.pdf\" target=\"_blank\" rel=\"nofollow\" aria-describedby=\"ref-id-h0145\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View PDF</span></span></a><a class=\"anchor link anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790301909832\" aria-describedby=\"ref-id-h0145\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View article</span></span></a></div> </span>",
+   "text": "D. Martínez-Torres, C. Buades, A. Latorre, A. Moya Molecular systematics of aphids and their primary endosymbionts Mol. Phylogenet. Evol., 20 (2001), pp. 437-449 View PDFView article",
+   "doi": "",
+   "url": "https://www.sciencedirect.com/science/article/pii/S1055790301909832/pdf?md5=2f1d6c64963908d64444cd977cd4df6c&pid=1-s2.0-S1055790301909832-main.pdf"
+  },
+  {
+   "n": 30,
+   "id": "ref-id-b0160",
+   "html": "<span class=\"reference\" id=\"h0150\"><div class=\"contribution\"><div class=\"authors u-font-sans\">M. Mateos, S.J. Catrezana, B.J. Nankivell, A. Estes, T.A. Markow, N.A. Moran</div> <div id=\"ref-id-h0150\" class=\"title text-m\">Heritable endosymbionts of <em>Drosophila</em></div> </div> <div class=\"host u-font-sans\">Genetics, 174 (2006), pp. 363-376</div> </span>",
+   "text": "M. Mateos, S.J. Catrezana, B.J. Nankivell, A. Estes, T.A. Markow, N.A. Moran Heritable endosymbionts of Drosophila Genetics, 174 (2006), pp. 363-376",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 31,
+   "id": "ref-id-b0165",
+   "html": "<span class=\"reference\" id=\"h0155\"><div class=\"contribution\"><div class=\"authors u-font-sans\">N.A. Moran</div> <div id=\"ref-id-h0155\" class=\"title text-m\">The evolution of life cycles in aphids</div> </div> <div class=\"host u-font-sans\">Ann. Rev. Entomol., 37 (1992), pp. 321-348</div> </span>",
+   "text": "N.A. Moran The evolution of life cycles in aphids Ann. Rev. Entomol., 37 (1992), pp. 321-348",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 32,
+   "id": "ref-id-b0190",
+   "html": "<span class=\"reference\" id=\"h0180\"><div class=\"contribution\"><div class=\"authors u-font-sans\">N.A. Moran, P.H. Degnan</div> <div id=\"ref-id-h0180\" class=\"title text-m\">Functional genomics of <em>Buchnera</em> and the ecology of aphid hosts</div> </div> <div class=\"host u-font-sans\">Mol. Ecol., 15 (2006), pp. 1251-1261</div> </span>",
+   "text": "N.A. Moran, P.H. Degnan Functional genomics of Buchnera and the ecology of aphid hosts Mol. Ecol., 15 (2006), pp. 1251-1261",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 33,
+   "id": "ref-id-b0175",
+   "html": "<span class=\"reference\" id=\"h0165\"><div class=\"contribution\"><div class=\"authors u-font-sans\">N.A. Moran, M.A. Munson, P. Baumann, H. Ishikawa</div> <div id=\"ref-id-h0165\" class=\"title text-m\">A molecular clock in endosymbiotic bacteria is calibrated using the insect hosts</div> </div> <div class=\"host u-font-sans\">Proc. R. Soc. Lond. B, 253 (1993), pp. 167-171</div> </span>",
+   "text": "N.A. Moran, M.A. Munson, P. Baumann, H. Ishikawa A molecular clock in endosymbiotic bacteria is calibrated using the insect hosts Proc. R. Soc. Lond. B, 253 (1993), pp. 167-171",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 34,
+   "id": "ref-id-b0180",
+   "html": "<span class=\"reference\" id=\"h0170\"><div class=\"contribution\"><div class=\"authors u-font-sans\">N.A. Moran, C.D. von Dohlen, P. Baumann</div> <div id=\"ref-id-h0170\" class=\"title text-m\">Faster evolutionary rates in endosymbiotic bacteria than in cospeciating insect hosts</div> </div> <div class=\"host u-font-sans\">J. Mol. Evol., 41 (1995), pp. 727-731</div> </span>",
+   "text": "N.A. Moran, C.D. von Dohlen, P. Baumann Faster evolutionary rates in endosymbiotic bacteria than in cospeciating insect hosts J. Mol. Evol., 41 (1995), pp. 727-731",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 35,
+   "id": "ref-id-b0185",
+   "html": "<span class=\"reference\" id=\"h0175\"><div class=\"contribution\"><div class=\"authors u-font-sans\">N.A. Moran, P.H. Degnan, S.R. Santos, H.E. Dunbar, H. Ochman</div> <div id=\"ref-id-h0175\" class=\"title text-m\">The players in a mutualistic symbiosis: Insects, bacteria, viruses, and virulence genes</div> </div> <div class=\"host u-font-sans\">Proc. Natl. Acad. Sci. USA, 102 (2005), pp. 16919-16926</div> </span>",
+   "text": "N.A. Moran, P.H. Degnan, S.R. Santos, H.E. Dunbar, H. Ochman The players in a mutualistic symbiosis: Insects, bacteria, viruses, and virulence genes Proc. Natl. Acad. Sci. USA, 102 (2005), pp. 16919-16926",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 36,
+   "id": "ref-id-b0170",
+   "html": "<span class=\"reference\" id=\"h0160\"><div class=\"contribution\"><div class=\"authors u-font-sans\">N.A. Moran, J.P. McCutcheon, A. Nakabachi</div> <div id=\"ref-id-h0160\" class=\"title text-m\">Evolution and genomics of heritable bacterial symbionts</div> </div> <div class=\"host u-font-sans\">Ann. Rev. Genet., 42 (2008), pp. 165-190</div> </span>",
+   "text": "N.A. Moran, J.P. McCutcheon, A. Nakabachi Evolution and genomics of heritable bacterial symbionts Ann. Rev. Genet., 42 (2008), pp. 165-190",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 37,
+   "id": "ref-id-b0195",
+   "html": "<span class=\"reference\" id=\"h0185\"><div class=\"contribution\"><div class=\"authors u-font-sans\">N.A. Moran, H.J. McLaughlin, R. Sorek</div> <div id=\"ref-id-h0185\" class=\"title text-m\">The dynamics and time scale of ongoing genomic erosion in symbiotic bacteria</div> </div> <div class=\"host u-font-sans\">Science, 323 (2009), pp. 379-382</div> </span>",
+   "text": "N.A. Moran, H.J. McLaughlin, R. Sorek The dynamics and time scale of ongoing genomic erosion in symbiotic bacteria Science, 323 (2009), pp. 379-382",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 38,
+   "id": "ref-id-b0200",
+   "html": "<span class=\"reference\" id=\"h0190\"><div class=\"contribution\"><div class=\"authors u-font-sans\">A. Moya, J. Pereto, R. Gil, A. Latorre</div> <div id=\"ref-id-h0190\" class=\"title text-m\">Learning how to live together: genomic insights into prokaryote-animal symbioses</div> </div> <div class=\"host u-font-sans\">Nat. Rev. Gen., 9 (2008), pp. 218-229</div> </span>",
+   "text": "A. Moya, J. Pereto, R. Gil, A. Latorre Learning how to live together: genomic insights into prokaryote-animal symbioses Nat. Rev. Gen., 9 (2008), pp. 218-229",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 39,
+   "id": "ref-id-b0205",
+   "html": "<span class=\"reference\" id=\"h0195\"><div class=\"contribution\"><div class=\"authors u-font-sans\">M.A. Munson, P. Baumann, M.A. Clark, L. Baumann, N.A. Moran, D.J. Voegtlin, B.C. Campbell</div> <div id=\"ref-id-h0195\" class=\"title text-m\">Evidence for the establishment of aphid eubacterium endosymbiosis in an ancestor of four aphid families</div> </div> <div class=\"host u-font-sans\">J. Bacteriol., 173 (1991), pp. 6321-6324</div> </span>",
+   "text": "M.A. Munson, P. Baumann, M.A. Clark, L. Baumann, N.A. Moran, D.J. Voegtlin, B.C. Campbell Evidence for the establishment of aphid eubacterium endosymbiosis in an ancestor of four aphid families J. Bacteriol., 173 (1991), pp. 6321-6324",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 40,
+   "id": "ref-id-b0210",
+   "html": "<span class=\"reference\" id=\"h0200\"><div class=\"contribution\"><div class=\"authors u-font-sans\">M.A. Munson, L. Baumann, P. Baumann</div> <div id=\"ref-id-h0200\" class=\"title text-m\"><em>Buchnera aphidicola</em> (a prokaryotic endosymbiont of aphids) contains a putative 16S rRNA operon unlinked to the 23S rRNA-encoding gene: sequence determination and promoter and terminator analysis</div> </div> <div class=\"host u-font-sans\">Gene, 137 (1993), pp. 171-178</div> <div class=\"ReferenceLinks u-font-sans\" lang=\"en\" data-aa-region=\"reference-links\"><a class=\"anchor pdf link anchor-primary anchor-icon-left anchor-with-icon\" href=\"https://www.sciencedirect.com/science/article/pii/037811199390003L/pdf?md5=e262b5b2e375686075d06674ada283f6&amp;pid=1-s2.0-037811199390003L-main.pdf\" target=\"_blank\" rel=\"nofollow\" aria-describedby=\"ref-id-h0200\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View PDF</span></span></a><a class=\"anchor link anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/037811199390003L\" aria-describedby=\"ref-id-h0200\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View article</span></span></a></div> </span>",
+   "text": "M.A. Munson, L. Baumann, P. Baumann Buchnera aphidicola (a prokaryotic endosymbiont of aphids) contains a putative 16S rRNA operon unlinked to the 23S rRNA-encoding gene: sequence determination and promoter and terminator analysis Gene, 137 (1993), pp. 171-178 View PDFView article",
+   "doi": "",
+   "url": "https://www.sciencedirect.com/science/article/pii/037811199390003L/pdf?md5=e262b5b2e375686075d06674ada283f6&pid=1-s2.0-037811199390003L-main.pdf"
+  },
+  {
+   "n": 41,
+   "id": "ref-id-b0345",
+   "html": "<span class=\"reference\" id=\"h0320\"><div class=\"contribution\"><div class=\"authors u-font-sans\">J.M. Nieto Nafría, M.P. Mier Durante, G. Remaudière</div> <div id=\"ref-id-h0320\" class=\"title text-m\">Les noms des taxa du groupe-famille chez les Aphididae (Hemiptera)</div> </div> <div class=\"host u-font-sans\">Revue Fr. Ent. (NS), 19 (1997), pp. 77-92</div> </span>",
+   "text": "J.M. Nieto Nafría, M.P. Mier Durante, G. Remaudière Les noms des taxa du groupe-famille chez les Aphididae (Hemiptera) Revue Fr. Ent. (NS), 19 (1997), pp. 77-92",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 42,
+   "id": "ref-id-b0225",
+   "html": "<span class=\"reference\" id=\"h0210\"><div class=\"contribution\"><div class=\"authors u-font-sans\">B.B. Normark</div> <div id=\"ref-id-h0210\" class=\"title text-m\">Molecular systematics and evolution of the aphid family Lachnidae</div> </div> <div class=\"host u-font-sans\">Mol. Phylogenet. Evol., 14 (2000), pp. 131-140</div> <div class=\"ReferenceLinks u-font-sans\" lang=\"en\" data-aa-region=\"reference-links\"><a class=\"anchor pdf link anchor-primary anchor-icon-left anchor-with-icon\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790399906991/pdf?md5=a00d786021b534a8c2ccd33ced4b4538&amp;pid=1-s2.0-S1055790399906991-main.pdf\" target=\"_blank\" rel=\"nofollow\" aria-describedby=\"ref-id-h0210\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View PDF</span></span></a><a class=\"anchor link anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790399906991\" aria-describedby=\"ref-id-h0210\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View article</span></span></a></div> </span>",
+   "text": "B.B. Normark Molecular systematics and evolution of the aphid family Lachnidae Mol. Phylogenet. Evol., 14 (2000), pp. 131-140 View PDFView article",
+   "doi": "",
+   "url": "https://www.sciencedirect.com/science/article/pii/S1055790399906991/pdf?md5=a00d786021b534a8c2ccd33ced4b4538&pid=1-s2.0-S1055790399906991-main.pdf"
+  },
+  {
+   "n": 43,
+   "id": "ref-id-b0220",
+   "html": "<span class=\"reference\" id=\"h0205\"><div class=\"contribution\"><div class=\"authors u-font-sans\">E. Nováková, N.A. Moran</div> <div id=\"ref-id-h0205\" class=\"title text-m\">Diversification of genes for carotenoid biosynthesis in aphids following an ancient transfer from a fungus</div> </div> <div class=\"host u-font-sans\">Mol. Biol. Evol., 29 (2012), pp. 313-323</div> </span>",
+   "text": "E. Nováková, N.A. Moran Diversification of genes for carotenoid biosynthesis in aphids following an ancient transfer from a fungus Mol. Biol. Evol., 29 (2012), pp. 313-323",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 44,
+   "id": "ref-id-b0230",
+   "html": "<span class=\"reference\" id=\"h0215\"><div class=\"contribution\"><div class=\"authors u-font-sans\">B. Ortiz-Rivas, D. Martínez-Torres</div> <div id=\"ref-id-h0215\" class=\"title text-m\">Combination of molecular data support the existence of three main lineages in the phylogeny of aphids (Hemiptera: Aphididae) and the basal position of the subfamily Lachninae</div> </div> <div class=\"host u-font-sans\">Mol. Phylogenet. Evol., 55 (2010), pp. 305-317</div> <div class=\"ReferenceLinks u-font-sans\" lang=\"en\" data-aa-region=\"reference-links\"><a class=\"anchor pdf link anchor-primary anchor-icon-left anchor-with-icon\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790309005119/pdfft?md5=797e955a8964dd4b383adb7087eb4241&amp;pid=1-s2.0-S1055790309005119-main.pdf\" target=\"_blank\" rel=\"nofollow\" aria-describedby=\"ref-id-h0215\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View PDF</span></span></a><a class=\"anchor link anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790309005119\" aria-describedby=\"ref-id-h0215\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View article</span></span></a></div> </span>",
+   "text": "B. Ortiz-Rivas, D. Martínez-Torres Combination of molecular data support the existence of three main lineages in the phylogeny of aphids (Hemiptera: Aphididae) and the basal position of the subfamily Lachninae Mol. Phylogenet. Evol., 55 (2010), pp. 305-317 View PDFView article",
+   "doi": "",
+   "url": "https://www.sciencedirect.com/science/article/pii/S1055790309005119/pdfft?md5=797e955a8964dd4b383adb7087eb4241&pid=1-s2.0-S1055790309005119-main.pdf"
+  },
+  {
+   "n": 45,
+   "id": "ref-id-b0235",
+   "html": "<span class=\"reference\" id=\"h0220\"><div class=\"contribution\"><div class=\"authors u-font-sans\">J. Peccoud, J.C. Simon, H.J. McLaughlin, N.A. Moran</div> <div id=\"ref-id-h0220\" class=\"title text-m\">Post-Pleistocene radiation of the pea aphid complex revealed by rapidly evolving endosymbionts</div> </div> <div class=\"host u-font-sans\">Proc. Natl. Acad. Sci. USA, 106 (2009), pp. 16315-16320</div> </span>",
+   "text": "J. Peccoud, J.C. Simon, H.J. McLaughlin, N.A. Moran Post-Pleistocene radiation of the pea aphid complex revealed by rapidly evolving endosymbionts Proc. Natl. Acad. Sci. USA, 106 (2009), pp. 16315-16320",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 46,
+   "id": "ref-id-b0240",
+   "html": "<span class=\"reference\" id=\"h0225\"><div class=\"contribution\"><div class=\"authors u-font-sans\">A.S. Peek, R.A. Feldman, R.A. Lutz, R.C. Vrijenhoek</div> <div id=\"ref-id-h0225\" class=\"title text-m\">Cospeciation of chemoautotrophic bacteria and deep sea clams</div> </div> <div class=\"host u-font-sans\">Proc. Natl. Acad. Sci. USA, 95 (1998), pp. 9962-9966</div> </span>",
+   "text": "A.S. Peek, R.A. Feldman, R.A. Lutz, R.C. Vrijenhoek Cospeciation of chemoautotrophic bacteria and deep sea clams Proc. Natl. Acad. Sci. USA, 95 (1998), pp. 9962-9966",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 47,
+   "id": "ref-id-b0245",
+   "html": "<span class=\"reference\" id=\"h0230\"><div class=\"contribution\"><div class=\"authors u-font-sans\">D. Posada</div> <div id=\"ref-id-h0230\" class=\"title text-m\">JModelTest: phylogenetic model averaging</div> </div> <div class=\"host u-font-sans\">Mol. Biol. Evol., 25 (2008), pp. 1253-1256</div> </span>",
+   "text": "D. Posada JModelTest: phylogenetic model averaging Mol. Biol. Evol., 25 (2008), pp. 1253-1256",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 48,
+   "id": "ref-id-b0250",
+   "html": "<span class=\"reference\" id=\"h0235\"><div class=\"contribution\"><div class=\"authors u-font-sans\">G. Remaudière, M. Remaudière</div> <div id=\"ref-id-h0235\" class=\"title text-m\">Catalogue des Aphididae du Monde</div> </div> <div class=\"host u-font-sans\">INRA, Homoptera Aphidoidea. Paris (1997)</div> <div class=\"comment\">473pp</div> </span>",
+   "text": "G. Remaudière, M. Remaudière Catalogue des Aphididae du Monde INRA, Homoptera Aphidoidea. Paris (1997) 473pp",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 49,
+   "id": "ref-id-b0255",
+   "html": "<span class=\"reference\" id=\"h0240\"><div class=\"contribution\"><div class=\"authors u-font-sans\">C. Rispe, N.A. Moran</div> <div id=\"ref-id-h0240\" class=\"title text-m\">Accumulation of deleterious mutations in endosymbionts: Muller’s ratchet with two levels of selection</div> </div> <div class=\"host u-font-sans\">Amer. Nat., 156 (2000), pp. 425-441</div> </span>",
+   "text": "C. Rispe, N.A. Moran Accumulation of deleterious mutations in endosymbionts: Muller’s ratchet with two levels of selection Amer. Nat., 156 (2000), pp. 425-441",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 50,
+   "id": "ref-id-b9015",
+   "html": "<span class=\"reference\" id=\"h9015\"><div class=\"contribution\"><div class=\"authors u-font-sans\">C. Rispe, M. Kutsukake, V. Doublet, S. Hudaverdian, F. Legeai, J.C. Simon, D. Tagu, T. Fukatsu</div> <div id=\"ref-id-h9015\" class=\"title text-m\">Large gene family expansion and variable selective pressures for cathepsin B in aphids</div> </div> <div class=\"host u-font-sans\">Mol. Biol. Evol, 25 (2008), pp. 5-17</div> </span>",
+   "text": "C. Rispe, M. Kutsukake, V. Doublet, S. Hudaverdian, F. Legeai, J.C. Simon, D. Tagu, T. Fukatsu Large gene family expansion and variable selective pressures for cathepsin B in aphids Mol. Biol. Evol, 25 (2008), pp. 5-17",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 51,
+   "id": "ref-id-b0260",
+   "html": "<span class=\"reference\" id=\"h0245\"><div class=\"contribution\"><div class=\"authors u-font-sans\">M. Robinson, M. Gouy, C. Gautier, D. Mouchiroud</div> <div id=\"ref-id-h0245\" class=\"title text-m\">Sensitivity of the relative-rate test to taxonomic sampling</div> </div> <div class=\"host u-font-sans\">Mol. Biol. Evol., 15 (1998), pp. 1091-1098</div> </span>",
+   "text": "M. Robinson, M. Gouy, C. Gautier, D. Mouchiroud Sensitivity of the relative-rate test to taxonomic sampling Mol. Biol. Evol., 15 (1998), pp. 1091-1098",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 52,
+   "id": "ref-id-b0265",
+   "html": "<span class=\"reference\" id=\"h0250\"><div class=\"contribution\"><div class=\"authors u-font-sans\">M. Robinson-Rechavi, D. Huchon</div> <div id=\"ref-id-h0250\" class=\"title text-m\">RRTree: relative-rate tests between groups of sequences on a phylogenetic tree</div> </div> <div class=\"host u-font-sans\">Bioinformatics, 16 (2000), pp. 296-297</div> </span>",
+   "text": "M. Robinson-Rechavi, D. Huchon RRTree: relative-rate tests between groups of sequences on a phylogenetic tree Bioinformatics, 16 (2000), pp. 296-297",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 53,
+   "id": "ref-id-b0270",
+   "html": "<span class=\"reference\" id=\"h0255\"><div class=\"contribution\"><div class=\"authors u-font-sans\">F. Ronquist, J.P. Huelsenbeck</div> <div id=\"ref-id-h0255\" class=\"title text-m\">MRBAYES 3: Bayesian phylogenetic inference under mixed models</div> </div> <div class=\"host u-font-sans\">Bioinformatics, 19 (2003), pp. 1572-1574</div> </span>",
+   "text": "F. Ronquist, J.P. Huelsenbeck MRBAYES 3: Bayesian phylogenetic inference under mixed models Bioinformatics, 19 (2003), pp. 1572-1574",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 54,
+   "id": "ref-id-b0275",
+   "html": "<span class=\"reference\" id=\"h0260\"><div class=\"contribution\"><div class=\"authors u-font-sans\">D.B. Rorabacher</div> <div id=\"ref-id-h0260\" class=\"title text-m\">Statistical treatment for rejection of deviant values: critical values of Dixon Q parameter and related subrange ratios at the 95 percent confidence level</div> </div> <div class=\"host u-font-sans\">Anal. Chem., 63 (1991), pp. 139-146</div> </span>",
+   "text": "D.B. Rorabacher Statistical treatment for rejection of deviant values: critical values of Dixon Q parameter and related subrange ratios at the 95 percent confidence level Anal. Chem., 63 (1991), pp. 139-146",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 55,
+   "id": "ref-id-b0280",
+   "html": "<span class=\"reference\" id=\"h0265\"><div class=\"contribution\"><div class=\"authors u-font-sans\">J.A. Russell, A. Latorre, B. Sabater-Muñoz, A. Moya, N.A. Moran</div> <div id=\"ref-id-h0265\" class=\"title text-m\">Side-stepping secondary symbionts: widespread horizontal transfer across and beyond the Aphidoidea</div> </div> <div class=\"host u-font-sans\">Mol. Ecol., 12 (2003), pp. 1061-1075</div> </span>",
+   "text": "J.A. Russell, A. Latorre, B. Sabater-Muñoz, A. Moya, N.A. Moran Side-stepping secondary symbionts: widespread horizontal transfer across and beyond the Aphidoidea Mol. Ecol., 12 (2003), pp. 1061-1075",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 56,
+   "id": "ref-id-b0285",
+   "html": "<span class=\"reference\" id=\"h0270\"><div class=\"contribution\"><div class=\"authors u-font-sans\">J.P. Sandström, J.A. Russell, J.P. White, N.A. Moran</div> <div id=\"ref-id-h0270\" class=\"title text-m\">Independent origins and horizontal transfer of bacterial symbionts of aphids</div> </div> <div class=\"host u-font-sans\">Mol. Ecol., 10 (2001), pp. 217-228</div> </span>",
+   "text": "J.P. Sandström, J.A. Russell, J.P. White, N.A. Moran Independent origins and horizontal transfer of bacterial symbionts of aphids Mol. Ecol., 10 (2001), pp. 217-228",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 57,
+   "id": "ref-id-b0290",
+   "html": "<span class=\"reference\" id=\"h0275\"><div class=\"contribution\"><div class=\"authors u-font-sans\">H. Shimodaira, M. Hasegawa</div> <div id=\"ref-id-h0275\" class=\"title text-m\">CONSEL: for assessing the confidence of phylogenetic tree selection</div> </div> <div class=\"host u-font-sans\">Bioinformatics, 17 (2001), pp. 1246-1247</div> </span>",
+   "text": "H. Shimodaira, M. Hasegawa CONSEL: for assessing the confidence of phylogenetic tree selection Bioinformatics, 17 (2001), pp. 1246-1247",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 58,
+   "id": "ref-id-b0295",
+   "html": "<span class=\"reference\" id=\"j0020\"><div class=\"other-ref\"><span>Swofford, D.L., 2003. PAUP<sup>*</sup>. Phylogenetic Analysis Using Parsimony (<sup>*</sup>and Other Methods). Version 4. Sinauer Associates, Sunderland, Massachusetts.</span></div> </span>",
+   "text": "Swofford, D.L., 2003. PAUP*. Phylogenetic Analysis Using Parsimony (*and Other Methods). Version 4. Sinauer Associates, Sunderland, Massachusetts.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 59,
+   "id": "ref-id-b0300",
+   "html": "<span class=\"reference\" id=\"h0280\"><div class=\"contribution\"><div class=\"authors u-font-sans\">The International Aphid Genomics Consortium</div> <div id=\"ref-id-h0280\" class=\"title text-m\">Genome Sequence of the Pea Aphid Acyrthosiphon pisum</div> </div> <div class=\"host u-font-sans\">PLoS Biol., 8 (2010), p. e1000313</div> </span>",
+   "text": "The International Aphid Genomics Consortium Genome Sequence of the Pea Aphid Acyrthosiphon pisum PLoS Biol., 8 (2010), p. e1000313",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 60,
+   "id": "ref-id-b0310",
+   "html": "<span class=\"label u-font-sans\"><a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#bb0310\" id=\"ref-id-b0310\" data-aa-button=\"sd:product:journal:article:location=references:type=anchor:name=citation-name\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">von Dohlen and Moran, 2000</span></span></a></span><span class=\"reference\" id=\"h0290\"><div class=\"contribution\"><div class=\"authors u-font-sans\">C.D. von Dohlen, N.A. Moran</div> <div id=\"ref-id-h0290\" class=\"title text-m\">Molecular data support a rapid radiation of aphids in the Cretaceous and multiple origins of host alternation</div> </div> <div class=\"host u-font-sans\">Biol. J. Linn. Soc., 71 (2000), pp. 689-717</div> <div class=\"ReferenceLinks u-font-sans\" lang=\"en\" data-aa-region=\"reference-links\"><a class=\"anchor pdf link anchor-primary anchor-icon-left anchor-with-icon\" href=\"https://www.sciencedirect.com/science/article/pii/S002440660090470X/pdf?md5=e022514eff8274042c382eca0f33a970&amp;pid=1-s2.0-S002440660090470X-main.pdf\" target=\"_blank\" rel=\"nofollow\" aria-describedby=\"ref-id-h0290\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View PDF</span></span></a><a class=\"anchor link anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S002440660090470X\" aria-describedby=\"ref-id-h0290\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View article</span></span></a></div> </span>",
+   "text": "von Dohlen and Moran, 2000C.D. von Dohlen, N.A. Moran Molecular data support a rapid radiation of aphids in the Cretaceous and multiple origins of host alternation Biol. J. Linn. Soc., 71 (2000), pp. 689-717 View PDFView article",
+   "doi": "",
+   "url": "https://www.sciencedirect.com/science/article/pii/S002440660090470X/pdf?md5=e022514eff8274042c382eca0f33a970&pid=1-s2.0-S002440660090470X-main.pdf"
+  },
+  {
+   "n": 61,
+   "id": "ref-id-b0315",
+   "html": "<span class=\"label u-font-sans\"><a class=\"anchor anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#bb0315\" id=\"ref-id-b0315\" data-aa-button=\"sd:product:journal:article:location=references:type=anchor:name=citation-name\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">von Dohlen et al., 2006</span></span></a></span><span class=\"reference\" id=\"h0295\"><div class=\"contribution\"><div class=\"authors u-font-sans\">C.D. von Dohlen, C.A. Rowe, O.E. Heie</div> <div id=\"ref-id-h0295\" class=\"title text-m\">A test of morphological hypotheses for tribal and subtribal relationships of Aphidinae (Insecta: Hemiptera: Aphididae) using DNA sequences</div> </div> <div class=\"host u-font-sans\">Mol. Phylogenet. Evol., 38 (2006), pp. 316-329</div> <div class=\"ReferenceLinks u-font-sans\" lang=\"en\" data-aa-region=\"reference-links\"><a class=\"anchor pdf link anchor-primary anchor-icon-left anchor-with-icon\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790305003714/pdfft?md5=48725281253391fa2fe83b243dd0306d&amp;pid=1-s2.0-S1055790305003714-main.pdf\" target=\"_blank\" rel=\"nofollow\" aria-describedby=\"ref-id-h0295\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View PDF</span></span></a><a class=\"anchor link anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S1055790305003714\" aria-describedby=\"ref-id-h0295\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View article</span></span></a></div> </span>",
+   "text": "von Dohlen et al., 2006C.D. von Dohlen, C.A. Rowe, O.E. Heie A test of morphological hypotheses for tribal and subtribal relationships of Aphidinae (Insecta: Hemiptera: Aphididae) using DNA sequences Mol. Phylogenet. Evol., 38 (2006), pp. 316-329 View PDFView article",
+   "doi": "",
+   "url": "https://www.sciencedirect.com/science/article/pii/S1055790305003714/pdfft?md5=48725281253391fa2fe83b243dd0306d&pid=1-s2.0-S1055790305003714-main.pdf"
+  },
+  {
+   "n": 62,
+   "id": "ref-id-b0350",
+   "html": "<span class=\"reference\" id=\"h0325\"><div class=\"contribution\"><div class=\"authors u-font-sans\">J.B. Whitfield, P.J. Lockhart</div> <div id=\"ref-id-h0325\" class=\"title text-m\">Deciphering ancient rapid radiations</div> </div> <div class=\"host u-font-sans\">Trends Ecol. Evol., 22 (2007), pp. 258-265</div> <div class=\"ReferenceLinks u-font-sans\" lang=\"en\" data-aa-region=\"reference-links\"><a class=\"anchor pdf link anchor-primary anchor-icon-left anchor-with-icon\" href=\"https://www.sciencedirect.com/science/article/pii/S0169534707000328/pdfft?md5=dafec72c2b00fa6a318904884cce5349&amp;pid=1-s2.0-S0169534707000328-main.pdf\" target=\"_blank\" rel=\"nofollow\" aria-describedby=\"ref-id-h0325\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View PDF</span></span></a><a class=\"anchor link anchor-primary\" href=\"https://www.sciencedirect.com/science/article/pii/S0169534707000328\" aria-describedby=\"ref-id-h0325\"><span class=\"anchor-text-container\"><span class=\"anchor-text\">View article</span></span></a></div> </span>",
+   "text": "J.B. Whitfield, P.J. Lockhart Deciphering ancient rapid radiations Trends Ecol. Evol., 22 (2007), pp. 258-265 View PDFView article",
+   "doi": "",
+   "url": "https://www.sciencedirect.com/science/article/pii/S0169534707000328/pdfft?md5=dafec72c2b00fa6a318904884cce5349&pid=1-s2.0-S0169534707000328-main.pdf"
+  },
+  {
+   "n": 63,
+   "id": "ref-id-b0325",
+   "html": "<span class=\"reference\" id=\"h0300\"><div class=\"contribution\"><div class=\"authors u-font-sans\">W. Wojciechowski</div> <div id=\"ref-id-h0300\" class=\"title text-m\">Studies on the Systematic System of Aphids (Homoptera, Aphidinea)</div> </div> <div class=\"host u-font-sans\">Uniwersytet Slaski, Katowice (1992)</div> </span>",
+   "text": "W. Wojciechowski Studies on the Systematic System of Aphids (Homoptera, Aphidinea) Uniwersytet Slaski, Katowice (1992)",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 64,
+   "id": "ref-id-b0330",
+   "html": "<span class=\"reference\" id=\"h0305\"><div class=\"contribution\"><div class=\"authors u-font-sans\">X. Xia, Z. Xie</div> <div id=\"ref-id-h0305\" class=\"title text-m\">DAMBE: data analysis in molecular biology and evolution</div> </div> <div class=\"host u-font-sans\">J. Heredity, 92 (2001), pp. 371-373</div> </span>",
+   "text": "X. Xia, Z. Xie DAMBE: data analysis in molecular biology and evolution J. Heredity, 92 (2001), pp. 371-373",
+   "doi": "",
+   "url": ""
+  }
+ ],
+ "citationStyle": "name-year",
+ "supplementary": [
+  {
+   "label": "Appendix A. Supplementary material",
+   "href": "https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#s0105",
+   "kind": "link"
+  },
+  {
+   "label": "Supplementary data 1",
+   "href": "https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#m0005",
+   "kind": "link"
+  },
+  {
+   "label": "Supplementary data 2",
+   "href": "https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#m0010",
+   "kind": "link"
+  },
+  {
+   "label": "Supplementary data 3",
+   "href": "https://www.sciencedirect.com/science/article/pii/S1055790313001176?casa_token=dwg3sI6T8LIAAAAA:Bw_uwBMVNfLi7osZxNEKcBFZJUkNbaIvP9tDqUyF1mymjnJKJ7dBYI-EOw7oEiMXat8q6cQTi3c#m0015",
+   "kind": "link"
+  },
+  {
+   "label": "Download: Download Word document (31KB)",
+   "href": "https://ars.els-cdn.com/content/image/1-s2.0-S1055790313001176-mmc1.docx",
+   "kind": "file"
+  },
+  {
+   "label": "Download: Download Word document (15KB)",
+   "href": "https://ars.els-cdn.com/content/image/1-s2.0-S1055790313001176-mmc2.docx",
+   "kind": "file"
+  },
+  {
+   "label": "Download: Download Word document (30KB)",
+   "href": "https://ars.els-cdn.com/content/image/1-s2.0-S1055790313001176-mmc3.docx",
+   "kind": "file"
+  },
+  {
+   "label": "View PDF",
+   "href": "https://www.sciencedirect.com/science/article/pii/S1055790305001107/pdfft?md5=2609afac2b82295bc7de58cd6984f4ef&pid=1-s2.0-S1055790305001107-main.pdf",
+   "kind": "file"
+  },
+  {
+   "label": "View PDF",
+   "href": "https://www.sciencedirect.com/science/article/pii/S1055790301909832/pdf?md5=2f1d6c64963908d64444cd977cd4df6c&pid=1-s2.0-S1055790301909832-main.pdf",
+   "kind": "file"
+  },
+  {
+   "label": "View PDF",
+   "href": "https://www.sciencedirect.com/science/article/pii/037811199390003L/pdf?md5=e262b5b2e375686075d06674ada283f6&pid=1-s2.0-037811199390003L-main.pdf",
+   "kind": "file"
+  },
+  {
+   "label": "View PDF",
+   "href": "https://www.sciencedirect.com/science/article/pii/S1055790399906991/pdf?md5=a00d786021b534a8c2ccd33ced4b4538&pid=1-s2.0-S1055790399906991-main.pdf",
+   "kind": "file"
+  },
+  {
+   "label": "View PDF",
+   "href": "https://www.sciencedirect.com/science/article/pii/S1055790309005119/pdfft?md5=797e955a8964dd4b383adb7087eb4241&pid=1-s2.0-S1055790309005119-main.pdf",
+   "kind": "file"
+  },
+  {
+   "label": "View PDF",
+   "href": "https://www.sciencedirect.com/science/article/pii/S002440660090470X/pdf?md5=e022514eff8274042c382eca0f33a970&pid=1-s2.0-S002440660090470X-main.pdf",
+   "kind": "file"
+  },
+  {
+   "label": "View PDF",
+   "href": "https://www.sciencedirect.com/science/article/pii/S1055790305003714/pdfft?md5=48725281253391fa2fe83b243dd0306d&pid=1-s2.0-S1055790305003714-main.pdf",
+   "kind": "file"
+  },
+  {
+   "label": "View PDF",
+   "href": "https://www.sciencedirect.com/science/article/pii/S0169534707000328/pdfft?md5=dafec72c2b00fa6a318904884cce5349&pid=1-s2.0-S0169534707000328-main.pdf",
+   "kind": "file"
+  },
+  {
+   "label": "View PDF",
+   "href": "https://www.sciencedirect.com/science/article/pii/S0960982216309897/pdfft?md5=8b2dcac28985faae466adb62e796eab7&pid=1-s2.0-S0960982216309897-main.pdf",
+   "kind": "file"
+  }
+ ],
+ "warnings": [],
+ "stats": {
+  "ms": 85,
+  "bodyChars": 62505,
+  "paragraphs": 51
+ }
+}

@@ -1,0 +1,1861 @@
+{
+ "source": {
+  "url": "http://127.0.0.1:8799/An%20environmentally%20regulated%20dichotomy%20in%20cell%20lineages%20of%20the%20root%20_%20Nature.html?v=1792956348",
+  "host": "127.0.0.1",
+  "adapter": "",
+  "journal": "Nature",
+  "doi": "10.1038/s41586-026-11179-y",
+  "pdfUrl": "https://www.nature.com/articles/s41586-026-11179-y.pdf"
+ },
+ "meta": {
+  "title": "An environmentally regulated dichotomy in cell lineages of the root",
+  "subtitle": "An environment-regulated state is identified across multiple cell types at the root tip, revealing a shared dichotomy between cells with and without this state.",
+  "journal": "Nature",
+  "publisher": "Nature Publishing Group",
+  "articleType": "Article",
+  "doi": "10.1038/s41586-026-11179-y",
+  "date": "2026-10-21",
+  "volume": "",
+  "pages": "1–10",
+  "authors": [
+   "Marina Oliva",
+   "Tim Stuart",
+   "Dave Tang",
+   "Adil Khan",
+   "Olivier Clement",
+   "Dawid Makosa",
+   "Daniel Poppe",
+   "Jahnvi Pflueger",
+   "Jafar S. Jabbari",
+   "Scott Gigante",
+   "Jonathan Michael Dragwidge",
+   "Milly Petterson",
+   "James Whelan",
+   "Mathew G. Lewsey",
+   "Ryan Lister"
+  ],
+  "affiliations": [
+   "ARC Centre of Excellence in Plant Energy Biology, School of Molecular Sciences, University of Western Australia, Perth, Australia",
+   "ARC Centre of Excellence in Plants for Space, School of Molecular Sciences, University of Western Australia, Perth, Australia",
+   "Genome Institute of Singapore, Agency for Science Technology and Research (A*STAR), Singapore, Singapore",
+   "The Harry Perkins Institute of Medical Research, QEII Medical Centre and Centre for Medical Research, The University of Western Australia, Perth, Australia",
+   "The Walter and Eliza Hall Institute of Medical Research, Melbourne, Australia",
+   "Australian Genome Research Facility, Melbourne, Australia",
+   "La Trobe Institute for Sustainable Agriculture and Food, Department of Animal, Plant and Soil Sciences, School of Life Sciences, La Trobe University, Bundoora, Australia",
+   "State Key Laboratory of Plant Environmental Resilience, College of Life Science, Zhejiang University, Hangzhou, P. R. China",
+   "Australian Research Council Research Hub for Protected Cropping, La Trobe University, Bundoora, Australia",
+   "ARC Centre of Excellence in Plants for Space, La Trobe University, Bundoora, Australia"
+  ],
+  "keywords": [
+   "Cell fate",
+   "Root apical meristem",
+   "Abiotic",
+   "Transcriptomics"
+  ]
+ },
+ "abstractHtml": "<div class=\"c-article-section__content\" id=\"Abs1-content\"><p>Plant development is highly plastic, with growth and architecture continuously shaped by environmental conditions. Roots, for instance, adjust their development to local water, nutrient and soil conditions. Despite this plasticity, individual root cell types are generally viewed as largely homogeneous populations that progress along a single developmental trajectory<sup><a data-track=\"click\" data-track-action=\"reference anchor\" data-track-label=\"link\" data-test=\"citation-ref\" aria-label=\"Reference 1\" title=\"Petricka, J. J., Winter, C. M. &amp; Benfey, P. N. Control of Arabidopsis root development. Annu. Rev. Plant Biol. 63, 563–590 (2012).\" href=\"https://www.nature.com/articles/s41586-026-11179-y#ref-CR1\" id=\"ref-link-section-d278543929e720\">1</a></sup>. Here we show that rather than progressing along a single developmental trajectory, most <i>Arabidopsis</i> root cell lineage trajectories exhibit a stereotyped bifid topology, as revealed by single-cell RNA sequencing and spatial transcript mapping. One branch is characterized by a transcriptional program that is shared across multiple cell types and enriched for genes associated with environmental responses, including abscisic acid (ABA) signalling. This state occurs reproducibly in a subset of cells across multiple cell types, independent of developmental lineage, thereby revealing an additional layer of root cell identity. It is conserved across <i>Arabidopsis</i> ecotypes and persists despite major perturbations in developmental identity. Moreover, it is reduced in ABA-deficient and ABA-insensitive mutants and becomes more prevalent under water-deficit conditions. Together, these findings reveal an additional layer of root cell identity that is superimposed on developmental lineage and its prevalence is modulated by environmental conditions. These results uncover a previously unrecognized source of environment-associated transcriptional heterogeneity shared across root cell types.</p></div>",
+ "sections": [
+  {
+   "id": "Sec1",
+   "title": "Main",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The root of <i>Arabidopsis thaliana</i> is a valuable model for studying cell differentiation in plants. Cell types are arranged in concentric layers around a central vascular bundle and arise from distinct stem cell populations maintained near the root tip in the meristem<sup><a class=\"ref-chip\" data-ref=\"1\" href=\"#ref-1\">1</a></sup>. As stem cells divide, their descendants are displaced shootward and progressively differentiate, which creates developmental trajectories in which the spatial arrangement of cells recapitulates the temporal dynamics of differentiation (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-1\">1a</a>)."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-1"
+    },
+    {
+     "t": "p",
+     "html": "Single-cell RNA sequencing (scRNA-seq) has refined the transcriptional signatures of <i>Arabidopsis</i> root cell types and enabled high-resolution reconstruction of these developmental trajectories<sup><a class=\"ref-chip\" data-ref=\"2\" href=\"#ref-2\">2</a>,<a class=\"ref-chip\" data-ref=\"3\" href=\"#ref-3\">3</a>,<a class=\"ref-chip\" data-ref=\"4\" href=\"#ref-4\">4</a>,<a class=\"ref-chip\" data-ref=\"5\" href=\"#ref-5\">5</a>,<a class=\"ref-chip\" data-ref=\"6\" href=\"#ref-6\">6</a>,<a class=\"ref-chip\" data-ref=\"7\" href=\"#ref-7\">7</a>,<a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a>,<a class=\"ref-chip\" data-ref=\"9\" href=\"#ref-9\">9</a></sup>. Although these studies have identified transient cell states in individual lineages, they have largely analysed each lineage independently, which may overlook transcriptional states shared across multiple cell types irrespective of developmental identity. Whether such shared transcriptional states exist and how they contribute to root cell identity remain largely unexplored."
+    }
+   ]
+  },
+  {
+   "id": "Sec2",
+   "title": "A dichotomy in root cell lineages",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "To characterize cell states during root development, here we generated a high-resolution scRNA-seq (10x Genomics) atlas of the <i>A. thaliana</i> Col-0 root tip (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-1\">1b</a>). After filtering low-quality cells, doublets and genes significantly affected by protoplast isolation, batch integration generated a reference atlas comprising 87,056 cells from 9 replicates, with a total of 25,784 detected genes (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-1\">1b</a>, Supplementary Tables <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"supplementary material anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#MOESM3\">1</a> and <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"supplementary material anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#MOESM4\">2</a> and Supplementary Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"supplementary material anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#MOESM1\">1</a>)."
+    },
+    {
+     "t": "p",
+     "html": "We identified 27 transcriptionally distinct clusters and assigned their identities by combining differential expression with optimized whole-mount hybridization chain reaction (HCR)<sup><a class=\"ref-chip\" data-ref=\"10\" href=\"#ref-10\">10</a></sup> and tissue clearing<sup><a class=\"ref-chip\" data-ref=\"11\" href=\"#ref-11\">11</a></sup> to spatially map the expression of the 15 most specific marker genes (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-1\">1b–d</a>). This process resolved all known cell types, including distinct root cap subpopulations (early, tip and lateral) (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-1\">1b–d</a>). One cluster located between the root cap and epidermis could not be assigned directly by marker expression. However, on the basis of its position and developmental origin of these tissues, it was annotated as ‘epidermis–meristem’ (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-1\">1b</a>)."
+    },
+    {
+     "t": "p",
+     "html": "Cells were grouped according to their developmental lineages (epidermis, root cap, cortex, endodermis, xylem pole pericycle (XPP), phloem pole pericycle (PPP), procambium, phloem and xylem), which confirmed that ontogenic programs remain the dominant determinant of root cell identity (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-1\">1b,e</a>). Cells from each lineage were analysed independently to reconstruct developmental trajectories. A meristematic score, derived from genes enriched in the meristematic epidermis cluster, was calculated for each lineage, and the cell with the highest score was defined as the trajectory starting point (<i>t</i> = 0). Trajectory topology was inferred using partition-based graph abstraction (PAGA), and developmental progression was ordered by diffusion pseudotime from <i>t</i> = 0 (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-1\">1e–g</a>)."
+    },
+    {
+     "t": "p",
+     "html": "The root cap lineage exhibited the most complex topology and recapitulated known developmental events. That is, the split of lateral and tip populations and their convergence with columella cells to form the sloughing border-like cells<sup><a class=\"ref-chip\" data-ref=\"12\" href=\"#ref-12\">12</a></sup> (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-1\">1g</a>). These trajectories were supported by stage-specific marker genes<sup><a class=\"ref-chip\" data-ref=\"13\" href=\"#ref-13\">13</a>,<a class=\"ref-chip\" data-ref=\"14\" href=\"#ref-14\">14</a>,<a class=\"ref-chip\" data-ref=\"15\" href=\"#ref-15\">15</a></sup> (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig6\">1a</a>), which further validated the inferred developmental trajectories."
+    },
+    {
+     "t": "p",
+     "html": "Although some lineages are anticipated to be composed of distinct cell subtypes, such as phloem and xylem, which are made of metaphloem and protophloem and metaxylem and protoxylem, respectively, and the epidermis, which subdivides into root hairs and non-root hairs, each is expected to follow a single developmental trajectory from undifferentiated to differentiated states. Notably, PAGA revealed that all cell types and subcell types instead exhibit two branches (branch 1 and branch 2) that diverge at an early pseudotime point (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-1\">1g</a>). Only the epidermis contained cells preceding this bifurcation and a clearly identifiable meristematic population. In most other lineages, branching occurred directly from <i>t </i>= 0, which probably reflects the difficulty in capturing the rarer inner-layer meristematic cells during protoplasting."
+    },
+    {
+     "t": "p",
+     "html": "To independently validate the inferred topology, whole-mount HCR was used to detect early and late markers in epidermis, endodermis and XPP (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig6\">1b–e</a>). In all three lineages, genes predicted to be expressed near <i>t </i>= 0 were detected closer to the meristem than predicted late markers. Consistent with this finding, lineage-specific meristem, elongation and maturation gene signatures obtained from a previous study<sup><a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a></sup> progressed as expected along pseudotime. This result provides support for the robustness of our <i>t</i> = 0 assignment and inferred developmental ordering (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig7\">2a</a>)."
+    },
+    {
+     "t": "p",
+     "html": "Independent trajectory inference using Monocle also recovered the bifid topology (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig7\">2b–d</a>). Cell ordering in both branches was highly correlated with diffusion pseudotime and supported by RNA velocity analyses (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig7\">2e–g</a>)."
+    },
+    {
+     "t": "p",
+     "html": "Together, these data show that in addition to developmental progression, cells in most cell types exhibit two alternative transcriptional states. This result therefore reveals the existence of an additional, previously unrecognized, level of complexity in cell identity."
+    }
+   ]
+  },
+  {
+   "id": "Sec3",
+   "title": "A shared transcriptional program",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "To identify transcriptional programs associated with cell type, developmental progression and branch identity, we performed high-dimensional weighted gene co-expression network analysis (hdWGCNA). Of the 6,649 genes assigned to 25 identified co-expression modules (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-2\">2a,b</a> and Supplementary Table <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"supplementary material anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#MOESM5\">3</a>), most were enriched in specific cell types, groups of cell types or developmental stages. By contrast, modules 20 and 21 were specifically enriched in branch 1 across all lineages. This result demonstrates that there is a transcriptional program shared across multiple cell types independently of developmental identity."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-2"
+    },
+    {
+     "t": "p",
+     "html": "Across all cell types, branch 1 cells consistently contained more detected genes and higher unique molecular identifier (UMI) counts than branch 2 cells (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-2\">2c</a>), which indicated greater overall transcriptional activity. Modules 20 and 21 were also among the largest co-expression modules identified (320 and 615 genes, respectively; Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-2\">2d</a>), which showed that this transcriptional asymmetry involves a broad coordinated gene expression program. Although the PAGA analysis did not resolve two branches in non-hair cells, enrichment of the branch-specific modules and increased transcript abundance suggest that both populations are also present in this lineage."
+    },
+    {
+     "t": "p",
+     "html": "Given the unexpected transcriptional differences between the two branches of the same cell type, we next sought to exclude possible experimental or analytical artefacts that might have created spurious trajectory bifurcations. Branch separation was not explained by cell cycle phase, experimental batches or genes affected by protoplast isolation (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig8\">3a–e</a>). Because roots grown on the surface of agar experience distinct agar-facing and air-facing microenvironments, we also profiled root tips from plants grown fully embedded in agar. The bifid trajectories remained clearly detectable across all cell types, which therefore ruled out these growth microenvironments as a contributing factor (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig8\">3f–h</a>)."
+    },
+    {
+     "t": "p",
+     "html": "Another possibility was that the lower UMI branch (branch 2) reflected damaged cells from which fewer transcripts were captured, despite these cells not exhibiting elevated mitochondrial or chloroplastic transcript content (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig8\">3i–j</a>). If so, lowly expressed genes would be preferentially detected in the higher UMI branch 1, whereas highly expressed genes would be shared between both branches. Using the XPP, we found that depletion of branch-1-specific genes in branch 2 substantially exceeded that expected from expression level alone (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig9\">4a–c</a>). Likewise, branch separation persisted after randomly downsampling branch 1 cells to match the UMI distribution of their branch 2 counterparts and reprocessing the dataset in three independent replicates (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig9\">4d–g</a>). Together, these analyses indicate that the lack of activation of the branch 1 transcriptional program in branch 2 cells cannot be explained solely by their lower transcript abundance. Finally, both branches and the branch-1-specific modules were also detected in a previously published <i>Arabidopsis</i> root tip single-nucleus RNA sequencing (snRNA-seq) dataset<sup><a class=\"ref-chip\" data-ref=\"16\" href=\"#ref-16\">16</a></sup> (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig10\">5</a>). This result rules out technical differences between cells and nuclei, protoplast isolation or cell damage as explanations for the observed bifurcation."
+    },
+    {
+     "t": "p",
+     "html": "To further demonstrate the robustness of the observed branches, we re-analysed two independent previously published <i>Arabidopsis</i> root tip scRNA-seq datasets<sup><a class=\"ref-chip\" data-ref=\"7\" href=\"#ref-7\">7</a>,<a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a></sup> (Extended Data Figs. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig11\">6</a> and <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig12\">7</a>). In all three cases (one snRNA-seq dataset and two scRNA-seq datasets), we recovered both branches in all cell types, together with the higher UMI and gene content of branch 1 cells and enrichment of modules 20 and 21. Indeed, branch assignment remained robust across a range of label-transfer parameters (Extended Data Figs. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig10\">5</a>–<a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig12\">7</a>). The first scRNA-seq study<sup><a class=\"ref-chip\" data-ref=\"7\" href=\"#ref-7\">7</a></sup> did not initially identify the branches because many branch 2 cells were excluded owing to their lower UMI content. Conversely, the second study<sup><a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a></sup>, which integrates two additional published root scRNA-seq datasets<sup><a class=\"ref-chip\" data-ref=\"3\" href=\"#ref-3\">3</a>,<a class=\"ref-chip\" data-ref=\"4\" href=\"#ref-4\">4</a></sup>, clearly showed two branches in their uniform manifold approximation and projection (UMAP) plots and noted their presence in the epidermis, cortex and endodermis. However, these findings were not explored further."
+    },
+    {
+     "t": "p",
+     "html": "Some of our libraries were generated from an equimolar mix of cells from Col-0 and a second ecotype, which enabled experimental determination of cell multiplet rates while simultaneously generating root tip atlases for four additional <i>Arabidopsis</i> ecotypes (C24, Cvi-0, Ler and Ws-2; <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"section anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Sec7\">Methods</a>, Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig13\">8a</a> and Supplementary Table <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"supplementary material anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#MOESM4\">2</a>). Both branches were detected across all cell lineages in all ecotypes, with the same co-expression modules enriched in branch 1 (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig13\">8b,c</a>). Moreover, fewer than 4% of branch-1-specific module genes were differentially expressed in any ecotype, which demonstrated that the transcriptional program underlying the branching is highly conserved (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig13\">8e,f</a>). Among the ecotypes analysed, only Cvi-0 showed a significantly lower proportion of branch 1 cells (relative to branch 2) compared with Col-0 and was the ecotype with the greatest overall transcriptional divergence (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig13\">8d–f</a>)"
+    },
+    {
+     "t": "p",
+     "html": "A previous snRNA-seq study<sup><a class=\"ref-chip\" data-ref=\"16\" href=\"#ref-16\">16</a></sup> also generated a snATAC–seq atlas of the root tip. Using this chromatin accessibility data alone, we identified cells corresponding to each branch, with branch 1 cells displaying elevated fractions of reads in peaks and increased transcription start site enrichment, consistent with greater transcriptional activity (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig14\">9a–c</a>). Notably, this increase was specific to genes belonging to the branch-1-specific modules. Through this orthogonal method, this finding confirms the transcriptional asymmetry underlying the dichotomy identified by the scRNA-seq trajectories (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig14\">9d,e</a>)."
+    },
+    {
+     "t": "p",
+     "html": "To independently validate this transcriptional state in vivo, we measured the transcripts of five branch-1-specific genes by whole-mount HCR in intact root tips: <i>AT2G41660</i> (also known as <i>MIZ1</i>),<i> AT3G04010</i>, <i>AT4G26080</i> (also known as <i>ABI1</i>)<i>,</i> <i>AT5G56550</i> (also known as <i>OXS3</i>) and <i>AT4G24060</i> (also known as <i>VDOF1</i>) (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-3\">3a</a> and Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig15\">10a,b</a>). All five genes showed heterogeneous expression in the cell types in which they are expressed, with some cells exhibiting strong transcript enrichment (positive) and others showing depletion (negative). Volumetric fluorescence quantification of segmented epidermal, cortex and endodermal cells confirmed up to 20-fold differences in fluorescence intensity between cells in the same tissue layer (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-3\">3a</a>). Canonical cell-type markers remained detectable in negative cells, which indicated that reduced branch 1 marker detection was unlikely to reflect a general failure of HCR detection (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig15\">10c</a>). Although branch 2 lacks a distinct transcriptional program, analyses of epidermal gene expression identified <i>AT3G01720</i> as largely complementary to the branch 1 marker <i>AT5G56550</i>, a pattern confirmed by HCR in vivo (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-3\">3b–h</a>). Volumetric fluorescence quantification of segmented cells across three independent roots, together with Gaussian mixture modelling of both scRNA-seq scores and HCR fluorescence ratios, identified two discrete epidermal populations corresponding to branch 1 and branch 2 cells. This result provides direct in vivo evidence for the two transcriptionally distinct cell populations in the same tissue layer (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-3\">3e–h</a>)."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-3"
+    },
+    {
+     "t": "p",
+     "html": "Together, these independent lines of evidence demonstrate that the bifid topology reflects a reproducible biological state characterized by the activation of a coordinated transcriptional program in a subset of cells across multiple root cell types."
+    }
+   ]
+  },
+  {
+   "id": "Sec4",
+   "title": "Association with environmental responses",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "To investigate the biological characteristics and potential regulators of this branch-specific transcriptional program, we analysed gene ontology (GO) term enrichment in the two branch-1-specific modules 20 and 21 (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-4\">4a</a> and Supplementary Table <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"supplementary material anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#MOESM6\">4</a>). These modules were enriched for responses to environmental stimuli, including nutrients, water and oxygen. Terms linked to positive regulation of RNA synthesis were also enriched, consistent with the observed increase in transcriptional activity of branch 1&nbsp;cells. Among the signalling pathways analysed, only ABA, a central regulator of environmental responses and the circadian clock (an integrator of multiple environmental signals), were enriched (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-4\">4a</a> and Supplementary Table <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"supplementary material anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#MOESM6\">4</a>). Consequently, this cellular state will henceforth be referred to as the environment-regulated state (ERS), with branch 1 and branch 2 corresponding to ERS-positive (ERS<sup>+</sup>) and ERS-negative (ERS<sup>–</sup>) cells, respectively. These terms reflect the presence or absence of this transcriptional state at the single-cell level rather than any intrinsic difference in the capacity of individual cells to respond to environmental signals."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-4"
+    },
+    {
+     "t": "p",
+     "html": "To complement this enrichment analysis, we investigated transcription factors (TFs) that could potentially regulate the ERS. Using an <i>Arabidopsis</i> DAP-seq dataset<sup><a class=\"ref-chip\" data-ref=\"17\" href=\"#ref-17\">17</a></sup> and predicted binding similarities from Cis-BP2 (ref. <sup><a class=\"ref-chip\" data-ref=\"18\" href=\"#ref-18\">18</a></sup>), we predicted putative targets for 800 TFs, filtered using hdWGCNA with the XGBoost algorithm. This process produced putative regulons for 186 TFs expressed in our atlas (average expression scores per cell identity are shown in Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-4\">4b</a>). Notably, 84 of these TFs (&gt;45%) showed regulon enrichment in ERS<sup>+</sup> cells, a result consistent with the elevated activity of this state (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-4\">4b</a>). These TFs included all the profiled ones linked to ABA signalling (<i>ABF1</i>,<i> ABF2</i>,<i> ATHB5</i>,<i> ATHB6</i>,<i> ATHB7</i> and<i> HAT22</i>)<sup><a class=\"ref-chip\" data-ref=\"19\" href=\"#ref-19\">19</a>,<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>,<a class=\"ref-chip\" data-ref=\"21\" href=\"#ref-21\">21</a>,<a class=\"ref-chip\" data-ref=\"22\" href=\"#ref-22\">22</a>,<a class=\"ref-chip\" data-ref=\"23\" href=\"#ref-23\">23</a>,<a class=\"ref-chip\" data-ref=\"24\" href=\"#ref-24\">24</a>,<a class=\"ref-chip\" data-ref=\"25\" href=\"#ref-25\">25</a></sup> or known to be circadian-regulated, such as members of the REVEILLE family (<i>RVE1</i>,<i> RVE2</i>,<i> RVE6</i>,<i> EPR1</i> and<i> RVE8</i>)<sup><a class=\"ref-chip\" data-ref=\"26\" href=\"#ref-26\">26</a>,<a class=\"ref-chip\" data-ref=\"27\" href=\"#ref-27\">27</a>,<a class=\"ref-chip\" data-ref=\"28\" href=\"#ref-28\">28</a></sup> as well as cycling DOF factors (<i>CDF2–CDF5</i>). Consistently, two ERS markers validated by HCR (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-3\">3a</a>), <i>AT4G26080</i> and <i>AT2G41660</i>, are known direct ABA targets<sup><a class=\"ref-chip\" data-ref=\"29\" href=\"#ref-29\">29</a>,<a class=\"ref-chip\" data-ref=\"30\" href=\"#ref-30\">30</a>,<a class=\"ref-chip\" data-ref=\"31\" href=\"#ref-31\">31</a></sup>. This result provides further support that ABA signalling has a role in ERS regulation."
+    },
+    {
+     "t": "p",
+     "html": "Because ABA was the only signalling pathway identified by GO enrichment, we functionally tested its role in ERS formation by profiling an ABA biosynthesis mutant (<i>aba2-3</i>)<sup><a class=\"ref-chip\" data-ref=\"32\" href=\"#ref-32\">32</a></sup> and a quintuple ABA receptor mutant (<i>pyl11458</i>)<sup><a class=\"ref-chip\" data-ref=\"33\" href=\"#ref-33\">33</a></sup> (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-4\">4c–e</a>). Both mutants showed a reduced proportion of ERS<sup>+</sup> cells across the whole root (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-4\">4d</a>) and in almost all cell types independently, albeit not always significantly (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig16\">11a</a>). Consistently, the ERS-specific modules 20 and 21 were the most strongly downregulated co-expression modules, which confirmed that ABA signalling is involved in the establishment of the ERS (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-4\">4e</a>)."
+    },
+    {
+     "t": "p",
+     "html": "The ERS is present in only a subset of cells regardless of lineage, which suggests that it is superimposed on, and independent from, developmental programs. To test this idea, we performed scRNA-seq to profile the root tips of the <i>scr-3</i> mutant, which exhibits major defects in root cell identity through loss of <i>SCARECROW</i> (<i>SCR</i>) function<sup><a class=\"ref-chip\" data-ref=\"34\" href=\"#ref-34\">34</a></sup> (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig16\">11b–d</a>). Using our Col-0 reference atlas for cell-type assignment, we observed the expected depletion of endodermis and protoxylem, together with additional alterations affecting the columella and pericycle. This result is consistent with shifts towards root cap and procambium identities, respectively, and uncovers broader cell identity changes than previously described<sup><a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a>,<a class=\"ref-chip\" data-ref=\"35\" href=\"#ref-35\">35</a>,<a class=\"ref-chip\" data-ref=\"36\" href=\"#ref-36\">36</a>,<a class=\"ref-chip\" data-ref=\"37\" href=\"#ref-37\">37</a></sup> (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig16\">11d</a>). Despite these major developmental perturbations, ERS<sup>+</sup> cells remained detectable across all cell populations, including those with altered identities (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig16\">11b,c</a>). These observations support the conclusion that the ERS represents a transcriptional state superimposed on multiple cell lineage identities regardless of cell type or developmental stage."
+    }
+   ]
+  },
+  {
+   "id": "Sec5",
+   "title": "Environmental modulation of the ERS",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Our atlas incorporated a set of experiments designed to test the effect of the composition of the growth medium on cell identities. In these experiments, seedlings from three independent replicates were grown in parallel on either full-strength (1×) or half-strength (0.5×) Murashige and Skoog (MS) medium, which resulted in six out of the nine samples included in the atlas. Although this range had little effect on root growth, reducing the medium concentration induced physiological responses, including increased root hair density (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig17\">12a</a>). Compared with full MS, roots grown on half MS contained fewer ERS<sup>+</sup> cells across most cell types, reaching significance in hair cells, cortex and protophloem (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-5\">5a,b</a> and Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig17\">12b</a>). Consistently, ERS-specific gene modules were significantly downregulated (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-5\">5c</a>)."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-5"
+    },
+    {
+     "t": "p",
+     "html": "Given the well-established role of ABA in water-related stresses and the enrichment of GO terms linked to responses to water and nutrients, we speculated that larger reductions in water potential would further increase the proportion of ERS<sup>+</sup> cells. To that end, we used a hard-agar model of drought to explore this idea. In this model, reduced water content induces a drought response that more closely resembles soil drying than conventional osmotic treatments<sup><a class=\"ref-chip\" data-ref=\"38\" href=\"#ref-38\">38</a></sup>."
+    },
+    {
+     "t": "p",
+     "html": "Seedlings were grown on half MS containing 100%, 50% or 20% water (two replicates each) and profiled by scRNA-seq (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-5\">5d</a>). Cells were assigned an identity on the basis of our reference atlas. Fewer cells were recovered from the 20% water condition (Supplementary Table <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"supplementary material anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#MOESM4\">2</a>), together with an enrichment of undifferentiated cells and an underrepresentation of larger differentiated cells (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig17\">12c</a>). This result is consistent with their increased fragility under severe water deficit."
+    },
+    {
+     "t": "p",
+     "html": "We then statistically assessed changes in the proportion of ERS<sup>+</sup> cells between the conditions, taking into account cells that can either be in ERS<sup>+</sup> or ERS<sup>–</sup> state, using water concentration as a continuous covariate (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-5\">5e</a>). The proportion of ERS<sup>+</sup> cells increased substantially when the water potential was reduced, from 0.38 in 100% water to 0.66 in 20% water. This result demonstrates that water deficit increases the prevalence of ERS<sup>+</sup> cells (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-5\">5e</a>). This change was significant both across the whole-root level and in individual cell types (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig17\">12d</a>), and was unrelated to differences in cell filtering (here and across the study) (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig17\">12h</a>). We observed that cells grown under water-deficit conditions contained more detected transcripts than those grown under control conditions (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig17\">12e</a>), which suggests that the increased prevalence of ERS<sup>+</sup> cells might reflect higher transcriptional output. However, ERS-specific module scores remained elevated in water-deficit cells with comparable transcript abundance, and this difference remained significant after adjusting for log-transformed UMI counts (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig17\">12f</a>). Likewise, logistic regression showed that the increased odds of a cell being classified as ERS<sup>+</sup> remained significant after accounting for transcript abundance (Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig17\">12g</a>), which indicated that the increased prevalence of ERS<sup>+</sup> cells cannot be fully explained by higher transcriptional output alone. Whether this result reflects changes in the probability of cells transitioning between ERS<sup>+</sup> and ERS<sup>−</sup> states, or more persistent occupancy of the ERS<sup>+</sup> state, cannot be determined from the current data."
+    },
+    {
+     "t": "p",
+     "html": "To further validate this finding, we examined the expression of two ERS-specific markers that we had already profiled (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-3\">3a</a>)—<i>AT3G04010</i> and <i>AT4G26080</i> (which are ABA-responsive)<sup><a class=\"ref-chip\" data-ref=\"29\" href=\"#ref-29\">29</a>,<a class=\"ref-chip\" data-ref=\"30\" href=\"#ref-30\">30</a></sup>—in vivo by whole-mount HCR in intact root tips under both the control (100% water) and water-deficit (20% water) conditions (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-5\">5f</a>). We observed a marked increase in the number of cells expressing both these genes under the water-deficit condition (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-5\">5f</a>). Quantifications revealed an approximate 1.6-fold increase in overall signal intensity and a 2.2–2.5-fold increase in areas showing a positive signal, independent of differences in root length (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-5\">5g</a> and Extended Data Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Fig17\">12i</a>). Consistent with these measurements, empirical cumulative distribution functions showed a global shift of per-cell fluorescence towards higher values under water-deficit conditions for both gene markers (Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"figure anchor\" data-fig=\"fig-5\">5h</a>). Together, these HCR analyses provide independent in planta evidence that more cells express ERS markers under water-deficit conditions, consistent with the increased prevalence of ERS<sup>+</sup> cells detected by scRNA-seq."
+    },
+    {
+     "t": "p",
+     "html": "Overall, these findings demonstrate that environmental conditions modulate the prevalence of the ERS, thereby establishing this transcriptional state as a dynamic layer of root cell identity that may contribute to adaptation to water-deficit conditions."
+    }
+   ]
+  },
+  {
+   "id": "Sec6",
+   "title": "Discussion",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Through deep characterization of root cell transcriptional states coupled with HCR spatial mapping, we identified an alternative trajectory for all cell types above the root meristematic region. This trajectory, which we term the ERS, corresponds to a strong and specific transcriptional signature superimposed on a subset of cells across multiple lineages simultaneously. Cell identity in the root tip can therefore be defined by three factors: (1) the lineage that defines the cell type, which remains stable during development; (2) the developmental stage; and (3) the presence or absence of this additional transcriptional state, the prevalence of which is modulated by environmental conditions (Supplementary Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"supplementary material anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#MOESM1\">2</a>). Although detected in parallel with developmental trajectories, the ERS seems to be independent of developmental origin, as it was detected across all cell types throughout developmental progression. Instead, it represents an additional layer of identity strongly associated with ABA signalling. Our analyses also suggest that the circadian clock may influence ERS formation. This aspect will be interesting to explore further, particularly given its known feedback with ABA signalling and stress responses<sup><a class=\"ref-chip\" data-ref=\"39\" href=\"#ref-39\">39</a></sup>. We note that although an ERS can be detected across all lineages, it is not entirely equivalent in all cell types. Some ERS-specific genes were enriched in all ERS<sup>+</sup> cells, whereas others were restricted to specific lineages, which suggests that there is a degree of cell-type specificity in the occurrence of this transcriptional state, which may be shaped by the underlying regulatory networks of each cell type. Differences in ABA sensitivity or signalling capacity among cells within and between cell types could equally contribute to this variability and represent an important avenue for future investigation."
+    },
+    {
+     "t": "p",
+     "html": "A notable feature of this discovery is the scale of transcriptional heterogeneity observed in cell types, which was largely undetectable using bulk methods before single-cell technologies. Recent imaging approaches have revealed transcriptional heterogeneity in plant tissues<sup><a class=\"ref-chip\" data-ref=\"40\" href=\"#ref-40\">40</a>,<a class=\"ref-chip\" data-ref=\"41\" href=\"#ref-41\">41</a>,<a class=\"ref-chip\" data-ref=\"42\" href=\"#ref-42\">42</a>,<a class=\"ref-chip\" data-ref=\"43\" href=\"#ref-43\">43</a>,<a class=\"ref-chip\" data-ref=\"44\" href=\"#ref-44\">44</a></sup>. However, to our knowledge, none has reported the clear and consistent dichotomy observed here. The robust presence of two populations across independent datasets and detection methods, together with consistent detection of the same ERS-specific co-expressed gene modules, strongly supports the interpretation that the ERS reflects a regulated transcriptional program. Nonetheless, important questions remain regarding the mechanisms that establish and maintain this state. Exploring the temporal dynamics of the ERS will be essential, including how rapidly it is induced and how stable it remains under constant or changing environments. Moreover, it will be important to determine whether the proportions of ERS<sup>+</sup> and ERS<sup>–</sup> cells detected by scRNA-seq reflect stochastic transitions between states, the probabilities of which are modulated by environmental conditions. Live imaging of ERS marker genes will be an important avenue to address these questions. Equally important will be determining the signals that govern entry into and exit from the ERS, including whether ABA directly influences the probability that cells adopt this state or whether it permissively sets the proportion of cells competent to do so."
+    },
+    {
+     "t": "p",
+     "html": "Another open question is the spatial arrangement and coordination of ERS<sup>+</sup> cells. We showed that the ERS can occur in all root layers, independent of cell type, but the signal determining which cells enter this state is unclear. The increase in ERS prevalence under water-deficit conditions suggests that this state is part of a physiological response to the environment. If this response is linked to water and nutrient availability, it would make sense that it spans from the epidermis, which senses and absorbs these resources, to the vasculature, which distributes them throughout the plant. As such, ERS formation may contribute to, or result from, a coordinated response across the tissue. The persistence of the ERS across environmental and genetic perturbations suggests that it represents an important physiological state. Correlating ERS occurrence with known pathways or functional markers will be crucial to clarify its role."
+    },
+    {
+     "t": "p",
+     "html": "The marked increase in ERS prevalence under water-deficit conditions demonstrates that this transcriptional state is dynamically regulated by environmental conditions. Determining which environmental cues regulate ERS prevalence, how these signals are integrated and how the ERS influences cellular physiology will be important next steps. More broadly, our findings establish the ERS as a previously unrecognized layer of root cell identity. We anticipate that the identification of the ERS will facilitate the discovery and investigation of additional environmentally regulated transcriptional states across plant tissues and species. As such, it provides a framework for understanding how environmental regulation shapes cell identity across plant tissues and how plants dynamically remodel cellular states in response to their environment, which will ultimately advance our understanding of plant physiology."
+    }
+   ]
+  },
+  {
+   "id": "Sec7",
+   "title": "Methods",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "Sec8",
+   "title": "Plant material and growth conditions",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Seeds from wild-type <i>A. thaliana</i> ecotypes (Col-0, Ws-2, Cvi-0, c24 and Ler) or the mutants <i>aba2-3</i> (Col-0 background, ABRC stock number CS3834), <i>pyl11458</i> (Col-0 background, ABRC stock number CS72390) and <i>scr-3</i> (Col-0 background, NASC stock code N3997) were sterilized and densely sown in rows on 1× (or 0.5× when testing the effect of nutrient concentration) MS basal medium with vitamins (Austratec) on 0.9% agar plates supplemented with 1% sucrose (pH 5.7) and stratified in the dark at 4 °C for 2 days. Plates were subsequently grown in long day conditions (16 h of light, 8 h of dark) at 22 °C. At 6–7 days after germination (d.a.g.), root tips (up to around 3 mm) were collected for protoplast isolation using sharp tweezers. For all experiments, seedlings were grown under identical conditions and collected at the same time of day. For all comparative experiments (MS concentrations or water-deficit), seedlings from the different conditions were sterilized, plated, grown and harvested simultaneously."
+    }
+   ]
+  },
+  {
+   "id": "Sec9",
+   "title": "Hard-agar model of drought",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "For the hard-agar water-deficit assay, seedlings were grown on 0.5× MS medium under control conditions (100% water content) or on 0.5× MS medium with the water content reduced to 50% or 20% of the control level (corresponding to 1× MS with 1.8% agar and 2.5× MS with 4.5% agar, respectively). Seedlings were otherwise grown and collected under the same conditions as described above."
+    }
+   ]
+  },
+  {
+   "id": "Sec10",
+   "title": "Roots growing through agar",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "In standard plate assays, roots are grown along the agar surface and are simultaneously exposed to two microenvironments: air on one side and agar on the other. To test whether this heterogeneous exposure influences the formation of the ERS described in this study, roots were instead grown entirely in the agar to provide a homogeneous environment. To do so, square plates were filled with 1× MS medium as described above. After solidification, the medium was cut in half with a razor blade under sterile conditions. Seeds were placed at the top edge of the cut agar and plates were positioned vertically in the growth chamber, allowing cotyledons to develop at the surface while roots penetrated and grew through the agar. Root tips were collected with fine tweezers at the same developmental stage and time point as described above."
+    }
+   ]
+  },
+  {
+   "id": "Sec11",
+   "title": "Protoplast isolation and scRNA-seq",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Root tips were placed in 15 ml protoplasting solution<sup><a class=\"ref-chip\" data-ref=\"45\" href=\"#ref-45\">45</a></sup> (1.25% w/v cellulase, 0.3% w/v macerozyme, 0.4 M <span class=\"u-small-caps\">d</span>-mannitol, 20 mM MES (pH 5.7), 20 mM KCl, 10 mM CaCl<sub>2</sub>, 0.5% w/v BSA and 5 mM β-mercaptoethanol in ultrapure water) and incubated at room temperature for 1 h on a tube rotator. The solution was subsequently filtered through a 70 μm strainer and a 40 μm cell strainer (Falcon) to separate protoplasts from undissociated tissue. Cells were centrifuged for 5 min at 500<i>g</i> in a swinging bucket centrifuge. The pellet was resuspended in 15 ml protoplast resuspension buffer (0.4 M <span class=\"u-small-caps\">d</span>-mannitol, 20 mM MES (pH 5.7), 20 mM KCl, 10 mM CaCl<sub>2</sub> and 0.5% w/v BSA in ultrapure water) and centrifuged at 500<i>g</i> for 5 min. Cells were resuspended in the protoplast resuspension buffer and filtered through a 35 μm cell strainer Snap Cap (Falcon). When preparations involved two <i>Arabidopsis</i> ecotypes, protoplasts from each background were mixed in equal proportions. The final concentration was adjusted to 900–1,200 cells per μl and barcoded using a Chromium Controller (10x Genomics). Libraries were generated with reagents from a Single Cell Gene Expression kit (10x Genomics, Single Cell 3′ Library kit) according to the manufacturer’s instructions. Libraries were sequenced either on an Illumina NextSeq 500 or a NovaSeq 6000, following recommendations of 10x Genomics."
+    }
+   ]
+  },
+  {
+   "id": "Sec12",
+   "title": "Preprocessing",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "All the data preprocessing steps are summarized in Supplementary Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"supplementary material anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#MOESM1\">1</a>."
+    }
+   ]
+  },
+  {
+   "id": "Sec13",
+   "title": "Mapping",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Reads were mapped using the 10x Genomics CellRanger pipeline (v.7.1.0) to the TAIR10 <i>Arabidopsis</i> genome with the –expect-cells=10000 parameter."
+    },
+    {
+     "t": "p",
+     "html": "If the cell preparation contained a mix of two ecotypes, reads were mapped to a version of the <i>Arabidopsis</i> (TAIR10) genome with ambiguous base codes placed at single-nucleotide polymorphism (SNP) positions for the genotypes sequenced, as identified by the <i>Arabidopsis</i> 1001 genomes project<sup><a class=\"ref-chip\" data-ref=\"46\" href=\"#ref-46\">46</a></sup>."
+    }
+   ]
+  },
+  {
+   "id": "Sec14",
+   "title": "Low-quality cell filtering",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Recent versions of CellRanger identify substantially more cells than earlier releases. This enables the detection of low-UMI root cap cells (which were discarded in earlier releases), but also results in the identification of more cells than expected based on cell loading in the assay. Many of these seem to be low-UMI, low-quality cells, which are probably derived from damaged protoplasts that nonetheless pass the CellRanger threshold. To identify and remove such cells, we developed a filtering approach based on clustering CellRanger-called ‘cell’ barcodes together with barcodes classified as background. The method was applied independently to each library and manually adjusted, which enabled the proportion of filtered cells to vary according to the intrinsic quality of each preparation. The procedure (illustrated in Supplementary Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"supplementary material anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#MOESM1\">1</a>) is described below."
+    },
+    {
+     "t": "p",
+     "html": "A Seurat (v.5.0.0)<sup><a class=\"ref-chip\" data-ref=\"47\" href=\"#ref-47\">47</a></sup> object was created from the <i>N</i> barcodes identified as cells by CellRanger, excluding genes expressed in fewer than three cells. Data were log-normalized and scaled. Highly variable genes (HVGs) were identified using FindVariableFeatures (nfeatures=15,000). Genes affected by protoplast isolation (see the section ‘Identification of genes affected by protoplast isolation’), as well as mitochondrial and chloroplastic genes, were excluded from the HVG set. The first 40 principal components were used for UMAP dimensionality reduction and clustering. Major root cell types (root cap, epidermis, cortex, endodermis, pericycle, phloem, xylem and procambium) were annotated."
+    },
+    {
+     "t": "p",
+     "html": "The following steps were applied to each cell type individually:"
+    },
+    {
+     "t": "list",
+     "html": "\n                  <li>\n                    <p>A new Seurat object was created containing the ‘cell type’ cells and the first top <i>N</i> barcodes (ranked by UMI content) that were classified as background by CellRanger. The object was processed as above, with the exception that FindVariableFeatures was run with the parameter nfeatures=5000 and that the first 20 principal components were used for UMAP and cell clustering.</p>\n                  </li>\n                  <li>\n                    <p>The object was subsetted to retain only the cluster (or clusters) containing the ‘cell type’ cells, which typically also includes some background barcodes. This subsetted object was then re-processed as in the previous step.</p>\n                  </li>\n                  <li>\n                    <p>In this subset, background barcodes typically form distinct clusters, often together with low-quality cells of the given type. All cells clustering with background were considered more similar to background than to high-quality cells and were reclassified as background and discarded.</p>\n                  </li>\n                "
+    },
+    {
+     "t": "list",
+     "html": "\n                  <li>\n                    <p>Cells retained after filtering across all types were merged into a new Seurat object.</p>\n                  </li>\n                "
+    },
+    {
+     "t": "p",
+     "html": "Using this approach, between 8 and 30% of CellRanger-identified cells were typically removed. Preparations processed using 10x Genomics NextGem chemistry tended to generate a higher proportion of discarded cells."
+    }
+   ]
+  },
+  {
+   "id": "Sec15",
+   "title": "Doublet identification",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Doublets were identified using scDblFinder<sup><a class=\"ref-chip\" data-ref=\"48\" href=\"#ref-48\">48</a>,<a class=\"ref-chip\" data-ref=\"49\" href=\"#ref-49\">49</a></sup> following the recommendations of the Single-cell Best Practices guide (<a href=\"http://www.sc-best-practices.org/\">www.sc-best-practices.org</a>). The analysis was performed on the Seurat object obtained after cell filtering, with the parameters artificialDoublets=25000, dims=30, dbr.sd=1 and propRandom=1. All cells identified as doublets were subsequently removed from the dataset."
+    }
+   ]
+  },
+  {
+   "id": "Sec16",
+   "title": "Cell genotyping",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "After doublet removal, preparations composed of a mix of two <i>Arabidopsis</i> ecotypes were subjected to cell genotyping based on SNPs. SNP UMIs were counted per cell using the countsnps command in the sctools package (<a href=\"https://github.com/timoast/sctools)\">https://github.com/timoast/sctools)</a>. To separate the two ecotype populations, density-based clustering was performed on the SNP UMI counts for each ecotype using the dbscan<sup><a class=\"ref-chip\" data-ref=\"50\" href=\"#ref-50\">50</a></sup> package in R (Supplementary Fig. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"supplementary material anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#MOESM1\">1</a>), with the eps and minPts parameters adjusted for each dataset. The few cells that did not cluster with either population were discarded."
+    }
+   ]
+  },
+  {
+   "id": "Sec17",
+   "title": "Data integration",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Each condition included at least three replicates, except for the water-deficit experiments, which had two replicates each. Replicates were integrated using Seurat (v.5.0.0) to generate batch-corrected atlases. In brief, replicates were merged into a single Seurat object. HVGs were detected using the FindVariableFeatures function with nfeatures=25000. Genes affected by protoplasting, as well as mitochondrial and chloroplastic genes, were excluded from the HVG dataset. Data were scaled, and the first 50 principal components were computed using RunPCA. Replicates were then integrated using the anchor-based RPCA method in Seurat (v.5.0.0) with IntegrateLayers, using method=RPCAIntegration and dims=1:50."
+    },
+    {
+     "t": "p",
+     "html": "For the Col-0 reference atlas, the replicates RL650, RL970 and RL971, which exhibited the highest data complexity, were used as reference during integration with reference=1:3. The resulting 50-dimensional integrated RPCA reduction was used for UMAP and clustering."
+    },
+    {
+     "t": "p",
+     "html": "In some cases, after the integration step, a few diffuse groups of low-UMI cells could be identified associated with the epidermis and cortex lineages, which probably represent low-quality cells that had passed the initial filtering step. To remove these, separate ‘epidermis–root cap’ and ‘cortex’ objects were created, re-integrated and processed as described above. After removing the low-quality cells, the atlas was re-processed with RPCA integration, and the first 45 dimensions were used for UMAP and clustering."
+    },
+    {
+     "t": "p",
+     "html": "In other cases beyond the Col-0 atlas, small clusters of low-quality cells were also removed; see the integration scripts for further details."
+    }
+   ]
+  },
+  {
+   "id": "Sec18",
+   "title": "Identification of genes affected by protoplast isolation",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Plants were prepared as for scRNA-seq, as described above. Four replicates each of dissociated and non-dissociated root tips were compared. For dissociated samples, root tips were placed in the protoplasting solution for 1 h at room temperature, as for scRNA-seq. After this incubation step, samples were centrifuged for 5 min at 500<i>g</i>, the supernatant was removed and the tissue samples were snap-frozen in liquid nitrogen and ground into a powder. For non-dissociated samples, root tips were collected and directly snap-frozen and ground into powder in liquid nitrogen. Bulk RNA-seq libraries were generated using a TruSeq stranded mRNA kit (Illumina). Bulk RNA-seq libraries were sequenced on an Illumina HiSeq 1500 (single end, 101 cycles). RNA-seq read quality was assessed using FastQC and MultiQC<sup><a class=\"ref-chip\" data-ref=\"51\" href=\"#ref-51\">51</a>,<a class=\"ref-chip\" data-ref=\"52\" href=\"#ref-52\">52</a></sup>. RNA-seq reads were trimmed using Trimmomatic (v.0.36) with the following parameters: ILLUMINACLIP:TruSeq3-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 (ref. <sup><a class=\"ref-chip\" data-ref=\"53\" href=\"#ref-53\">53</a></sup>). Reads were aligned to the TAIR10 genome using STAR<sup><a class=\"ref-chip\" data-ref=\"54\" href=\"#ref-54\">54</a></sup> with the following parameters: --alignIntronMax 5000, --alignIntronMin 10, --readFilesCommand zcat, --quantMode GeneCounts, --outSAMtype BAM SortedByCoordinate. Differentially expressed genes resulting from the cell dissociation step were identified using the DESeq2 R package<sup><a class=\"ref-chip\" data-ref=\"55\" href=\"#ref-55\">55</a></sup>, with a Benjamini–Hochberg adjusted <i>P</i> &lt; 0.001 and a log<sub>2</sub> fold change in expression of &gt;2. This experiment was repeated twice, and genes that were identified as differentially expressed in both experiments were taken as the set of genes affected by protoplast isolation."
+    }
+   ]
+  },
+  {
+   "id": "Sec19",
+   "title": "Whole-mount in situ HCR",
+   "level": 2,
+   "blocks": []
+  },
+  {
+   "id": "Sec20",
+   "title": "Probe design",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Candidate cluster markers for our reference atlas were generated using the FindAllMarkers function in Seurat, with the only.pos = TRUE parameter. To select the best target genes, cluster markers were filtered on the basis of the following criteria: the gene should be detected almost only in the cluster (or clusters) it is enriched in; and the gene should have a large portion of its coding sequence that does not share homology with other <i>Arabidopsis</i> genes, which will enable the design of highly specific probes for these sequences. Split probes for our target genes were designed and synthesized by Molecular Instruments (<a href=\"http://www.molecularinstruments.com/\">www.molecularinstruments.com</a>)."
+    }
+   ]
+  },
+  {
+   "id": "Sec21",
+   "title": "Sample fixation and dehydration",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Experiments were performed as previously described<sup><a class=\"ref-chip\" data-ref=\"56\" href=\"#ref-56\">56</a></sup>. Roots were collected at 6 d.a.g., as for scRNA-seq, and immediately placed in FAA (7.4% formaldehyde, 5% acetic acid and 50% ethanol in ultrapure water) for 1 h at room temperature. Samples were then dehydrated in successive 10 min washes at room temperature: once in 70% ethanol, once in 90% ethanol and twice in 100% ethanol. Samples were washed twice in 100% methanol and left in the second wash at −20 °C overnight (or up to a few weeks)."
+    }
+   ]
+  },
+  {
+   "id": "Sec22",
+   "title": "Permeabilization and protease digestion",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Roots were rehydrated in a series of 5 min washes at room temperature in 75%, 50%, 25% methanol and in DPBS-T (0.1% Tween 20 in DPBS) and incubated in 1× cell wall digestion solution (10× stock: 250 mg macerozyme, 250 mg cellulase, 125 mg pectolyase and 375 mg pectinase in 50 ml ultrapure water) in DPBS-T for 5 min. After a wash in DPBS-T, samples were fixed in 10% (v/v) formaldehyde (37% solution, Sigma-Aldrich) in DPBS-T for 15 min at room temperature and washed twice in DPBS-T. Roots were incubated in 1 ml proteinase K buffer (0.1 M Tris-HCl (pH 8) and 50 mM EDTA (pH 8) in ultrapure water) with 8 μl proteinase K (10 mg ml<sup>–1</sup>) for 15 min at 37 °C. After two washes in DPBS-T, samples were fixed in 10% (v/v) formaldehyde (37% solution, Sigma-Aldrich) in DPBS-T for 15 min at room temperature and washed twice in DPBS-T."
+    }
+   ]
+  },
+  {
+   "id": "Sec23",
+   "title": "Probe hybridization and amplification",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "We followed the third-generation in situ HCR procedure developed by Molecular Instruments, and as previously described<sup><a class=\"ref-chip\" data-ref=\"10\" href=\"#ref-10\">10</a></sup>, but the dextran sulfate used in the amplification buffer had to be replaced by a low-molecular-weight dextran sulfate to preserve the root structure. Roots were pre-hybridized in the 30% probe hybridization buffer for 30 min at 37 °C, then placed in the probe solution (2–3 μl of probe mixture in 500 μl of 30% probe hybridization buffer) and incubated at 37 °C overnight."
+    },
+    {
+     "t": "p",
+     "html": "Samples were washed twice in the 30% probe wash buffer for 30 min at 37 °C, then washed twice in 5× SSCT (5× SSC and 0.1% Tween 20 in ultrapure water) for 10 min at room temperature. Samples were placed in the amplification buffer for 30 min at room temperature. In the meantime, fluorescently labelled hairpins were prepared by snap-cooling 10 μl of 3 μM stock in hairpin storage buffer (heat at 95 °C for 90 s in a thermocycler and cool to room temperature in the dark for 30 min). We predominantly used HCR amplifiers coupled to Alexa 647 fluorophores in this study, with Alexa 488-coupled amplifiers used for experiments targeting two genes simultaneously. The hairpin solution was prepared by adding the snap-cooled hairpins to 500 μl amplification buffer. Samples were placed in the hairpin solution and incubated overnight at room temperature in the dark. They were subsequently washed 3 times in 5× SSCT for 20 min at room temperature."
+    }
+   ]
+  },
+  {
+   "id": "Sec24",
+   "title": "Clearing, cell wall staining and sample mounting",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Samples were incubated in ClearSee<sup><a class=\"ref-chip\" data-ref=\"11\" href=\"#ref-11\">11</a></sup> in the dark for 3 days."
+    },
+    {
+     "t": "p",
+     "html": "Cell walls were stained by incubating samples in 1 ml ClearSee and 2 μl calcofluor solution (50 mg ml<sup>–1</sup> in DMSO) for 2 h in the dark. Samples were washed in ClearSee for 1 h, in the dark, and mounted in ClearSee in a chamber made with a square coverslip and double-sided tape. The chamber was sealed using top coat nail polish, and samples were imaged on the same day."
+    }
+   ]
+  },
+  {
+   "id": "Sec25",
+   "title": "Imaging",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Mounted roots were imaged using a Nikon Ti-E inverted motorized microscope with a Nikon A1Si spectral detector confocal system or a Nikon A1RMP confocal microscope, controlled by NIS-Elements software, and a ×60 water-immersion objective. Calcofluor white and the Alex 488-&nbsp;and the Alexa 647-coupled amplifiers were excited at 405 nm, 488 nm and 640 nm, respectively. Seven to eight images were taken per root along the differentiation axis. Images were processed using Fiji<sup><a class=\"ref-chip\" data-ref=\"57\" href=\"#ref-57\">57</a></sup>. Images of the same roots were stitched using the Grid/Collection stitching plugin<sup><a class=\"ref-chip\" data-ref=\"58\" href=\"#ref-58\">58</a></sup>, and the brightness and contrast were adjusted for each image based on the signal detected. Optical sections were generated using the Orthogonal Views method in Fiji."
+    }
+   ]
+  },
+  {
+   "id": "Sec26",
+   "title": "Cell annotation",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "All datasets other than the Col-0 atlas were annotated using the Col-0 atlas as the reference. Anchors between the reference atlas and the other datasets were identified using FindTransferAnchors in Seurat (v.5), specifying the Col-0 RPCA-integrated data as the reference assay. TransferData in Seurat (v.5) was then used to calculate, for each cell, a prediction score for every identity, based on the identified anchors and the atlas annotations. Each cell was assigned the identity with the highest prediction score."
+    }
+   ]
+  },
+  {
+   "id": "Sec27",
+   "title": "Cell cycle annotation",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "We used the CellCycleScoring function in Seurat to assign a cell cycle score to each cell of our reference atlas based on the expression of S phase marker genes (<i>E2Fc</i> (also known as <i>AT1G47870</i>), <i>E2Fb</i> (<i>AT5G22220</i>), <i>DPa</i> (also known as <i>AT5G02470</i>), <i>CDKG;2</i> (also known as <i>AT1G67580</i>), <i>E2Fa</i> (also known as <i>AT2G36010</i>), <i>DPb</i> (also known as <i>AT5G03415</i>), <i>CYCA3;1</i> (also known as <i>AT5G43080</i>), <i>CYCA3;2</i> (also known as <i>AT1G47210</i>), <i>KRP5</i> (also known as <i>AT3G24810</i>), <i>KRP2</i> (also known as <i>AT3G50630</i>), <i>KRP6</i> (also known as <i>AT3G19150</i>), <i>KRP3</i> (also known as <i>AT5G48820</i>), <i>WEE</i> (also known as <i>AT1G02970</i>), <i>KRP4</i> (also known as <i>AT2G32710</i>), <i>CYCD4;2</i> (also known as <i>AT5G10440</i>)) and of G2/M phase marker genes (<i>CYCB1;1</i> (also known as <i>AT4G37490</i>), <i>CYCB2;1</i> (also known as <i>AT2G17620</i>), <i>CDKB2;2</i> (also known as <i>AT1G20930</i>), <i>CYCB3;1</i> (also known as <i>AT1G16330</i>), <i>CYCA2;2</i> (also known as <i>AT5G11300</i>), <i>CYCA2;4</i> (also known as <i>AT1G80370</i>), <i>CYCA1;1</i> (also known as <i>AT1G44110</i>), <i>CYCA2;1</i> (also known as <i>AT5G25380</i>), <i>CDKD;1</i> (also known as <i>AT1G73690</i>), <i>CDKB2;1</i> (also known as <i>AT1G76540</i>), <i>CKS2</i> (also known as <i>AT2G27970</i>), <i>CYCB1;2</i> (also known as <i>AT5G06150</i>), <i>CYCD3;1</i> (also known as <i>AT4G34160</i>), <i>CCS52B</i> (also known as <i>AT5G13840</i>), <i>CYCA2;3</i> (also known as <i>AT1G15570</i>), <i>CCS52A2</i> (also known as <i>AT4G11920</i>), <i>CYCB2;3</i> (also known as <i>AT1G20610</i>) and <i>CYCB1;3</i> (also known as <i>AT3G11520</i>)) obtained from a previous study<sup><a class=\"ref-chip\" data-ref=\"59\" href=\"#ref-59\">59</a></sup>. This score was used to provide a predicted classification of the cell cycle phase and to regress out cell cycle effects using vars.to.regress = c(“S.Score”, “G2M.Score”) in the ScaleData function. After regression, the top 50 principal components were calculated and the replicates were integrated again. UMAP dimensionality reduction was then performed, and cell identities were visualized in the embedding to confirm that both branches remained present."
+    }
+   ]
+  },
+  {
+   "id": "Sec28",
+   "title": "Pseudotime trajectory analyses",
+   "level": 2,
+   "blocks": []
+  },
+  {
+   "id": "Sec29",
+   "title": "PAGA",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The Col-0 atlas was subsetted into nine lineage-specific objects: epidermis, root cap, cortex, endodermis, PPP, XPP, procambium, phloem and xylem. Each lineage dataset was then processed independently."
+    },
+    {
+     "t": "p",
+     "html": "Subclusters in each lineage were identified using FindNeighbors and FindClusters in Seurat (v.5), with the values of dims, k.param and resolution adapted to each lineage."
+    },
+    {
+     "t": "p",
+     "html": "For each lineage, a ‘root cell’ corresponding to <i>t</i> = 0 in the trajectory was defined, as required by the diffusion pseudotime analysis underlying the PAGA trajectory inference. In the case of the epidermis and root cap lineages, developmental progression is known to originate at their junction. Therefore, for the epidermal lineage, the root cell was defined as the cell with the lowest coordinate along the UMAP <i>y</i> axis. For the root cap lineage, the root cell was defined as the cell with the highest coordinate along the UMAP <i>y</i> axis. For all other lineages, for which such anatomical landmarks are less obvious, the root cell was defined as the cell with the highest meristematic score (see below)."
+    },
+    {
+     "t": "p",
+     "html": "To perform trajectory inference, we used the SCP package<sup><a class=\"ref-chip\" data-ref=\"60\" href=\"#ref-60\">60</a></sup>, which implements PAGA<sup><a class=\"ref-chip\" data-ref=\"61\" href=\"#ref-61\">61</a>,<a class=\"ref-chip\" data-ref=\"62\" href=\"#ref-62\">62</a>,<a class=\"ref-chip\" data-ref=\"63\" href=\"#ref-63\">63</a></sup> analysis directly in R, thereby avoiding conversion of Seurat objects to AnnData format to run scanpy<sup><a class=\"ref-chip\" data-ref=\"63\" href=\"#ref-63\">63</a></sup>. Seurat v.5 assays were first converted to v.3 assays to enable SCP. Trajectories were inferred with the RunPAGA function, grouping cells by the subclusters defined above, with the following parameters: inear_reduction = “integrated.rpca”, nonlinear_reduction = “umap.rpca”, infer_pseudotime=TRUE, n_pcs and n_neighbours matching the values used for subclustering, and root_cell containing the barcode of the designated root cell. The trajectory topology was visualized with the PAGAPlot function, using reduction = “umap.rpca” and an edge_threshold adapted to each lineage. The pseudotime value assigned to each cell was then transferred to the metadata of the original Seurat (v.5) object."
+    }
+   ]
+  },
+  {
+   "id": "Sec30",
+   "title": "Meristematic score calculation",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The diffusion pseudotime analysis required the identification of a cell that would serve as <i>t</i> = 0; that is, the starting point of each trajectory. To do so, we developed an approach for identifying the ‘most meristematic’ cell in each lineage."
+    },
+    {
+     "t": "p",
+     "html": "The epidermis is the only lineage for which the meristematic region can be unambiguously located based on both the topology of its clusters and the known biology of the tissue. It lies at the junction with the root cap, before differentiation into the two epidermal subtypes: hair cells and non-hair cells. This cluster was therefore designated as epidermis–meristem. To identify marker genes for this region, we ran the FindMarkers function on the subsetted Seurat object containing only epidermal clusters, with ident.1 = 5 (corresponding to the ‘epidermis–meristem’ cluster), only.pos=TRUE, and test.use = ‘t’. The resulting gene list was then used with the AddModuleScore function in Seurat (v.5) to assign a meristematic score to every cell in the atlas."
+    },
+    {
+     "t": "p",
+     "html": "We reasoned that at least a subset of the genes enriched in the epidermal meristem would also be enriched in meristematic regions of other lineages. Thus, the cell with the highest meristematic score in each lineage was taken to represent the most likely earliest developmental state and used as the root cell (<i>t</i> = 0) for pseudotime analysis."
+    }
+   ]
+  },
+  {
+   "id": "Sec31",
+   "title": "Monocle analysis",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Monocle 3 (v.1.3.7)<sup><a class=\"ref-chip\" data-ref=\"64\" href=\"#ref-64\">64</a>,<a class=\"ref-chip\" data-ref=\"65\" href=\"#ref-65\">65</a>,<a class=\"ref-chip\" data-ref=\"66\" href=\"#ref-66\">66</a></sup> was used as an alternative method to confirm the developmental trajectories obtained using PAGA. Our Col-0 atlas was converted to a cds object using SeuratWrappers (v.0.4.0) (<a href=\"https://github.com/satijalab/seurat-wrappers)\">https://github.com/satijalab/seurat-wrappers)</a>. Cells were clustered and partitioned with cluster_cells using resolution=0.0002, and trajectories were computed using learn_graph with learn_graph_control=list(minimal_branch_len=20)). As for the PAGA trajectories, root cells were defined as those with the highest meristematic score per lineage, and these were used in order_cells to assign a pseudotime to each cell in the trajectory. All plots were generated with plot_cells. Concordance between (scaled) Monocle and diffusion pseudotime assignments was assessed using Spearman’s correlation coefficients computed independently for each lineage."
+    }
+   ]
+  },
+  {
+   "id": "Sec32",
+   "title": "scVelo analysis",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "RNA velocity analysis was performed using the dynamical model implemented in the R package velociraptor<sup><a class=\"ref-chip\" data-ref=\"67\" href=\"#ref-67\">67</a></sup> (v.1.10.0) (wrapping scVelo<sup><a class=\"ref-chip\" data-ref=\"68\" href=\"#ref-68\">68</a></sup>) on a per-lineage basis. Spliced and unspliced count matrices were generated independently for each library from velocyto<sup><a class=\"ref-chip\" data-ref=\"69\" href=\"#ref-69\">69</a></sup> (v.0.17.17) loom files and merged after restricting to genes detected across all samples. Because the intronic signal in <i>Arabidopsis</i> scRNA-seq datasets is limited, only genes with sufficient spliced and unspliced coverage were retained for velocity inference (minimum 50 cells with unspliced counts and 300 total unspliced counts; minimum 50 cells with spliced counts and 1,000 total spliced counts globally across the dataset). The top 4,000 variable genes were identified independently for each lineage, and protoplasting-sensitive genes, mitochondrial genes and chloroplast genes were excluded before analysis. The final gene set used for velocity inference corresponded to the intersection between lineage variable features and genes passing global spliced or unspliced filtering criteria. For each lineage, a SingleCellExperiment object containing spliced, unspliced and total RNA counts was generated and analysed using the scVelo dynamical model with the RPCA integrated embedding used as the neighbourhood graph for kinetic inference. Root cells for latent time estimation were defined independently for each lineage as the top 1% of cells with the highest meristematic score. Given the relatively low proportion of unspliced reads in our dataset (about 3% median unspliced fraction), RNA velocity was used primarily as an orthogonal validation of trajectory structure rather than as the primary trajectory inference approach. Concordance between scVelo latent time and diffusion pseudotime was assessed using Spearman’s correlation coefficients computed independently for each lineage."
+    }
+   ]
+  },
+  {
+   "id": "Sec33",
+   "title": "Expression-level analysis of ERS-associated genes",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "To test whether the apparent absence of ERS-associated genes in ERS<sup>−</sup> cells could be explained by reduced transcript capture, we compared the expression behaviour of genes from ERS<sup>+</sup>-specific modules (modules 20 and 21) and modules expressed in both branches (modules 13 and 14) in the XPP lineage, the largest lineage exhibiting the ERS dichotomy. Average log-normalized expression was calculated independently in ERS<sup>+</sup> and ERS<sup>−</sup> cells for each gene. To compare genes across a shared expression range, overlapping expression intervals between ERS<sup>+</sup>-specific and shared-module genes were defined using the 10–90th percentile range of average ERS<sup>+</sup> expression for each group. A linear model describing the relationship between ERS<sup>+</sup> and ERS<sup>−</sup> expression was then fitted using genes from modules expressed in both branches. Residual ERS<sup>−</sup> expression values (observed minus expected expression) were subsequently calculated for all genes relative to this model. Residual distributions were compared between ERS<sup>+</sup>-specific genes and genes expressed in both branches in the overlapping expression interval using a two-sided Wilcoxon rank-sum test. This analysis tested whether ERS<sup>+</sup>-specific genes exhibited systematically lower ERS<sup>−</sup> expression than expected based solely on their expression level in ERS<sup>+</sup> cells."
+    }
+   ]
+  },
+  {
+   "id": "Sec34",
+   "title": "UMI downsampling",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Because the number of transcripts detected in branch 1 was systematically higher than in branch 2, we tested whether the observed branching events could result from coverage artefacts. To control for this factor, UMI counts were selectively downsampled in ERS<sup>+</sup> cells to match the UMI distribution of ERS<sup>−</sup> cells in each cell type. Specifically, for each ERS<sup>+</sup> cell, a target UMI count was assigned based on quantile matching to the corresponding ERS<sup>−</sup> cell-type distribution, and counts were downsampled using the downsampleMatrix function from DropletUtils<sup><a class=\"ref-chip\" data-ref=\"70\" href=\"#ref-70\">70</a></sup> (v1.20.0). ERS<sup>−</sup> cells were left unchanged. Three independent downsampled count matrices were generated using different random seeds. Each downsampled matrix was used to generate a new Seurat object, which was processed independently using the same workflow as the reference atlas, including log-normalization, variable feature selection, scaling, PCA and UMAP embedding. Protoplasting-sensitive genes, mitochondrial genes and chloroplast genes were excluded from the variable feature set before dimensionality reduction. A meristematic score was then calculated for each cell using the same gene set as in the reference atlas."
+    }
+   ]
+  },
+  {
+   "id": "Sec35",
+   "title": "Identification of gene co-expression modules",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "We used hdWGCNA (v0.4.1)<sup><a class=\"ref-chip\" data-ref=\"71\" href=\"#ref-71\">71</a>,<a class=\"ref-chip\" data-ref=\"72\" href=\"#ref-72\">72</a>,<a class=\"ref-chip\" data-ref=\"73\" href=\"#ref-73\">73</a></sup> to identify modules of co-expressed genes across our Col-0 reference atlas. To determine the list of genes that would be used in the analysis, we first applied the SetupForWGCNA function to obtain all genes expressed in at least 10% of cells in at least one lineage. This list was intersected with the VariableFeatures of the atlas, which contains all genes detected in every replicate, excluding those affected by protoplast isolation as well as mitochondrial and chloroplastic genes. The resulting set of 12,923 genes was supplied to SetupForWGCNA with the parameter gene_select = “custom”."
+    },
+    {
+     "t": "p",
+     "html": "To reduce data sparsity before WGCNA, we generated metacells (aggregates of small groups of similar cells per biological sample) and their associated expression matrices, which served as inputs for the network analysis. Metacells were generated using the MetacellsByGroups function using group.by=c(“lineage”,“orig.ident”), reduction = “integrated.rpca”, ident.group = “lineage”, k = 20 and max_shared=5, followed by normalization with NormalizeMetacells."
+    },
+    {
+     "t": "p",
+     "html": "We then set up the expression dataset for consensus network analysis across all replicates using SetMultiExpr with multi.group.by = “orig.ident”. After determining the soft power threshold for each batch with the TestSoftPowersConsensus function, the consensus co-expression network was constructed using ConstructNetworkusing minModuleSize=30, consensus=TRUE and deepSplit=2."
+    },
+    {
+     "t": "p",
+     "html": "Module scores were computed using ModuleExprScore using n_genes = “all” and method = “Seurat”, and projected onto the atlas UMAP with ModuleFeaturePlot using features = “scores”."
+    }
+   ]
+  },
+  {
+   "id": "Sec36",
+   "title": "GO enrichment analysis for ERS-specific modules",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "GO enrichment analysis was performed on the gene sets from modules 20 and 21 using ShinyGO (v.0.82; <a href=\"https://bioinformatics.sdstate.edu/go/?utm_source=chatgpt.com\">https://bioinformatics.sdstate.edu/go/)</a>. The analysis was run with the GO Biological Process pathway database, an FDR cut-off value of 0.01 and the number of pathways to display set to 50. Pathways were ranked by fold enrichment, and the results were visualized as a hierarchical clustering tree."
+    }
+   ]
+  },
+  {
+   "id": "Sec37",
+   "title": "TF regulon analysis",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Putative TF target genes were inferred from the DAP-seq dataset<sup><a class=\"ref-chip\" data-ref=\"17\" href=\"#ref-17\">17</a></sup>. The ‘Motifs in peaks (<i>P</i> ≤ 1 × 10<sup>–</sup><a class=\"ref-chip\" data-ref=\"4\" href=\"#ref-4\">4</a>)’ BED file (<a href=\"http://neomorph.salk.edu/dap_web/pages/browse_table_aj.php\">http://neomorph.salk.edu/dap_web/pages/browse_table_aj.php</a>) was used as a DNA-binding database for the profiled TFs of the DAP-seq dataset."
+    },
+    {
+     "t": "p",
+     "html": "The 500 bp promoter coordinates for <i>Arabidopsis</i> genes were extracted using the promoters function in GenomicRanges<sup><a class=\"ref-chip\" data-ref=\"74\" href=\"#ref-74\">74</a></sup>, genes(TxDb.Athaliana.BioMart.plantsmart28) as an annotation for <i>Arabidopsis</i> genes and the arguments upstream = 500, downstream = 50. For each TF, the binding coordinates were extracted from the Motif in Peaks.bed file and intersected with the promoter coordinates using the subsetByOverlaps function in GenomicRanges. Every gene that had a binding motif for the TF in the 500 bp region upstream of its transcription start site (TSS) was considered a putative target gene. For TFs that were not profiled in the DAP-seq studies but, according to the cisBP2 study<sup><a class=\"ref-chip\" data-ref=\"18\" href=\"#ref-18\">18</a></sup>, have a strong similarity in their DNA-binding domains with another TF that was studied by DAP-seq, their target genes were considered to be the same as the TF profiled by DAP-seq."
+    },
+    {
+     "t": "p",
+     "html": "We then converted the TF target predictions into data to be processed with hdWGCNA. A sparse matrix was generated whereby rows are all genes in the dataset, columns are TFs with putative targets and values are set to 1 if the gene was a target of the TF and 0 otherwise. This was input into the Seurat object using the SetMotifMatrix function of hdWGCNA (v.0.4.1). The list of TFs and their target genes was set with SetMotifTargets, and a dataframe containing the target numbers was input with SetMotifs. Because we were interested in what drives the expression of co-expression modules in the dataset, we restricted the analysis to all genes that were assigned to a co-expression module as well as all TFs with target information. A network of TFs and target genes was built using ConstructTFNetwork, in which the XGBoost regression was used to evaluate how important each TF is for predicting each gene based on single-cell data<sup><a class=\"ref-chip\" data-ref=\"72\" href=\"#ref-72\">72</a>,<a class=\"ref-chip\" data-ref=\"75\" href=\"#ref-75\">75</a></sup>. The network was then pruned to keep only the strongest TF–gene connections. Specifically, we selected the top ten TFs above a regulatory score threshold as regulators for each gene, using the AssignTFRegulons function with strategy = “A”, reg_thresh=0.01 and n_tfs=10. A positive regulon score was then computed for each cell using RegulonScores, and the scaled average regulon score per cell identity was plotted using pheatmap<sup><a class=\"ref-chip\" data-ref=\"76\" href=\"#ref-76\">76</a></sup>."
+    }
+   ]
+  },
+  {
+   "id": "Sec38",
+   "title": "Analysis of published single-cell and single-nucleus datasets",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Three published <i>Arabidopsis</i> root single-cell datasets were used to verify that the ERS and associated ERS-specific genes described in this study are also present in other datasets<sup><a class=\"ref-chip\" data-ref=\"7\" href=\"#ref-7\">7</a>,<a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a>,<a class=\"ref-chip\" data-ref=\"16\" href=\"#ref-16\">16</a></sup>. For ref. <sup><a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a></sup>, we directly used the processed Seurat object provided by the authors. For ref. <sup><a class=\"ref-chip\" data-ref=\"7\" href=\"#ref-7\">7</a></sup>, we reprocessed the raw fastq files using the same pre-processing steps as described for our Col-0 atlas. For ref. <sup><a class=\"ref-chip\" data-ref=\"16\" href=\"#ref-16\">16</a></sup>, we used the count matrices provided by the authors and performed batch integration."
+    },
+    {
+     "t": "p",
+     "html": "Once the final Seurat objects were generated, cells were annotated using our reference atlas following the same procedure described in the section ‘Cell annotation’ above. Cells were also projected onto the atlas UMAP embedding using the MapQuery function in Seurat (v.5.0.0). Co-expression gene modules were projected onto these datasets using the ProjectModules function in hdWGCNA (v.0.4.1), and module scores were calculated with ModuleExprScore using n_genes = “all” and method = “Seurat”."
+    }
+   ]
+  },
+  {
+   "id": "Sec39",
+   "title": "Label-transfer stability analysis",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "To assess the robustness of ERS assignments in external datasets, label transfer was repeated across a range of Seurat parameter settings using the integrated Col-0 atlas as reference. Specifically, projections were performed using 30, 40 or 50 principal components and k.anchor values of 5, 10 or 20, which generated nine parameter combinations in total. For each parameter set, transfer anchors were identified using FindTransferAnchors with the RPCA integrated embedding, and cell identities were assigned using TransferData. To focus analyses on cells robustly assigned to the ERS bifurcation, only cells classified as ERS<sup>+</sup> or ERS<sup>−</sup> in the baseline parameter set (50 principal components, k.anchor = 5) were retained for downstream comparisons. Predicted identities were separated into cell-type and ERS-state components, and stability was assessed independently for both. Cell-type stability was quantified as the fraction of parameter sets in which each cell retained its baseline cell-type assignment, whereas ERS stability was calculated as the consistency of ERS<sup>+</sup> and ERS<sup>−</sup> assignment in the baseline cell type across parameter sets. Global agreement between parameter sets was further quantified using pairwise adjusted rand index (ARI) comparisons across all transferred labels. Furthermore, the proportion of ERS<sup>+</sup> cells in each cell type, the fraction of cells retaining their baseline cell type assignment and the frequency of ERS state switching across parameter sets were calculated independently for each external dataset."
+    }
+   ]
+  },
+  {
+   "id": "Sec40",
+   "title": "Analysis of a previously published snATAC-seq dataset",
+   "level": 3,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The fragment files generated with Cell Ranger ATAC (v.1.2) and mapped to TAIR10/Araport11 reference were obtained from a previous study<sup><a class=\"ref-chip\" data-ref=\"16\" href=\"#ref-16\">16</a></sup>, imported to snapatac2 (v.2.6.4) and paired-insertions calculated<sup><a class=\"ref-chip\" data-ref=\"77\" href=\"#ref-77\">77</a></sup> in 500 bp bins<sup><a class=\"ref-chip\" data-ref=\"78\" href=\"#ref-78\">78</a></sup>. The cells were initially defined as barcodes associated with more than 3,500 and fewer than 50,000 fragments per barcode and with a TSS enrichment score higher than 2.5. Low-quality cells and outliers were also identified per-sample basis using the 3× median absolute deviation threshold and further removed from analysis<sup><a class=\"ref-chip\" data-ref=\"79\" href=\"#ref-79\">79</a></sup>. Following peak calling using macs3 (ref. <sup><a class=\"ref-chip\" data-ref=\"80\" href=\"#ref-80\">80</a></sup>), peak and gene activity matrices were calculated using the paired-insertion counting strategy. For ATAC–seq data integration into our scRNA-seq dataset, the peak matrices were imported to the Signac package<sup><a class=\"ref-chip\" data-ref=\"81\" href=\"#ref-81\">81</a></sup> and the dimensions of ATAC–seq were reduced using latent semantic indexing. ATAC–seq nuclei were assigned identities using our reference atlas and the FindTransferAnchors function with the parameters reduction = ‘cca’ and dims = 1:30, followed by TransferData with weight.reduction = obj[[“lsi”]] and dims = 2:30. The TransferData function and previously computed anchors were also used to generate an ‘imputed’ scRNA-seq matrix for the ATAC nuclei. Using this imputed matrix, the snATAC–seq and scRNA-seq reference atlases were merged into a single object, processed with ScaleData and RunPCA, and the first 30 principal components were used to produce a UMAP co-embedding of the two datasets."
+    }
+   ]
+  },
+  {
+   "id": "Sec41",
+   "title": "Differential module score analysis",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "To perform differential expression analysis of our co-expression modules, a Seurat object was created with all conditions to compare, and the data were scaled using ScaleData (Seurat v.5.0.0). The modules were projected into the new dataset using ProjectModules (hdWGCNA v.0.4.1). A module score was then calculated using ModuleExprScore. The differential module scores were determined using the FindDMEs function with features = “ModuleScores” and test.use = “wilcox”. The results were plotted using PlotDMEsLollipop."
+    }
+   ]
+  },
+  {
+   "id": "Sec42",
+   "title": "Differential composition analysis",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "All changes in cell composition were tested with sccomp (v.1.99.18) in R<sup><a class=\"ref-chip\" data-ref=\"82\" href=\"#ref-82\">82</a></sup>. Specifically, when evaluating changes in ERS<sup>+</sup> (and consequently ERS<sup>−</sup>) proportions, the Seurat object was subsetted to retain only cells that had reached the developmental stage at which they could be assigned to either state to avoid taking into account sampling effects that might affect the total number of mature cells captured. This process excluded the root cap, ‘early’ identities and the non-hair cells, for which the trajectories could determine the point of branching. The test was then run on the subsetted data using sccomp_estimate and sccomp_test, and results were plotted with sccomp_boxplot or with plot in the case of the water-deficit experiment for which the covariate is continuous."
+    }
+   ]
+  },
+  {
+   "id": "Sec43",
+   "title": "Counting of hair cells",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Seedlings were grown vertically on full (1×) or half (0.5×) MS plates, as for scRNA-seq experiments. Pictures of the roots were taken at 6 d.a.g., using a stereomicroscope (<i>n</i> = 16 for full MS, <i>n</i> = 23 for half MS, from two different plates each). A portion corresponding to approximately 2.5 mm from the tip was selected for each image of the root, and root hairs were manually counted using the Cell Counter plugin in Fiji. A significant difference in root hair density between the two conditions was determined using a Wilcoxon rank-sum test (wilcox.test function) in R."
+    },
+    {
+     "t": "p",
+     "html": "Note that the seedlings used for this quantification were in the top row of the plate (seeds were sown in two rows for scRNA-seq experiments). Roots of seedlings grown in the bottom row tended to have fewer root hairs (in both conditions)."
+    }
+   ]
+  },
+  {
+   "id": "Sec44",
+   "title": "Ecotype-specific DEGs",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "A new Seurat object was created using the Col-0 cells that were grown on full MS (which is all replicates except the three half MS replicates), as well as the cells of the C24, Cvi-0, Ler and Ws-2 atlases. The expression data were then pseudobulked per genotype, cell identity and batch using the AggregateExpression in Seurat (v.5.0.0). For each possible inter-accession replicate pair, a differential expression test was performed on the pseudobulk data using FindMarkers with DESeq2. Genes were considered differentially expressed if the adjusted <i>P</i> &lt; 0.05 and the absolute log<sub>2</sub> fold-change was &gt;0.5. For a gene to be called an accession-specific DEG, it had to be systematically differentially expressed in a given accession compared with the other four, but not be differentially expressed in any pairwise comparison between the remaining four accessions. The proportion of ecotype-specific DEGs per identity or per module were plotted using pheatmap."
+    }
+   ]
+  },
+  {
+   "id": "Sec45",
+   "title": "Adjustment for transcript abundance in water-deficit analyses",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Module scores for hdWGCNA modules 20 and 21 were calculated using AddModuleScore in Seurat (v.5.0.0). Analyses were restricted to cells classified as ERS<sup>+</sup> or ERS<sup>−</sup> from the 100% and 20% water conditions. Total UMI counts were log<sub>10</sub>-transformed after addition of a pseudocount. Module scores were analysed using linear mixed-effects models implemented in the lme4 (v.1.1.36) and lmerTest (v.3.2.1) R packages, with water condition as a fixed effect, log<sub>10</sub> UMI count modelled using a natural spline with four degrees of freedom (splines v.4.3.1 package) and biological replicate included as a random intercept. For visualization, cells were divided into ten equal-frequency bins according to log<sub>10</sub> UMI count, and mean module scores ± s.e.m. were calculated in each bin. Binning was used for visualization only; all statistical inference was performed on the unbinned cell-level data. The association between water condition and ERS identity was assessed using binomial generalized linear mixed-effects models (glmer; lme4) with biological replicate included as a random intercept. An unadjusted model included water condition alone, whereas the adjusted model also included log<sub>10</sub> UMI count as a fixed-effect covariate. Odds ratios and 95% confidence intervals for the effect of water condition were obtained using broom.mixed (v.0.2.9.6)."
+    }
+   ]
+  },
+  {
+   "id": "Sec46",
+   "title": "Quantification of HCR signals in the water-deficit experiment",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "To compare roots grown under different conditions using whole-mount HCR, all roots were grown, processed and imaged simultaneously using identical confocal settings."
+    },
+    {
+     "t": "p",
+     "html": "First, a mask defining the cytoplasmic area of the root was created in Fiji. A threshold-based mask of the whole root was generated from the calcofluor channel using Image &gt; Adjust &gt; Threshold, followed by Process &gt; Binary &gt; Close and Process &gt; Binary &gt; Fill Holes. A second threshold-based mask was created from the calcofluor channel to define cell walls. Subtracting the cell wall mask from the whole-root mask (Process &gt; Math &gt; Subtract) produced a mask containing only the cytoplasmic regions. This mask was then multiplied by a mask selecting the region from the elongation zone upwards, corresponding to the area where ERS expression begins in single-cell data."
+    },
+    {
+     "t": "p",
+     "html": "The resulting cytoplasmic mask was multiplied by the channel containing the HCR signal to retain only signal in cells from the elongation zone upwards. A separate threshold-based mask was created from the HCR signal channel to identify areas above a defined signal threshold. Multiplying this mask by the cytoplasmic mask ensured that only signal inside cells from the elongation zone upwards was considered."
+    },
+    {
+     "t": "p",
+     "html": "Custom Fiji macros were used to automate measurements across <i>z</i>-stacks. One macro measured the surface area covered by a mask in each slice, which enabled calculation of the total cytoplasmic area for normalization and the area of positive signal. Another macro measured the sum of all pixel intensities per slice, which was applied to the cytoplasmic signal image."
+    },
+    {
+     "t": "p",
+     "html": "Differences in signal between conditions were assessed using the Wilcoxon rank-sum test."
+    }
+   ]
+  },
+  {
+   "id": "Sec47",
+   "title": "Cell segmentation and volumetric quantification of single-cell fluorescence",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Single-cell segmentation was performed in 3D using the cell-wall staining channel. Individual cells were first manually seeded by placing markers in each cell lumen and storing these positions as regions of interest. A binary marker image was then generated from the seed positions. The cell wall channel was processed using the MorphoLibJ<sup><a class=\"ref-chip\" data-ref=\"83\" href=\"#ref-83\">83</a></sup> Morphological Filters (3D) function with the Gradient filter to enhance cell boundaries. The processed cell-wall image and binary marker image were subsequently used for marker-controlled watershed segmentation using MorphoLibJ. Segmentation outputs were manually curated to correct improper segmentations caused by discontinuities or holes in cell-wall staining, either by removing incorrectly segmented cells or merging oversegmented regions. Before fluorescence quantification, signal channels were background-corrected to minimize the contribution of imaging noise and diffuse background fluorescence. In brief, pixel intensities were measured in a region outside the root tissue, and the 99th percentile background intensity value was subtracted from all pixels in the image using the Subtract function in Fiji. The resulting filtered fluorescence images were combined with the curated segmentation masks to quantify volumetric single-cell mean fluorescence intensity using the Intensity Measurements 2D/3D function in MorphoLibJ. Measured fluorescence values were then mapped back onto segmented cells using the Assign Measure to Labels function in MorphoLibJ to generate colour-coded single-cell fluorescence representations."
+    },
+    {
+     "t": "p",
+     "html": "For the water-deficit HCR experiments, segmentation was restricted to epidermal and cortical cells. Fluorescence quantification was performed on the original, non-background-subtracted images so that identical image processing was applied across control and water-deficit samples, which enabled direct comparison of fluorescence intensities between conditions. Mean fluorescence intensity was measured for each segmented cell. To account for batch-to-batch differences in HCR signal intensity, the mean fluorescence intensity for each segmented cell was normalized to the mean per-cell fluorescence of the corresponding 100% water control sample processed in parallel. Empirical cumulative distribution functions were then generated to compare the distributions of normalized single-cell fluorescence intensities between conditions."
+    }
+   ]
+  },
+  {
+   "id": "Sec48",
+   "title": "Detection of bimodal cell populations in fluorescence imaging and scRNA-seq data",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "To test whether mutually exclusive marker expression defined two separable cell populations, Gaussian mixture modelling was applied independently to fluorescence quantification data and scRNA-seq expression data using the R package mclust<sup><a class=\"ref-chip\" data-ref=\"84\" href=\"#ref-84\">84</a></sup> (v.6.0.0). For fluorescence imaging data, mean single-cell fluorescence intensities for <i>AT3G01720</i> and <i>AT5G56550</i> were extracted from segmented cells following background correction and volumetric quantification. A marker ratio was calculated for each cell as <i>AT3G01720/(AT3G01720</i> + <i>AT5G56550)</i>, and Gaussian mixture modelling was performed on the resulting distribution using Mclust. Cells were assigned to the inferred populations based on maximum posterior probability. The fitted Gaussian components and their relative proportions were visualized over the observed ratio distribution. For scRNA-seq data, normalized expression values for <i>AT3G01720</i> and <i>AT5G56550</i> were extracted from hair cells in the reference atlas. Cells with zero combined expression for both markers were excluded from the analysis. A marker score was then calculated as the difference between <i>AT3G01720</i> and <i>AT5G56550</i> expression values, and Gaussian mixture modelling was applied to the score distribution using Mclust. Fitted Gaussian distributions were visualized together with the observed score distribution to assess the presence of two transcriptionally distinct populations."
+    }
+   ]
+  },
+  {
+   "id": "Sec49",
+   "title": "Reporting summary",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Further information on research design is available in the&nbsp;<a data-track=\"click\" data-track-label=\"link\" data-track-action=\"supplementary material anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#MOESM2\">Nature Portfolio Reporting Summary</a> linked to this article."
+    }
+   ]
+  },
+  {
+   "id": "data-availability",
+   "title": "Data availability",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The raw FASTQ files have been deposited into the European Nucleotide Archive under project accession <a href=\"https://www.ebi.ac.uk/ena/browser/view/PRJEB100815\">PRJEB100815</a>. Processed Seurat objects have been deposited into Zenodo (<a href=\"https://doi.org/10.5281/zenodo.17411120\">https://doi.org/10.5281/zenodo.17411120</a> and <a href=\"https://doi.org/10.5281/zenodo.17411065\">https://doi.org/10.5281/zenodo.17411065</a>)<sup><a class=\"ref-chip\" data-ref=\"85\" href=\"#ref-85\">85</a>,<a class=\"ref-chip\" data-ref=\"86\" href=\"#ref-86\">86</a></sup>. Previously published datasets re-analysed in this study are available from the Gene Expression Omnibus under accession numbers <a href=\"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE155304\">GSE155304</a> (ref. <sup><a class=\"ref-chip\" data-ref=\"16\" href=\"#ref-16\">16</a></sup>), <a href=\"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141730\">GSE141730</a> (ref. <sup><a class=\"ref-chip\" data-ref=\"7\" href=\"#ref-7\">7</a></sup>) and <a href=\"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE152766\">GSE152766</a> (ref. <sup><a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a></sup>).&nbsp;<a data-track=\"click\" data-track-label=\"link\" data-track-action=\"section anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Sec53\">Source data</a> are provided with this paper."
+    }
+   ]
+  },
+  {
+   "id": "code-availability",
+   "title": "Code availability",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "All data were analysed using commonly used open-source software programs and packages as detailed in the <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"section anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#Sec7\">Methods</a>. The custom code used for analyses in this study and central to the conclusions of the paper is openly accessible at GitHub (<a href=\"https://github.com/ListerLab/root_ERS_dichotomy\">https://github.com/ListerLab/root_ERS_dichotomy</a>)."
+    }
+   ]
+  },
+  {
+   "id": "Ack1",
+   "title": "Acknowledgements",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "We thank O. Hamant, A. de Mendoza, A. Sadier, I. Small and J. Borevitz for feedback on this manuscript; A. Hubbard, L. Hirvonen and all&nbsp;staff at Microscopy Australia at the Centre for Microscopy, Characterisation &amp; Analysis, The University of Western Australia, a facility funded by the University, State and Commonwealth Governments, for their scientific and technical assistance; staff at the Australian Plant Phenomics Network (APPN), which is supported by the Australian Government’s National Collaborative Research Infrastructure Strategy (NCRIS), for use of their facilities and their scientific and technical assistance; the UWA IT–HPC team<sup><a class=\"ref-chip\" data-ref=\"87\" href=\"#ref-87\">87</a></sup> for use of KAYA, the High-Performance Computing facility at The University of Western Australia, and their technical assistance; C. Woodruff and C. Ye for assistance in developing genotype-based cell-classification approaches; H. Löffler-Wirth for help with the use of the oposSOM package in the initial version of the manuscript; and H. Choi for sharing the HCR v.3 protocol ahead of publication. Genomics libraries and data were generated at the ACRF Centre for Advanced Cancer Genomics and Genomics WA."
+    }
+   ]
+  },
+  {
+   "id": "Fun",
+   "title": "Funding",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "This work was supported by the following grants to R.L.: NHMRC Investigator grants GNT1178460 and GNT2035042, a Silvia and Charles Viertel Senior Medical Research Fellowship, a Howard Hughes Medical Institute International Research Scholarship, Australian Research Council (ARC) DP140104044, ARC DP210104058, ARC FT120100862 and ARC LE170100225, and ARC Centres of Excellence in Plant Energy Biology CE140100008 and Plants for Space CE230100015. T.S. was supported by a Jean Rogerson Postgraduate Research Scholarship."
+    }
+   ]
+  },
+  {
+   "id": "author-information",
+   "title": "Author information",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "affiliations",
+   "title": "Authors and Affiliations",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "list",
+     "html": "<li id=\"Aff1\"><p class=\"c-article-author-affiliation__address\">ARC Centre of Excellence in Plant Energy Biology, School of Molecular Sciences, University of Western Australia, Perth, Western Australia, Australia</p><p class=\"c-article-author-affiliation__authors-list\">Marina Oliva,&nbsp;Tim Stuart,&nbsp;Dave Tang,&nbsp;Daniel Poppe,&nbsp;Jahnvi Pflueger&nbsp;&amp;&nbsp;Ryan Lister</p></li><li id=\"Aff2\"><p class=\"c-article-author-affiliation__address\">ARC Centre of Excellence in Plants for Space, School of Molecular Sciences, University of Western Australia, Perth, Western Australia, Australia</p><p class=\"c-article-author-affiliation__authors-list\">Marina Oliva,&nbsp;Adil Khan,&nbsp;Milly Petterson&nbsp;&amp;&nbsp;Ryan Lister</p></li><li id=\"Aff3\"><p class=\"c-article-author-affiliation__address\">Genome Institute of Singapore, Agency for Science Technology and Research (A*STAR), Singapore, Singapore</p><p class=\"c-article-author-affiliation__authors-list\">Tim Stuart</p></li><li id=\"Aff4\"><p class=\"c-article-author-affiliation__address\">The Harry Perkins Institute of Medical Research, QEII Medical Centre and Centre for Medical Research, The University of Western Australia, Perth, Western Australia, Australia</p><p class=\"c-article-author-affiliation__authors-list\">Olivier Clement,&nbsp;Dawid Makosa,&nbsp;Daniel Poppe,&nbsp;Jahnvi Pflueger&nbsp;&amp;&nbsp;Ryan Lister</p></li><li id=\"Aff5\"><p class=\"c-article-author-affiliation__address\">The Walter and Eliza Hall Institute of Medical Research, Melbourne, Victoria, Australia</p><p class=\"c-article-author-affiliation__authors-list\">Jafar S. Jabbari&nbsp;&amp;&nbsp;Scott Gigante</p></li><li id=\"Aff6\"><p class=\"c-article-author-affiliation__address\">Australian Genome Research Facility, Melbourne, Victoria, Australia</p><p class=\"c-article-author-affiliation__authors-list\">Jafar S. Jabbari</p></li><li id=\"Aff7\"><p class=\"c-article-author-affiliation__address\">La Trobe Institute for Sustainable Agriculture and Food, Department of Animal, Plant and Soil Sciences, School of Life Sciences, La Trobe University, Bundoora, Victoria, Australia</p><p class=\"c-article-author-affiliation__authors-list\">Jonathan Michael Dragwidge&nbsp;&amp;&nbsp;Mathew G. Lewsey</p></li><li id=\"Aff8\"><p class=\"c-article-author-affiliation__address\">State Key Laboratory of Plant Environmental Resilience, College of Life Science, Zhejiang University, Hangzhou, P. R. China</p><p class=\"c-article-author-affiliation__authors-list\">James Whelan</p></li><li id=\"Aff9\"><p class=\"c-article-author-affiliation__address\">Australian Research Council Research Hub for Protected Cropping, La Trobe University, Bundoora, Victoria, Australia</p><p class=\"c-article-author-affiliation__authors-list\">Mathew G. Lewsey</p></li><li id=\"Aff10\"><p class=\"c-article-author-affiliation__address\">ARC Centre of Excellence in Plants for Space, La Trobe University, Bundoora, Victoria, Australia</p><p class=\"c-article-author-affiliation__authors-list\">Mathew G. Lewsey</p></li>"
+    }
+   ]
+  },
+  {
+   "id": "contributions",
+   "title": "Contributions",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "M.O. and R.L. conceived the study and designed the experiments and analyses. M.O. performed the experiments and analysed the data. T.S. developed the cell genotyping and data integration methods, and analysed the bulk RNA-seq libraries. D.T. performed preliminary analyses of <i>Arabidopsis</i> accessions and assisted in establishing various analytical tools. A.K. and M.P. conducted some of the HCR experiments. O.C. contributed to testing spatial transcriptomics methods and generating single-cell libraries. D.M. analysed the snATAC–seq data. S.G. contributed to the development of the cell genotyping method. D.P. and J.P. sequenced the libraries. J.M.D., J.S.J., J.W. and M.G.L. assisted with pilot experiments. M.O. and R.L. wrote the manuscript. All authors reviewed and approved the final version of the manuscript."
+    }
+   ]
+  },
+  {
+   "id": "corresponding-author",
+   "title": "Corresponding authors",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Correspondence to\n                <a id=\"corresp-c1\" aria-label=\"email Marina Oliva\" href=\"mailto:marina.oliva@uwa.edu.au\">Marina Oliva</a> or <a id=\"corresp-c2\" aria-label=\"email Ryan Lister\" href=\"mailto:ryan.lister@uwa.edu.au\">Ryan Lister</a>."
+    }
+   ]
+  },
+  {
+   "id": "ethics",
+   "title": "Ethics declarations",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "FPar2",
+   "title": "Competing interests",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The authors declare no competing interests."
+    }
+   ]
+  },
+  {
+   "id": "peer-review",
+   "title": "Peer review",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "FPar1",
+   "title": "Peer review information",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "<i>Nature</i> thanks the anonymous reviewers for their contribution to the peer review of this work. <a data-track=\"click\" data-track-label=\"link\" data-track-action=\"supplementary material anchor\" href=\"https://www.nature.com/articles/s41586-026-11179-y#MOESM7\">Peer reviewer reports</a> are available."
+    }
+   ]
+  },
+  {
+   "id": "additional-information",
+   "title": "Additional information",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "<b>Publisher’s note</b> Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations."
+    }
+   ]
+  },
+  {
+   "id": "Sec53",
+   "title": "Source data",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "sec-source-data-extended-data-fig-12-download-xlsx",
+   "title": "Source Data Extended Data Fig. 12 (download XLSX )",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "<b>Open Access</b>  This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the licensed material. You do not have permission under this licence to share adapted material derived from this article or parts of it. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit <a href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\" rel=\"license\">http://creativecommons.org/licenses/by-nc-nd/4.0/</a>."
+    }
+   ]
+  },
+  {
+   "id": "article-info",
+   "title": "About this article",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Oliva, M., Stuart, T., Tang, D. <i>et al.</i> An environmentally regulated dichotomy in cell lineages of the root.\n                    <i>Nature</i>  (2026). https://doi.org/10.1038/s41586-026-11179-y"
+    },
+    {
+     "t": "list",
+     "html": "<li class=\"c-bibliographic-information__list-item\"><p>Received<span class=\"u-hide\">: </span><span class=\"c-bibliographic-information__value\"><time datetime=\"2022-06-27\">27 June 2022</time></span></p></li><li class=\"c-bibliographic-information__list-item\"><p>Accepted<span class=\"u-hide\">: </span><span class=\"c-bibliographic-information__value\"><time datetime=\"2026-09-17\">17 September 2026</time></span></p></li><li class=\"c-bibliographic-information__list-item\"><p>Published<span class=\"u-hide\">: </span><span class=\"c-bibliographic-information__value\"><time datetime=\"2026-10-21\">21 October 2026</time></span></p></li><li class=\"c-bibliographic-information__list-item\"><p>Version of record<span class=\"u-hide\">: </span><span class=\"c-bibliographic-information__value\"><time datetime=\"2026-10-21\">21 October 2026</time></span></p></li><li class=\"c-bibliographic-information__list-item c-bibliographic-information__list-item--full-width\"><p><abbr title=\"Digital Object Identifier\">DOI</abbr><span class=\"u-hide\">: </span><span class=\"c-bibliographic-information__value\">https://doi.org/10.1038/s41586-026-11179-y</span></p></li>"
+    }
+   ]
+  }
+ ],
+ "figures": [
+  {
+   "id": "fig-1",
+   "label": "Fig. 1",
+   "captionHtml": "<b id=\"Fig1\" class=\"c-article-section__figure-caption\" data-test=\"figure-caption-text\">A high-resolution single-cell atlas of the <i>Arabidopsis</i> root tip reveals an early dichotomy in cell lineage trajectories.</b>",
+   "src": "http://127.0.0.1:8799/An%20environmentally%20regulated%20dichotomy%20in%20cell%20lineages%20of%20the%20root%20_%20Nature_files/41586_2026_11179_Fig1_HTML.png",
+   "thumb": "http://127.0.0.1:8799/An%20environmentally%20regulated%20dichotomy%20in%20cell%20lineages%20of%20the%20root%20_%20Nature_files/41586_2026_11179_Fig1_HTML.png",
+   "alt": "Fig. 1: A high-resolution single-cell atlas of the Arabidopsis root tip reveals an early dichotomy in cell lineage trajectories.",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y/figures/1",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-2",
+   "label": "Fig. 2",
+   "captionHtml": "<b id=\"Fig2\" class=\"c-article-section__figure-caption\" data-test=\"figure-caption-text\">Co-expression gene modules identify a branch-specific transcriptional signature common to all cell types.</b>",
+   "src": "http://127.0.0.1:8799/An%20environmentally%20regulated%20dichotomy%20in%20cell%20lineages%20of%20the%20root%20_%20Nature_files/41586_2026_11179_Fig2_HTML.png",
+   "thumb": "http://127.0.0.1:8799/An%20environmentally%20regulated%20dichotomy%20in%20cell%20lineages%20of%20the%20root%20_%20Nature_files/41586_2026_11179_Fig2_HTML.png",
+   "alt": "Fig. 2: Co-expression gene modules identify a branch-specific transcriptional signature common to all cell types.",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y/figures/2",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-3",
+   "label": "Fig. 3",
+   "captionHtml": "<b id=\"Fig3\" class=\"c-article-section__figure-caption\" data-test=\"figure-caption-text\">Whole-mount HCR validates the bifid topologies and associated branch-specific genes.</b>",
+   "src": "http://127.0.0.1:8799/An%20environmentally%20regulated%20dichotomy%20in%20cell%20lineages%20of%20the%20root%20_%20Nature_files/41586_2026_11179_Fig3_HTML.png",
+   "thumb": "http://127.0.0.1:8799/An%20environmentally%20regulated%20dichotomy%20in%20cell%20lineages%20of%20the%20root%20_%20Nature_files/41586_2026_11179_Fig3_HTML.png",
+   "alt": "Fig. 3: Whole-mount HCR validates the bifid topologies and associated branch-specific genes.",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y/figures/3",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-4",
+   "label": "Fig. 4",
+   "captionHtml": "<b id=\"Fig4\" class=\"c-article-section__figure-caption\" data-test=\"figure-caption-text\">The branch-1-specific ERS is regulated by ABA.</b>",
+   "src": "http://127.0.0.1:8799/An%20environmentally%20regulated%20dichotomy%20in%20cell%20lineages%20of%20the%20root%20_%20Nature_files/41586_2026_11179_Fig4_HTML.png",
+   "thumb": "http://127.0.0.1:8799/An%20environmentally%20regulated%20dichotomy%20in%20cell%20lineages%20of%20the%20root%20_%20Nature_files/41586_2026_11179_Fig4_HTML.png",
+   "alt": "Fig. 4: The branch-1-specific ERS is regulated by ABA.",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y/figures/4",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-5",
+   "label": "Fig. 5",
+   "captionHtml": "<b id=\"Fig5\" class=\"c-article-section__figure-caption\" data-test=\"figure-caption-text\">Water deficiency modulates the prevalence of the ERS.</b>",
+   "src": "http://127.0.0.1:8799/An%20environmentally%20regulated%20dichotomy%20in%20cell%20lineages%20of%20the%20root%20_%20Nature_files/41586_2026_11179_Fig5_HTML.png",
+   "thumb": "http://127.0.0.1:8799/An%20environmentally%20regulated%20dichotomy%20in%20cell%20lineages%20of%20the%20root%20_%20Nature_files/41586_2026_11179_Fig5_HTML.png",
+   "alt": "Fig. 5: Water deficiency modulates the prevalence of the ERS.",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y/figures/5",
+   "origin": "inline"
+  }
+ ],
+ "references": [
+  {
+   "n": 1,
+   "id": "ref-CR1",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR1\">Petricka, J. J., Winter, C. M. &amp; Benfey, P. N. Control of <i>Arabidopsis</i> root development. <i>Annu. Rev. Plant Biol.</i> <b>63</b>, 563–590 (2012).</p>",
+   "text": "Petricka, J. J., Winter, C. M. & Benfey, P. N. Control of Arabidopsis root development. Annu. Rev. Plant Biol. 63, 563–590 (2012).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 2,
+   "id": "ref-CR2",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR2\">Jean-Baptiste, K. et al. Dynamics of gene expression in single root cells of <i>Arabidopsis</i> <i>thaliana</i>. <i>Plant Cell</i> <b>31</b>, 993–1011 (2019).</p>",
+   "text": "Jean-Baptiste, K. et al. Dynamics of gene expression in single root cells of Arabidopsis thaliana. Plant Cell 31, 993–1011 (2019).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 3,
+   "id": "ref-CR3",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR3\">Denyer, T. et al. Spatiotemporal developmental trajectories in the <i>Arabidopsis</i> root revealed using high-throughput single-cell RNA sequencing. <i>Dev. Cell</i> <b>48</b>, 840–852 (2019).</p>",
+   "text": "Denyer, T. et al. Spatiotemporal developmental trajectories in the Arabidopsis root revealed using high-throughput single-cell RNA sequencing. Dev. Cell 48, 840–852 (2019).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 4,
+   "id": "ref-CR4",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR4\">Ryu, K. H., Huang, L., Kang, H. M. &amp; Schiefelbein, J. Single-cell RNA sequencing resolves molecular relationships among individual plant cells. <i>Plant Physiol.</i> <b>179</b>, 1444–1456 (2019).</p>",
+   "text": "Ryu, K. H., Huang, L., Kang, H. M. & Schiefelbein, J. Single-cell RNA sequencing resolves molecular relationships among individual plant cells. Plant Physiol. 179, 1444–1456 (2019).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 5,
+   "id": "ref-CR5",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR5\">Shulse, C. N. et al. High-throughput single-cell transcriptome profiling of plant cell types. <i>Cell Rep.</i> <b>27</b>, 2241–2247 (2019).</p>",
+   "text": "Shulse, C. N. et al. High-throughput single-cell transcriptome profiling of plant cell types. Cell Rep. 27, 2241–2247 (2019).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 6,
+   "id": "ref-CR6",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR6\">Zhang, T.-Q., Xu, Z.-G., Shang, G.-D. &amp; Wang, J.-W. A single-cell RNA sequencing profiles the developmental landscape of <i>Arabidopsis</i> root. <i>Mol. Plant</i> <b>12</b>, 648–660 (2019).</p>",
+   "text": "Zhang, T.-Q., Xu, Z.-G., Shang, G.-D. & Wang, J.-W. A single-cell RNA sequencing profiles the developmental landscape of Arabidopsis root. Mol. Plant 12, 648–660 (2019).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 7,
+   "id": "ref-CR7",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR7\">Wendrich, J. R. et al. Vascular transcription factors guide plant epidermal responses to limiting phosphate conditions. <i>Science</i> <b>370</b>, eaay4970 (2020).</p>",
+   "text": "Wendrich, J. R. et al. Vascular transcription factors guide plant epidermal responses to limiting phosphate conditions. Science 370, eaay4970 (2020).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 8,
+   "id": "ref-CR8",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR8\">Shahan, R. et al. A single-cell <i>Arabidopsis</i> root atlas reveals developmental trajectories in wild-type and cell identity mutants. <i>Dev. Cell</i> <b>57</b>, 543–560 (2022).</p>",
+   "text": "Shahan, R. et al. A single-cell Arabidopsis root atlas reveals developmental trajectories in wild-type and cell identity mutants. Dev. Cell 57, 543–560 (2022).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 9,
+   "id": "ref-CR9",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR9\">Otero, S. et al. A root phloem pole cell atlas reveals common transcriptional states in protophloem-adjacent cells. <i>Nat. Plants</i> <b>8</b>, 954–970 (2022).</p>",
+   "text": "Otero, S. et al. A root phloem pole cell atlas reveals common transcriptional states in protophloem-adjacent cells. Nat. Plants 8, 954–970 (2022).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 10,
+   "id": "ref-CR10",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR10\">Choi, H. M. T. et al. Third-generation in situ hybridization chain reaction: multiplexed, quantitative, sensitive, versatile, robust. <i>Development</i> <b>145</b>, dev165753 (2018).</p>",
+   "text": "Choi, H. M. T. et al. Third-generation in situ hybridization chain reaction: multiplexed, quantitative, sensitive, versatile, robust. Development 145, dev165753 (2018).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 11,
+   "id": "ref-CR11",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR11\">Kurihara, D., Mizuta, Y., Sato, Y. &amp; Higashiyama, T. ClearSee: a rapid optical clearing reagent for whole-plant fluorescence imaging. <i>Development</i> <b>142</b>, 4168–4179 (2015).</p>",
+   "text": "Kurihara, D., Mizuta, Y., Sato, Y. & Higashiyama, T. ClearSee: a rapid optical clearing reagent for whole-plant fluorescence imaging. Development 142, 4168–4179 (2015).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 12,
+   "id": "ref-CR12",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR12\">Kumpf, R. P. &amp; Nowack, M. K. The root cap: a short story of life and death. <i>J. Exp. Bot.</i> <b>66</b>, 5651–5662 (2015).</p>",
+   "text": "Kumpf, R. P. & Nowack, M. K. The root cap: a short story of life and death. J. Exp. Bot. 66, 5651–5662 (2015).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 13,
+   "id": "ref-CR13",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR13\">Pi, L. et al. Organizer-derived WOX5 signal maintains root columella stem cells through chromatin-mediated repression of CDF4 expression. <i>Dev. Cell</i> <b>33</b>, 576–588 (2015).</p>",
+   "text": "Pi, L. et al. Organizer-derived WOX5 signal maintains root columella stem cells through chromatin-mediated repression of CDF4 expression. Dev. Cell 33, 576–588 (2015).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 14,
+   "id": "ref-CR14",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR14\">Willemsen, V. et al. The NAC domain transcription factors FEZ and SOMBRERO control the orientation of cell division plane in <i>Arabidopsis</i> root stem cells. <i>Dev. Cell</i> <b>15</b>, 913–922 (2008).</p>",
+   "text": "Willemsen, V. et al. The NAC domain transcription factors FEZ and SOMBRERO control the orientation of cell division plane in Arabidopsis root stem cells. Dev. Cell 15, 913–922 (2008).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 15,
+   "id": "ref-CR15",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR15\">Shi, C.-L. et al. The dynamics of root cap sloughing in <i>Arabidopsis</i> is regulated by peptide signalling. <i>Nat. Plants</i> <b>4</b>, 596–604 (2018).</p>",
+   "text": "Shi, C.-L. et al. The dynamics of root cap sloughing in Arabidopsis is regulated by peptide signalling. Nat. Plants 4, 596–604 (2018).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 16,
+   "id": "ref-CR16",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR16\">Farmer, A., Thibivilliers, S., Ryu, K. H., Schiefelbein, J. &amp; Libault, M. Single-nucleus RNA and ATAC sequencing reveals the impact of chromatin accessibility on gene expression in <i>Arabidopsis</i> roots at the single-cell level. <i>Mol. Plant</i> <b>14</b>, 372–383 (2021).</p>",
+   "text": "Farmer, A., Thibivilliers, S., Ryu, K. H., Schiefelbein, J. & Libault, M. Single-nucleus RNA and ATAC sequencing reveals the impact of chromatin accessibility on gene expression in Arabidopsis roots at the single-cell level. Mol. Plant 14, 372–383 (2021).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 17,
+   "id": "ref-CR17",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR17\">O’Malley, R. C. et al. Cistrome and epicistrome features shape the regulatory DNA landscape. <i>Cell</i> <b>165</b>, 1280–1292 (2016).</p>",
+   "text": "O’Malley, R. C. et al. Cistrome and epicistrome features shape the regulatory DNA landscape. Cell 165, 1280–1292 (2016).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 18,
+   "id": "ref-CR18",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR18\">Lambert, S. A. et al. Similarity regression predicts evolution of transcription factor sequence specificity. <i>Nat. Genet.</i> <b>51</b>, 981–989 (2019).</p>",
+   "text": "Lambert, S. A. et al. Similarity regression predicts evolution of transcription factor sequence specificity. Nat. Genet. 51, 981–989 (2019).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 19,
+   "id": "ref-CR19",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR19\">Choi, H., Hong, J., Ha, J., Kang, J. &amp; Kim, S. Y. ABFs, a family of ABA-responsive element binding factors. <i>J. Biol. Chem.</i> <b>275</b>, 1723–1730 (2000).</p>",
+   "text": "Choi, H., Hong, J., Ha, J., Kang, J. & Kim, S. Y. ABFs, a family of ABA-responsive element binding factors. J. Biol. Chem. 275, 1723–1730 (2000).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 20,
+   "id": "ref-CR20",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR20\">Uno, Y. et al. <i>Arabidopsis</i> basic leucine zipper transcription factors involved in an abscisic acid-dependent signal transduction pathway under drought and high-salinity conditions. <i>Proc. Natl Acad. Sci. USA</i> <b>97</b>, 11632–11637 (2000).</p>",
+   "text": "Uno, Y. et al. Arabidopsis basic leucine zipper transcription factors involved in an abscisic acid-dependent signal transduction pathway under drought and high-salinity conditions. Proc. Natl Acad. Sci. USA 97, 11632–11637 (2000).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 21,
+   "id": "ref-CR21",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR21\">Kang, J.-Y., Choi, H.-I., Im, M.-Y. &amp; Kim, S. Y. <i>Arabidopsis</i> basic leucine zipper proteins that mediate stress-responsive abscisic acid signaling. <i>Plant Cell</i> <b>14</b>, 343–357 (2002).</p>",
+   "text": "Kang, J.-Y., Choi, H.-I., Im, M.-Y. & Kim, S. Y. Arabidopsis basic leucine zipper proteins that mediate stress-responsive abscisic acid signaling. Plant Cell 14, 343–357 (2002).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 22,
+   "id": "ref-CR22",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR22\">Himmelbach, A., Hoffmann, T., Leube, M., Höhener, B. &amp; Grill, E. Homeodomain protein ATHB6 is a target of the protein phosphatase ABI1 and regulates hormone responses in <i>Arabidopsis</i>. <i>EMBO J.</i> <b>21</b>, 3029–3038 (2002).</p>",
+   "text": "Himmelbach, A., Hoffmann, T., Leube, M., Höhener, B. & Grill, E. Homeodomain protein ATHB6 is a target of the protein phosphatase ABI1 and regulates hormone responses in Arabidopsis. EMBO J. 21, 3029–3038 (2002).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 23,
+   "id": "ref-CR23",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR23\">Johannesson, H., Wang, Y., Hanson, J. &amp; Engström, P. The <i>Arabidopsis thaliana</i> homeobox gene ATHB5 is a potential regulator of abscisic acid responsiveness in developing seedlings. <i>Plant Mol. Biol.</i> <b>51</b>, 719–729 (2003).</p>",
+   "text": "Johannesson, H., Wang, Y., Hanson, J. & Engström, P. The Arabidopsis thaliana homeobox gene ATHB5 is a potential regulator of abscisic acid responsiveness in developing seedlings. Plant Mol. Biol. 51, 719–729 (2003).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 24,
+   "id": "ref-CR24",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR24\">Söderman, E., Mattsson, J. &amp; Engström, P. The <i>Arabidopsis</i> homeobox gene <i>ATHB-7</i> is induced by water deficit and by abscisic acid. <i>Plant J.</i> <b>10</b>, 375–381 (1996).</p>",
+   "text": "Söderman, E., Mattsson, J. & Engström, P. The Arabidopsis homeobox gene ATHB-7 is induced by water deficit and by abscisic acid. Plant J. 10, 375–381 (1996).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 25,
+   "id": "ref-CR25",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR25\">Liu, T., Longhurst, A. D., Talavera-Rauh, F., Hokin, S. A. &amp; Barton, M. K. The <i>Arabidopsis</i> transcription factor ABIG1 relays ABA signaled growth inhibition and drought induced senescence. <i>eLife</i> <b>5</b>, e13768 (2016).</p>",
+   "text": "Liu, T., Longhurst, A. D., Talavera-Rauh, F., Hokin, S. A. & Barton, M. K. The Arabidopsis transcription factor ABIG1 relays ABA signaled growth inhibition and drought induced senescence. eLife 5, e13768 (2016).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 26,
+   "id": "ref-CR26",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR26\">Kuno, N. et al. The novel MYB protein EARLY-PHYTOCHROME-RESPONSIVE1 is a component of a slave circadian oscillator in <i>Arabidopsis</i>. <i>Plant Cell</i> <b>15</b>, 2476–2488 (2003).</p>",
+   "text": "Kuno, N. et al. The novel MYB protein EARLY-PHYTOCHROME-RESPONSIVE1 is a component of a slave circadian oscillator in Arabidopsis. Plant Cell 15, 2476–2488 (2003).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 27,
+   "id": "ref-CR27",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR27\">Zhang, X. et al. Constitutive expression of <i>CIR1</i> (<i>RVE2</i>) affects several circadian-regulated processes and seed germination in <i>Arabidopsis</i>. <i>Plant J.</i> <b>51</b>, 512–525 (2007).</p>",
+   "text": "Zhang, X. et al. Constitutive expression of CIR1 (RVE2) affects several circadian-regulated processes and seed germination in Arabidopsis. Plant J. 51, 512–525 (2007).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 28,
+   "id": "ref-CR28",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR28\">Hsu, P. Y., Devisetty, U. K. &amp; Harmer, S. L. Accurate timekeeping is controlled by a cycling activator in <i>Arabidopsis</i>. <i>eLife</i> <b>2</b>, e00473 (2013).</p>",
+   "text": "Hsu, P. Y., Devisetty, U. K. & Harmer, S. L. Accurate timekeeping is controlled by a cycling activator in Arabidopsis. eLife 2, e00473 (2013).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 29,
+   "id": "ref-CR29",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR29\">Leung, J., Merlot, S. &amp; Giraudat, J. The <i>Arabidopsis</i> <i>ABSCISIC ACID-INSENSITIVE2</i> (<i>ABI2</i>) and <i>ABI1</i> genes encode homologous protein phosphatases 2C involved in abscisic acid signal transduction. <i>Plant Cell</i> <b>9</b>, 759–771 (1997).</p>",
+   "text": "Leung, J., Merlot, S. & Giraudat, J. The Arabidopsis ABSCISIC ACID-INSENSITIVE2 (ABI2) and ABI1 genes encode homologous protein phosphatases 2C involved in abscisic acid signal transduction. Plant Cell 9, 759–771 (1997).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 30,
+   "id": "ref-CR30",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR30\">Wang, X. et al. ABRE-BINDING FACTORS play a role in the feedback regulation of ABA signaling by mediating rapid ABA induction of ABA co-receptor genes. <i>New Phytol.</i> <b>221</b>, 341–355 (2019).</p>",
+   "text": "Wang, X. et al. ABRE-BINDING FACTORS play a role in the feedback regulation of ABA signaling by mediating rapid ABA induction of ABA co-receptor genes. New Phytol. 221, 341–355 (2019).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 31,
+   "id": "ref-CR31",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR31\">Moriwaki, T., Miyazawa, Y., Fujii, N. &amp; Takahashi, H. Light and abscisic acid signalling are integrated by <i>MIZ1</i> gene expression and regulate hydrotropic response in roots of <i>Arabidopsis thaliana</i>: light and ABA regulate MIZ1-dependent hydrotropism. <i>Plant Cell Environ.</i> <b>35</b>, 1359–1368 (2012).</p>",
+   "text": "Moriwaki, T., Miyazawa, Y., Fujii, N. & Takahashi, H. Light and abscisic acid signalling are integrated by MIZ1 gene expression and regulate hydrotropic response in roots of Arabidopsis thaliana: light and ABA regulate MIZ1-dependent hydrotropism. Plant Cell Environ. 35, 1359–1368 (2012).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 32,
+   "id": "ref-CR32",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR32\">Laby, R. J., Kincaid, M. S., Kim, D. &amp; Gibson, S. I. The <i>Arabidopsis</i> sugar-insensitive mutants sis4 and sis5 are defective in abscisic acid synthesis and response. <i>Plant J.</i> <b>23</b>, 587–596 (2000).</p>",
+   "text": "Laby, R. J., Kincaid, M. S., Kim, D. & Gibson, S. I. The Arabidopsis sugar-insensitive mutants sis4 and sis5 are defective in abscisic acid synthesis and response. Plant J. 23, 587–596 (2000).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 33,
+   "id": "ref-CR33",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR33\">Antoni, R. et al. PYRABACTIN RESISTANCE1-LIKE8 plays an important role for the regulation of abscisic acid signaling in root. <i>Plant Physiol.</i> <b>161</b>, 931–941 (2013).</p>",
+   "text": "Antoni, R. et al. PYRABACTIN RESISTANCE1-LIKE8 plays an important role for the regulation of abscisic acid signaling in root. Plant Physiol. 161, 931–941 (2013).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 34,
+   "id": "ref-CR34",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR34\">Fukaki, H. et al. Genetic evidence that the endodermis is essential for shoot gravitropism in <i>Arabidopsis thaliana</i>. <i>Plant J.</i> <b>14</b>, 425–430 (1998).</p>",
+   "text": "Fukaki, H. et al. Genetic evidence that the endodermis is essential for shoot gravitropism in Arabidopsis thaliana. Plant J. 14, 425–430 (1998).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 35,
+   "id": "ref-CR35",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR35\">Scheres, B. et al. Mutations affecting the radial organisation of the <i>Arabidopsis</i> root display specific defects throughout the embryonic axis. <i>Development</i> <b>121</b>, 53–62 (1995).</p>",
+   "text": "Scheres, B. et al. Mutations affecting the radial organisation of the Arabidopsis root display specific defects throughout the embryonic axis. Development 121, 53–62 (1995).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 36,
+   "id": "ref-CR36",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR36\">Di Laurenzio, L. et al. The <i>SCARECROW</i> gene regulates an asymmetric cell division that is essential for generating the radial organization of the <i>Arabidopsis</i> root. <i>Cell</i> <b>86</b>, 423–433 (1996).</p>",
+   "text": "Di Laurenzio, L. et al. The SCARECROW gene regulates an asymmetric cell division that is essential for generating the radial organization of the Arabidopsis root. Cell 86, 423–433 (1996).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 37,
+   "id": "ref-CR37",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR37\">Carlsbecker, A. et al. Cell signalling by microRNA165/6 directs gene dose-dependent root cell fate. <i>Nature</i> <b>465</b>, 316–321 (2010).</p>",
+   "text": "Carlsbecker, A. et al. Cell signalling by microRNA165/6 directs gene dose-dependent root cell fate. Nature 465, 316–321 (2010).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 38,
+   "id": "ref-CR38",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR38\">Gonzalez, S. et al. <i>Arabidopsis</i> transcriptome responses to low water potential using high-throughput plate assays. <i>eLife</i> <b>12</b>, RP84747 (2024).</p>",
+   "text": "Gonzalez, S. et al. Arabidopsis transcriptome responses to low water potential using high-throughput plate assays. eLife 12, RP84747 (2024).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 39,
+   "id": "ref-CR39",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR39\">Seo, P. J. &amp; Mas, P. STRESSing the role of the plant circadian clock. <i>Trends Plant Sci.</i> <b>20</b>, 230–237 (2015).</p>",
+   "text": "Seo, P. J. & Mas, P. STRESSing the role of the plant circadian clock. Trends Plant Sci. 20, 230–237 (2015).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 40,
+   "id": "ref-CR40",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR40\">Araújo, I. S. et al. Stochastic gene expression in <i>Arabidopsis thaliana</i>. <i>Nat. Commun.</i> <b>8</b>, 2132 (2017).</p>",
+   "text": "Araújo, I. S. et al. Stochastic gene expression in Arabidopsis thaliana. Nat. Commun. 8, 2132 (2017).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 41,
+   "id": "ref-CR41",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR41\">Alamos, S., Reimer, A., Niyogi, K. K. &amp; Garcia, H. G. Quantitative imaging of RNA polymerase II activity in plants reveals the single-cell basis of tissue-wide transcriptional dynamics. <i>Nat. Plants</i> <b>7</b>, 1037–1049 (2021).</p>",
+   "text": "Alamos, S., Reimer, A., Niyogi, K. K. & Garcia, H. G. Quantitative imaging of RNA polymerase II activity in plants reveals the single-cell basis of tissue-wide transcriptional dynamics. Nat. Plants 7, 1037–1049 (2021).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 42,
+   "id": "ref-CR42",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR42\">Hani, S. et al. Live single-cell transcriptional dynamics via RNA labelling during the phosphate response in plants. <i>Nat. Plants</i> <b>7</b>, 1050–1064 (2021).</p>",
+   "text": "Hani, S. et al. Live single-cell transcriptional dynamics via RNA labelling during the phosphate response in plants. Nat. Plants 7, 1050–1064 (2021).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 43,
+   "id": "ref-CR43",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR43\">Abley, K. &amp; Locke, J. C. W. Noisy transcription under the spotlight. <i>Nat. Plants</i> <b>7</b>, 996–997 (2021).</p>",
+   "text": "Abley, K. & Locke, J. C. W. Noisy transcription under the spotlight. Nat. Plants 7, 996–997 (2021).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 44,
+   "id": "ref-CR44",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR44\">Zhao, L., Fonseca, A., Meschichi, A., Sicard, A. &amp; Rosa, S. Whole-mount smFISH allows combining RNA and protein quantification at cellular and subcellular resolution. <i>Nat. Plants</i> <b>9</b>, 1094–1102 (2023).</p>",
+   "text": "Zhao, L., Fonseca, A., Meschichi, A., Sicard, A. & Rosa, S. Whole-mount smFISH allows combining RNA and protein quantification at cellular and subcellular resolution. Nat. Plants 9, 1094–1102 (2023).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 45,
+   "id": "ref-CR45",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR45\">Bargmann, B. O. R. &amp; Birnbaum, K. D. Fluorescence activated cell sorting of plant protoplasts. <i>J. Vis. Exp.</i>  (2010).</p>",
+   "text": "Bargmann, B. O. R. & Birnbaum, K. D. Fluorescence activated cell sorting of plant protoplasts. J. Vis. Exp. (2010).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 46,
+   "id": "ref-CR46",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR46\">1001 Genomes Consortium. 1,135 genomes reveal the global pattern of polymorphism in <i>Arabidopsis thaliana</i>. <i>Cell</i> <b>166</b>, 481–491 (2016).</p>",
+   "text": "1001 Genomes Consortium. 1,135 genomes reveal the global pattern of polymorphism in Arabidopsis thaliana. Cell 166, 481–491 (2016).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 47,
+   "id": "ref-CR47",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR47\">Hao, Y. et al. Dictionary learning for integrative, multimodal and scalable single-cell analysis. <i>Nat. Biotechnol.</i> <b>42</b>, 293–304 (2024).</p>",
+   "text": "Hao, Y. et al. Dictionary learning for integrative, multimodal and scalable single-cell analysis. Nat. Biotechnol. 42, 293–304 (2024).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 48,
+   "id": "ref-CR48",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR48\">Germain, P.-L. scDblFinder. R package version 1.14.0 <a href=\"https://doi.org/10.18129/B9.BIOC.SCDBLFINDER\" data-track=\"click_references\" data-track-action=\"external reference\" data-track-value=\"external reference\" data-track-label=\"10.18129/B9.BIOC.SCDBLFINDER\">https://doi.org/10.18129/B9.BIOC.SCDBLFINDER</a> (2019).</p>",
+   "text": "Germain, P.-L. scDblFinder. R package version 1.14.0 https://doi.org/10.18129/B9.BIOC.SCDBLFINDER (2019).",
+   "doi": "10.18129/B9.BIOC.SCDBLFINDER",
+   "url": "https://doi.org/10.18129/B9.BIOC.SCDBLFINDER"
+  },
+  {
+   "n": 49,
+   "id": "ref-CR49",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR49\">Germain, P.-L., Lun, A., Garcia Meixide, C., Macnair, W. &amp; Robinson, M. D. Doublet identification in single-cell sequencing data using scDblFinder. <i>F1000Research</i> <b>10</b>, 979 (2021).</p>",
+   "text": "Germain, P.-L., Lun, A., Garcia Meixide, C., Macnair, W. & Robinson, M. D. Doublet identification in single-cell sequencing data using scDblFinder. F1000Research 10, 979 (2021).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 50,
+   "id": "ref-CR50",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR50\">Hahsler, M., Piekenbrock, M. &amp; Doran, D. dbscan: fast density-based clustering with R. <i>J. Stat. Softw</i>.  (2019).</p>",
+   "text": "Hahsler, M., Piekenbrock, M. & Doran, D. dbscan: fast density-based clustering with R. J. Stat. Softw. (2019).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 51,
+   "id": "ref-CR51",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR51\">Andrews, S. FastQC: a quality control tool for high throughput sequence data. <i>Babraham Bioinformatics</i> <a href=\"http://www.bioinformatics.babraham.ac.uk/projects/fastqc/\" data-track=\"click_references\" data-track-action=\"external reference\" data-track-value=\"external reference\" data-track-label=\"http://www.bioinformatics.babraham.ac.uk/projects/fastqc/\">http://www.bioinformatics.babraham.ac.uk/projects/fastqc/</a> (2010).</p>",
+   "text": "Andrews, S. FastQC: a quality control tool for high throughput sequence data. Babraham Bioinformatics http://www.bioinformatics.babraham.ac.uk/projects/fastqc/ (2010).",
+   "doi": "",
+   "url": "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/"
+  },
+  {
+   "n": 52,
+   "id": "ref-CR52",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR52\">Ewels, P., Magnusson, M., Lundin, S. &amp; Käller, M. MultiQC: summarize analysis results for multiple tools and samples in a single report. <i>Bioinformatics</i> <b>32</b>, 3047–3048 (2016).</p>",
+   "text": "Ewels, P., Magnusson, M., Lundin, S. & Käller, M. MultiQC: summarize analysis results for multiple tools and samples in a single report. Bioinformatics 32, 3047–3048 (2016).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 53,
+   "id": "ref-CR53",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR53\">Bolger, A. M., Lohse, M. &amp; Usadel, B. Trimmomatic: a flexible trimmer for Illumina sequence data. <i>Bioinformatics</i> <b>30</b>, 2114–2120 (2014).</p>",
+   "text": "Bolger, A. M., Lohse, M. & Usadel, B. Trimmomatic: a flexible trimmer for Illumina sequence data. Bioinformatics 30, 2114–2120 (2014).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 54,
+   "id": "ref-CR54",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR54\">Dobin, A. et al. STAR: ultrafast universal RNA-seq aligner. <i>Bioinformatics</i> <b>29</b>, 15–21 (2013).</p>",
+   "text": "Dobin, A. et al. STAR: ultrafast universal RNA-seq aligner. Bioinformatics 29, 15–21 (2013).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 55,
+   "id": "ref-CR55",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR55\">Love, M. I., Huber, W. &amp; Anders, S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. <i>Genome Biol.</i> <b>15</b>, 550 (2014).</p><p class=\"c-article-references__links u-hide-print\"><a data-track=\"click_references\" rel=\"noopener\" data-track-label=\"10.1186/s13059-014-0550-8\" data-track-item_id=\"10.1186/s13059-014-0550-8\" data-track-value=\"article reference\" data-track-action=\"article reference\" href=\"https://link.springer.com/doi/10.1186/s13059-014-0550-8\" aria-label=\"Article reference 55\" data-doi=\"10.1186/s13059-014-0550-8\">Article</a>&nbsp;\n    &nbsp;\n    &nbsp;\n    &nbsp;\n                </p>",
+   "text": "Love, M. I., Huber, W. & Anders, S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biol. 15, 550 (2014).Article",
+   "doi": "10.1186/s13059-014-0550-8",
+   "url": "https://link.springer.com/doi/10.1186/s13059-014-0550-8"
+  },
+  {
+   "n": 56,
+   "id": "ref-CR56",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR56\">Rozier, F., Mirabet, V., Vernoux, T. &amp; Das, P. Analysis of 3D gene expression patterns in plants using whole-mount RNA in situ hybridization. <i>Nat. Protoc.</i> <b>9</b>, 2464–2475 (2014).</p>",
+   "text": "Rozier, F., Mirabet, V., Vernoux, T. & Das, P. Analysis of 3D gene expression patterns in plants using whole-mount RNA in situ hybridization. Nat. Protoc. 9, 2464–2475 (2014).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 57,
+   "id": "ref-CR57",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR57\">Schindelin, J. et al. Fiji: an open-source platform for biological-image analysis. <i>Nat. Methods</i> <b>9</b>, 676–682 (2012).</p>",
+   "text": "Schindelin, J. et al. Fiji: an open-source platform for biological-image analysis. Nat. Methods 9, 676–682 (2012).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 58,
+   "id": "ref-CR58",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR58\">Preibisch, S., Saalfeld, S. &amp; Tomancak, P. Globally optimal stitching of tiled 3D microscopic image acquisitions. <i>Bioinformatics</i> <b>25</b>, 1463–1465 (2009).</p>",
+   "text": "Preibisch, S., Saalfeld, S. & Tomancak, P. Globally optimal stitching of tiled 3D microscopic image acquisitions. Bioinformatics 25, 1463–1465 (2009).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 59,
+   "id": "ref-CR59",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR59\">Boruc, J. et al. Functional modules in the <i>Arabidopsis</i> core cell cycle binary protein–protein interaction network. <i>Plant Cell</i> <b>22</b>, 1264–1280 (2010).</p>",
+   "text": "Boruc, J. et al. Functional modules in the Arabidopsis core cell cycle binary protein–protein interaction network. Plant Cell 22, 1264–1280 (2010).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 60,
+   "id": "ref-CR60",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR60\">Zhang, H. zhanghao-njmu/SCP. <i>GitHub</i> <a href=\"https://github.com/zhanghao-njmu/SCP\" data-track=\"click_references\" data-track-action=\"external reference\" data-track-value=\"external reference\" data-track-label=\"https://github.com/zhanghao-njmu/SCP\">https://github.com/zhanghao-njmu/SCP</a> (2023).</p>",
+   "text": "Zhang, H. zhanghao-njmu/SCP. GitHub https://github.com/zhanghao-njmu/SCP (2023).",
+   "doi": "",
+   "url": "https://github.com/zhanghao-njmu/SCP"
+  },
+  {
+   "n": 61,
+   "id": "ref-CR61",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR61\">Wolf, F. A. et al. PAGA: graph abstraction reconciles clustering with trajectory inference through a topology preserving map of single cells. <i>Genome Biol.</i> <b>20</b>, 59 (2019).</p><p class=\"c-article-references__links u-hide-print\"><a data-track=\"click_references\" rel=\"noopener\" data-track-label=\"10.1186/s13059-019-1663-x\" data-track-item_id=\"10.1186/s13059-019-1663-x\" data-track-value=\"article reference\" data-track-action=\"article reference\" href=\"https://link.springer.com/doi/10.1186/s13059-019-1663-x\" aria-label=\"Article reference 61\" data-doi=\"10.1186/s13059-019-1663-x\">Article</a>&nbsp;\n    &nbsp;\n    &nbsp;\n    &nbsp;\n                </p>",
+   "text": "Wolf, F. A. et al. PAGA: graph abstraction reconciles clustering with trajectory inference through a topology preserving map of single cells. Genome Biol. 20, 59 (2019).Article",
+   "doi": "10.1186/s13059-019-1663-x",
+   "url": "https://link.springer.com/doi/10.1186/s13059-019-1663-x"
+  },
+  {
+   "n": 62,
+   "id": "ref-CR62",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR62\">Haghverdi, L., Büttner, M., Wolf, F. A., Buettner, F. &amp; Theis, F. J. Diffusion pseudotime robustly reconstructs lineage branching. <i>Nat. Methods</i> <b>13</b>, 845–848 (2016).</p>",
+   "text": "Haghverdi, L., Büttner, M., Wolf, F. A., Buettner, F. & Theis, F. J. Diffusion pseudotime robustly reconstructs lineage branching. Nat. Methods 13, 845–848 (2016).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 63,
+   "id": "ref-CR63",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR63\">Wolf, F. A., Angerer, P. &amp; Theis, F. J. SCANPY: large-scale single-cell gene expression data analysis. <i>Genome Biol.</i> <b>19</b>, 15 (2018).</p><p class=\"c-article-references__links u-hide-print\"><a data-track=\"click_references\" rel=\"noopener\" data-track-label=\"10.1186/s13059-017-1382-0\" data-track-item_id=\"10.1186/s13059-017-1382-0\" data-track-value=\"article reference\" data-track-action=\"article reference\" href=\"https://link.springer.com/doi/10.1186/s13059-017-1382-0\" aria-label=\"Article reference 63\" data-doi=\"10.1186/s13059-017-1382-0\">Article</a>&nbsp;\n    &nbsp;\n    &nbsp;\n    &nbsp;\n                </p>",
+   "text": "Wolf, F. A., Angerer, P. & Theis, F. J. SCANPY: large-scale single-cell gene expression data analysis. Genome Biol. 19, 15 (2018).Article",
+   "doi": "10.1186/s13059-017-1382-0",
+   "url": "https://link.springer.com/doi/10.1186/s13059-017-1382-0"
+  },
+  {
+   "n": 64,
+   "id": "ref-CR64",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR64\">Trapnell, C. et al. The dynamics and regulators of cell fate decisions are revealed by pseudotemporal ordering of single cells. <i>Nat. Biotechnol.</i> <b>32</b>, 381–386 (2014).</p>",
+   "text": "Trapnell, C. et al. The dynamics and regulators of cell fate decisions are revealed by pseudotemporal ordering of single cells. Nat. Biotechnol. 32, 381–386 (2014).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 65,
+   "id": "ref-CR65",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR65\">Qiu, X. et al. Reversed graph embedding resolves complex single-cell trajectories. <i>Nat. Methods</i> <b>14</b>, 979–982 (2017).</p>",
+   "text": "Qiu, X. et al. Reversed graph embedding resolves complex single-cell trajectories. Nat. Methods 14, 979–982 (2017).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 66,
+   "id": "ref-CR66",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR66\">Cao, J. et al. The single-cell transcriptional landscape of mammalian organogenesis. <i>Nature</i> <b>566</b>, 496–502 (2019).</p>",
+   "text": "Cao, J. et al. The single-cell transcriptional landscape of mammalian organogenesis. Nature 566, 496–502 (2019).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 67,
+   "id": "ref-CR67",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR67\">Rue-Albrecht, K., Lun, A., Soneson, C. &amp; Stadler, M. velociraptor. R package version 1.10.0 <a href=\"https://bioconductor.org/packages/velociraptor\" data-track=\"click_references\" data-track-action=\"external reference\" data-track-value=\"external reference\" data-track-label=\"https://bioconductor.org/packages/velociraptor\">https://bioconductor.org/packages/velociraptor</a> (2026).</p>",
+   "text": "Rue-Albrecht, K., Lun, A., Soneson, C. & Stadler, M. velociraptor. R package version 1.10.0 https://bioconductor.org/packages/velociraptor (2026).",
+   "doi": "",
+   "url": "https://bioconductor.org/packages/velociraptor"
+  },
+  {
+   "n": 68,
+   "id": "ref-CR68",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR68\">Bergen, V., Lange, M., Peidli, S., Wolf, F. A. &amp; Theis, F. J. Generalizing RNA velocity to transient cell states through dynamical modeling. <i>Nat. Biotechnol.</i> <b>38</b>, 1408–1414 (2020).</p>",
+   "text": "Bergen, V., Lange, M., Peidli, S., Wolf, F. A. & Theis, F. J. Generalizing RNA velocity to transient cell states through dynamical modeling. Nat. Biotechnol. 38, 1408–1414 (2020).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 69,
+   "id": "ref-CR69",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR69\">La Manno, G. et al. RNA velocity of single cells. <i>Nature</i> <b>560</b>, 494–498 (2018).</p>",
+   "text": "La Manno, G. et al. RNA velocity of single cells. Nature 560, 494–498 (2018).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 70,
+   "id": "ref-CR70",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR70\">Lun, A. DropletUtils. R package version 1.20.0 <a href=\"https://doi.org/10.18129/B9.BIOC.DROPLETUTILS\" data-track=\"click_references\" data-track-action=\"external reference\" data-track-value=\"external reference\" data-track-label=\"10.18129/B9.BIOC.DROPLETUTILS\">https://doi.org/10.18129/B9.BIOC.DROPLETUTILS</a> (2018).</p>",
+   "text": "Lun, A. DropletUtils. R package version 1.20.0 https://doi.org/10.18129/B9.BIOC.DROPLETUTILS (2018).",
+   "doi": "10.18129/B9.BIOC.DROPLETUTILS",
+   "url": "https://doi.org/10.18129/B9.BIOC.DROPLETUTILS"
+  },
+  {
+   "n": 71,
+   "id": "ref-CR71",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR71\">Morabito, S. et al. Single-nucleus chromatin accessibility and transcriptomic characterization of Alzheimer’s disease. <i>Nat. Genet.</i> <b>53</b>, 1143–1155 (2021).</p>",
+   "text": "Morabito, S. et al. Single-nucleus chromatin accessibility and transcriptomic characterization of Alzheimer’s disease. Nat. Genet. 53, 1143–1155 (2021).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 72,
+   "id": "ref-CR72",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR72\">Morabito, S., Reese, F., Rahimzadeh, N., Miyoshi, E. &amp; Swarup, V. hdWGCNA identifies co-expression networks in high-dimensional transcriptomics data. <i>Cell Rep. Methods</i> <b>3</b>, 100498 (2023).</p>",
+   "text": "Morabito, S., Reese, F., Rahimzadeh, N., Miyoshi, E. & Swarup, V. hdWGCNA identifies co-expression networks in high-dimensional transcriptomics data. Cell Rep. Methods 3, 100498 (2023).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 73,
+   "id": "ref-CR73",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR73\">Langfelder, P. &amp; Horvath, S. WGCNA: an R package for weighted correlation network analysis. <i>BMC Bioinformatics</i> <b>9</b>, 559 (2008).</p><p class=\"c-article-references__links u-hide-print\"><a data-track=\"click_references\" rel=\"noopener\" data-track-label=\"10.1186/1471-2105-9-559\" data-track-item_id=\"10.1186/1471-2105-9-559\" data-track-value=\"article reference\" data-track-action=\"article reference\" href=\"https://link.springer.com/doi/10.1186/1471-2105-9-559\" aria-label=\"Article reference 73\" data-doi=\"10.1186/1471-2105-9-559\">Article</a>&nbsp;\n    &nbsp;\n    &nbsp;\n    &nbsp;\n                </p>",
+   "text": "Langfelder, P. & Horvath, S. WGCNA: an R package for weighted correlation network analysis. BMC Bioinformatics 9, 559 (2008).Article",
+   "doi": "10.1186/1471-2105-9-559",
+   "url": "https://link.springer.com/doi/10.1186/1471-2105-9-559"
+  },
+  {
+   "n": 74,
+   "id": "ref-CR74",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR74\">Aboyoun, P., Pagès, H. &amp; Lawrence, M. GenomicRanges. R package 1.52.0 <a href=\"https://doi.org/10.18129/B9.BIOC.GENOMICRANGES\" data-track=\"click_references\" data-track-action=\"external reference\" data-track-value=\"external reference\" data-track-label=\"10.18129/B9.BIOC.GENOMICRANGES\">https://doi.org/10.18129/B9.BIOC.GENOMICRANGES</a> (2017).</p>",
+   "text": "Aboyoun, P., Pagès, H. & Lawrence, M. GenomicRanges. R package 1.52.0 https://doi.org/10.18129/B9.BIOC.GENOMICRANGES (2017).",
+   "doi": "10.18129/B9.BIOC.GENOMICRANGES",
+   "url": "https://doi.org/10.18129/B9.BIOC.GENOMICRANGES"
+  },
+  {
+   "n": 75,
+   "id": "ref-CR75",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR75\">Childs, J. E. et al. Relapse to cocaine seeking is regulated by medial habenula NR4A2/NURR1 in mice. <i>Cell Rep.</i> <b>43</b>, 113956 (2024).</p>",
+   "text": "Childs, J. E. et al. Relapse to cocaine seeking is regulated by medial habenula NR4A2/NURR1 in mice. Cell Rep. 43, 113956 (2024).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 76,
+   "id": "ref-CR76",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR76\">Kolde, R. raivokolde / pheatmap. <i>GitHub</i> <a href=\"https://github.com/raivokolde/pheatmap\" data-track=\"click_references\" data-track-action=\"external reference\" data-track-value=\"external reference\" data-track-label=\"https://github.com/raivokolde/pheatmap\">https://github.com/raivokolde/pheatmap</a> (2025).</p>",
+   "text": "Kolde, R. raivokolde / pheatmap. GitHub https://github.com/raivokolde/pheatmap (2025).",
+   "doi": "",
+   "url": "https://github.com/raivokolde/pheatmap"
+  },
+  {
+   "n": 77,
+   "id": "ref-CR77",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR77\">Miao, Z. &amp; Kim, J. Uniform quantification of single-nucleus ATAC-seq data with Paired-Insertion Counting (PIC) and a model-based insertion rate estimator. <i>Nat. Methods</i> <b>21</b>, 32–36 (2024).</p>",
+   "text": "Miao, Z. & Kim, J. Uniform quantification of single-nucleus ATAC-seq data with Paired-Insertion Counting (PIC) and a model-based insertion rate estimator. Nat. Methods 21, 32–36 (2024).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 78,
+   "id": "ref-CR78",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR78\">Zhang, K., Zemke, N. R., Armand, E. J. &amp; Ren, B. A fast, scalable and versatile tool for analysis of single-cell omics data. <i>Nat. Methods</i> <b>21</b>, 217–227 (2024).</p>",
+   "text": "Zhang, K., Zemke, N. R., Armand, E. J. & Ren, B. A fast, scalable and versatile tool for analysis of single-cell omics data. Nat. Methods 21, 217–227 (2024).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 79,
+   "id": "ref-CR79",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR79\">You, Y. et al. Benchmarking UMI-based single-cell RNA-seq preprocessing workflows. <i>Genome Biol.</i> <b>22</b>, 339 (2021).</p><p class=\"c-article-references__links u-hide-print\"><a data-track=\"click_references\" rel=\"noopener\" data-track-label=\"10.1186/s13059-021-02552-3\" data-track-item_id=\"10.1186/s13059-021-02552-3\" data-track-value=\"article reference\" data-track-action=\"article reference\" href=\"https://link.springer.com/doi/10.1186/s13059-021-02552-3\" aria-label=\"Article reference 79\" data-doi=\"10.1186/s13059-021-02552-3\">Article</a>&nbsp;\n    &nbsp;\n    &nbsp;\n    &nbsp;\n    &nbsp;\n                </p>",
+   "text": "You, Y. et al. Benchmarking UMI-based single-cell RNA-seq preprocessing workflows. Genome Biol. 22, 339 (2021).Article",
+   "doi": "10.1186/s13059-021-02552-3",
+   "url": "https://link.springer.com/doi/10.1186/s13059-021-02552-3"
+  },
+  {
+   "n": 80,
+   "id": "ref-CR80",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR80\">Zhang, Y. et al. Model-based analysis of ChIP–seq (MACS). <i>Genome Biol.</i> <b>9</b>, R137 (2008).</p><p class=\"c-article-references__links u-hide-print\"><a data-track=\"click_references\" rel=\"noopener\" data-track-label=\"10.1186/gb-2008-9-9-r137\" data-track-item_id=\"10.1186/gb-2008-9-9-r137\" data-track-value=\"article reference\" data-track-action=\"article reference\" href=\"https://link.springer.com/doi/10.1186/gb-2008-9-9-r137\" aria-label=\"Article reference 80\" data-doi=\"10.1186/gb-2008-9-9-r137\">Article</a>&nbsp;\n    &nbsp;\n    &nbsp;\n    &nbsp;\n                </p>",
+   "text": "Zhang, Y. et al. Model-based analysis of ChIP–seq (MACS). Genome Biol. 9, R137 (2008).Article",
+   "doi": "10.1186/gb-2008-9-9-r137",
+   "url": "https://link.springer.com/doi/10.1186/gb-2008-9-9-r137"
+  },
+  {
+   "n": 81,
+   "id": "ref-CR81",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR81\">Stuart, T., Srivastava, A., Madad, S., Lareau, C. A. &amp; Satija, R. Single-cell chromatin state analysis with Signac. <i>Nat. Methods</i> <b>18</b>, 1333–1341 (2021).</p>",
+   "text": "Stuart, T., Srivastava, A., Madad, S., Lareau, C. A. & Satija, R. Single-cell chromatin state analysis with Signac. Nat. Methods 18, 1333–1341 (2021).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 82,
+   "id": "ref-CR82",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR82\">Mangiola, S. et al. sccomp: robust differential composition and variability analysis for single-cell data. <i>Proc. Natl Acad. Sci. USA</i> <b>120</b>, e2203828120 (2023).</p>",
+   "text": "Mangiola, S. et al. sccomp: robust differential composition and variability analysis for single-cell data. Proc. Natl Acad. Sci. USA 120, e2203828120 (2023).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 83,
+   "id": "ref-CR83",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR83\">Legland, D., Arganda-Carreras, I. &amp; Andrey, P. MorphoLibJ: integrated library and plugins for mathematical morphology with ImageJ. <i>Bioinformatics</i> <b>32</b>, 3532–3534 (2016).</p>",
+   "text": "Legland, D., Arganda-Carreras, I. & Andrey, P. MorphoLibJ: integrated library and plugins for mathematical morphology with ImageJ. Bioinformatics 32, 3532–3534 (2016).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 84,
+   "id": "ref-CR84",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR84\">Scrucca, L., Fraley, C., Murphy, T. B. &amp; Adrian E. R. <i>Model-Based Clustering, Classification, and Density Estimation Using mclust in R</i> (Chapman and Hall/CRC, 2023).</p>",
+   "text": "Scrucca, L., Fraley, C., Murphy, T. B. & Adrian E. R. Model-Based Clustering, Classification, and Density Estimation Using mclust in R (Chapman and Hall/CRC, 2023).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 85,
+   "id": "ref-CR85",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR85\">Oliva, M. &amp; Lister, R. Single-cell atlas of the <i>Arabidopsis</i> root tip - part 1 [Dataset]. <i>Zenodo</i>  (2025).</p>",
+   "text": "Oliva, M. & Lister, R. Single-cell atlas of the Arabidopsis root tip - part 1 [Dataset]. Zenodo (2025).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 86,
+   "id": "ref-CR86",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR86\">Oliva, M. &amp; Lister, R. Single-cell atlas of the <i>Arabidopsis</i> root tip - part 2 [Dataset]. <i>Zenodo</i>  (2025).</p>",
+   "text": "Oliva, M. & Lister, R. Single-cell atlas of the Arabidopsis root tip - part 2 [Dataset]. Zenodo (2025).",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 87,
+   "id": "ref-CR87",
+   "html": "<p class=\"c-article-references__text\" id=\"ref-CR87\">Infrastructure and platforms. <i>KAYA Research Compute Platform</i>  (The University of Western Australia, 2025).</p>",
+   "text": "Infrastructure and platforms. KAYA Research Compute Platform (The University of Western Australia, 2025).",
+   "doi": "",
+   "url": ""
+  }
+ ],
+ "supplementary": [
+  {
+   "label": "Source data",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y#MOESM8",
+   "kind": "link"
+  },
+  {
+   "label": "Source data",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y#MOESM9",
+   "kind": "link"
+  },
+  {
+   "label": "Source data",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y#MOESM10",
+   "kind": "link"
+  },
+  {
+   "label": "Source data",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y#MOESM11",
+   "kind": "link"
+  },
+  {
+   "label": "Source data",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y#Sec53",
+   "kind": "link"
+  },
+  {
+   "label": "Extended Data Fig. 1 Validation of root cap trajectories and pseudotime assignments.",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y/figures/6",
+   "kind": "link"
+  },
+  {
+   "label": "Source data",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y#MOESM12",
+   "kind": "link"
+  },
+  {
+   "label": "Source data",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y#MOESM13",
+   "kind": "link"
+  },
+  {
+   "label": "Extended Data Fig. 4 The bifurcating trajectories are not driven by reduced transcript detection in low-UMI cells.",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y/figures/9",
+   "kind": "link"
+  },
+  {
+   "label": "Source data",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y#MOESM14",
+   "kind": "link"
+  },
+  {
+   "label": "Source data",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y#MOESM15",
+   "kind": "link"
+  },
+  {
+   "label": "Source data",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y#MOESM16",
+   "kind": "link"
+  },
+  {
+   "label": "Source data",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y#MOESM17",
+   "kind": "link"
+  },
+  {
+   "label": "Extended Data Fig. 8 Branches are robustly detected in all five tested Arabidopsis ecotypes.",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y/figures/13",
+   "kind": "link"
+  },
+  {
+   "label": "Source data",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y#MOESM18",
+   "kind": "link"
+  },
+  {
+   "label": "Source data",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y#MOESM19",
+   "kind": "link"
+  },
+  {
+   "label": "Extended Data Fig. 10 Additional whole-mount HCR data supporting branch 1-associated marker expression.",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y/figures/15",
+   "kind": "link"
+  },
+  {
+   "label": "Extended Data Fig. 11 ERS cell states across ABA-related and developmental mutants.",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y/figures/16",
+   "kind": "link"
+  },
+  {
+   "label": "Source data",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y#MOESM20",
+   "kind": "link"
+  },
+  {
+   "label": "Extended Data Fig. 12 Root phenotypes and ERS modulation under altered media conditions.",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y/figures/17",
+   "kind": "link"
+  },
+  {
+   "label": "Source data",
+   "href": "https://www.nature.com/articles/s41586-026-11179-y#MOESM21",
+   "kind": "link"
+  },
+  {
+   "label": "Supplementary Figures (download PDF )",
+   "href": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-026-11179-y/MediaObjects/41586_2026_11179_MOESM1_ESM.pdf",
+   "kind": "file"
+  },
+  {
+   "label": "Reporting Summary (download PDF )",
+   "href": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-026-11179-y/MediaObjects/41586_2026_11179_MOESM2_ESM.pdf",
+   "kind": "file"
+  },
+  {
+   "label": "Supplementary Table 1 (download XLSX )",
+   "href": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-026-11179-y/MediaObjects/41586_2026_11179_MOESM3_ESM.xlsx",
+   "kind": "file"
+  }
+ ],
+ "warnings": [],
+ "stats": {
+  "ms": 191,
+  "bodyChars": 134621,
+  "paragraphs": 110
+ }
+}

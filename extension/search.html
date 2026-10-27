@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search — SchReader</title>
+<link rel="stylesheet" href="library.css">
+</head>
+<body class="page-search">
+<header class="bar">
+  <div class="brand"><span class="mark">R</span><span>Search</span></div>
+  <div class="grow"></div>
+  <button id="btnAdd" class="ghost" title="Add a site">+ Site</button>
+</header>
+
+<main class="page">
+  <form id="find" class="find" autocomplete="off">
+    <input id="q" type="search" placeholder="Search papers on Google Scholar, or type an address…" aria-label="Search">
+    <button class="primary" type="submit">Search</button>
+  </form>
+
+  <div id="shelf"></div>
+
+  <section class="shelf-group">
+    <h4>My sites</h4>
+    <div class="shelf" id="mine"></div>
+
+    <form id="addForm" class="add-site" autocomplete="off">
+      <input id="addName" type="text" placeholder="Name, e.g. NEJM" aria-label="Site name">
+      <input id="addUrl" type="text" placeholder="nejm.org" aria-label="Site address">
+      <button class="primary" type="submit">Add</button>
+    </form>
+    <div class="msg" id="msg" role="status"></div>
+  </section>
+</main>
+
+<script src="theme.js"></script>
+<script src="library-store.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

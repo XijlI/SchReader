@@ -1,0 +1,173 @@
+name: Release
+
+# Two ways to ship a release:
+#   1. push a version tag:   git tag v0.2.0 && git push origin v0.2.0
+#   2. Actions → Release → Run workflow → version: 0.2.0
+# Both produce the signed APK + the Chrome extension zip on one GitHub release.
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release, e.g. 0.2.0 (a leading "v" is optional)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Build APK + extension and publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0          # full history: changelog + previous tag
+
+      - name: Check the site whitelist
+        run: python3 .github/scripts/sync_whitelist.py --check
+
+      - name: Resolve the version
+        id: v
+        env:
+          RAW_INPUT: ${{ inputs.version }}
+        run: |
+          set -euo pipefail
+          if [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ]; then
+            RAW="${RAW_INPUT}"
+          else
+            RAW="${GITHUB_REF_NAME}"
+          fi
+          V="${RAW#v}"; V="${V#V}"
+          if ! printf '%s' "${V}" | grep -Eq '^[0-9]+(\.[0-9]+){0,2}$'; then
+            echo "::error::'${RAW}' is not a version. Use vMAJOR.MINOR.PATCH, e.g. v0.2.0."
+            exit 1
+          fi
+          # normalise 0.2 -> 0.2.0 so Chrome's manifest and the APK agree
+          V="$(printf '%s' "${V}" | awk -F. '{printf "%d.%d.%d", $1, $2, $3}')"
+          CODE="$(printf '%s' "${V}" | awk -F. '{printf "%d", $1 * 10000 + $2 * 100 + $3}')"
+          if ! printf '%s' "${V}" | awk -F. '($2 > 99 || $3 > 99) {exit 1} {exit 0}'; then
+            echo "::error::MINOR and PATCH must be 0-99 (versionCode is MAJOR*10000+MINOR*100+PATCH)."
+            exit 1
+          fi
+          if [ "${CODE}" -gt 2100000000 ]; then
+            echo "::error::versionCode ${CODE} exceeds the Android limit; keep MAJOR below 210000."
+            exit 1
+          fi
+          echo "version=${V}" >> "${GITHUB_OUTPUT}"
+          echo "code=${CODE}" >> "${GITHUB_OUTPUT}"
+          echo "tag=v${V}" >> "${GITHUB_OUTPUT}"
+          echo "Resolved version ${V} (versionCode ${CODE})"
+
+      - name: Create the tag (manual runs only)
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          TAG: ${{ steps.v.outputs.tag }}
+        run: |
+          set -euo pipefail
+          if git rev-parse -q --verify "refs/tags/${TAG}" >/dev/null; then
+            echo "tag ${TAG} already exists — re-releasing it"
+          else
+            git tag "${TAG}"
+            git push origin "${TAG}"
+          fi
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up the Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools platforms;android-36 build-tools;36.0.0'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          cache-provider: basic
+
+      - name: Decode the signing keystore
+        id: keystore
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        run: |
+          set -euo pipefail
+          if [ -z "${KEYSTORE_B64}" ]; then
+            echo "::warning::ANDROID_KEYSTORE_BASE64 is not set — the APK will carry the CI debug signature and will NOT install over an older release. See docs/RELEASING.md."
+            echo "path=" >> "${GITHUB_OUTPUT}"
+            echo "signed=false" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+          mkdir -p "${RUNNER_TEMP}/signing"
+          printf '%s' "${KEYSTORE_B64}" | base64 -d > "${RUNNER_TEMP}/signing/release.jks"
+          echo "path=${RUNNER_TEMP}/signing/release.jks" >> "${GITHUB_OUTPUT}"
+          echo "signed=true" >> "${GITHUB_OUTPUT}"
+
+      - name: Build the signed release APK
+        working-directory: android
+        env:
+          NV_KEYSTORE_FILE: ${{ steps.keystore.outputs.path }}
+          NV_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          NV_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          NV_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          set -euo pipefail
+          python3 tools/mirror.py                 # extension/ -> app assets (single source of truth)
+          chmod +x gradlew
+          ./gradlew --no-daemon assembleRelease \
+            -PappVersionName="${{ steps.v.outputs.version }}" \
+            -PappVersionCode="${{ steps.v.outputs.code }}"
+
+      - name: Stamp the version into the extension manifest
+        run: python3 .github/scripts/stamp_version.py --version "${{ steps.v.outputs.version }}"
+
+      - name: Package the artifacts
+        env:
+          VERSION: ${{ steps.v.outputs.version }}
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          APK="$(find android/app/build/outputs/apk/release -maxdepth 1 -name '*.apk' | head -n1)"
+          if [ -z "${APK}" ]; then
+            echo "::error::no release APK was produced"
+            exit 1
+          fi
+          cp "${APK}" "dist/schreader-android-v${VERSION}.apk"
+          python3 .github/scripts/zip_extension.py \
+            --out "dist/schreader-chrome-v${VERSION}.zip" \
+            --expect-version "${VERSION}"
+          ( cd dist && sha256sum schreader-* > SHA256SUMS.txt )
+          ls -l dist
+
+      - name: Generate the release notes
+        env:
+          VERSION: ${{ steps.v.outputs.version }}
+          TAG: ${{ steps.v.outputs.tag }}
+          SIGNED: ${{ steps.keystore.outputs.signed }}
+        run: |
+          python3 .github/scripts/release_notes.py \
+            --version "${VERSION}" --tag "${TAG}" --signed "${SIGNED}" \
+            --out "${RUNNER_TEMP}/notes.md"
+          cat "${RUNNER_TEMP}/notes.md" >> "${GITHUB_STEP_SUMMARY}"
+
+      - name: Publish the release
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ steps.v.outputs.tag }}
+          name: SchReader ${{ steps.v.outputs.tag }}
+          body_path: ${{ runner.temp }}/notes.md
+          fail_on_unmatched_files: true
+          make_latest: true
+          files: |
+            dist/schreader-android-v${{ steps.v.outputs.version }}.apk
+            dist/schreader-chrome-v${{ steps.v.outputs.version }}.zip
+            dist/SHA256SUMS.txt

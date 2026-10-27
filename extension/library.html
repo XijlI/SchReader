@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My library — SchReader</title>
+<link rel="stylesheet" href="library.css">
+</head>
+<body>
+<header class="bar">
+  <div class="brand"><span class="mark">R</span><span>My library</span></div>
+  <div class="tabs" role="tablist">
+    <button class="tab on" data-view="library" role="tab">Saved<span class="count" id="countLib"></span></button>
+    <button class="tab" data-view="history" role="tab">History<span class="count" id="countHist"></span></button>
+  </div>
+  <div class="grow"></div>
+  <input id="q" type="search" placeholder="Search title, author, DOI, tag…" autocomplete="off">
+  <select id="sort" title="Sort">
+    <option value="added">Recently added</option>
+    <option value="read">Recently read</option>
+    <option value="title">Title A–Z</option>
+    <option value="year">Year ↓</option>
+  </select>
+  <button id="btnExport" class="ghost" title="Export the list">Export</button>
+  <button id="btnImport" class="ghost" title="Import BibTeX or JSON">Import</button>
+  <button id="btnSettings" class="ghost icon" title="Settings" aria-label="Settings">⚙</button>
+  <button id="btnBack" class="ghost icon" title="Close this page" aria-label="Close">✕</button>
+</header>
+
+<div class="wrap">
+  <div class="side" id="side">
+    <div class="side-block">
+      <h4>Tags</h4>
+      <div id="tagList" class="tags"></div>
+    </div>
+    <div class="side-block">
+      <h4>Options</h4>
+      <label class="row"><input type="checkbox" id="optHistory"><span>Record reading history</span></label>
+      <p class="hint">Saved items keep title, authors, journal, year, DOI, link, tags, notes and your reading position. The article text itself is re-read from the publisher page when you open it.</p>
+    </div>
+  </div>
+
+  <div class="col">
+    <main id="list" class="list"></main>
+
+    <div class="empty" id="empty" hidden>
+      <h2>Nothing saved yet</h2>
+      <p>Open a paper, click the <b>SchReader</b> pill, then press <b>☆</b> in the reader's top bar.
+         Saved papers show up here with their tags, notes and where you stopped reading.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal" hidden>
+  <div class="sheet">
+    <h3 id="mTitle">Edit entry</h3>
+    <label class="field"><span>Tags</span>
+      <input id="mTags" placeholder="comma separated, e.g. symbiosis, methods">
+    </label>
+    <label class="field"><span>Note</span>
+      <textarea id="mNote" rows="5" placeholder="Why it matters, what to cite it for…"></textarea>
+    </label>
+    <div class="sheet-actions">
+      <button id="mCancel" class="ghost">Cancel</button>
+      <button id="mSave" class="primary">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- Settings — the same panel the Android app mounts as its own Settings tab (settings.js). -->
+<div class="modal" id="settingsModal" hidden>
+  <div class="sheet sheet-wide">
+    <div class="sheet-head">
+      <h3>Settings</h3>
+      <button id="setDone" class="ghost icon" aria-label="Close settings">✕</button>
+    </div>
+    <div class="settings-body" id="settingsBody"></div>
+  </div>
+</div>
+
+<div class="menu" id="exportMenu" hidden>
+  <button data-fmt="bibtex">BibTeX (.bib)</button>
+  <button data-fmt="ris">RIS (.ris)</button>
+  <button data-fmt="csv">CSV (.csv)</button>
+  <button data-fmt="json">JSON (backup)</button>
+</div>
+
+<input type="file" id="file" accept=".bib,.json,text/plain,application/json" hidden>
+<div id="toast"></div>
+
+<script src="theme.js"></script>
+<script src="src/whitelist.js"></script>
+<script src="library-store.js"></script>
+<script src="settings.js"></script>
+<script src="library.js"></script>
+</body>
+</html>

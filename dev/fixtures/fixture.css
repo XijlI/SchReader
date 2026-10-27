@@ -1,0 +1,17 @@
+body{font:16px/1.6 Georgia,serif;max-width:1200px;margin:0 auto;padding:20px 16px;color:#222}
+.site-nav{font:13px system-ui;padding:8px 0;border-bottom:1px solid #ddd}
+.masthead{display:flex;justify-content:space-between;padding:14px 0;border-bottom:2px solid #333;margin-bottom:18px}
+.article-header h1{font-size:2rem;line-height:1.2;margin:.3em 0}
+.byline,.affiliations,.dates,.doi-line{font:14px system-ui;color:#555;margin:.35em 0}
+#body{max-width:760px}
+#body h2{font-size:1.3rem;margin:1.6em 0 .5em;border-bottom:1px solid #ddd;padding-bottom:.2em}
+#body h3{font-size:1.05rem;margin:1.2em 0 .4em}
+#abstract{background:#f4f6f8;padding:14px 16px;margin:18px 0;max-width:760px}
+figure{margin:1.6em 0}
+figure img{width:100%;display:block;border:1px solid #ddd}
+.caption{font:13.5px/1.5 system-ui;color:#444;padding:.6em 0}
+.caption .label{font-weight:700;color:#111}
+.references{max-width:760px;margin-top:2em;border-top:1px solid #ddd}
+.reference{font:13.5px/1.5 system-ui;padding:.5em 0;border-bottom:1px dashed #e5e5e5}
+.reference .label{font-weight:700;margin-right:.4em}
+.related-articles{margin-top:2em;padding:14px;background:#fafafa}

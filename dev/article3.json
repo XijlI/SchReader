@@ -1,0 +1,899 @@
+{
+ "source": {
+  "url": "https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0012523",
+  "host": "journals.plos.org",
+  "adapter": "plos",
+  "journal": "PLOS Neglected Tropical Diseases",
+  "doi": "10.1371/journal.pntd.0012523",
+  "pdfUrl": "https://journals.plos.org/plosntds/article/file?id=10.1371/journal.pntd.0012523&type=printable"
+ },
+ "meta": {
+  "title": "Stable introduction of Wolbachia wPip into invasive Anopheles stephensi for potential malaria control",
+  "subtitle": "",
+  "journal": "PLOS Neglected Tropical Diseases",
+  "publisher": "Public Library of Science",
+  "articleType": "Research Article",
+  "doi": "10.1371/journal.pntd.0012523",
+  "date": "26 Sept 2024",
+  "volume": "18",
+  "pages": "e0012523",
+  "authors": [
+   "Yongkang Liang",
+   "Julian Liu",
+   "YiLian Wu",
+   "Yu Wu",
+   "Zhiyong Xi"
+  ],
+  "affiliations": [
+   "Department of Parasitology, Key Laboratory of Tropical Disease Control of the Ministry of Education, Sun Yat-sen University, Guangzhou, China",
+   "Guangzhou Wolbaki Biotech Co., Ltd, Guangzhou, China",
+   "Department of Microbiology, Genetics, & Immunology, Michigan State University, East Lansing, Michigan, United States of America"
+  ],
+  "keywords": []
+ },
+ "abstractHtml": "<a id=\"abstract0\" name=\"abstract0\" data-toc=\"abstract0\" class=\"link-target\" title=\"Abstract\"></a><div class=\"abstract-content\"><a id=\"article1.front1.article-meta1.abstract1.p1\" name=\"article1.front1.article-meta1.abstract1.p1\" class=\"link-target\"></a><p>The spread and invasion of the urban malaria vector <em>Anopheles stephensi</em> has emerged as a significant threat to ongoing malaria control and elimination efforts, particularly in Africa. The successful use of the maternally inherited endosymbiotic bacterium <em>Wolbachia</em> for arbovirus control has inspired the exploration of similar strategies for managing malaria vectors, necessitating the establishment of a stable <em>Wolbachia-Anopheles</em> symbiosis. In this study, we successfully transferred <em>Wolbachia w</em>Pip into <em>An</em>. <em>stephensi</em>, resulting in the establishment of a stable transinfected HP1 line with 100% maternal transmission efficiency. We demonstrate that <em>w</em>Pip in the HP1 line induces nearly complete unidirectional cytoplasmic incompatibility (CI) and maintains high densities in both somatic and germline tissues. Despite a modest reduction in lifespan and female reproductive capacity, our results suggest the <em>Wolbachia</em> infection in the HP1 line has little impact on life history traits, body size, and male mating competitiveness, as well as the ability of its larvae to tolerate rearing temperatures up to 38°C, although <em>w</em>Pip densities moderately decrease when larvae are exposed to a constant 33°C and diurnal cyclic temperatures of 27–36°C and 27–38°C. These findings highlight the potential of the HP1 line as a robust candidate for further development in malaria control.</p>\n</div>",
+ "sections": [
+  {
+   "id": "sec-author-summary",
+   "title": "Author summary",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Recent efforts have successfully utilized the endosymbiotic bacterium <em>Wolbachia</em> to control mosquito-transmitted viral diseases like dengue in multiple countries. However, similar initiatives have been limited in combating malaria, the most devastating and deadly mosquito-borne disease, which claims over half a million lives each year. This is primarily due to the difficulty in establishing a stable, maternally inheritable <em>Wolbachia</em> infection in <em>Anopheles</em>, the mosquito vector responsible for malaria transmission. A significant concern in malaria control is the invasion of the urban malaria vector <em>Anopheles stephensi</em> into Africa, where malaria burden is highest, and over 40% of the population resides in urban areas. Building on the previous breakthrough of establishing <em>Wolbachia</em> strain <em>w</em>AlbB in <em>An</em>. <em>stephensi</em>, the author has now achieved a second stable infection by transferring the <em>w</em>Pip strain from <em>Culex pipiens</em> into this mosquito species using embryonic microinjection. The resultant transinfected HP1 line induces nearly complete cytoplasmic incompatibility when crossed with wild mosquitoes, displays robust fitness and male mating competitiveness, and exhibits strong resilience against heat stress. These advantageous traits position the HP1 line as a promising candidate for further development in malaria control."
+    },
+    {
+     "t": "p",
+     "html": "<strong>Citation: </strong>Liang Y, Liu J, Wu Y, Wu Y, Xi Z (2024) Stable introduction of <em>Wolbachia w</em>Pip into invasive <em>Anopheles stephensi</em> for potential malaria control. PLoS Negl Trop Dis 18(9):\n           e0012523.\n        \n        https://doi.org/10.1371/journal.pntd.0012523"
+    },
+    {
+     "t": "p",
+     "html": "<strong>Editor: </strong>Gordana Rasic, QIMR Berghofer Medical Research Institute, AUSTRALIA"
+    },
+    {
+     "t": "p",
+     "html": "<strong>Received: </strong>April 24, 2024; <strong>Accepted: </strong>September 9, 2024; <strong>Published: </strong> September 26, 2024"
+    },
+    {
+     "t": "p",
+     "html": "<strong>Copyright: </strong> © 2024 Liang et al. This is an open access article distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited."
+    },
+    {
+     "t": "p",
+     "html": "<strong>Data Availability: </strong>All data are available in the manuscript and its <a href=\"#sec023\">Supporting Information</a> files."
+    },
+    {
+     "t": "p",
+     "html": "<strong>Funding: </strong>This work was supported by the National Natural Science Foundation of China (nos. 31372263 to YW) and the National Institutes of Health (R01AI182096 to ZX). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript."
+    },
+    {
+     "t": "p",
+     "html": "<strong>Competing interests: </strong> I have read the journal’s policy and the authors of this manuscript have the following competing interests: YKL, JLL, YLW and ZYX are affiliated with Guangzhou Wolbaki Biotech Co., Ltd. The other authors declare no competing interests."
+    }
+   ]
+  },
+  {
+   "id": "sec-introduction",
+   "title": "Introduction",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Malaria, caused by <em>Plasmodium</em> spp., which are transmitted by <em>Anopheles</em> mosquito species [<a class=\"ref-chip\" data-ref=\"1\" href=\"#ref-1\">1</a>], imposes a significant public health burden [<a class=\"ref-chip\" data-ref=\"2\" href=\"#ref-2\">2</a>]. The World Health Organization reported approximately 249 million malaria cases and 608,000 related deaths across 85 endemic countries in 2022, a substantial increase from pre-COVID-19 pandemic estimates [<a class=\"ref-chip\" data-ref=\"3\" href=\"#ref-3\">3</a>]. Despite the availability of artemisinin-based treatments, the emergence and spread of resistant <em>Plasmodium</em> strains and the absence of an effective vaccine have significantly hindered the global malaria eradication efforts [<a class=\"ref-chip\" data-ref=\"4\" href=\"#ref-4\">4</a>–<a class=\"ref-chip\" data-ref=\"6\" href=\"#ref-6\">6</a>]. <em>Anopheles stephensi</em>, capable of thriving in urban and man-made environments and transmitting both <em>P</em>. <em>falciparum</em> and <em>P</em>. <em>vivax</em> [<a class=\"ref-chip\" data-ref=\"7\" href=\"#ref-7\">7</a>,<a class=\"ref-chip\" data-ref=\"8\" href=\"#ref-8\">8</a>], is native to South Asia and parts of the Arabian Peninsula but has recently expanded its range into sub-Saharan Africa. This region, where malaria’s burden is most severe and over 40% of the population resides in urban areas, has become a critical focus for mosquito control efforts. A recent WHO initiative underscores the urgency of developing innovative control strategies targeting <em>An</em>. <em>stephensi</em> [<a class=\"ref-chip\" data-ref=\"9\" href=\"#ref-9\">9</a>]. Currently, control efforts primarily rely on chemical pesticides; however, the rapid development of resistance among vectors and the adverse environmental impacts of these insecticides [<a class=\"ref-chip\" data-ref=\"10\" href=\"#ref-10\">10</a>,<a class=\"ref-chip\" data-ref=\"11\" href=\"#ref-11\">11</a>], necessitate the development of new methods for vector control."
+    },
+    {
+     "t": "p",
+     "html": "The maternally transmitted endosymbiotic bacterium <em>Wolbachia pipientis</em> naturally infects ~40% of all terrestrial insect species [<a class=\"ref-chip\" data-ref=\"12\" href=\"#ref-12\">12</a>]. Native <em>Wolbachia</em> infections have been discovered in several anopheline populations across Africa [<a class=\"ref-chip\" data-ref=\"13\" href=\"#ref-13\">13</a>–<a class=\"ref-chip\" data-ref=\"17\" href=\"#ref-17\">17</a>]. Unfortunately, except for one report of high-density infection [<a class=\"ref-chip\" data-ref=\"16\" href=\"#ref-16\">16</a>,<a class=\"ref-chip\" data-ref=\"18\" href=\"#ref-18\">18</a>], other native <em>Wolbachia</em> infections have been reported with low prevalence and low titer, which has led to controversy, as these could reasonably result from contamination or other environmental sources. Also, none of these strains has been observed to induce cytoplasmic incompatibility (CI), the early embryonic death that occurs when infected males mate with females that are either uninfected or infected with a different <em>Wolbachia</em> strain [<a class=\"ref-chip\" data-ref=\"19\" href=\"#ref-19\">19</a>]. Stable, artificial <em>Wolbachia</em> infections can be generated in mosquitoes through embryo microinjection. Although many <em>Wolbachia</em>-transinfected <em>Aedes</em> lines have been developed through this technique, thus far only a single <em>Wolbachia</em> transinfected anopheline line has been generated: the <em>An</em>. <em>stephensi</em> LB1 line carrying <em>w</em>AlbB strain originally from <em>Aedes albopictus</em> [<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>]. Stable transinfections typically cause CI in mosquitoes, which acts as a type of natural genetic drive to allow <em>Wolbachia</em> to spread rapidly into uninfected mosquito populations [<a class=\"ref-chip\" data-ref=\"21\" href=\"#ref-21\">21</a>]. <em>Wolbachia</em> infection can also cause pathogen blocking, which makes mosquitoes resistant to infection with key pathogens and decreases the likelihood that these pathogens will be transmitted [<a class=\"ref-chip\" data-ref=\"22\" href=\"#ref-22\">22</a>–<a class=\"ref-chip\" data-ref=\"24\" href=\"#ref-24\">24</a>]. In LB1 line, <em>w</em>AlbB was found to induce <em>An</em>. <em>stephensi</em> refractory to both the human malaria parasite <em>Plasmodium falciparum</em> and the rodent parasite <em>P</em>. <em>berghei</em> [<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>,<a class=\"ref-chip\" data-ref=\"25\" href=\"#ref-25\">25</a>]."
+    },
+    {
+     "t": "p",
+     "html": "Strategies that utilize <em>Wolbachia</em> to control arbovirus transmission have shown considerable advancement, with successful field trials demonstrating population reductions [<a class=\"ref-chip\" data-ref=\"26\" href=\"#ref-26\">26</a>,<a class=\"ref-chip\" data-ref=\"27\" href=\"#ref-27\">27</a>] and reduced disease transmission through the replacement of pathogen-susceptible populations with <em>Wolbachia</em>-infected pathogen-resistant ones [<a class=\"ref-chip\" data-ref=\"21\" href=\"#ref-21\">21</a>,<a class=\"ref-chip\" data-ref=\"28\" href=\"#ref-28\">28</a>–<a class=\"ref-chip\" data-ref=\"30\" href=\"#ref-30\">30</a>]. Similar efforts are underway in Hawaii, targeting <em>Culex</em> mosquitoes to control avian malaria [<a class=\"ref-chip\" data-ref=\"31\" href=\"#ref-31\">31</a>]. However, the application of <em>Wolbachia</em> for malaria control is less developed, primarily because only one <em>Wolbachia</em>-transinfected <em>Anopheles</em> line was available until recently, and major resources were focused on developing <em>Wolbachia</em> for dengue control. Consequently, there is a need to develop additional transinfected lines, identify those with substantial parasite-blocking potential and minimal fitness costs, and assess the feasibility of a <em>Wolbachia</em>-based population suppression strategy to eradicate this invasive species and restore the original <em>An</em>. <em>stephensi</em>-free ecosystems in urban Africa."
+    },
+    {
+     "t": "p",
+     "html": "In this study, we established the <em>An</em>. <em>stephensi</em> HP1 line transinfected with <em>w</em>Pip, originally derived from <em>Culex pipiens molestus</em>. In the HP1 line, <em>w</em>Pip exhibits perfect maternal transmission and induces nearly complete CI in crosses between infected males and uninfected wild females. While <em>w</em>Pip in the HP1 line has little impact on mosquito fitness and shows tolerance to the rearing temperatures up to 38°C, it experiences a modest reduction in lifespan and female reproductive capacity, with <em>w</em>Pip densities moderately decreasing when larvae are exposed to a constant 33°C and diurnal cyclic temperatures of 27–36°C and 27–38°C. These findings underscore the robustness of the HP1 line and its potential utility in vector control strategies."
+    }
+   ]
+  },
+  {
+   "id": "sec-methods-and-materials",
+   "title": "Methods and materials",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "sec-ethics-statement",
+   "title": "Ethics statement",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "This study was conducted in accordance with the recommendations of the Animal Care and Use Committee (ACUC) of Sun Yat-sen University. Mice were used for mosquito rearing according to protocol SYSU-IACUC-2022-B0023, approved by the Institutional Animal Care and Use Committee (IACUC) of Sun Yat-sen University."
+    }
+   ]
+  },
+  {
+   "id": "sec-mosquito-colonies",
+   "title": "Mosquito colonies",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Originally collected from India, the <em>An</em>. <em>stephensi</em> Hor line was provided by Professor Wen-Yue Xu [<a class=\"ref-chip\" data-ref=\"32\" href=\"#ref-32\">32</a>]. The <em>Ae</em>. <em>albopictus</em> transinfected GTM line was established by transferring <em>Wolbachia w</em>Pip from <em>Cx</em>. <em>pipiens molestus</em>, a gift from Professor Tongyan Zhao, into a tetracycline-treated <em>Ae</em>. <em>albopictus</em> Guangzhou line through embryonic microinjection in our laboratory in 2014. Since then, <em>w</em>Pip has stably maintained 100% maternal transmission in the GTM line. Both <em>An</em>. <em>stephensi</em> line and GTM line were maintained on 10% sugar solution at 27 ± 1°C, 70 ± 10% with a 12-hr L/D (light/dark) cycle [<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>]. Five to seven days old female mosquitoes were fed on the blood of anesthetized mice to initiate egg development."
+    }
+   ]
+  },
+  {
+   "id": "sec-embryonic-microinjection",
+   "title": "Embryonic microinjection",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Embryonic microinjection involved transferring cytoplasm from GTM embryos into the posterior of recipient Hor embryos, following previously reported procedures with minor modifications [<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>,<a class=\"ref-chip\" data-ref=\"33\" href=\"#ref-33\">33</a>]. Post-injection, embryos were incubated at 70% relative humidity and 27°C for approximately 40 minutes, then removed from oil (Halocarbon oil 700, Simga) and placed on wet filter paper supported by water-soaked cotton. Hatched larvae were reared under standard maintenance conditions as described earlier. The establishment of an isofemale line and screening for stable transinfection followed methods previously detailed [<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>,<a class=\"ref-chip\" data-ref=\"33\" href=\"#ref-33\">33</a>]. Briefly, G0 females were isolated as virgins and mated with Hor males. After oviposition, G0 parents were tested for <em>Wolbachia</em> infection using the universal primers 81F and 691R [<a class=\"ref-chip\" data-ref=\"34\" href=\"#ref-34\">34</a>], based on established protocols [<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>,<a class=\"ref-chip\" data-ref=\"26\" href=\"#ref-26\">26</a>]. G0 females testing negative for <em>Wolbachia</em> were discarded along with their progeny. This screening process was repeated in each generation until all offspring tested positive for <em>Wolbachia</em> infection. After nine generations of screening, we established the transinfected <em>An</em>. <em>stephensi</em> HP1 line with a stable <em>Wolbachia</em> infection, which has been outcrossed with Hor for six generations to homogenize the host genetic background before further study."
+    }
+   ]
+  },
+  {
+   "id": "sec-ci-crosses",
+   "title": "CI crosses",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "At G30, standard crosses were conducted to evaluate the patterns and intensity of cytoplasmic incompatibility (CI) [<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>]. Each cross involved three replicates, consisting of 10 virgin females and 10 virgin males. Adults had constant access to a 10% sucrose solution. Mating was allowed for five days before the females were blood-fed on anesthetized mice. Two days post-blood meal, oviposition cups lined with wet filter paper were placed in the cages. Females were given 2 to 3 days to lay eggs on the filter paper. Egg hatch rates were assessed two days post-hatching under a dissecting microscope."
+    }
+   ]
+  },
+  {
+   "id": "sec-pcr-assay-of-wolbachia-densities-in-the-whole-bo",
+   "title": "PCR assay of Wolbachia densities in the whole bodies and different tissues of HP1 line",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "qPCR was conducted to assess <em>Wolbachia</em> densities in the whole bodies, ovaries, midguts, fat bodies, salivary glands of 7-day-old females and the whole bodies of 7-day-old males, with five replicates for each tissue or whole body. All the tissues were dissected in 1× PBS solution, and DNA from these tissues was extracted individually following previously described methods [<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>]. <em>Wolbachia</em> density for each sample was quantified using ChamQ SYBR qPCR Master Mix (Without ROX). The assay targeted the <em>Wolbachia wsp</em> gene and the host ribosomal protein S6 (<em>rps6</em>) gene using specific primers. The primers for <em>rps6</em> gene were as previous described [<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>], and those for <em>w</em>Pip <em>wsp</em> gene were: <em>w</em>Pip F: TATTTCCCACTATATCCCTTC; <em>w</em>Pip R: GGATTTGACCTTTCCGGC [<a class=\"ref-chip\" data-ref=\"26\" href=\"#ref-26\">26</a>]. Two recombinant plasmids containing the targeted gene fragments were serially diluted to construct separate standard curves for the <em>wsp</em> and <em>rps6</em> genes."
+    }
+   ]
+  },
+  {
+   "id": "sec-immature-development",
+   "title": "Immature development",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "For both HP1 line and Hor line, larval development and survival were determined as previously described [<a class=\"ref-chip\" data-ref=\"35\" href=\"#ref-35\">35</a>]. Firstly, 150 larvae (&lt; 2h old) were transferred to a plastic container (20 * 10 * 5 cm) filling with 1,000 ml distilled water. Bovine liver powder solution at a concentration of 60 g/L was provided daily. Three biological replicates were performed for each group. Pupae were collected daily at 9:00 am and 4:00 pm and transferred to culture tubes. Adult emergence was also recorded daily at 9:00 am, 12:00 am and 3:00 pm. Time to pupation and time to emergence were both recorded as the time required for the development of L1 to pupa and L1 to adult stages, respectively. Survival to pupation and survival to adult emergence were calculated as the proportion of larvae that survived from L1 to pupal stage and from L1 to adult stage, respectively."
+    }
+   ]
+  },
+  {
+   "id": "sec-wing-length",
+   "title": "Wing length",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "To assess adult size, the left wing of 29 males and 29 females from each line was collected for measurement under a microscope (Olympus CX31, Japan). The wing length was determined by measuring the distance from the distal edge of the alula to the end of the radius vein (excluding fringe scales) [<a class=\"ref-chip\" data-ref=\"35\" href=\"#ref-35\">35</a>]. Three replicates of 29 males and 29 females each were conducted per line."
+    }
+   ]
+  },
+  {
+   "id": "sec-adult-longevity",
+   "title": "Adult longevity",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Adult longevity was assessed as previously described with slight modifications [<a class=\"ref-chip\" data-ref=\"35\" href=\"#ref-35\">35</a>]. Twenty-five newly emerged males and females each were placed in 15 × 15 × 15 cm stainless steel cages, with continuous access to a 10% sugar solution. Adult longevity was assessed under four different feeding regimes: (a) virgin males receiving only sugar solution, (b) virgin females receiving only sugar solution, (c) mated females receiving only sugar solution, and (d) mated females receiving both sugar solution and weekly blood meals that were repeated more than four times. Three biological replicates were conducted for each feeding regime. Mosquito mortality was monitored daily; dead individuals were counted and removed to determine longevity, continuing until all mosquitoes in each cage had perished."
+    }
+   ]
+  },
+  {
+   "id": "sec-female-fecundity-and-fertility",
+   "title": "Female fecundity and fertility",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "To assess female fecundity and fertility, 6- to 7-day-old females from the maintenance colonies were randomly selected and placed into a new 23 × 23 × 23 cm stainless steel cage [<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>,<a class=\"ref-chip\" data-ref=\"35\" href=\"#ref-35\">35</a>]. After providing a blood meal, unfed mosquitoes were removed. Two days later, thirty-one individual females were transferred to 50-ml tubes lined with wet filter paper at the bottom for egg collection. After collecting eggs for two nights, the females were removed. The oviposition filter papers were transferred the next day to a hatching cup with fresh water and some larval food, and allowed to hatch over two days. Then the hatched eggs and the total number of eggs were scored under a microscope."
+    }
+   ]
+  },
+  {
+   "id": "sec-male-mating-competitiveness-assay",
+   "title": "Male mating competitiveness assay",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "The mating competitiveness of HP1 and Hor males with Hor females was assessed with minor modifications from previous methods [<a class=\"ref-chip\" data-ref=\"35\" href=\"#ref-35\">35</a>]. Before the experiment, males and females were placed separately in laboratory cages (23 × 23 × 23 cm). For the assay, males were released into large cages one hour before introducing the females. Twenty 1–2 day-old Hor females were paired with 2–3 day-old Hor and HP1 males in varying ratios: 1:0, 1:1, 1:3, 1:5, and 0:1, with three to five biological replicates conducted for each ratio. Mating was allowed for five days before the females were blood-fed on anesthetized mice. Two days post-blood meal, oviposition cups lined with wet filter paper were placed in the cages. The females were given 2 to 3 days to lay eggs on the filter paper. Egg hatch rates were assessed two days post-hatching under a microscope as described above, and compared against an expected rate based on the assumption of equal mating competitiveness between HP1 and Hor males under random mating conditions. The Fried male mating competitiveness index was calculated following established methods [<a class=\"ref-chip\" data-ref=\"36\" href=\"#ref-36\">36</a>]."
+    }
+   ]
+  },
+  {
+   "id": "sec-temperature-sensitivity-studies-under-laboratory",
+   "title": "Temperature sensitivity studies under laboratory conditions",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "Two temperature regimens were used to evaluate the tolerance of HP1 line to high temperatures in term of their impacts on <em>Wolbachia</em> density and mosquito immature development. In the first regimen, first-instar larvae of HP1 line and Hor line were exposed to temperature maintained constantly at 30°C, 33°C, 36°C and 38°C up to pupal stage. In the second regimen, the larvae were reared at diurnal cyclic temperatures of 27–33°C, 27–33°C, 27–36°C and 27–38°C to pupae. Batches of 30 first-instar larvae of each strain were released separately into a plastic container (20 * 10 * 5 cm) filling with 300 mL distilled water and the containers were placed inside an artificial climate Chamber till the larvae pupated. The water baths were set to maintain temperature constantly at 30°C, 33°C, 36°C and 38°C or at daytime cycling temperatures of 27–33°C, 27–33°C, 27–36°C and 27–38°C. Three replicates (each with 30 larvae) were kept for each temperature regimen and for each strain. Simultaneously, larvae of HP1 line and Hor line were maintained constantly at 27 ± 1°C as controls for each experiment. The larvae were fed with Bovine liver powder solution as described above. The water temperature was recorded using submerging data loggers. Pupae were collected daily at 9:00 am and 3:00 pm and transferred to 15 ml culture tubes containing 1 ml of water. All tubes were kept at a temperature of 27°C. Adult emergence was also recorded daily at 9:00 am and 3:00 pm. Survival to pupation and survival to adult emergence were calculated as the proportion of larvae that survived from L1 to pupal stage and from L1 to adult stage, respectively. Five-day-old adults emerged from all the treatment were used to detect the <em>Wolbachia</em> frequency and density by qPCR as described above [<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>,<a class=\"ref-chip\" data-ref=\"26\" href=\"#ref-26\">26</a>]."
+    }
+   ]
+  },
+  {
+   "id": "sec-statistical-analysis",
+   "title": "Statistical analysis",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "All data were analyzed using Graphpad Prism 9.0 or SPSS 26 software. Kolmogorov-Smirnov tests were used to analyze whether the data obeyed normal distribution. Student’s <em>t</em> test or Mann-Whitney <em>U</em> test was then used to analyze the significant difference in fecundity and fertility of female mosquitoes, <em>Wolbachia</em> density of females and males, survival assays and wing length. The life span of adult mosquitoes was analyzed using Log-rank (Mantel-Cox) tests, and the comparison between the experimental and predicted mating competitiveness of males was analyzed using one sample <em>t</em> test. ANOVA, followed by Tukey post-hoc tests, was used to analyze the significant difference in CI cross, <em>Wolbachia</em> density in female tissues, and temperature sensitivity of the HP1 line."
+    }
+   ]
+  },
+  {
+   "id": "sec-results",
+   "title": "Results",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "sec-generation-of-the-hp1-line",
+   "title": "Generation of the HP1 line",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "In order to establish novel <em>Wolbachia</em> transinfection in <em>An</em>. <em>stephensi</em>, we transferred <em>Wolbachia</em> from <em>w</em>Pip-transinfected <em>Ae</em>. <em>albopictus</em> GTM line into <em>An</em>. <em>stephensi</em> wild-type Hor line by embryonic microinjection. There were 81 larvae hatched from 920 Hor embryos injected, resulting in 68 pupae and 59 adults (G0) survived (<a href=\"#pntd-0012523-t001\">Table 1</a>). Screening of those adults detected <em>Wolbachia</em> infections in 44.1% and 36.0% of males and females, respectively. Individual isofemale line was established from each of 9 infected G0 females by outcrosses with Hor males and only three of them produced G1 offsrpings. We observed only one isofemale line successfully inherited <em>w</em>Pip into G1 progenies, achieving approximately 30% maternal transmission efficiency (Tables <a href=\"#pntd-0012523-t001\">1</a> and <a href=\"#pntd.0012523.s001\">S1</a>). Three positive G1 females were outcrossed with Hor males to establish the next generation and <em>Wolbachia</em> infections were detected in 71.4% and 60.0% of male and female G2 progenies, respectively (<a href=\"#pntd-0012523-t001\">Table 1</a>). The positive female offspring were individually crossed with Hor males to obtain their next generations and screen was repeated until 100% maternal transmission efficiency was observed at both G9 and G10 (<a href=\"#pntd.0012523.s002\">S2 Table</a>). This transinfected line, which was outcrossed with Hor for six generations (from G1 to G6), is hereafter referred to as the HP1 line. The stability of maternally inherited <em>w</em>Pip infection in HP1 was confirmed by PCR assay of randomly selected individuals at the subsequent generations until G55 (the last generation assayed in this study thus far) (Figs <a data-fig=\"fig-table-1\">1</a> and <a href=\"#pntd.0012523.s004\">S1</a> and <a href=\"#pntd.0012523.s002\">S2</a> Tables). Thus, we succeeded in establishing the second <em>Wolbachia</em> transinfection in <em>Anopheles</em>, following the previous LB1 line transinfected with <em>w</em>AlbB."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-1"
+    },
+    {
+     "t": "figure",
+     "fid": "fig-table-1"
+    }
+   ]
+  },
+  {
+   "id": "sec-ci-crosses-and-wolbachia-densities-across-whole-",
+   "title": "CI crosses and Wolbachia densities across whole bodies and different tissues of HP1 mosquitoes",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "To determine whether <em>w</em>Pip induces CI in <em>An</em>. <em>stephensi</em>, we set up the crosses between transinfected HP1 and wild-type Hor lines. Out of 1,992 eggs resulting from crosses between HP1 males and Hor females, nearly no egg hatched (0.8 ± 0.1%), whereas HP1 females rescued CI when mating with HP1 males, with the egg hatch rates (62.9 ± 5.2%), slightly lower than both the self-crosses of Hor (79.6 ± 1.7%) and compatible crosses between HP1 females and Hor males (75.5 ± 3.1%) (<a data-fig=\"fig-table-2\">Fig 2A</a> and <a href=\"#pntd.0012523.s003\">S3 Table</a>, ANOVA analysis, F<sub>3, 8</sub> = 133.3, <em>P</em> &lt; 0.05). These results are similar to the previous observation in <em>w</em>AlbB-infected LB1 line, indicating a typical pattern of unidirectional CI induced by <em>w</em>Pip in <em>An</em>. <em>stephensi</em>. In contrast to the normal embryonic development with dark black pigment, CI embryos stayed at light color, indicating deficiency in eggshell melanization (<a data-fig=\"fig-table-2\">Fig 2B and 2C</a>)."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-2"
+    },
+    {
+     "t": "p",
+     "html": "To examine the densities of <em>w</em>Pip across different tissues in HP1, we collected the whole bodies of both sexes as well as the midguts, salivary glands, ovaries and fat bodies of 7-day-old non-blood-feeding females, and measured the numbers of <em>w</em>Pip genome copies using real-time qPCR. The results showed that <em>w</em>Pip densities in the whole bodies of females were significantly higher than in the males (<a data-fig=\"fig-table-2\">Fig 2D</a>, Student’s <em>t</em> test, <em>P</em> &lt; 0.05). Furthermore, the fat bodies exhibited the highest <em>w</em>Pip densities among all the tissues, followed by ovaries and salivary glands, with the lowest <em>w</em>Pip densities in midguts (<a data-fig=\"fig-table-2\">Fig 2E</a>, ANOVA analysis, F<sub>3, 16</sub> = 62.34, <em>P</em> &lt; 0.05). These results indicate that <em>w</em>Pip has distinct tissue tropism, being highly enriched in fat bodies but only minimally present in midguts."
+    }
+   ]
+  },
+  {
+   "id": "sec-impact-of-wpip-on-the-development-and-body-size-",
+   "title": "Impact of wPip on the development and body size of HP1 line",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "To examine the impact of <em>w</em>Pip on the development and body size of <em>An</em>. <em>stephensi</em>, we assessed life history traits and adult body sizes of HP1 and Hor lines. There were no significant differences in survivorship and development time from the L1 larval stage to pupae/adults, sex ratios, or wing lengths of both females and males between the HP1 and Hor lines (<a href=\"#pntd-0012523-t002\">Table 2</a>). These results indicate that, similar to observations in the LB1 line, there are no measurable fitness costs associated with immature development and adult body size in <em>An</em>. <em>stephensi</em> due to <em>w</em>Pip."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-table-2"
+    }
+   ]
+  },
+  {
+   "id": "sec-impact-of-wpip-on-the-longevity-of-hp1-line",
+   "title": "Impact of wPip on the longevity of HP1 line",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "In order to determine whether <em>w</em>Pip impacts the lifespan of HP1 mosquitoes, we compared the longevity of HP1 mosquitoes and Hor mosquitoes under different rearing conditions. When unmated mosquitoes were provided with sugar solution only, both males (<a data-fig=\"fig-3\">Fig 3A</a>, Log-rank test, χ<a class=\"ref-chip\" data-ref=\"2\" href=\"#ref-2\">2</a> = 4.28, df = 1, <em>P</em> = 0.0385) and females (<a data-fig=\"fig-3\">Fig 3B</a>, Log-rank test, χ<a class=\"ref-chip\" data-ref=\"2\" href=\"#ref-2\">2</a> = 4.88, df = 1, <em>P</em> = 0.0272) of HP1 line showed a significantly decreased lifespan as compared to the counterparts of Hor line. The median lifespan was 21 days for HP1 males and 26 days for Hor males, while it was 36 days for HP1 females and 40 days for Hor females. Interestingly, HP1 females appeared to survive better during the first 30 days; however, this trend reversed subsequently, with Hor females demonstrating superior survival thereafter (<a data-fig=\"fig-3\">Fig 3B</a>). We then measured the lifespan of mated females by providing with sugar solution only and observed that the HP1 females had the median lifespan 30 days, significantly lower than Hor females, with the median lifespan 47 days (<a data-fig=\"fig-3\">Fig 3C</a>, Log-rank test, χ2 = 50.87, df = 1, P &lt; 0.0001). We further assessed the lifespan of the mated females by providing with both bloodmeal and sugar solution. Again, the HP1 females had the median lifespan 18 days after the first blood meal, significantly lower than Hor females, with the median lifespan 21 days (<a data-fig=\"fig-3\">Fig 3D</a>, Log-rank test, χ2 = 6.77, df = 1, <em>P</em> = 0.0093). Taken together, <em>w</em>Pip decreases the lifespan of <em>An</em>. <em>stephensi</em> in all the three rearing conditions."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-3"
+    }
+   ]
+  },
+  {
+   "id": "sec-impact-of-wpip-on-the-reproduction-of-hp1-line",
+   "title": "Impact of wPip on the reproduction of HP1 line",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "To investigate whether <em>w</em>Pip influences the reproduction of HP1 line, we compared the fecundity (the number of eggs laid by a female) and fertility (egg hatch rate) of females between HP1 and Hor lines. The results show HP1 females produced a significantly lower number of eggs (89.2 ± 3.3) than Hor females (107.4 ± 3.1) (<a data-fig=\"fig-4\">Fig 4A</a>, Student’s <em>t</em> test, <em>P</em> &lt; 0.05), and the hatch rates of eggs produced by HP1 females (62.0 ± 1.9%) also were significantly lower than Hor females (89.2 ± 1.4%) (<a data-fig=\"fig-4\">Fig 4B</a>, Student’s <em>t</em> test, <em>P</em> &lt; 0.05), likely due to partial self-incompatibility."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-4"
+    },
+    {
+     "t": "p",
+     "html": "We then examined the impact of <em>w</em>Pip on the competitiveness of HP1 males to mate with Hor females relative to Hor males. Five (1:1) or three cages (0:1, 3:1, 5:1, and 1:0) containing Hor females and different ratios of HP1 males to Hor males were set up. We found that the egg hatch rate was decreased as the ratio of HP1 males increased in the cages (<a data-fig=\"fig-4\">Fig 4C</a>). Consistent with the CI induction, near no egg hatched (0.59 ± 0.17%) at the ratio 1:0, where only HP1 males mated with Hor females. There were no significant differences between the observed egg hatch rates and the predicted values assuming equal competitiveness of HP1 and Hor males and random mating (<a data-fig=\"fig-4\">Fig 4C</a>, One sample <em>t</em> test, <em>P</em> &gt; 0.05). The male mating competitiveness index at the 1:1 ratio of HP1 males to Hor males was 1.148 ± 0.34, not significantly different from 1 (<a data-fig=\"fig-4\">Fig 4D</a>, one sample <em>t</em> test, <em>P</em> = 0.4393)."
+    }
+   ]
+  },
+  {
+   "id": "sec-tolerance-of-hp1-mosquito-to-high-temperatures",
+   "title": "Tolerance of HP1 mosquito to high temperatures",
+   "level": 2,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "To investigate the tolerance of <em>w</em>Pip-<em>Anopheles</em> symbiosis to high temperature, HP1 and Hor larvae were exposed to constant temperatures of 30°C, 33°C, and 27°C (control) and diurnal cyclic temperatures of 27–30°C, 27–33°C, 27–36°C, or 27–38°C. The results showed <em>Wolbachia</em> infection frequency maintained 100% in HP1 females and males under all of constant and cyclic temperatures. The <em>Wolbachia</em> density in HP1 males exposed to the constant temperatures of 30°C as larvae did not differ significantly from the control 27°C; however, the <em>Wolbachia</em> densities in HP1 males exposed to 33°C as larvae were significantly lower than in those exposed to 30°C and 27°C as larvae (<a data-fig=\"fig-5\">Fig 5A</a>, ANOVA analysis, F<sub>2, 21</sub> = 5.875, <em>P</em> &lt; 0.05). At the diurnal cyclic temperatures, there was no significant difference in <em>Wolbachia</em> densities among HP1 males exposed to 27°C, 27–30°C, 27–33°C as larvae; however, while HP1 males exposed to temperatures of 27–36°C and 27–38°C as larvae exhibited similar <em>Wolbachia</em> densities, these densities were significantly lower compared to other groups (<a data-fig=\"fig-5\">Fig 5A</a>, ANOVA analysis, F<sub>4, 35</sub> = 7.320, <em>P</em> &lt; 0.05). Furthermore, HP1 females exposed to 30°C and 33°C as larvae exhibited significantly lower <em>Wolbachia</em> densities than that exposed to 27°C as larvae (<a data-fig=\"fig-5\">Fig 5B</a>, ANOVA analysis, F<sub>2, 21</sub> = 8.515, <em>P</em> &lt; 0.05). Under the diurnal cyclic temperatures, HP1 females exposed to 27–36°C and 27–38°C as larvae also had significantly lower <em>Wolbachia</em> densities than those exposed to 27–30°C, 27–33°C and 27°C as larvae; by contrast, HP1 female exposed to 27–30°C as larvae had the highest <em>Wolbachia</em> densities among all the tested groups (<a data-fig=\"fig-5\">Fig 5B</a>, ANOVA analysis, F<sub>4, 35</sub> = 33.08, <em>P</em> &lt; 0.05). No difference in <em>Wolbachia</em> densities was observed between 30°C and 33°C, between 27–36°C and 27–38°C, and between 27°C and 27–33°C (<a data-fig=\"fig-5\">Fig 5B</a>). These results suggest that <em>w</em>Pip densities in <em>An</em>. <em>stephensi</em> may decrease as environmental temperatures reach sufficiently high levels. However, this transinfection remains robust to a certain extent, maintaining a 100% infection frequency even under elevated temperatures."
+    },
+    {
+     "t": "figure",
+     "fid": "fig-5"
+    },
+    {
+     "t": "p",
+     "html": "In addition to <em>Wolbachia</em> densities, we also examined whether high larvae rearing temperature stress might differ in their impacts on the development of HP1 and Hor lines. We found that both HP1 and Hor lines exhibited a decrease in pupae and adult emergence rates with the increase of larvae rearing temperature to 33°C, 36°C, 38°C, 27–36°C, and 27–38°C compared to 27°C and other treatments (<a href=\"#pntd.0012523.s005\">S2 Fig</a>). However, under the same rearing temperatures, even at high larvae rearing temperatures, there were no differences in the pupation rates and adult emergence rates between HP1 and Hor lines (<a href=\"#pntd.0012523.s005\">S2 Fig</a>)."
+    }
+   ]
+  },
+  {
+   "id": "sec-discussion",
+   "title": "Discussion",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "In this study, we have succeeded in transferring <em>Wolbachia w</em>Pip into <em>An</em>. <em>stephensi</em> and established a stable maternally inherited artificial infection, which is the second <em>Wolbachia</em> transinfection in <em>Anopheles</em> mosquitoes. We show that <em>w</em>Pip in <em>An</em>. <em>stephensi</em> induces nearly complete unidirectional CI and distributes in both somatic and germline tissues. There is no impact of <em>w</em>Pip on immature survivorship and development time, sex ratio, body size and male mating competitiveness. By contrast, <em>w</em>Pip reduces both the life span of transinfected mosquito and female reproduction capacity. While exposing larvae to high temperature reduces the densities of <em>w</em>Pip and negatively affects immature development, <em>Wolbachia</em> infection frequence has been stably maintained at 100% in the transinfected line and there is no difference in immature tolerance to high temperature between transinfected and wild-type lines. These results support the robustness of the <em>w</em>Pip transinfection in <em>Anopheles</em> with only moderate fitness cost detected and highlight its potential to be used for malaria control in endemic countries."
+    },
+    {
+     "t": "p",
+     "html": "The generation of the 2nd transinfection in <em>An</em>. <em>stephensi</em> allows us to analyze the phenotypes induced by these two supergroup B strains, <em>w</em>Pip and <em>w</em>AlbB. However, direct comparison should be avoided as they were studied in separate experiments. Both strains induce near complete CI, with egg hatch rates in the CI crosses 0.8% and 1.2% for <em>w</em>Pip and <em>w</em>AlbB [<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>], respectively. The self-crosses of both transinfected lines show reduced egg hatch compared to the other two compatible crosses, which might be caused by partial self-incompatibility or a transinfection-associated cost on female reproduction rather than inbreeding effects. This is evidenced by the persistence of reduced hatching after outcrossing with wild types for six generations and by normal egg hatch rates observed in crosses between transinfected females and wild-type males. Similar to <em>w</em>AlbB, <em>w</em>Pip has the highest density in fat bodies and lowest in midguts among the tested tissues, different with their native infection, typically highly enriched in ovaries related to somatic tissues [<a class=\"ref-chip\" data-ref=\"37\" href=\"#ref-37\">37</a>]. Both <em>w</em>Pip and <em>w</em>AlbB have no impact on the life history traits and sex ratio of the transinfected lines, with either no or very minor impact on male mating competitiveness [<a class=\"ref-chip\" data-ref=\"35\" href=\"#ref-35\">35</a>]. While <em>w</em>AlbB increased the longevity of <em>An</em>. <em>stephensi</em> when mosquitoes were provided with sugar alone [<a class=\"ref-chip\" data-ref=\"35\" href=\"#ref-35\">35</a>], <em>w</em>Pip consistently reduced mosquito life span when providing with either sugar alone or blood meal. In general, although the two transinfected lines were generated from different host backgrounds in either the LIS or Hor strain [<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>,<a class=\"ref-chip\" data-ref=\"32\" href=\"#ref-32\">32</a>], they exhibit more similarities than differences, indicating the presence of conserved interactions between <em>Wolbachia</em> supergroup B and <em>Anopheles</em> hosts. Given that <em>w</em>AlbB induces resistance to both <em>P</em>. <em>berghei</em> [<a class=\"ref-chip\" data-ref=\"25\" href=\"#ref-25\">25</a>] and <em>P</em>. <em>falciparum</em> [<a class=\"ref-chip\" data-ref=\"20\" href=\"#ref-20\">20</a>], while <em>w</em>Pip does not inhibit dengue viruses in transinfected <em>Aedes aegypti</em> [<a class=\"ref-chip\" data-ref=\"38\" href=\"#ref-38\">38</a>], it would be informative to investigate the impact of <em>w</em>Pip on vector competence for malaria parasites. Furthermore, a previous report shows no relationship between <em>Wolbachia</em> density and the blocking of parasites [<a class=\"ref-chip\" data-ref=\"39\" href=\"#ref-39\">39</a>], calling for further investigation into the <em>Anopheles-Wolbachia-Plasmodium</em> interactions."
+    },
+    {
+     "t": "p",
+     "html": "Although not evaluated in <em>w</em>AlbB-infected <em>An</em>. <em>stephensi</em>, we investigated the tolerance of the <em>w</em>Pip-transinfected HP1 line to heat stress during the immature stage, given <em>Anopheles</em> larvae can still be found alive when the water temperature at the breeding habitat reaches 36°C [<a class=\"ref-chip\" data-ref=\"40\" href=\"#ref-40\">40</a>] in malaria endemic areas, and the temperature sensitivity of <em>Wolbachia</em>-mosquito associations observed in the transinfected <em>Aedes</em> mosquitoes [<a class=\"ref-chip\" data-ref=\"41\" href=\"#ref-41\">41</a>–<a class=\"ref-chip\" data-ref=\"43\" href=\"#ref-43\">43</a>]. Importantly, none of the high larvae rearing temperature treatments resulted in loss of <em>Wolbachia</em> in transinfected line. For both males and females, we observed a consistent reduction in <em>w</em>Pip densities when larvae were exposed to sufficiently high temperatures, including a constant temperature of 33°C, as well as to diurnal cyclic temperatures of 27–36°C and 27–38°C. However, upon exposure to 30°C, <em>w</em>Pip densities decreased in females but remained unchanged in males. Additionally, cyclic temperatures of 27–30°C did not affect <em>w</em>Pip densities in males, yet increased them in females. These findings suggest a gender-specific difference in regulation of <em>w</em>Pip densities by temperature."
+    },
+    {
+     "t": "p",
+     "html": "Heat stress is reported to have negative, strain-specific effects on CI and <em>Wolbachia</em> load [<a class=\"ref-chip\" data-ref=\"41\" href=\"#ref-41\">41</a>–<a class=\"ref-chip\" data-ref=\"43\" href=\"#ref-43\">43</a>]. Increased temperatures are associated with a reduced expression of CI and lowered <em>Wolbachia</em> density, and this trend appears to vary by strain in the transinfected <em>Ae</em>. <em>aegypti</em> (e.g., more marked in <em>w</em>Mel than in <em>w</em>AlbB) [<a class=\"ref-chip\" data-ref=\"43\" href=\"#ref-43\">43</a>]. As a nutrition-consuming parasite, <em>Wolbachia</em> increases the mosquito’s energy requirements, and there is likely a trade-off between this increased energy requirement and mosquito fitness at increasing temperatures [<a class=\"ref-chip\" data-ref=\"44\" href=\"#ref-44\">44</a>]. Although field trials have demonstrated that the <em>w</em>Mel strain can achieve <em>Ae</em>. <em>aegypti</em> population replacement and dengue control in some regions, such as Australia and Indonesia [<a class=\"ref-chip\" data-ref=\"21\" href=\"#ref-21\">21</a>,<a class=\"ref-chip\" data-ref=\"30\" href=\"#ref-30\">30</a>], this same <em>Wolbachia</em> strain struggles to spread in other areas, such as Vietnam and Brazil [<a class=\"ref-chip\" data-ref=\"45\" href=\"#ref-45\">45</a>,<a class=\"ref-chip\" data-ref=\"46\" href=\"#ref-46\">46</a>], pointing to temperature and other environmental conditions as the key drivers for the low efficacy in certain settings. Field populations experience variable temperatures and periods of rainfall, as well as limited food resources available to larvae, likely leading some <em>Wolbachia</em> strains to parasitize mosquitoes by depleting their energetic resources and reducing their fitness, as observed in <em>w</em>MelPop- and <em>w</em>AlbB- transinfected <em>Ae</em>. <em>aegypti</em> [<a class=\"ref-chip\" data-ref=\"47\" href=\"#ref-47\">47</a>]. In addition, both <em>w</em>AlbB and <em>w</em>Mel are reported to reduce the thermal tolerance of <em>Ae</em>. <em>aegypti</em> [<a class=\"ref-chip\" data-ref=\"43\" href=\"#ref-43\">43</a>,<a class=\"ref-chip\" data-ref=\"48\" href=\"#ref-48\">48</a>]. However, we have not observed increased sensitivity to high temperatures in the immature development and survivorship of the HP1 line relative to its wild counterpart. <em>An</em>. <em>stephensi</em> is reported to survive extremely high temperatures during the dry season, when malaria transmission usually reaches a seasonal low. Thus, future studies are needed to assess how these stressful field conditions will affect <em>Wolbachia</em> densities and CI expression, and compare how known environmental factors affect <em>Wolbachia-Anopheles-Plasmodium</em> interactions across different <em>Wolbachia</em> strains."
+    },
+    {
+     "t": "p",
+     "html": "The expansion of <em>An</em>. <em>stephensi</em> has triggered a recent WHO initiative aimed at determining whether this vector can be eradicated from regions it has already established. The successful application of the Incompatible Insect Technique (IIT) for eliminating the invasive mosquito species <em>Aedes albopictus</em> [<a class=\"ref-chip\" data-ref=\"26\" href=\"#ref-26\">26</a>], combined with the lack of negative impact of <em>w</em>Pip on the mating competitiveness of HP1 males observed in this study, supports the potential of releasing incompatible males to suppress and eliminate <em>An</em>. <em>stephensi</em> populations. However, it is more challenging to achieve mass production and sex separation in <em>Anopheles</em> mosquitoes compared to <em>Aedes</em> mosquitoes. We noted a <em>w</em>Pip-associated fitness cost affecting female reproduction and adult lifespan. Such reductions in female fecundity and fertility may increase the cost of mass-rearing the transinfected line. In strategies involving population replacement, these fitness costs could increase the threshold frequency of <em>Wolbachia</em> required for successful replacement. However, once replacement is achieved, these costs could potentially facilitate disease control by both lowering mosquito density and reducing the probability of mosquitoes surviving through the extrinsic incubation period. The variability of these fitness costs with environmental conditions and mosquito genetic backgrounds, and their potential impacts on the spread of <em>w</em>Pip in field populations, remain to be explored."
+    },
+    {
+     "t": "p",
+     "html": "In conclusion, we have successfully established <em>w</em>Pip transinfection in <em>An</em>. <em>stephensi</em>. The ability of <em>w</em>Pip to achieve perfect maternal transmission, induce nearly complete CI, and exhibit no measurable fitness cost on the immature development and male mating competitiveness in the HP1 line while maintaining reduced infection densities at temperatures up to 38°C supports further evaluation of the HP1 line for malaria control. Future studies should investigate the <em>w</em>Pip-mediated <em>Plasmodium</em> blocking effect, its potential to induce population replacement and suppression, and the long-term stability of <em>Wolbachia-Anopheles</em> associations under real-world field conditions."
+    }
+   ]
+  },
+  {
+   "id": "sec-supporting-information",
+   "title": "Supporting information",
+   "level": 1,
+   "blocks": []
+  },
+  {
+   "id": "sec-acknowledgments",
+   "title": "Acknowledgments",
+   "level": 1,
+   "blocks": [
+    {
+     "t": "p",
+     "html": "We would like to thank Professor Wen-Yue Xu for providing the Hor line for this work, and Professors Zhongdao Wu, Xiaoying Zheng and Dongjing Zhang for their technical assistance."
+    }
+   ]
+  }
+ ],
+ "figures": [
+  {
+   "id": "fig-1",
+   "label": "Fig 1",
+   "captionHtml": " Generation of a stable <em>w</em>Pip transinfection in <em>An</em>. <em>stephensi</em> through intensive PCR-screenings over multiple generations.",
+   "src": "https://journals.plos.org/plosntds/article/figure/image?size=medium&id=10.1371/journal.pntd.0012523.g001",
+   "thumb": "https://journals.plos.org/plosntds/article/figure/image?size=medium&id=10.1371/journal.pntd.0012523.g001",
+   "alt": "thumbnail",
+   "href": "",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-table-1",
+   "label": "Table 1",
+   "captionHtml": " Survival of microinjected <em>An</em>. <em>stephensi</em> embryos and the resulting <em>Wolbachia w</em>Pip infection status in the G0, G1 and G2 adults.",
+   "src": "https://journals.plos.org/plosntds/article/figure/image?size=medium&id=10.1371/journal.pntd.0012523.t001",
+   "thumb": "https://journals.plos.org/plosntds/article/figure/image?size=medium&id=10.1371/journal.pntd.0012523.t001",
+   "alt": "thumbnail",
+   "href": "",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-2",
+   "label": "Fig 2",
+   "captionHtml": " CI crosses and <em>Wolbachia</em> densities in the whole bodies and different tissues of HP1 mosquitoes.",
+   "src": "https://journals.plos.org/plosntds/article/figure/image?size=medium&id=10.1371/journal.pntd.0012523.g002",
+   "thumb": "https://journals.plos.org/plosntds/article/figure/image?size=medium&id=10.1371/journal.pntd.0012523.g002",
+   "alt": "thumbnail",
+   "href": "",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-table-2",
+   "label": "Table 2",
+   "captionHtml": " Life history traits and adult body sizes of HP1 and Hor lines.",
+   "src": "https://journals.plos.org/plosntds/article/figure/image?size=medium&id=10.1371/journal.pntd.0012523.t002",
+   "thumb": "https://journals.plos.org/plosntds/article/figure/image?size=medium&id=10.1371/journal.pntd.0012523.t002",
+   "alt": "thumbnail",
+   "href": "",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-3",
+   "label": "Fig 3",
+   "captionHtml": " The impacts of <em>w</em>Pip on the longevity of HP1 line.",
+   "src": "https://journals.plos.org/plosntds/article/figure/image?size=medium&id=10.1371/journal.pntd.0012523.g003",
+   "thumb": "https://journals.plos.org/plosntds/article/figure/image?size=medium&id=10.1371/journal.pntd.0012523.g003",
+   "alt": "thumbnail",
+   "href": "",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-4",
+   "label": "Fig 4",
+   "captionHtml": " The impact of <em>w</em>Pip on the reproduction of HP1 line.",
+   "src": "https://journals.plos.org/plosntds/article/figure/image?size=medium&id=10.1371/journal.pntd.0012523.g004",
+   "thumb": "https://journals.plos.org/plosntds/article/figure/image?size=medium&id=10.1371/journal.pntd.0012523.g004",
+   "alt": "thumbnail",
+   "href": "",
+   "origin": "inline"
+  },
+  {
+   "id": "fig-5",
+   "label": "Fig 5",
+   "captionHtml": " The tolerance of HP1 line to high temperatures.",
+   "src": "https://journals.plos.org/plosntds/article/figure/image?size=medium&id=10.1371/journal.pntd.0012523.g005",
+   "thumb": "https://journals.plos.org/plosntds/article/figure/image?size=medium&id=10.1371/journal.pntd.0012523.g005",
+   "alt": "thumbnail",
+   "href": "",
+   "origin": "inline"
+  }
+ ],
+ "references": [
+  {
+   "n": 1,
+   "id": "ref1",
+   "html": "Cowman AF, Healer J, Marapana D, Marsh K. Malaria: Biology and Disease. Cell. 2016;167(3):610–24.  pmid:27768886. ",
+   "text": "Cowman AF, Healer J, Marapana D, Marsh K. Malaria: Biology and Disease. Cell. 2016;167(3):610–24. pmid:27768886.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 2,
+   "id": "ref2",
+   "html": "Hay SI, Guerra CA, Tatem AJ, Noor AM, Snow RW. The global distribution and population at risk of malaria: past, present, and future. Lancet Infect Dis. 2004;4(6):327–36.  pmid:15172341; PubMed Central PMCID: PMC3145123. ",
+   "text": "Hay SI, Guerra CA, Tatem AJ, Noor AM, Snow RW. The global distribution and population at risk of malaria: past, present, and future. Lancet Infect Dis. 2004;4(6):327–36. pmid:15172341; PubMed Central PMCID: PMC3145123.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 3,
+   "id": "ref3",
+   "html": "WHO. World malaria report 2023. Geneva: World Health Organization; 2023. ",
+   "text": "WHO. World malaria report 2023. Geneva: World Health Organization; 2023.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 4,
+   "id": "ref4",
+   "html": "Uhlemann AC, Fidock DA. Loss of malarial susceptibility to artemisinin in Thailand. Lancet. 2012;379(9830):1928–30. Epub 20120405.  pmid:22484133. ",
+   "text": "Uhlemann AC, Fidock DA. Loss of malarial susceptibility to artemisinin in Thailand. Lancet. 2012;379(9830):1928–30. Epub 20120405. pmid:22484133.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 5,
+   "id": "ref5",
+   "html": "Phyo AP, Nkhoma S, Stepniewska K, Ashley EA, Nair S, McGready R, et al. Emergence of artemisinin-resistant malaria on the western border of Thailand: a longitudinal study. Lancet. 2012;379(9830):1960–6. Epub 20120405.  pmid:22484134; PubMed Central PMCID: PMC3525980. ",
+   "text": "Phyo AP, Nkhoma S, Stepniewska K, Ashley EA, Nair S, McGready R, et al. Emergence of artemisinin-resistant malaria on the western border of Thailand: a longitudinal study. Lancet. 2012;379(9830):1960–6. Epub 20120405. pmid:22484134; PubMed Central PMCID: PMC3525980.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 6,
+   "id": "ref6",
+   "html": "Uwimana A, Legrand E, Stokes BH, Ndikumana JM, Warsame M, Umulisa N, et al. Emergence and clonal expansion of in vitro artemisinin-resistant <em>Plasmodium falciparum</em> kelch13 R561H mutant parasites in Rwanda. Nat Med. 2020;26(10):1602–8. Epub 20200803.  pmid:32747827; PubMed Central PMCID: PMC7541349. ",
+   "text": "Uwimana A, Legrand E, Stokes BH, Ndikumana JM, Warsame M, Umulisa N, et al. Emergence and clonal expansion of in vitro artemisinin-resistant Plasmodium falciparum kelch13 R561H mutant parasites in Rwanda. Nat Med. 2020;26(10):1602–8. Epub 20200803. pmid:32747827; PubMed Central PMCID: PMC7541349.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 7,
+   "id": "ref7",
+   "html": "Surendran SN, Sivabalakrishnan K, Sivasingham A, Jayadas TTP, Karvannan K, Santhirasegaram S, et al. Anthropogenic Factors Driving Recent Range Expansion of the Malaria Vector <em>Anopheles stephensi</em>. Front Public Health. 2019;7:53. Epub 20190314.  pmid:30923705; PubMed Central PMCID: PMC6426791. ",
+   "text": "Surendran SN, Sivabalakrishnan K, Sivasingham A, Jayadas TTP, Karvannan K, Santhirasegaram S, et al. Anthropogenic Factors Driving Recent Range Expansion of the Malaria Vector Anopheles stephensi. Front Public Health. 2019;7:53. Epub 20190314. pmid:30923705; PubMed Central PMCID: PMC6426791.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 8,
+   "id": "ref8",
+   "html": "Sinka ME, Bangs MJ, Manguin S, Chareonviriyaphap T, Patil AP, Temperley WH, et al. The dominant <em>Anopheles</em> vectors of human malaria in the Asia-Pacific region: occurrence data, distribution maps and bionomic précis. Parasit Vectors. 2011;4:89. Epub 20110525.  pmid:21612587; PubMed Central PMCID: PMC3127851. ",
+   "text": "Sinka ME, Bangs MJ, Manguin S, Chareonviriyaphap T, Patil AP, Temperley WH, et al. The dominant Anopheles vectors of human malaria in the Asia-Pacific region: occurrence data, distribution maps and bionomic précis. Parasit Vectors. 2011;4:89. Epub 20110525. pmid:21612587; PubMed Central PMCID: PMC3127851.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 9,
+   "id": "ref9",
+   "html": "WHO. WHO initiative to stop the spread of <em>Anopheles stephensi</em> in Africa, 2023 update. Available from: <a href=\"https://www.who.int/publications/i/item/WHO-UCN-GMP-2022.06\">https://www.who.int/publications/i/item/WHO-UCN-GMP-2022.06</a>. ",
+   "text": "WHO. WHO initiative to stop the spread of Anopheles stephensi in Africa, 2023 update. Available from: https://www.who.int/publications/i/item/WHO-UCN-GMP-2022.06.",
+   "doi": "",
+   "url": "https://www.who.int/publications/i/item/WHO-UCN-GMP-2022.06"
+  },
+  {
+   "n": 10,
+   "id": "ref10",
+   "html": "Yared S, Gebressielasie A, Damodaran L, Bonnell V, Lopez K, Janies D, et al. Insecticide resistance in <em>Anopheles stephensi</em> in Somali Region, eastern Ethiopia. Malar J. 2020;19(1):180. Epub 20200512.  pmid:32398055; PubMed Central PMCID: PMC7216317. ",
+   "text": "Yared S, Gebressielasie A, Damodaran L, Bonnell V, Lopez K, Janies D, et al. Insecticide resistance in Anopheles stephensi in Somali Region, eastern Ethiopia. Malar J. 2020;19(1):180. Epub 20200512. pmid:32398055; PubMed Central PMCID: PMC7216317.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 11,
+   "id": "ref11",
+   "html": "Syafrudin M, Kristanti RA, Yuniarto A, Hadibarata T, Rhee J, Al-Onazi WA, et al. Pesticides in Drinking Water-A Review. Int J Environ Res Public Health. 2021;18(2). Epub 20210108.  pmid:33430077; PubMed Central PMCID: PMC7826868. ",
+   "text": "Syafrudin M, Kristanti RA, Yuniarto A, Hadibarata T, Rhee J, Al-Onazi WA, et al. Pesticides in Drinking Water-A Review. Int J Environ Res Public Health. 2021;18(2). Epub 20210108. pmid:33430077; PubMed Central PMCID: PMC7826868.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 12,
+   "id": "ref12",
+   "html": "Zug R, Hammerstein P. Still a host of hosts for <em>Wolbachia</em>: analysis of recent data suggests that 40% of terrestrial arthropod species are infected. PLoS One. 2012;7(6):e38544. Epub 20120607.  pmid:22685581; PubMed Central PMCID: PMC3369835. ",
+   "text": "Zug R, Hammerstein P. Still a host of hosts for Wolbachia: analysis of recent data suggests that 40% of terrestrial arthropod species are infected. PLoS One. 2012;7(6):e38544. Epub 20120607. pmid:22685581; PubMed Central PMCID: PMC3369835.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 13,
+   "id": "ref13",
+   "html": "Shaw WR, Marcenac P, Childs LM, Buckee CO, Baldini F, Sawadogo SP, et al. <em>Wolbachia</em> infections in natural <em>Anopheles</em> populations affect egg laying and negatively correlate with <em>Plasmodium</em> development. Nat Commun. 2016;7:11772. Epub 20160531.  pmid:27243367; PubMed Central PMCID: PMC4895022. ",
+   "text": "Shaw WR, Marcenac P, Childs LM, Buckee CO, Baldini F, Sawadogo SP, et al. Wolbachia infections in natural Anopheles populations affect egg laying and negatively correlate with Plasmodium development. Nat Commun. 2016;7:11772. Epub 20160531. pmid:27243367; PubMed Central PMCID: PMC4895022.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 14,
+   "id": "ref14",
+   "html": "Gomes FM, Hixson BL, Tyner MDW, Ramirez JL, Canepa GE, Alves ESTL, et al. Effect of naturally occurring <em>Wolbachia</em> in <em>Anopheles gambiae</em> s.l. mosquitoes from Mali on <em>Plasmodium falciparum</em> malaria transmission. Proc Natl Acad Sci U S A. 2017;114(47):12566–71. Epub 20171107.  pmid:29114059; PubMed Central PMCID: PMC5703331. ",
+   "text": "Gomes FM, Hixson BL, Tyner MDW, Ramirez JL, Canepa GE, Alves ESTL, et al. Effect of naturally occurring Wolbachia in Anopheles gambiae s.l. mosquitoes from Mali on Plasmodium falciparum malaria transmission. Proc Natl Acad Sci U S A. 2017;114(47):12566–71. Epub 20171107. pmid:29114059; PubMed Central PMCID: PMC5703331.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 15,
+   "id": "ref15",
+   "html": "Baldini F, Rougé J, Kreppel K, Mkandawile G, Mapua SA, Sikulu-Lord M, et al. First report of natural <em>Wolbachia</em> infection in the malaria mosquito Anopheles arabiensis in Tanzania. Parasit Vectors. 2018;11(1):635. Epub 20181213.  pmid:30545384; PubMed Central PMCID: PMC6293665. ",
+   "text": "Baldini F, Rougé J, Kreppel K, Mkandawile G, Mapua SA, Sikulu-Lord M, et al. First report of natural Wolbachia infection in the malaria mosquito Anopheles arabiensis in Tanzania. Parasit Vectors. 2018;11(1):635. Epub 20181213. pmid:30545384; PubMed Central PMCID: PMC6293665.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 16,
+   "id": "ref16",
+   "html": "Jeffries CL, Lawrence GG, Golovko G, Kristan M, Orsborne J, Spence K, et al. Novel <em>Wolbachia</em> strains in <em>Anopheles</em> malaria vectors from Sub-Saharan Africa. Wellcome Open Res. 2018;3:113. Epub 20181127.  pmid:30483601; PubMed Central PMCID: PMC6234743. ",
+   "text": "Jeffries CL, Lawrence GG, Golovko G, Kristan M, Orsborne J, Spence K, et al. Novel Wolbachia strains in Anopheles malaria vectors from Sub-Saharan Africa. Wellcome Open Res. 2018;3:113. Epub 20181127. pmid:30483601; PubMed Central PMCID: PMC6234743.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 17,
+   "id": "ref17",
+   "html": "Niang EHA, Bassene H, Makoundou P, Fenollar F, Weill M, Mediannikov O. First report of natural <em>Wolbachia</em> infection in wild <em>Anopheles</em> funestus population in Senegal. Malar J. 2018;17(1):408. Epub 20181106.  pmid:30400987; PubMed Central PMCID: PMC6219158. ",
+   "text": "Niang EHA, Bassene H, Makoundou P, Fenollar F, Weill M, Mediannikov O. First report of natural Wolbachia infection in wild Anopheles funestus population in Senegal. Malar J. 2018;17(1):408. Epub 20181106. pmid:30400987; PubMed Central PMCID: PMC6219158.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 18,
+   "id": "ref18",
+   "html": "Walker T, Quek S, Jeffries CL, Bandibabone J, Dhokiya V, Bamou R, et al. Stable high-density and maternally inherited <em>Wolbachia</em> infections in <em>Anopheles moucheti</em> and <em>Anopheles demeilloni</em> mosquitoes. Curr Biol. 2021;31(11):2310–20 e5. Epub 20210414.  pmid:33857432; PubMed Central PMCID: PMC8210651. ",
+   "text": "Walker T, Quek S, Jeffries CL, Bandibabone J, Dhokiya V, Bamou R, et al. Stable high-density and maternally inherited Wolbachia infections in Anopheles moucheti and Anopheles demeilloni mosquitoes. Curr Biol. 2021;31(11):2310–20 e5. Epub 20210414. pmid:33857432; PubMed Central PMCID: PMC8210651.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 19,
+   "id": "ref19",
+   "html": "Chrostek E, Gerth M. Is Anopheles gambiae a Natural Host of Wolbachia? mBio. 2019;10(3). Epub 20190611.  pmid:31186318; PubMed Central PMCID: PMC6561020. ",
+   "text": "Chrostek E, Gerth M. Is Anopheles gambiae a Natural Host of Wolbachia? mBio. 2019;10(3). Epub 20190611. pmid:31186318; PubMed Central PMCID: PMC6561020.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 20,
+   "id": "ref20",
+   "html": "Bian G, Joshi D, Dong Y, Lu P, Zhou G, Pan X, et al. <em>Wolbachia</em> invades <em>Anopheles stephensi</em> populations and induces refractoriness to <em>Plasmodium</em> infection. Science. 2013;340(6133):748–51.  pmid:23661760. ",
+   "text": "Bian G, Joshi D, Dong Y, Lu P, Zhou G, Pan X, et al. Wolbachia invades Anopheles stephensi populations and induces refractoriness to Plasmodium infection. Science. 2013;340(6133):748–51. pmid:23661760.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 21,
+   "id": "ref21",
+   "html": "Hoffmann AA, Montgomery BL, Popovici J, Iturbe-Ormaetxe I, Johnson PH, Muzzi F, et al. Successful establishment of <em>Wolbachia</em> in <em>Aedes populations</em> to suppress dengue transmission. Nature. 2011;476(7361):454–7. Epub 20110824.  pmid:21866160. ",
+   "text": "Hoffmann AA, Montgomery BL, Popovici J, Iturbe-Ormaetxe I, Johnson PH, Muzzi F, et al. Successful establishment of Wolbachia in Aedes populations to suppress dengue transmission. Nature. 2011;476(7361):454–7. Epub 20110824. pmid:21866160.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 22,
+   "id": "ref22",
+   "html": "Kambris Z, Cook PE, Phuc HK, Sinkins SP. Immune activation by life-shortening <em>Wolbachia</em> and reduced filarial competence in mosquitoes. Science. 2009;326(5949):134–6.  pmid:19797660; PubMed Central PMCID: PMC2867033. ",
+   "text": "Kambris Z, Cook PE, Phuc HK, Sinkins SP. Immune activation by life-shortening Wolbachia and reduced filarial competence in mosquitoes. Science. 2009;326(5949):134–6. pmid:19797660; PubMed Central PMCID: PMC2867033.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 23,
+   "id": "ref23",
+   "html": "Moreira LA, Iturbe-Ormaetxe I, Jeffery JA, Lu G, Pyke AT, Hedges LM, et al. A <em>Wolbachia</em> symbiont in <em>Aedes aegypti</em> limits infection with dengue, Chikungunya, and <em>Plasmodium</em>. Cell. 2009;139(7):1268–78.  pmid:20064373. ",
+   "text": "Moreira LA, Iturbe-Ormaetxe I, Jeffery JA, Lu G, Pyke AT, Hedges LM, et al. A Wolbachia symbiont in Aedes aegypti limits infection with dengue, Chikungunya, and Plasmodium. Cell. 2009;139(7):1268–78. pmid:20064373.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 24,
+   "id": "ref24",
+   "html": "Bian G, Xu Y, Lu P, Xie Y, Xi Z. The Endosymbiotic Bacterium Wolbachia Induces Resistance to Dengue Virus in Aedes aegypti. PLoS Pathogens. 2010;6(4).  pmid:20368968 ",
+   "text": "Bian G, Xu Y, Lu P, Xie Y, Xi Z. The Endosymbiotic Bacterium Wolbachia Induces Resistance to Dengue Virus in Aedes aegypti. PLoS Pathogens. 2010;6(4). pmid:20368968",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 25,
+   "id": "ref25",
+   "html": "Joshi D, Pan X, McFadden MJ, Bevins D, Liang X, Lu P, et al. The Maternally Inheritable <em>Wolbachia wAlbB</em> Induces Refractoriness to <em>Plasmodium berghei</em> in Anopheles stephensi. Front Microbiol. 2017;8:366. Epub 20170308.  pmid:28337184; PubMed Central PMCID: PMC5340780. ",
+   "text": "Joshi D, Pan X, McFadden MJ, Bevins D, Liang X, Lu P, et al. The Maternally Inheritable Wolbachia wAlbB Induces Refractoriness to Plasmodium berghei in Anopheles stephensi. Front Microbiol. 2017;8:366. Epub 20170308. pmid:28337184; PubMed Central PMCID: PMC5340780.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 26,
+   "id": "ref26",
+   "html": "Zheng X, Zhang D, Li Y, Yang C, Wu Y, Liang X, et al. Incompatible and sterile insect techniques combined eliminate mosquitoes. Nature. 2019;572(7767):56–61. Epub 20190717.  pmid:31316207. ",
+   "text": "Zheng X, Zhang D, Li Y, Yang C, Wu Y, Liang X, et al. Incompatible and sterile insect techniques combined eliminate mosquitoes. Nature. 2019;572(7767):56–61. Epub 20190717. pmid:31316207.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 27,
+   "id": "ref27",
+   "html": "Crawford JE, Clarke DW, Criswell V, Desnoyer M, Cornel D, Deegan B, et al. Efficient production of male <em>Wolbachia</em>-infected <em>Aedes aegypti</em> mosquitoes enables large-scale suppression of wild populations. Nat Biotechnol. 2020;38(4):482–92. Epub 20200406.  pmid:32265562. ",
+   "text": "Crawford JE, Clarke DW, Criswell V, Desnoyer M, Cornel D, Deegan B, et al. Efficient production of male Wolbachia-infected Aedes aegypti mosquitoes enables large-scale suppression of wild populations. Nat Biotechnol. 2020;38(4):482–92. Epub 20200406. pmid:32265562.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 28,
+   "id": "ref28",
+   "html": "Nazni WA, Hoffmann AA, NoorAfizah A, Cheong YL, Mancini MV, Golding N, et al. Establishment of <em>Wolbachia</em> Strain <em>w</em>AlbB in Malaysian Populations of <em>Aedes aegypti</em> for Dengue Control. Curr Biol. 2019;29(24):4241–8 e5. Epub 20191121.  pmid:31761702; PubMed Central PMCID: PMC6926472. ",
+   "text": "Nazni WA, Hoffmann AA, NoorAfizah A, Cheong YL, Mancini MV, Golding N, et al. Establishment of Wolbachia Strain wAlbB in Malaysian Populations of Aedes aegypti for Dengue Control. Curr Biol. 2019;29(24):4241–8 e5. Epub 20191121. pmid:31761702; PubMed Central PMCID: PMC6926472.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 29,
+   "id": "ref29",
+   "html": "Ryan PA, Turley AP, Wilson G, Hurst TP, Retzki K, Brown-Kenyon J, et al. Establishment of <em>wMel Wolbachia</em> in Aedes aegypti mosquitoes and reduction of local dengue transmission in Cairns and surrounding locations in northern Queensland, Australia. Gates Open Research. 2020;3:1547. Epub 20200408.  pmid:31667465; PubMed Central PMCID: PMC6801363. ",
+   "text": "Ryan PA, Turley AP, Wilson G, Hurst TP, Retzki K, Brown-Kenyon J, et al. Establishment of wMel Wolbachia in Aedes aegypti mosquitoes and reduction of local dengue transmission in Cairns and surrounding locations in northern Queensland, Australia. Gates Open Research. 2020;3:1547. Epub 20200408. pmid:31667465; PubMed Central PMCID: PMC6801363.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 30,
+   "id": "ref30",
+   "html": "Utarini A, Indriani C, Ahmad RA, Tantowijoyo W, Arguni E, Ansari MR, et al. Efficacy of <em>Wolbachia</em>-Infected Mosquito Deployments for the Control of Dengue. N Engl J Med. 2021;384(23):2177–86.  pmid:34107180; PubMed Central PMCID: PMC8103655. ",
+   "text": "Utarini A, Indriani C, Ahmad RA, Tantowijoyo W, Arguni E, Ansari MR, et al. Efficacy of Wolbachia-Infected Mosquito Deployments for the Control of Dengue. N Engl J Med. 2021;384(23):2177–86. pmid:34107180; PubMed Central PMCID: PMC8103655.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 31,
+   "id": "ref31",
+   "html": "Vorsino AE, Xi Z. A mass rearing cost calculator for the control of <em>Culex quinquefasciatus</em> in Hawai’i using the incompatible insect technique. Parasit Vectors. 2022;15(1):453. Epub 20221205.  pmid:36471389; PubMed Central PMCID: PMC9724328. ",
+   "text": "Vorsino AE, Xi Z. A mass rearing cost calculator for the control of Culex quinquefasciatus in Hawai’i using the incompatible insect technique. Parasit Vectors. 2022;15(1):453. Epub 20221205. pmid:36471389; PubMed Central PMCID: PMC9724328.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 32,
+   "id": "ref32",
+   "html": "Zhang J, Zhang S, Wang Y, Xu W, Zhang J, Jiang H, et al. Modulation of Anopheles stephensi gene expression by nitroquine, an antimalarial drug against <em>Plasmodium yoelii</em> infection in the mosquito. PLoS One. 2014;9(2):e89473. Epub 20140224.  pmid:24586804; PubMed Central PMCID: PMC3933544. ",
+   "text": "Zhang J, Zhang S, Wang Y, Xu W, Zhang J, Jiang H, et al. Modulation of Anopheles stephensi gene expression by nitroquine, an antimalarial drug against Plasmodium yoelii infection in the mosquito. PLoS One. 2014;9(2):e89473. Epub 20140224. pmid:24586804; PubMed Central PMCID: PMC3933544.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 33,
+   "id": "ref33",
+   "html": "Xi Z, Khoo CC, Dobson SL. <em>Wolbachia</em> establishment and invasion in an <em>Aedes aegypti</em> laboratory population. Science. 2005;310(5746):326–8.  pmid:16224027. ",
+   "text": "Xi Z, Khoo CC, Dobson SL. Wolbachia establishment and invasion in an Aedes aegypti laboratory population. Science. 2005;310(5746):326–8. pmid:16224027.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 34,
+   "id": "ref34",
+   "html": "Zhou W, Rousset F, O’Neil S. Phylogeny and PCR-based classification of <em>Wolbachia</em> strains using <em>wsp</em> gene sequences. Proc Biol Sci. 1998;265(1395):509–15.  pmid:9569669 ",
+   "text": "Zhou W, Rousset F, O’Neil S. Phylogeny and PCR-based classification of Wolbachia strains using wsp gene sequences. Proc Biol Sci. 1998;265(1395):509–15. pmid:9569669",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 35,
+   "id": "ref35",
+   "html": "Joshi D, McFadden MJ, Bevins D, Zhang F, Xi Z. <em>Wolbachia</em> strain wAlbB confers both fitness costs and benefit on <em>Anopheles stephensi</em>. Parasit Vectors. 2014;7:336. Epub 20140721.  pmid:25041943; PubMed Central PMCID: PMC4223616. ",
+   "text": "Joshi D, McFadden MJ, Bevins D, Zhang F, Xi Z. Wolbachia strain wAlbB confers both fitness costs and benefit on Anopheles stephensi. Parasit Vectors. 2014;7:336. Epub 20140721. pmid:25041943; PubMed Central PMCID: PMC4223616.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 36,
+   "id": "ref36",
+   "html": "Fried M. Determination of Sterile-Insect Competitiveness. Journal of Economic Entomology. 1971;64:869–72. ",
+   "text": "Fried M. Determination of Sterile-Insect Competitiveness. Journal of Economic Entomology. 1971;64:869–72.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 37,
+   "id": "ref37",
+   "html": "Lu P, Bian G, Pan X, Xi Z. <em>Wolbachia</em> induces density-dependent inhibition to dengue virus in mosquito cells. PLoS Negl Trop Dis. 2012;6(7):e1754. Epub 20120724.  pmid:22848774; PubMed Central PMCID: PMC3404113. ",
+   "text": "Lu P, Bian G, Pan X, Xi Z. Wolbachia induces density-dependent inhibition to dengue virus in mosquito cells. PLoS Negl Trop Dis. 2012;6(7):e1754. Epub 20120724. pmid:22848774; PubMed Central PMCID: PMC3404113.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 38,
+   "id": "ref38",
+   "html": "Fraser JE, O’Donnell TB, Duyvestyn JM, O’Neill SL, Simmons CP, Flores HA. Novel phenotype of <em>Wolbachia</em> strain wPip in <em>Aedes aegypti</em> challenges assumptions on mechanisms of Wolbachia-mediated dengue virus inhibition. PLoS Pathog. 2020;16(7):e1008410. Epub 20200729.  pmid:32726353; PubMed Central PMCID: PMC7416964. ",
+   "text": "Fraser JE, O’Donnell TB, Duyvestyn JM, O’Neill SL, Simmons CP, Flores HA. Novel phenotype of Wolbachia strain wPip in Aedes aegypti challenges assumptions on mechanisms of Wolbachia-mediated dengue virus inhibition. PLoS Pathog. 2020;16(7):e1008410. Epub 20200729. pmid:32726353; PubMed Central PMCID: PMC7416964.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 39,
+   "id": "ref39",
+   "html": "Hughes GL, Vega-Rodriguez J, Xue P, Rasgon JL. <em>Wolbachia</em> strain <em>w</em>AlbB enhances infection by the rodent malaria parasite <em>Plasmodium berghei</em> in <em>Anopheles gambiae</em> mosquitoes. Appl Environ Microbiol. 2012;78(5):1491–5. Epub 20111230.  pmid:22210220; PubMed Central PMCID: PMC3294472. ",
+   "text": "Hughes GL, Vega-Rodriguez J, Xue P, Rasgon JL. Wolbachia strain wAlbB enhances infection by the rodent malaria parasite Plasmodium berghei in Anopheles gambiae mosquitoes. Appl Environ Microbiol. 2012;78(5):1491–5. Epub 20111230. pmid:22210220; PubMed Central PMCID: PMC3294472.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 40,
+   "id": "ref40",
+   "html": "Kripa PK, Thanzeen PS, Jaganathasamy N, Ravishankaran S, Anvikar AR, Eapen A. Impact of climate change on temperature variations and extrinsic incubation period of malaria parasites in Chennai, India: implications for its disease transmission potential. Parasit Vectors. 2024;17(1):134. Epub 20240315.  pmid:38491547; PubMed Central PMCID: PMC11334410. ",
+   "text": "Kripa PK, Thanzeen PS, Jaganathasamy N, Ravishankaran S, Anvikar AR, Eapen A. Impact of climate change on temperature variations and extrinsic incubation period of malaria parasites in Chennai, India: implications for its disease transmission potential. Parasit Vectors. 2024;17(1):134. Epub 20240315. pmid:38491547; PubMed Central PMCID: PMC11334410.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 41,
+   "id": "ref41",
+   "html": "Ross PA, Wiwatanaratanabutr I, Axford JK, White VL, Endersby-Harshman NM, Hoffmann AA. <em>Wolbachia</em> Infections in <em>Aedes aegypti</em> Differ Markedly in Their Response to Cyclical Heat Stress. PLoS Pathog. 2017;13(1):e1006006. Epub 20170105.  pmid:28056065; PubMed Central PMCID: PMC5215852. ",
+   "text": "Ross PA, Wiwatanaratanabutr I, Axford JK, White VL, Endersby-Harshman NM, Hoffmann AA. Wolbachia Infections in Aedes aegypti Differ Markedly in Their Response to Cyclical Heat Stress. PLoS Pathog. 2017;13(1):e1006006. Epub 20170105. pmid:28056065; PubMed Central PMCID: PMC5215852.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 42,
+   "id": "ref42",
+   "html": "Ross PA, Hoffmann AA. Continued Susceptibility of the wMel <em>Wolbachia</em> Infection in Aedes aegypti to Heat Stress Following Field Deployment and Selection. Insects. 2018;9(3). Epub 20180630.  pmid:29966368; PubMed Central PMCID: PMC6165456. ",
+   "text": "Ross PA, Hoffmann AA. Continued Susceptibility of the wMel Wolbachia Infection in Aedes aegypti to Heat Stress Following Field Deployment and Selection. Insects. 2018;9(3). Epub 20180630. pmid:29966368; PubMed Central PMCID: PMC6165456.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 43,
+   "id": "ref43",
+   "html": "Ross PA, Ritchie SA, Axford JK, Hoffmann AA. Loss of cytoplasmic incompatibility in <em>Wolbachia</em>-infected <em>Aedes aegypti</em> under field conditions. PLoS Negl Trop Dis. 2019;13(4):e0007357. Epub 20190419.  pmid:31002720; PubMed Central PMCID: PMC6493766. ",
+   "text": "Ross PA, Ritchie SA, Axford JK, Hoffmann AA. Loss of cytoplasmic incompatibility in Wolbachia-infected Aedes aegypti under field conditions. PLoS Negl Trop Dis. 2019;13(4):e0007357. Epub 20190419. pmid:31002720; PubMed Central PMCID: PMC6493766.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 44,
+   "id": "ref44",
+   "html": "Mouton L, Henri H, Fleury F. Interactions between coexisting intracellular genomes: mitochondrial density and <em>Wolbachia</em> infection. Appl Environ Microbiol. 2009;75(7):1916–21. Epub 20090130.  pmid:19181828; PubMed Central PMCID: PMC2663226. ",
+   "text": "Mouton L, Henri H, Fleury F. Interactions between coexisting intracellular genomes: mitochondrial density and Wolbachia infection. Appl Environ Microbiol. 2009;75(7):1916–21. Epub 20090130. pmid:19181828; PubMed Central PMCID: PMC2663226.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 45,
+   "id": "ref45",
+   "html": "Hien NT, Anh DD, Le NH, Yen NT, Phong TV, Nam VS, et al. Environmental factors influence the local establishment of <em>Wolbachia</em> in <em>Aedes aegypti</em> mosquitoes in two small communities in central Vietnam. Gates Open Res. 2021;5:147. Epub 20220407.  pmid:35602266; PubMed Central PMCID: PMC9098883. ",
+   "text": "Hien NT, Anh DD, Le NH, Yen NT, Phong TV, Nam VS, et al. Environmental factors influence the local establishment of Wolbachia in Aedes aegypti mosquitoes in two small communities in central Vietnam. Gates Open Res. 2021;5:147. Epub 20220407. pmid:35602266; PubMed Central PMCID: PMC9098883.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 46,
+   "id": "ref46",
+   "html": "Pinto SB, Riback TIS, Sylvestre G, Costa G, Peixoto J, Dias FBS, et al. Effectiveness of <em>Wolbachia</em>-infected mosquito deployments in reducing the incidence of dengue and other Aedes-borne diseases in Niterói, Brazil: A quasi-experimental study. PLoS Negl Trop Dis. 2021;15(7):e0009556. Epub 20210712.  pmid:34252106; PubMed Central PMCID: PMC8297942. ",
+   "text": "Pinto SB, Riback TIS, Sylvestre G, Costa G, Peixoto J, Dias FBS, et al. Effectiveness of Wolbachia-infected mosquito deployments in reducing the incidence of dengue and other Aedes-borne diseases in Niterói, Brazil: A quasi-experimental study. PLoS Negl Trop Dis. 2021;15(7):e0009556. Epub 20210712. pmid:34252106; PubMed Central PMCID: PMC8297942.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 47,
+   "id": "ref47",
+   "html": "Ross PA, Endersby NM, Hoffmann AA. Costs of Three Wolbachia Infections on the Survival of <em>Aedes aegypti</em> Larvae under Starvation Conditions. PLoS Negl Trop Dis. 2016;10(1):e0004320. Epub 20160108.  pmid:26745630; PubMed Central PMCID: PMC4706305. ",
+   "text": "Ross PA, Endersby NM, Hoffmann AA. Costs of Three Wolbachia Infections on the Survival of Aedes aegypti Larvae under Starvation Conditions. PLoS Negl Trop Dis. 2016;10(1):e0004320. Epub 20160108. pmid:26745630; PubMed Central PMCID: PMC4706305.",
+   "doi": "",
+   "url": ""
+  },
+  {
+   "n": 48,
+   "id": "ref48",
+   "html": "Ware-Gilmore F, Sgrò CM, Xi Z, Dutra HLC, Jones MJ, Shea K, et al. Microbes increase thermal sensitivity in the mosquito <em>Aedes aegypti</em>, with the potential to change disease distributions. PLoS Negl Trop Dis. 2021;15(7):e0009548. Epub 20210722.  pmid:34292940; PubMed Central PMCID: PMC8297775. ",
+   "text": "Ware-Gilmore F, Sgrò CM, Xi Z, Dutra HLC, Jones MJ, Shea K, et al. Microbes increase thermal sensitivity in the mosquito Aedes aegypti, with the potential to change disease distributions. PLoS Negl Trop Dis. 2021;15(7):e0009548. Epub 20210722. pmid:34292940; PubMed Central PMCID: PMC8297775.",
+   "doi": "",
+   "url": ""
+  }
+ ],
+ "citationStyle": "numeric",
+ "supplementary": [
+  {
+   "label": "Supporting information",
+   "href": "https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0012523#sec023",
+   "kind": "link"
+  },
+  {
+   "label": "S1 Table.",
+   "href": "https://journals.plos.org/plosntds/article/file?type=supplementary&id=10.1371/journal.pntd.0012523.s001",
+   "kind": "link"
+  },
+  {
+   "label": "S2 Table.",
+   "href": "https://journals.plos.org/plosntds/article/file?type=supplementary&id=10.1371/journal.pntd.0012523.s002",
+   "kind": "link"
+  },
+  {
+   "label": "S3 Table.",
+   "href": "https://journals.plos.org/plosntds/article/file?type=supplementary&id=10.1371/journal.pntd.0012523.s003",
+   "kind": "link"
+  },
+  {
+   "label": "S1 Fig.",
+   "href": "https://journals.plos.org/plosntds/article/file?type=supplementary&id=10.1371/journal.pntd.0012523.s004",
+   "kind": "link"
+  },
+  {
+   "label": "S2 Fig.",
+   "href": "https://journals.plos.org/plosntds/article/file?type=supplementary&id=10.1371/journal.pntd.0012523.s005",
+   "kind": "link"
+  },
+  {
+   "label": "S1 Data.",
+   "href": "https://journals.plos.org/plosntds/article/file?type=supplementary&id=10.1371/journal.pntd.0012523.s006",
+   "kind": "link"
+  }
+ ],
+ "warnings": [],
+ "stats": {
+  "ms": 105,
+  "bodyChars": 57705,
+  "paragraphs": 40
+ }
+}
