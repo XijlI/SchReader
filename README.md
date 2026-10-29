@@ -55,6 +55,8 @@ reader. The page holds
   import back from BibTeX or a JSON backup
 - **⚙ Settings** (the app has it as its own tab): theme, reading typeface and size, the allowed-site
   list and the version, in one panel
+- **sync across devices**: the same library, reading positions and highlights on the browser and the
+  phone, carried by a private gist of your own — see [docs/INSTALL.md §6](docs/INSTALL.md)
 
 "A paper" is metadata plus the link — the article body is re-parsed from the publisher page when you
 open it, which is why the store stays tiny. The Android app uses the same page and the same data

@@ -5,6 +5,7 @@
 SchReader is a Chrome extension: it turns a paper page into something laid out like a Nature-family
 article.
 **No sign-up, no downloads over the network, nothing saved.**
+(Syncing between devices is optional and needs a free GitHub token — see §6.)
 
 ---
 
@@ -128,7 +129,32 @@ reload the paper page and click the pill again. No need to uninstall and reinsta
 
 ---
 
-## 6. When a particular site doesn't work
+## 6. Syncing across devices (browser + phone)
+
+Your library, reading positions and highlights can follow you between the browser and the phone.
+Small JSON file, private GitHub gist: titles, links, tags, notes, positions — never the article text.
+
+Set it up once, **on every device**:
+
+1. Sign in to GitHub and open
+   <https://github.com/settings/tokens/new?scopes=gist&description=SchReader%20sync>.
+2. Tick **gist** and nothing else, scroll down, click **Generate token**.
+3. Copy the token — GitHub shows it once. It starts with `ghp_` (classic) or `github_pat_`.
+4. In SchReader: **⚙ Settings → Sync**, paste the token, press **Connect**.
+5. On the phone (and any other computer) repeat 1–4 with the *same* token — the second device finds
+   the same gist by itself, no copy-pasting of ids.
+
+After that: each device pushes a few seconds after you change something and pulls when you open the
+library. Two devices editing different things keep both edits; a paper deleted on one disappears from
+the other. The token is stored only on that device, and **Disconnect** stops that device without
+touching the gist or the other devices.
+
+If something goes wrong the Sync line says so ("GitHub rejected the token (401)…", "Network error…")
+instead of failing silently — paste that message back to me.
+
+---
+
+## 7. When a particular site doesn't work
 
 First click **⋯** in the reader's top bar and read the diagnostics:
 
@@ -143,7 +169,7 @@ diagnostics panel**.
 
 ---
 
-## 7. Uninstall
+## 8. Uninstall
 
 `chrome://extensions` → the SchReader card → **Remove**.
 It leaves nothing behind on your computer.
