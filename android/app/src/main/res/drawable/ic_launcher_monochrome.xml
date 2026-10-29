@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- single-colour silhouette of the same R, for Android 13+ themed icons -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34.60 73.33V71.48L38.89 70.36V37.56L34.60 36.49V34.67H52.73Q56.69 34.67 59.71 35.92Q62.73 37.18 64.43 39.63Q66.14 42.08 66.14 45.66Q66.14 49.32 64.30 51.78Q62.45 54.24 59.13 55.43L68.80 70.49L73.40 71.48V73.33H59.69L49.56 56.50H47.53V70.36L53.26 71.48V73.33ZM47.53 53.78H48.24Q50.95 53.78 52.63 53.05Q54.30 52.31 55.35 51.07Q56.46 49.82 56.92 48.29Q57.38 46.75 57.38 45.15Q57.38 42.44 56.16 40.62Q54.94 38.80 52.98 38.02Q52.12 37.66 51.12 37.52Q50.12 37.38 48.57 37.38H47.53Z" />
+</vector>

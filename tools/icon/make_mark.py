@@ -1,34 +1,42 @@
 """Generate the SchReader mark from one outline.
 
-    uv run --with pillow --with svglib --with reportlab --with rlPyCairo --with fonttools \
-        python tools/icon/make_mark.py
+    uv run --with pillow --with fonttools python tools/icon/make_mark.py
 
-Writes `extension/icons/icon{16,32,48,128}.png` and
-`android/app/src/main/res/drawable/ic_launcher_foreground.xml` from the same path data, so the
+Writes `extension/icons/icon{16,32,48,128}.png` and the Android adaptive-icon layers
+(`drawable/ic_launcher_foreground.xml`, `ic_launcher_monochrome.xml`) from the same glyph, so the
 browser toolbar and the phone's launcher can never disagree again.
 
-The letterform is Literata Bold (SIL Open Font License, so embedding its outline is unambiguous),
-pulled from the glyph itself rather than redrawn by hand.
+The letterform is Libre Caslon Text Bold (SIL Open Font License; see `OFL.txt` next to this file —
+an OFL font may be used and embedded in a logo, only the font software itself cannot be sold).
+`LibreCaslonText-Bold.ttf` is the wght=700 instance of the upstream variable font
+(google/fonts -> ofl/librecaslontext), pinned so regeneration stays stable.
+
+Geometry, in the 108 dp grid Android uses for adaptive icons:
+  * the tile is full bleed and rounds its own corners at 24/108 for the PNGs (on the phone the
+    launcher draws the mask, so the vector layer itself is square);
+  * a launcher only shows the central 72 of those 108 dp, which is why `SAFE` is 58 * 72/108 —
+    the same letter-to-tile ratio as the browser icons, instead of a letter that reads 34% bolder
+    on the phone than in the toolbar.
 """
 from __future__ import annotations
 
-import io
 import pathlib
 
 from fontTools.pens.boundsPen import BoundsPen
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen
 from fontTools.ttLib import TTFont
-from PIL import Image
-from reportlab.graphics import renderPM
-from svglib.svglib import svg2rlg
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
-FONT = ROOT / "tools" / "icon" / "Literata-Bold.ttf"
+FONT = ROOT / "tools" / "icon" / "LibreCaslonText-Bold.ttf"
 LETTER = "R"
-INK, GOLD = "#14130f", "#f7b705"
+INK, GOLD = (20, 19, 15), (247, 183, 5)
 GRID = 108.0
-SAFE = 52.0          # adaptive icons: keep the art inside the central 66/108 safe zone
+CAP = 58.0                    # letter height on the 108 tile — the mark's one size constant
+VISIBLE = 72.0                # adaptive icons: only the central 72 of 108 dp is ever shown
+SAFE = CAP * VISIBLE / GRID   # 38.67 -> same share of the mask as the tile's letter, on the phone
+SS = 8                        # supersample factor for the PNGs
 
 
 def letter_path(target_h: float, cx: float = GRID / 2, cy: float = GRID / 2) -> str:
@@ -49,30 +57,40 @@ def letter_path(target_h: float, cx: float = GRID / 2, cy: float = GRID / 2) -> 
     return pen.getCommands()
 
 
-def tile_svg(size: int, letter_h: float) -> str:
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108">'
-            f'<rect width="108" height="108" rx="24" fill="{INK}"/>'
-            f'<path fill="{GOLD}" d="{letter_path(letter_h)}"/></svg>')
+def glyph_mask(target_px: int) -> Image.Image:
+    """The gold letter as an RGBA image, its ink exactly `target_px` tall."""
+    probe = ImageFont.truetype(str(FONT), 400)
+    x0, y0, x1, y1 = probe.getbbox(LETTER)
+    size = max(8, round(400 * target_px / (y1 - y0)))
+    face = ImageFont.truetype(str(FONT), size)
+    x0, y0, x1, y1 = (int(v) for v in face.getbbox(LETTER))   # PIL rounds the size to an int
+    im = Image.new("RGBA", (x1 - x0 + 2, y1 - y0 + 2), (0, 0, 0, 0))
+    ImageDraw.Draw(im).text((-x0 + 1, -y0 + 1), LETTER, font=face, fill=GOLD + (255,))
+    return im
 
 
-def raster(svg: str, px: int, ss: int = 8) -> Image.Image:
-    """Supersample then Lanczos down: at 16 px a single-pass render loses the serifs."""
-    drawing = svg2rlg(io.BytesIO(svg.encode()))
-    big = px * ss
-    scale = big / GRID
-    drawing.width, drawing.height = GRID * scale, GRID * scale
-    drawing.scale(scale, scale)
-    buf = io.BytesIO()
-    renderPM.drawToFile(drawing, buf, fmt="PNG", bg=0xFFFFFF)
-    buf.seek(0)
-    im = Image.open(buf).convert("RGBA")
-    px_map = im.load()
-    for y in range(im.height):                      # rounded corners back to transparent
-        for x in range(im.width):
-            r, g, b, _ = px_map[x, y]
-            if (r, g, b) == (255, 255, 255):
-                px_map[x, y] = (255, 255, 255, 0)
+def tile(px: int, cap_dp: float) -> Image.Image:
+    """A browser icon: rounded ink tile with the letter centred, rendered at `px`."""
+    big = px * SS
+    im = Image.new("RGBA", (big, big), (0, 0, 0, 0))
+    ImageDraw.Draw(im).rounded_rectangle(
+        (0, 0, big - 1, big - 1), radius=round(big * 24 / GRID), fill=INK + (255,))
+    g = glyph_mask(round(cap_dp / GRID * big))
+    im.alpha_composite(g, ((big - g.width) // 2, (big - g.height) // 2))
     return im.resize((px, px), Image.LANCZOS)
+
+
+def write_vector(name: str, colour: str, note: str) -> None:
+    body = ("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
+            "<vector xmlns:android=\"http://schemas.android.com/apk/res/android\"\n"
+            f"    android:width=\"{GRID:.0f}dp\"\n    android:height=\"{GRID:.0f}dp\"\n"
+            f"    android:viewportWidth=\"{GRID:.0f}\"\n    android:viewportHeight=\"{GRID:.0f}\">\n"
+            f"    <!-- {note} -->\n"
+            "    <path\n"
+            f"        android:fillColor=\"{colour}\"\n"
+            f"        android:pathData=\"{letter_path(SAFE)}\" />\n"
+            "</vector>\n")
+    (ROOT / f"android/app/src/main/res/drawable/{name}.xml").write_text(body, encoding="utf-8")
 
 
 def main() -> None:
@@ -80,16 +98,13 @@ def main() -> None:
     out.mkdir(parents=True, exist_ok=True)
     for size in (128, 48, 32, 16):
         # the tiny sizes get a slightly larger letter so it still reads in a toolbar
-        raster(tile_svg(size, letter_h=58 if size >= 32 else 63), size).save(out / f"icon{size}.png")
+        tile(size, CAP if size >= 32 else 63).save(out / f"icon{size}.png")
 
-    fg = ("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
-          "<vector xmlns:android=\"http://schemas.android.com/apk/res/android\"\n"
-          f"    android:width=\"{GRID:.0f}dp\"\n    android:height=\"{GRID:.0f}dp\"\n"
-          f"    android:viewportWidth=\"{GRID:.0f}\"\n    android:viewportHeight=\"{GRID:.0f}\">\n"
-          "    <!-- gold serif R, generated from the same outline as the extension icons -->\n"
-          "    <path\n        android:fillColor=\"#F7B705\"\n"
-          f"        android:pathData=\"{letter_path(SAFE)}\" />\n</vector>\n")
-    (ROOT / "android/app/src/main/res/drawable/ic_launcher_foreground.xml").write_text(fg, encoding="utf-8")
+    write_vector("ic_launcher_foreground", "#F7B705",
+                 "gold serif R, generated from the same outline as the extension icons; drawn for "
+                 "the central 72 of 108 dp a launcher actually shows")
+    write_vector("ic_launcher_monochrome", "#FFFFFF",
+                 "single-colour silhouette of the same R, for Android 13+ themed icons")
     print("icons written from", FONT.name)
 
 
