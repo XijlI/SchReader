@@ -25,7 +25,7 @@ DOI、链接，加上你自己打的标签、备注和阅读位置）和一份�
 3. 把拼图图标钉到工具栏
 
 给不写代码的人准备的逐步说明：[docs/INSTALL.zh-CN.md](docs/INSTALL.zh-CN.md)。
-想直接下载现成的？[最新 Release](https://github.com/XijlI/SchReader/releases/latest)
+想直接下载现成的？[最新 Release](https://github.com/303035/SchReader/releases/latest)
 里有扩展 zip 和 APK。
 
 ## 怎么用

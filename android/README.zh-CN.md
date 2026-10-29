@@ -24,7 +24,7 @@
 
 ## 安装
 
-最省事：[Releases 页面](https://github.com/XijlI/SchReader/releases/latest) 下载
+最省事：[Releases 页面](https://github.com/303035/SchReader/releases/latest) 下载
 `schreader-android-vX.Y.Z.apk`，直接从下面第 1 步开始 —— 它用发布密钥签名，能覆盖安装旧版本。
 在电脑上下载 APK 再传到手机，或者直接用手机打开 releases 页面下载。
 
