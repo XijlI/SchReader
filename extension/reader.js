@@ -1171,6 +1171,13 @@
     const list = hlList.map((h) => ({
       id: h.id, color: h.color, text: h.text, prefix: h.prefix, suffix: h.suffix, ts: h.ts,
     }));
+    /* the store owns the write when it is loaded (it is, on every page that also runs the
+       reader) — that is what lets highlights reach the other devices */
+    if (window.SR_LIB && typeof SR_LIB.hlPut === 'function') {
+      await SR_LIB.hlPut(key, list);
+      if (SR_LIB.sync) SR_LIB.sync.auto();
+      return;
+    }
     try {
       if (typeof chrome !== 'undefined' && chrome.storage && chrome.storage.local) {
         await chrome.storage.local.set({ [key]: list });

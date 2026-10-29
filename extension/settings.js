@@ -204,6 +204,32 @@
       and nothing new is recorded; existing entries stay until you clear them.</p>
   </section>
 
+  <section class="set-sec">
+    <h4>Sync <span class="n" id="setSyncState">not connected</span></h4>
+    <p class="hint">Your library, reading positions and highlights, the same on every device. It
+      travels through a private GitHub gist: titles, links and notes only — never the article text.</p>
+    <div id="setSyncOff">
+      <div class="add">
+        <input type="password" id="setSyncToken" placeholder="GitHub token with the gist scope"
+          aria-label="GitHub token" autocomplete="off" spellcheck="false">
+        <button type="button" class="primary" id="setSyncConnect">Connect</button>
+      </div>
+      <p class="hint">Make one in <a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=SchReader%20sync"
+        target="_blank" rel="noreferrer">GitHub &rsaquo; Settings &rsaquo; Developer settings &rsaquo; Tokens</a>
+        and tick only <b>gist</b>. Enter the same token on every device: the second one finds the same
+        gist by itself. The token stays on the device; the gist is secret.</p>
+    </div>
+    <div id="setSyncOn" hidden>
+      <div class="set-row">
+        <span id="setSyncWho">connected</span>
+        <button type="button" id="setSyncNow">Sync now</button>
+        <button type="button" id="setSyncOffBtn">Disconnect</button>
+      </div>
+      <p class="hint" id="setSyncMeta"></p>
+    </div>
+    <div class="msg" id="setSyncMsg" role="status"></div>
+  </section>
+
   ${SITES ? `
   <section class="set-sec">
     <h4>Allowed sites <span class="n">${SITES.DEFAULT_DOMAINS.length} built in</span></h4>
@@ -387,6 +413,78 @@
         window.dispatchEvent(new CustomEvent('sr-settings', { detail: { history: box.checked } }));
         say(box.checked ? 'History on' : 'History off', 'ok');
       });
+    }
+
+    /* ---- sync */
+    if (LIB && LIB.sync) {
+      const state = host.querySelector('#setSyncState');
+      const off = host.querySelector('#setSyncOff');
+      const on = host.querySelector('#setSyncOn');
+      const who = host.querySelector('#setSyncWho');
+      const meta = host.querySelector('#setSyncMeta');
+      const msg = host.querySelector('#setSyncMsg');
+      const say2 = (text, kind) => { msg.textContent = text || ''; msg.className = 'msg' + (kind ? ' ' + kind : ''); };
+      const ago = (ts) => {
+        const s = Math.round((Date.now() - ts) / 1000);
+        if (s < 90) return 'just now';
+        if (s < 5400) return Math.round(s / 60) + ' min ago';
+        if (s < 172800) return Math.round(s / 3600) + ' h ago';
+        return new Date(ts).toLocaleDateString();
+      };
+
+      const paint = async () => {
+        const st = await LIB.sync.state();
+        state.textContent = st.connected ? (st.busy ? 'syncing…' : 'on') : 'not connected';
+        off.hidden = st.connected;
+        on.hidden = !st.connected;
+        if (st.connected) {
+          who.textContent = st.login ? '@' + st.login : 'connected';
+          meta.textContent = st.lastSync ? 'Last sync ' + ago(st.lastSync) : 'Not synced yet.';
+          if (st.lastError) say2(st.lastError, 'err');
+        }
+      };
+
+      host.querySelector('#setSyncConnect').addEventListener('click', async (e) => {
+        const btn = e.currentTarget;
+        const token = host.querySelector('#setSyncToken');
+        btn.disabled = true;
+        say2('Checking the token…');
+        try {
+          const r = await LIB.sync.connect(token.value);
+          if (r && r.ok) {
+            token.value = '';
+            say2(`Connected. ${r.counts.lib} entries, ${r.counts.history} history items.`, 'ok');
+          } else {
+            say2((r && r.error) || 'Could not sync.', 'err');
+          }
+        } catch (err) {
+          say2(String((err && err.message) || err), 'err');
+        } finally {
+          btn.disabled = false;
+          paint();
+        }
+      });
+
+      host.querySelector('#setSyncNow').addEventListener('click', async (e) => {
+        const btn = e.currentTarget;
+        btn.disabled = true;
+        say2('Syncing…');
+        const r = await LIB.sync.sync();
+        btn.disabled = false;
+        if (r && r.ok) say2(`Up to date — ${r.counts.lib} entries, ${r.counts.history} history items.`, 'ok');
+        else say2((r && r.error) || 'Not connected.', 'err');
+        paint();
+        /* the library behind this panel is stale now */
+        window.dispatchEvent(new CustomEvent('sr-refresh'));
+      });
+
+      host.querySelector('#setSyncOffBtn').addEventListener('click', async () => {
+        await LIB.sync.disconnect();
+        say2('Disconnected on this device. The gist is untouched.', 'ok');
+        paint();
+      });
+
+      await paint();
     }
 
     /* ---- allowed sites (extension only) */

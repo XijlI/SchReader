@@ -50,7 +50,7 @@ class Library(context: Context) {
     }
 
     /** JSON text for one section; the page reads "sr-lib", "sr-history", "sr-lib-settings",
-     *  "sr-search-sites". */
+     *  "sr-search-sites", "sr-sync". */
     @Synchronized
     fun json(key: String): String {
         migrateLegacy()
@@ -62,6 +62,8 @@ class Library(context: Context) {
             /* the Search tab's own shortcuts. An unknown key must not fall through to "null":
                the page then keeps its list in memory only and it vanishes on the next reload. */
             "sr-search-sites" -> root.optJSONArray("searchSites")?.toString() ?: "[]"
+            /* sync config (token, gist id, last merged digest) — same rule: never "null" */
+            "sr-sync" -> root.optJSONObject("sync")?.toString() ?: "{}"
             else -> "null"
         }
     }
@@ -77,6 +79,7 @@ class Library(context: Context) {
                 "sr-history" -> root.put("history", JSONArray(text))
                 "sr-lib-settings" -> root.put("settings", JSONObject(text))
                 "sr-search-sites" -> root.put("searchSites", JSONArray(text))
+                "sr-sync" -> root.put("sync", JSONObject(text))
                 else -> return
             }
             write(root)
@@ -134,6 +137,7 @@ class Library(context: Context) {
             .put("doi", "")
             .put("addedAt", System.currentTimeMillis())
             .put("lastReadAt", 0)
+            .put("updatedAt", System.currentTimeMillis())
             .put("tags", JSONArray())
             .put("note", "")
             .put("progress", JSONObject.NULL))

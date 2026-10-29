@@ -396,6 +396,16 @@
       }
     } catch (e) { /* ignore */ }
     await reload();
+    /* the library is the page a device lands on, so it is where a pull happens: once on boot,
+       and again whenever the tab comes back to the front without a reload */
+    if (LIB.sync) {
+      LIB.sync.sync().then((r) => { if (r && r.ok) reload(); });
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+          LIB.sync.sync().then((r) => { if (r && r.ok) reload(); });
+        }
+      });
+    }
     /* no auto-focus in the app: it pops the keyboard and nudges the page on load */
     if (!APP) $('#q').focus();
   }
