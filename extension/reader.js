@@ -1542,6 +1542,26 @@
     toast('Saved — find it under ▤ My library');
   }
 
+  /* "Save to note" from the translation card: a note lives on a library entry, so an article
+     that was never starred is saved on the spot — the button would otherwise do nothing and
+     look broken. Both languages are kept: the Chinese alone is unreadable months later. */
+  async function saveTranslationNote(original, translated) {
+    if (!LIBAPI || !lib.id) return { ok: false, why: 'no-id' };
+    let entry = await LIBAPI.get(lib.id);
+    if (!entry) {
+      const fresh = LIBAPI.entryFrom(S.article);
+      fresh.progress = lib.pct > 1 ? progressPayload() : null;
+      await LIBAPI.upsert(fresh);
+      lib.saved = true;
+      setFav(true);
+      entry = await LIBAPI.get(lib.id);
+      if (!entry) return { ok: false, why: 'save-failed' };
+    }
+    const line = `【译】${translated}\n【原】${original}`;
+    await LIBAPI.patch(lib.id, { note: entry.note ? `${entry.note}\n\n${line}` : line });
+    return { ok: true };
+  }
+
   function openLibrary() {
     if (typeof SchReader !== 'undefined' && SchReader && typeof SchReader.openLibrary === 'function') {
       try { SchReader.openLibrary(); return; } catch (e) { /* fall through */ }
@@ -1643,6 +1663,9 @@
     wire();
     setupSpy();
     await initHighlights();
+    if (window.SR_TRANSLATE) {
+      window.SR_TRANSLATE.init({ paper: $('#paper'), onSaveNote: saveTranslationNote });
+    }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
     await initLibrary(a);

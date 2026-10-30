@@ -53,8 +53,8 @@ reader. The page holds
 - reading history with a one-click off switch
 - export as **BibTeX, RIS, CSV or JSON** (drop straight into Zotero / EndNote / NoteExpress) and
   import back from BibTeX or a JSON backup
-- **⚙ Settings** (the app has it as its own tab): theme, reading typeface and size, the allowed-site
-  list and the version, in one panel
+- **⚙ Settings** (the app has it as its own tab): theme, reading typeface and size, selection
+  translation (on/off and the target language), the allowed-site list and the version, in one panel
 - **sync across devices**: the same library, reading positions and highlights on the browser and the
   phone, carried by a private gist of your own — see [docs/INSTALL.md §6](docs/INSTALL.md)
 
@@ -101,6 +101,7 @@ pill appears there from then on. **Extension options** in `chrome://extensions` 
 | `↑ cited 3×` on a reference | Jump back to where the text cites it |
 | Click a figure, or Expand | Lightbox: wheel to zoom 25–600%, drag to pan, ← → to switch figures |
 | Select text, click the pen | Highlight in the current colour (right-click the pen for 6 colours) |
+| Select text, click 译 (or press `Y`) | Chinese translation of the selection in a floating card; **Copy** or **Save to note** (keeps both languages on the paper's library note) |
 | `J` / `K`, `S` / `F` / `R`, `T`, `Z`, `Esc` | Next section, tabs, theme, collapse rail, close |
 | `Aa` | Theme, typeface, custom colours, text size, line height, column width |
 | `⋯` | Parse diagnostics: paragraphs, figures and references found |

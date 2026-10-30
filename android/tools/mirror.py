@@ -36,7 +36,7 @@ def main():
 
     reader_dst = ASSETS / "reader"
     reader_dst.mkdir(parents=True, exist_ok=True)
-    for name in ("reader.html", "reader.css", "reader.js",
+    for name in ("reader.html", "reader.css", "reader.js", "translate.js",
                  "library.html", "library.css", "library.js", "library-store.js",
                  "search.html", "search.js", "settings.html", "settings.js",
                  "theme.js"):

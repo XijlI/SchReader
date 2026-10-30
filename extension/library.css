@@ -333,7 +333,7 @@ select {
   margin-top: .25rem; color: var(--fg-faint); font-size: 12.5px;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
-.item .note { margin-top: .45rem; font: italic 13px/1.5 var(--serif); color: var(--fg-soft); }
+.item .note { margin-top: .45rem; font: italic 13px/1.5 var(--serif); color: var(--fg-soft); white-space: pre-wrap; }
 .item .tags { margin-top: .45rem; }
 .acts { display: flex; flex-direction: column; gap: .3rem; align-items: flex-end; }
 .acts button {

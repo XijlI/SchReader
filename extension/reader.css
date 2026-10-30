@@ -1023,3 +1023,67 @@ html[data-rail="off"] #btnRail { opacity: .55; }
   font-size: .78rem; line-height: 1;
 }
 .hlpal button.del:hover { background: var(--bg-soft); color: var(--fg); }
+
+/* ---------- selection translation (translate.js) ---------- */
+.trbtn {
+  position: fixed; z-index: 94; display: flex; align-items: center; justify-content: center;
+  width: 1.95rem; height: 1.95rem; padding: 0; border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, .18);
+  background: #f7b705; color: #14130f;
+  font: 700 .82rem/1 var(--sans);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .2), 0 1px 3px rgba(0, 0, 0, .12);
+  cursor: pointer;
+}
+.trbtn:hover { background: #ffc31c; }
+.trbtn:active { transform: translateY(1px); }
+
+.trpop {
+  position: fixed; z-index: 95;
+  width: min(24rem, 86vw);
+  background: var(--bg);
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: .7rem .85rem .5rem;
+  font-family: var(--sans);
+  color: var(--fg);
+}
+.trpop-body {
+  font: calc(.92rem * var(--scale)) / 1.68 var(--font-read);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 42vh;
+  overflow-y: auto;
+  margin-bottom: .55rem;
+}
+.trwait { color: var(--fg-faint); font-family: var(--sans); font-size: .8rem; }
+.trerr { color: var(--fg-soft); font-family: var(--sans); font-size: .78rem; line-height: 1.5; }
+.tract {
+  margin-left: .5rem; font: inherit; font-family: var(--sans); font-size: .7rem;
+  border: 1px solid var(--line); background: var(--bg-soft); color: var(--fg-soft);
+  border-radius: 5px; padding: .2rem .5rem; cursor: pointer;
+}
+.tract:hover { color: var(--accent); border-color: var(--accent); }
+
+.trpop-foot {
+  display: flex; align-items: center; gap: .4rem;
+  border-top: 1px solid var(--line); padding-top: .45rem;
+}
+.trpop-src {
+  font-size: .66rem; letter-spacing: .05em; text-transform: uppercase;
+  color: var(--fg-faint); margin-right: auto;
+}
+.trpop-foot button {
+  font: inherit; font-family: var(--sans); font-size: .7rem;
+  border: 1px solid var(--line); background: var(--bg-soft); color: var(--fg-soft);
+  border-radius: 5px; padding: .22rem .5rem; cursor: pointer;
+}
+.trpop-foot button:hover { color: var(--accent); border-color: var(--accent); }
+.trpop-foot button.flash { color: var(--accent); border-color: var(--accent); }
+.trpop-foot button.x { padding: .22rem .42rem; color: var(--fg-faint); }
+.trpop-foot.quiet button:not(.x) { display: none; }
+
+@media (max-width: 34rem) {
+  .trpop { width: min(20rem, 92vw); }
+  .trpop-body { max-height: 38vh; }
+}

@@ -4,8 +4,9 @@
        "Extension options", which redirects to library.html?settings=1).
      • Android app      — the Settings tab of the home screen (settings.html).
      • dev harness      — whatever is being tested; sections degrade to what exists.
-   Sections: appearance (theme / typeface / reading size), reading history, allowed sites
-   (extension only — the app never gates on a whitelist) and about (version / shortcuts).
+   Sections: appearance (theme / typeface / reading size), reading history, translation (on/off and
+   the target language), sync, allowed sites (extension only — the app never gates on a whitelist)
+   and about (version / shortcuts).
 */
 (() => {
   'use strict';
@@ -42,6 +43,18 @@
 
   const readLS = (key, fallback) => { try { return localStorage.getItem(key) || fallback; } catch (e) { return fallback; } };
   const writeLS = (key, value) => { try { localStorage.setItem(key, value); } catch (e) { /* ignore */ } };
+
+  /* Target languages for the reader's selection translation. The code is what Google's endpoint
+     takes as `tl`; the reader reads the same localStorage keys, so one list serves both. */
+  const TR_LANGS = [
+    { id: 'zh-CN', label: '简体中文' },
+    { id: 'zh-TW', label: '繁體中文' },
+    { id: 'en', label: 'English' },
+    { id: 'ja', label: '日本語' },
+    { id: 'ko', label: '한국어' },
+  ];
+  const trEnabled = () => readLS('sr-tr-on', '1') !== '0';
+  const trLang = () => (TR_LANGS.some((l) => l.id === readLS('sr-tr-lang', '')) ? readLS('sr-tr-lang', '') : 'zh-CN');
 
   const storedTheme = () => readLS('sr-theme', 'light');
   const storedFont = () => (FONTS.some((f) => f.id === readLS('sr-font', 'palatino')) ? readLS('sr-font', 'palatino') : 'palatino');
@@ -161,6 +174,7 @@
 
   const SHORTCUTS = [
     ['j / k', 'next / previous section'],
+    ['y', 'translate the selection'],
     ['s · f · r', 'Sections · Figures · References rail'],
     ['z', 'show or hide the rail'],
     ['t', 'next theme'],
@@ -202,6 +216,23 @@
     </label>
     <p class="hint">History keeps the title and the link only — never the article text. Turn it off
       and nothing new is recorded; existing entries stay until you clear them.</p>
+  </section>
+
+  <section class="set-sec">
+    <h4>Translation <span class="n" id="setTrState">on</span></h4>
+    <label class="set-row check">
+      <input type="checkbox" id="setTrOn">
+      <span>Translate a selection in the reading view</span>
+    </label>
+    <div class="set-row">
+      <span>Translate into</span>
+      <select id="setTrLang">
+        ${TR_LANGS.map((l) => `<option value="${esc(l.id)}">${esc(l.label)}</option>`).join('')}
+      </select>
+    </div>
+    <p class="hint">Select text in the reader and click <b>译</b> (or press <kbd>y</kbd>) — the translation
+      floats next to the text, and <b>Save to note</b> keeps both languages on the paper. Google's free
+      endpoint does the work: no account, but it needs internet access.</p>
   </section>
 
   <section class="set-sec">
@@ -412,6 +443,31 @@
         await LIB.saveSettings({ history: box.checked });
         window.dispatchEvent(new CustomEvent('sr-settings', { detail: { history: box.checked } }));
         say(box.checked ? 'History on' : 'History off', 'ok');
+      });
+    }
+
+    /* ---- translation */
+    const trBox = host.querySelector('#setTrOn');
+    const trSel = host.querySelector('#setTrLang');
+    const trState = host.querySelector('#setTrState');
+    if (trBox && trSel) {
+      const paintTr = () => {
+        trBox.checked = trEnabled();
+        trSel.value = trLang();
+        trSel.disabled = !trBox.checked;
+        const l = TR_LANGS.find((x) => x.id === trSel.value);
+        trState.textContent = trBox.checked ? (l ? l.label : 'on') : 'off';
+      };
+      paintTr();
+      trBox.addEventListener('change', () => {
+        writeLS('sr-tr-on', trBox.checked ? '1' : '0');
+        paintTr();
+        say(trBox.checked ? 'Translation on' : 'Translation off', 'ok');
+      });
+      trSel.addEventListener('change', () => {
+        writeLS('sr-tr-lang', trSel.value);
+        paintTr();
+        say('Translating into ' + trSel.value, 'ok');
       });
     }
 
