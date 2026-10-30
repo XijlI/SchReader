@@ -127,9 +127,8 @@
     pop.hidden = true;
     pop.innerHTML = '<div class="trpop-body" id="trBody"></div>'
       + '<div class="trpop-foot">'
-      + '<span class="trpop-src" id="trSrc">Google</span>'
       + '<button type="button" data-act="copy">Copy</button>'
-      + '<button type="button" data-act="note">Save to note</button>'
+      + '<button type="button" data-act="note" title="Save the original and the translation to this paper\u2019s note">Save note</button>'
       + '<button type="button" class="x" data-act="close" aria-label="Close">✕</button>'
       + '</div>';
     document.body.appendChild(pop);
@@ -238,8 +237,9 @@
     /* the engine's answer is plain text; never innerHTML it back */
     body.textContent = S.result;
     foot.classList.remove('quiet');
-    const src = document.getElementById('trSrc');
-    if (src) src.textContent = 'Google' + (S.source ? ' · ' + S.source : '');
+    /* which engine and which language pair did the work: on the card's tooltip rather than in the
+       footer, so a one-word translation can stay a small card */
+    pop.title = 'Google' + (S.source ? ' · ' + S.source : '') + ' → ' + S.target;
   }
 
   function flash(act, label) {
