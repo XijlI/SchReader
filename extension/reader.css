@@ -726,11 +726,16 @@ ol.reflist > li .backref:hover { color: var(--accent); }
 .ref-list .meta a:hover { text-decoration: underline; }
 .ref-list .meta a.sch { color: var(--fg-faint); }
 .ref-list .meta a.sch:hover { color: var(--accent); }
-.ref-list .meta .back {
-  border: 0; background: none; font: inherit; font-size: .66rem;
-  color: var(--fg-faint); cursor: pointer; padding: 0;
+/* back-reference count: its own row under the entry, never inside the entry button */
+.ref-list .back {
+  display: block; width: 100%; text-align: left;
+  border: 0; border-left: 2px solid transparent; background: none;
+  font: inherit; font-size: .66rem; color: var(--accent);
+  cursor: pointer; padding: .1rem .45rem .45rem;
 }
-.ref-list .meta .back:hover { color: var(--accent); }
+/* the entry gives up its bottom padding to the count row it now sits above */
+.ref-list li.has-back button.ref-item { padding-bottom: .1rem; }
+.ref-list .back:hover { background: var(--bg-soft); }
 .empty { font-size: .76rem; color: var(--fg-faint); padding: .8rem .3rem; line-height: 1.5; }
 
 /* ---------- citation popover ---------- */

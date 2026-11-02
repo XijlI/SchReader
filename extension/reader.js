@@ -25,6 +25,8 @@
     popFor: null,
     hlColor: 'yellow',
     pendingRange: null,
+    /* which in-text citation a repeated click on a back-reference count lands on next */
+    citeStep: new Map(),
   };
 
   /* ---------------------------------------------------------
@@ -297,12 +299,15 @@
       const doi = r.doi ? `<a href="https://doi.org/${esc(r.doi)}" target="_blank" rel="noopener noreferrer">doi ↗</a>` : '';
       const sch = `<a class="sch" href="${esc(scholarHref(r))}" target="_blank" rel="noopener noreferrer" title="Find this reference on Google Scholar">Scholar ↗</a>`;
       const back = r.citedAt && r.citedAt.length
-        ? `<button class="back" type="button" data-backref="${r.n}">↑ ${r.citedAt.length}×</button>` : '';
-      return `<li data-railitem="${r.n}">
+        ? `<button class="back" type="button" data-backref="${r.n}" title="Jump to where this is cited — click again for the next one">↑ ${r.citedAt.length}× in text</button>` : '';
+      /* the count is a sibling of the entry button, never nested inside it: a button inside a
+         button is invalid markup and the click lands on the entry's [data-pin] handler instead */
+      return `<li data-railitem="${r.n}"${back ? ' class="has-back"' : ''}>
         <button class="ref-item" type="button" data-pin="${r.n}">
           <span class="txt"><span class="n">${r.n}</span>${esc(stripTags(r.html))}</span>
-          <span class="meta">${doi}${sch}${back}</span>
-        </button></li>`;
+          <span class="meta">${doi}${sch}</span>
+        </button>
+        ${back}</li>`;
     }).join('');
     return `<ul class="ref-list">${items}</ul>`;
   }
@@ -368,15 +373,23 @@
     if (showPop) showPopover(showPop, ref);
   }
 
+  /* Walk the in-text citations of one reference: the first click lands on the first occurrence,
+     every further click advances to the next one and wraps, so "↑ 3×" really visits all three. */
   function jumpToCitation(n) {
-    const chips = $$(`a[data-ref="${n}"]`);
+    const key = String(n);
+    const chips = $$(`a[data-ref="${CSS.escape(key)}"]`);
     if (!chips.length) { toast('No in-text citation found'); return; }
-    const chip = chips[0];
-    chip.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    const step = S.citeStep.get(key) || 0;
+    const idx = step % chips.length;
+    S.citeStep.set(key, (step + 1) % chips.length);
+    const chip = chips[idx];
+    scrollJump(chip, 'center');
     chips.forEach((c) => {
       c.classList.add('flash');
       setTimeout(() => c.classList.remove('flash'), 1600);
     });
+    /* say where the click landed, or the second click looks like nothing happened */
+    if (chips.length > 1) toast(`Citation ${idx + 1} of ${chips.length}`);
   }
 
   /* ---------------------------------------------------------
@@ -488,9 +501,20 @@
     toastTimer = setTimeout(() => el.classList.remove('show'), 1900);
   }
 
+  /* Jumping further than ~2 screens is instant, not animated: a smooth scroll across tens of
+     thousands of pixels sweeps the whole article past your eyes for a second and a half, and the
+     animation is dropped entirely while the page is not painting (background tab, a WebView that
+     is not on screen), which makes a real jump look like a dead button. */
+  function scrollJump(el, block = 'center') {
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const far = r.top > window.innerHeight * 2 || r.bottom < -window.innerHeight * 2;
+    el.scrollIntoView({ block, behavior: far ? 'auto' : 'smooth' });
+  }
+
   function flashAndScroll(el) {
     if (!el) return;
-    el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    scrollJump(el, 'center');
     el.classList.add('flash');
     setTimeout(() => el.classList.remove('flash'), 1500);
   }
@@ -887,17 +911,18 @@
       if (secBtn) {
         const el = document.getElementById(secBtn.dataset.gosec);
         if (el) {
-          el.scrollIntoView({ block: 'start', behavior: 'smooth' });
+          scrollJump(el, 'start');
           if (window.innerWidth <= 1088) closeRail();
         }
         return;
       }
+      /* back-reference first: it must win over the entry's [data-pin] if the two ever nest again */
+      const back = e.target.closest('[data-backref]');
+      if (back) { e.preventDefault(); jumpToCitation(back.dataset.backref); hidePopover(); return; }
       const pin = e.target.closest('[data-pin]');
       if (pin) { pinRef(pin.dataset.pin); return; }
       const pinBtn = e.target.closest('[data-pin-btn]');
       if (pinBtn) { pinRef(pinBtn.dataset.pinBtn); hidePopover(); return; }
-      const back = e.target.closest('[data-backref]');
-      if (back) { e.preventDefault(); jumpToCitation(back.dataset.backref); hidePopover(); return; }
       const aff = e.target.closest('#affilToggle');
       if (aff) {
         const list = $('#affilList');
@@ -1036,7 +1061,7 @@
         let i = secs.findIndex((s) => s.offsetTop > y);
         i = i < 0 ? secs.length - 1 : i;
         const target = secs[Math.max(0, Math.min(secs.length - 1, k === 'j' ? i : i - 2))];
-        target.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        scrollJump(target, 'start');
       } else if (k === 's') switchTab('sections');
       else if (k === 'f') switchTab('figures');
       else if (k === 'r') switchTab('references');
