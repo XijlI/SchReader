@@ -269,6 +269,56 @@
     a.replaceWith(frag);
   };
 
+  /* A printed range split across links — <a>20</a>–<a>23</a> — leaves the numbers in between
+     with no element of their own, so references 21 and 22 read as "not cited in text" and can
+     never be located (PNAS and Nature both print ranges this way). Rewrite such a range as the
+     numbers it stands for, each with its own chip; leave one alone when every middle number is
+     missing from the reference list. */
+  const siblingChip = (el, dir) => {
+    let node = el;
+    for (let hop = 0; hop < 4 && node; hop++) {
+      let s = dir < 0 ? node.previousSibling : node.nextSibling;
+      while (s && s.nodeType === 3 && !/\S/.test(s.nodeValue || '')) s = dir < 0 ? s.previousSibling : s.nextSibling;
+      if (!s) { node = node.parentElement; continue; }
+      if (s.nodeType !== 1) return null;
+      if (s.classList && s.classList.contains('ref-chip')) return s;
+      const inner = U.qsa(s, 'a.ref-chip');
+      return inner.length ? (dir < 0 ? inner[inner.length - 1] : inner[0]) : null;
+    }
+    return null;
+  };
+
+  const stitchRanges = (root, refMap) => {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: (t) => (/^[–—-]$/.test((t.nodeValue || '').trim()) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT),
+    });
+    const dashes = [];
+    let tn;
+    while ((tn = walker.nextNode())) dashes.push(tn);
+    let filled = 0;
+    for (const d of dashes) {
+      if (!d.parentNode) continue;
+      const left = siblingChip(d, -1);
+      const right = siblingChip(d, 1);
+      if (!left || !right || left === right) continue;
+      const a = Number(left.dataset.ref), b = Number(right.dataset.ref);
+      if (!a || !b || b <= a || b - a > 30) continue;
+      let cover = 0;
+      for (let i = a + 1; i < b; i++) if (refMap.byNum.has(String(i))) cover++;
+      if (!cover) continue;
+      const frag = document.createDocumentFragment();
+      for (let i = a; i <= b; i++) {
+        if (i > a) frag.appendChild(document.createTextNode(','));
+        frag.appendChild(refMap.byNum.has(String(i)) ? chip(i) : document.createTextNode(String(i)));
+      }
+      left.replaceWith(frag);
+      if (d.parentNode) d.remove();
+      if (right.parentNode) right.remove();
+      filled += cover;
+    }
+    return filled;
+  };
+
   /* author-year chip: keeps the original wording, just becomes clickable */
   const chipNY = (n, text) => {
     const a = document.createElement('a');
@@ -469,6 +519,9 @@
       frag.appendChild(document.createTextNode(s.slice(last)));
       t.replaceWith(frag);
     }
+
+    /* 4. "20–23" printed as two links: give the numbers in between chips of their own */
+    stitchRanges(node, refMap);
   };
 
   /* ---------- "Fig. 3" mentions -> anchors ---------- */
