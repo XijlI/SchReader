@@ -34,6 +34,7 @@ class Library(context: Context) {
         }
         if (!root.has("items")) root.put("items", JSONArray())
         if (!root.has("history")) root.put("history", JSONArray())
+        if (!root.has("words")) root.put("words", JSONArray())
         if (!root.has("settings")) root.put("settings", JSONObject().put("history", true))
         return root
     }
@@ -50,7 +51,7 @@ class Library(context: Context) {
     }
 
     /** JSON text for one section; the page reads "sr-lib", "sr-history", "sr-lib-settings",
-     *  "sr-search-sites", "sr-sync". */
+     *  "sr-words", "sr-search-sites", "sr-sync". */
     @Synchronized
     fun json(key: String): String {
         migrateLegacy()
@@ -59,6 +60,8 @@ class Library(context: Context) {
             "sr-lib" -> root.optJSONArray("items")?.toString() ?: "[]"
             "sr-history" -> root.optJSONArray("history")?.toString() ?: "[]"
             "sr-lib-settings" -> root.optJSONObject("settings")?.toString() ?: "{}"
+            /* the wordbook filled by the reader's translate card (★) */
+            "sr-words" -> root.optJSONArray("words")?.toString() ?: "[]"
             /* the Search tab's own shortcuts. An unknown key must not fall through to "null":
                the page then keeps its list in memory only and it vanishes on the next reload. */
             "sr-search-sites" -> root.optJSONArray("searchSites")?.toString() ?: "[]"
@@ -78,6 +81,7 @@ class Library(context: Context) {
                 "sr-lib" -> root.put("items", JSONArray(text))
                 "sr-history" -> root.put("history", JSONArray(text))
                 "sr-lib-settings" -> root.put("settings", JSONObject(text))
+                "sr-words" -> root.put("words", JSONArray(text))
                 "sr-search-sites" -> root.put("searchSites", JSONArray(text))
                 "sr-sync" -> root.put("sync", JSONObject(text))
                 else -> return

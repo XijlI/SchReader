@@ -1,7 +1,7 @@
 /* SchReader — the library store.
 
    One shape for all three hosts:
-     Chrome extension  → chrome.storage.local  (keys sr-lib, sr-history, sr-lib-settings)
+     Chrome extension  → chrome.storage.local  (keys sr-lib, sr-history, sr-lib-settings, sr-words)
      Android app       → the SchReader bridge when the native store is present, else localStorage
      dev harness       → localStorage
 
@@ -14,6 +14,10 @@
   const LIB_KEY = 'sr-lib';
   const HIST_KEY = 'sr-history';
   const SET_KEY = 'sr-lib-settings';
+  /* the wordbook: selections saved from the translate card (term + translation + example sentence).
+     Deliberately a store of its own — a saved word is not a note on a paper, and saving one must not
+     star the whole article. */
+  const WORDS_KEY = 'sr-words';
   /* the Search tab's "my sites" list: one shape for both hosts, so a shortcut added on the
      phone is not a second, drifting list next to a browser-only one */
   const SITES_KEY = 'sr-search-sites';
@@ -47,9 +51,9 @@
     return fallback;
   }
 
-  /* Everything that lands in the library or the history is worth pushing to the other devices;
-     the sync key itself is not (it would restart the loop on its own bookkeeping writes). */
-  const SYNCED = (key) => key === LIB_KEY || key === HIST_KEY;
+  /* Everything that lands in the library, the history or the wordbook is worth pushing to the other
+     devices; the sync key itself is not (it would restart the loop on its own bookkeeping writes). */
+  const SYNCED = (key) => key === LIB_KEY || key === HIST_KEY || key === WORDS_KEY;
 
   async function writeRaw(key, value) {
     const touch = () => { if (SYNCED(key)) SYNC.auto(); };
@@ -182,6 +186,87 @@
     const next = Object.assign(await getSettings(), patch_ || {});
     await writeRaw(SET_KEY, next);
     return next;
+  }
+
+  /* ------------------------------------------------------------ wordbook */
+
+  /* [{id, term, translation, example, from, to, articleId, title, url, addedAt, updatedAt}] —
+     what the reader's translate card files when you press ★. `term` is the selected text, `example`
+     the sentence it sat in, and `articleId`/`title`/`url` only say where it came from: no paper is
+     saved on the way, so one word never costs a library entry. */
+  const WORDS_MAX = 2000;
+
+  /* FNV-1a, 32 bit: the id has to be the SAME on both devices for the same word, or a sync would
+     keep two copies of it. */
+  const hash32 = (s) => {
+    let h = 2166136261;
+    for (let i = 0; i < s.length; i += 1) {
+      h ^= s.charCodeAt(i);
+      h = Math.imul(h, 16777619);
+    }
+    return (h >>> 0).toString(36);
+  };
+
+  /* The same word met in the same article is one entry (saving it again refreshes the translation
+     and example); the same word in another article keeps its own example sentence. */
+  const wordId = (term, articleId) =>
+    'w:' + hash32(String(term || '').trim().toLowerCase().replace(/\s+/g, ' ') + '\u0000' + String(articleId || ''));
+
+  const byAddedWord = (a, b) => (b.addedAt || 0) - (a.addedAt || 0)
+    || String(a.id).localeCompare(String(b.id));
+
+  async function words() {
+    const items = await readRaw(WORDS_KEY, []);
+    return Array.isArray(items) ? items.filter((i) => i && i.id).sort(byAddedWord) : [];
+  }
+
+  async function addWord(raw) {
+    const r = raw || {};
+    const term = String(r.term || '').trim().slice(0, 400);
+    const translation = String(r.translation || '').trim().slice(0, 800);
+    if (!term || !translation) return { ok: false, id: '', why: 'empty' };
+    const articleId = String(r.articleId || '');
+    const id = wordId(term, articleId);
+    const now = Date.now();
+    const fresh = {
+      id,
+      term,
+      translation,
+      example: String(r.example || '').trim().slice(0, 400),
+      from: String(r.from || ''),
+      to: String(r.to || ''),
+      articleId,
+      title: String(r.title || '').trim().slice(0, 300),
+      url: String(r.url || ''),
+      addedAt: now,
+      updatedAt: now,
+    };
+    const items = await words();
+    const at = items.findIndex((x) => x.id === id);
+    let entry = fresh;
+    if (at >= 0) {
+      entry = Object.assign({}, items[at], fresh, { addedAt: items[at].addedAt || now });
+      items[at] = entry;
+    } else {
+      items.unshift(fresh);
+    }
+    await writeRaw(WORDS_KEY, items.slice(0, WORDS_MAX));
+    return { ok: true, id, entry, again: at >= 0 };
+  }
+
+  async function patchWord(id, fields) {
+    const items = await words();
+    const at = items.findIndex((x) => x.id === id);
+    if (at < 0) return null;
+    items[at] = Object.assign({}, items[at], fields || {}, { updatedAt: Date.now() });
+    await writeRaw(WORDS_KEY, items);
+    return items[at];
+  }
+
+  async function removeWord(id) {
+    const items = (await words()).filter((x) => x.id !== id);
+    await writeRaw(WORDS_KEY, items);
+    return true;
   }
 
   /* ------------------------------------------------------------ search shortcuts */
@@ -338,10 +423,10 @@
 
   /* ------------------------------------------------------------ sync: local view */
 
-  /* Library, history, progress (a field on a library entry) and highlights, merged through a
-     private gist. Highlights are the one thing that does not live in this store: reader.js keeps
-     them under `sr-hl:<articleKey>` (chrome.storage.local in the extension, localStorage on the
-     phone). The helpers below resolve the backend in exactly that order, so sync reads and writes
+  /* Library, history, the wordbook, progress (a field on a library entry) and highlights, merged
+     through a private gist. Highlights are the one thing that does not live in this store: reader.js
+     keeps them under `sr-hl:<articleKey>` (chrome.storage.local in the extension, localStorage on
+     the phone). The helpers below resolve the backend in exactly that order, so sync reads and writes
      the same copy the reader does instead of inventing a second one. */
 
   const SYNC_KEY = 'sr-sync';
@@ -404,10 +489,10 @@
   /* `at` moves on every merge, so the snapshot as a whole can never be compared; only its
      content decides whether the gist needs another write. */
   const sameState = (a, b) => canonical({
-    lib: (a && a.lib) || [], history: (a && a.history) || [],
+    lib: (a && a.lib) || [], history: (a && a.history) || [], words: (a && a.words) || [],
     hl: (a && a.hl) || {}, clearedAt: (a && a.clearedAt) || 0,
   }) === canonical({
-    lib: (b && b.lib) || [], history: (b && b.history) || [],
+    lib: (b && b.lib) || [], history: (b && b.history) || [], words: (b && b.words) || [],
     hl: (b && b.hl) || {}, clearedAt: (b && b.clearedAt) || 0,
   });
 
@@ -453,6 +538,8 @@
 
   const mergeHistory = (a, b) => (stampOf(a) >= stampOf(b) ? a : b);
 
+  const mergeWord = (a, b) => (stampOf(a) >= stampOf(b) ? a : b);
+
   const mergeHighlight = (a, b) => (Number(a.ts || 0) >= Number(b.ts || 0) ? a : b);
 
   function mergeSnapshots(local, remote, base) {
@@ -466,9 +553,13 @@
     const clearedAt = Math.max(local.clearedAt || 0, remote.clearedAt || 0);
     const baseLib = (base && base.lib) || {};
     const baseHist = (base && base.history) || {};
+    const baseWords = (base && base.words) || {};
     const baseHl = (base && base.hl) || {};
 
     const lib = mergeMap(toMap(local.lib, byId), toMap(remote.lib, byId), baseLib, mergeEntry);
+
+    const words = mergeMap(toMap(local.words, byId), toMap(remote.words, byId), baseWords, mergeWord)
+      .sort(byAddedWord);
 
     const history = mergeMap(toMap(local.history, byId), toMap(remote.history, byId), baseHist, mergeHistory)
       .filter((h) => stampOf(h) >= clearedAt)
@@ -487,7 +578,7 @@
           || String(x.id).localeCompare(String(y.id)));
       }
     }
-    return { v: 1, at: Date.now(), clearedAt, lib: lib.sort(byAdded), history, hl };
+    return { v: 1, at: Date.now(), clearedAt, lib: lib.sort(byAdded), words, history, hl };
   }
 
   function digest(snap) {
@@ -498,7 +589,7 @@
     };
     const hl = {};
     for (const key of Object.keys((snap && snap.hl) || {})) hl[key] = index(snap.hl[key]);
-    return { lib: index(snap.lib), history: index(snap.history), hl };
+    return { lib: index(snap.lib), history: index(snap.history), words: index(snap.words), hl };
   }
 
   /* ------------------------------------------------------------ sync: transport */
@@ -605,13 +696,14 @@
   }
 
   async function snapshot() {
-    const [items, hist, hl, settings] = await Promise.all([list(), history(), hlAll(), getSettings()]);
+    const [items, hist, saved, hl, settings] = await Promise.all([list(), history(), words(), hlAll(), getSettings()]);
     return {
       v: 1,
       at: Date.now(),
       clearedAt: settings.historyClearedAt || 0,
       lib: items,
       history: hist,
+      words: saved,
       hl,
     };
   }
@@ -622,6 +714,7 @@
     const now = await snapshot();
     if (canonical(now.lib) !== canonical(merged.lib)) await saveAll(merged.lib);
     if (canonical(now.history) !== canonical(merged.history)) await writeRaw(HIST_KEY, merged.history);
+    if (canonical(now.words) !== canonical(merged.words || [])) await writeRaw(WORDS_KEY, merged.words || []);
     if ((now.clearedAt || 0) !== (merged.clearedAt || 0)) {
       await saveSettings({ historyClearedAt: merged.clearedAt || 0 });
     }
@@ -753,6 +846,7 @@
   globalThis.SR_LIB = {
     keyFor, entryFrom, list, saveAll, get, upsert, patch, remove,
     history, pushHistory, clearHistory, getSettings, saveSettings,
+    words, addWord, patchWord, removeWord,
     searchSites, saveSearchSites,
     bibtex, ris, csv, json, importItems, download,
     sync: SYNC, hlAll, hlPut,

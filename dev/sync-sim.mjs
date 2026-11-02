@@ -194,6 +194,37 @@ const idsA = (await A.list()).map((i) => i.id).sort();
 const idsB = (await B.list()).map((i) => i.id).sort();
 ok(idsA.join() === 'doi:10.1/c,doi:10.1/d' && idsA.join() === idsB.join(), 'papers added on either side both survive');
 
+console.log('the wordbook syncs, refreshes in place and forgets deletes');
+await sleep(5);
+const w1 = await A.addWord({
+  term: 'Mitochondria', translation: '线粒体', example: 'The mitochondrion is the powerhouse of the cell.',
+  from: 'en', to: 'zh-CN', articleId: 'doi:10.1/c', title: 'Paper C', url: 'https://example.org/c',
+});
+ok(w1.ok, 'A saved a word');
+await A.sync.sync();
+await sleep(5);
+await B.sync.sync();
+const wordsB = await B.words();
+ok(wordsB.length === 1 && wordsB[0].translation === '线粒体', 'B sees the word and its translation');
+ok(wordsB[0] && wordsB[0].example.indexOf('powerhouse') >= 0, 'the example sentence travelled too');
+await sleep(5);
+await B.addWord({
+  term: 'mitochondria', translation: '线粒体（复数）', example: 'A second sentence.',
+  articleId: 'doi:10.1/c', title: 'Paper C', url: 'https://example.org/c',
+});
+ok((await B.words()).length === 1, 'the same word in the same paper updates instead of duplicating');
+await B.sync.sync();
+await sleep(5);
+await A.sync.sync();
+const refreshed = (await A.words())[0];
+ok(refreshed && refreshed.example === 'A second sentence.', 'the refreshed example reached A');
+await sleep(5);
+await B.removeWord((await B.words())[0].id);
+await B.sync.sync();
+await sleep(5);
+await A.sync.sync();
+ok((await A.words()).length === 0, 'A dropped the word B deleted');
+
 console.log('a no-op sync writes nothing');
 const before = server.stats.patches;
 await sleep(5);
@@ -205,6 +236,7 @@ ok(server.stats.patches === before, 'no PATCH when nothing changed (' + before +
 console.log('the gist holds exactly the merged state');
 const snap = server.content();
 ok(snap.v === 1 && Array.isArray(snap.lib) && snap.lib.length === 2, 'snapshot has both papers');
+ok(Array.isArray(snap.words), 'snapshot carries a wordbook section');
 ok(!JSON.stringify(snap).includes('Papered'), 'no stray payload');
 
 console.log(failures ? `\n${failures} FAILED` : '\nall sync checks passed');

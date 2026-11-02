@@ -3,9 +3,10 @@
 
    Select text in the reader, a small 「译」 button appears next to the
    highlight pen; click it (or press `y`) and the translation floats
-   beside the selection. The popup shows the translation only — the
-   source sentence is kept for "Save to note", which files
-   original + translation into the article's library note.
+   beside the selection. The popup shows the translation only; the
+   source line is kept for the ★ button, which files original +
+   translation + the sentence it came from into the wordbook
+   (`sr-words`) — a list of its own, never the article's note.
 
    Engine: Google's public translate endpoint. No key, no account, and
    it answers with `Access-Control-Allow-Origin: *`, so both hosts (the
@@ -28,7 +29,7 @@
     paper: null,
     target: 'zh-CN',
     on: true,
-    onSaveNote: null,
+    onSaveWord: null,
     range: null,
     text: '',
     result: '',
@@ -128,7 +129,7 @@
     pop.innerHTML = '<div class="trpop-body" id="trBody"></div>'
       + '<div class="trpop-foot">'
       + '<button type="button" data-act="copy">Copy</button>'
-      + '<button type="button" data-act="note" title="Save the original and the translation to this paper\u2019s note">Save note</button>'
+      + '<button type="button" class="star" data-act="save" title="Save this word to your wordbook (★)" aria-label="Save to wordbook">★</button>'
       + '<button type="button" class="x" data-act="close" aria-label="Close">✕</button>'
       + '</div>';
     document.body.appendChild(pop);
@@ -146,7 +147,7 @@
       if (act === 'close') hidePop();
       else if (act === 'retry') run();
       else if (act === 'copy') copyResult();
-      else if (act === 'note') saveNote(b);
+      else if (act === 'save') saveWord(b);
     });
 
     btn.addEventListener('pointerdown', (e) => { e.preventDefault(); e.stopPropagation(); });
@@ -305,17 +306,56 @@
     flash('copy', ok ? 'Copied ✓' : 'Copy failed');
   }
 
-  async function saveNote(b) {
-    if (!S.result || !S.onSaveNote) return;
+  /* The sentence the selection sat in — a word list without it is a list of dead entries. Read off
+     the enclosing block, then cut at the sentence boundaries around the selected span; a selection
+     of several sentences simply yields the first one. */
+  function contextSentence() {
+    if (!S.range) return '';
+    const start = S.range.startContainer;
+    const el = start && (start.nodeType === 1 ? start : start.parentElement);
+    const block = el && el.closest && el.closest('p, li, dd, dt, blockquote, td, figcaption, h1, h2, h3');
+    if (!block) return '';
+    const whole = String(block.textContent || '').replace(/\s+/g, ' ').trim();
+    if (!whole) return '';
+    const needle = S.text.replace(/\s+/g, ' ').trim();
+    const at = needle ? whole.indexOf(needle) : 0;
+    const spans = [];
+    let from = 0;
+    const re = /[.!?。！？]+["'”’)\]]*\s+/g;
+    let m;
+    while ((m = re.exec(whole))) {
+      spans.push([from, m.index + m[0].length]);
+      from = m.index + m[0].length;
+    }
+    if (from < whole.length) spans.push([from, whole.length]);
+    const hit = at >= 0
+      ? spans.find(([a, b]) => at < b && at + needle.length > a)
+      : null;
+    const picked = (hit ? whole.slice(hit[0], hit[1]) : (at >= 0 ? whole : whole.slice(0, 240))).trim();
+    if (picked.length <= 300) return picked;
+    /* a long sentence is cut at a word, not mid-token — "…identity (Fig…" reads like a bug */
+    const head = picked.slice(0, 300);
+    const space = head.lastIndexOf(' ');
+    return (space > 160 ? head.slice(0, space) : head).trimEnd() + '…';
+  }
+
+  async function saveWord(b) {
+    if (!S.result || !S.onSaveWord) return;
     const was = b.textContent;
     b.disabled = true;
     try {
-      const res = await S.onSaveNote(S.text, S.result);
-      b.textContent = res && res.ok ? 'Saved ✓' : 'Not saved';
+      const res = await S.onSaveWord({
+        term: S.text,
+        translation: S.result,
+        example: contextSentence(),
+        from: S.source,
+        to: S.target,
+      });
+      b.textContent = res && res.ok ? '✓' : '!';
     } catch (e) {
-      b.textContent = 'Not saved';
+      b.textContent = '!';
     }
-    setTimeout(() => { b.textContent = was; b.disabled = false; }, 1700);
+    setTimeout(() => { b.textContent = was; b.disabled = false; }, 1500);
   }
 
   /* ---------------------------------------------------------
@@ -383,7 +423,7 @@
   function init(o) {
     const opts = o || {};
     S.paper = opts.paper || document.getElementById('paper');
-    S.onSaveNote = opts.onSaveNote || null;
+    S.onSaveWord = opts.onSaveWord || null;
     let lang = '';
     try { lang = localStorage.getItem('sr-tr-lang') || ''; } catch (e) { /* ignore */ }
     S.target = opts.target || lang || 'zh-CN';

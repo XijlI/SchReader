@@ -1573,24 +1573,27 @@
     toast('Saved — find it under ▤ My library');
   }
 
-  /* "Save to note" from the translation card: a note lives on a library entry, so an article
-     that was never starred is saved on the spot — the button would otherwise do nothing and
-     look broken. Both languages are kept: the Chinese alone is unreadable months later. */
-  async function saveTranslationNote(original, translated) {
-    if (!LIBAPI || !lib.id) return { ok: false, why: 'no-id' };
-    let entry = await LIBAPI.get(lib.id);
-    if (!entry) {
-      const fresh = LIBAPI.entryFrom(S.article);
-      fresh.progress = lib.pct > 1 ? progressPayload() : null;
-      await LIBAPI.upsert(fresh);
-      lib.saved = true;
-      setFav(true);
-      entry = await LIBAPI.get(lib.id);
-      if (!entry) return { ok: false, why: 'save-failed' };
+  /* ★ in the translate card: the word goes into the wordbook (`sr-words`), NOT into this paper's
+     `note` — and the paper is not added to the library on the way, so saving a word costs nothing
+     but the word. The entry keeps where it came from, so the wordbook can link back to the paper. */
+  async function saveWord(word) {
+    if (!LIBAPI || !word) return { ok: false, why: 'no-store' };
+    const meta = (S.article && S.article.meta) || {};
+    const src = (S.article && S.article.source) || {};
+    try {
+      return await LIBAPI.addWord({
+        term: word.term,
+        translation: word.translation,
+        example: word.example,
+        from: word.from,
+        to: word.to,
+        articleId: lib.id || LIBAPI.keyFor(S.article) || '',
+        title: meta.title || document.title,
+        url: src.url || '',
+      });
+    } catch (e) {
+      return { ok: false, why: 'write-failed' };
     }
-    const line = `【译】${translated}\n【原】${original}`;
-    await LIBAPI.patch(lib.id, { note: entry.note ? `${entry.note}\n\n${line}` : line });
-    return { ok: true };
   }
 
   function openLibrary() {
@@ -1695,7 +1698,7 @@
     setupSpy();
     await initHighlights();
     if (window.SR_TRANSLATE) {
-      window.SR_TRANSLATE.init({ paper: $('#paper'), onSaveNote: saveTranslationNote });
+      window.SR_TRANSLATE.init({ paper: $('#paper'), onSaveWord: saveWord });
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();

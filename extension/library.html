@@ -12,6 +12,7 @@
   <div class="tabs" role="tablist">
     <button class="tab on" data-view="library" role="tab">Saved<span class="count" id="countLib"></span></button>
     <button class="tab" data-view="history" role="tab">History<span class="count" id="countHist"></span></button>
+    <button class="tab" data-view="words" role="tab">Words<span class="count" id="countWords"></span></button>
   </div>
   <div class="grow"></div>
   <input id="q" type="search" placeholder="Search title, author, DOI, tag…" autocomplete="off">
@@ -45,7 +46,7 @@
 
     <div class="empty" id="empty" hidden>
       <h2>Nothing saved yet</h2>
-      <p>Open a paper, click the <b>SchReader</b> pill, then press <b>☆</b> in the reader's top bar.
+      <p id="emptyHint">Open a paper, click the <b>SchReader</b> pill, then press <b>☆</b> in the reader's top bar.
          Saved papers show up here with their tags, notes and where you stopped reading.</p>
     </div>
   </div>

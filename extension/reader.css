@@ -1087,6 +1087,8 @@ html[data-rail="off"] #btnRail { opacity: .55; }
 }
 .trpop-foot button:hover { color: var(--accent); border-color: var(--accent); }
 .trpop-foot button.flash { color: var(--accent); border-color: var(--accent); }
+/* the wordbook action is a star, not a word, so a one-word translation keeps a narrow card */
+.trpop-foot button.star { font-size: .82rem; line-height: 1; padding: .16rem .45rem; }
 /* the close button sits at the far edge; the two actions stay together on the left, which keeps
    the card's floor (and therefore a one-word card) narrow */
 .trpop-foot button.x { padding: .22rem .42rem; color: var(--fg-faint); margin-left: auto; }

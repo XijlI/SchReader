@@ -335,6 +335,16 @@ select {
 }
 .item .note { margin-top: .45rem; font: italic 13px/1.5 var(--serif); color: var(--fg-soft); white-space: pre-wrap; }
 .item .tags { margin-top: .45rem; }
+/* wordbook rows: the word is the headline, the translation reads as text, the example as a quote */
+.item.word h3 .term { font: 650 1.12rem/1.35 var(--serif); letter-spacing: -.005em; }
+.item.word .trans { margin-top: .2rem; font-size: 14.5px; line-height: 1.5; color: var(--fg); }
+.item.word .eg {
+  margin-top: .4rem; padding-left: .6rem; border-left: 2px solid var(--line-strong);
+  font: italic 13px/1.5 var(--serif); color: var(--fg-soft);
+}
+/* the source article is a link inside .meta, which has no link styling of its own */
+.item.word .meta a { color: var(--fg-soft); text-decoration: underline; text-underline-offset: 2px; text-decoration-color: var(--line-strong); }
+.item.word .meta a:hover { color: var(--accent); text-decoration-color: currentColor; }
 .acts { display: flex; flex-direction: column; gap: .3rem; align-items: flex-end; }
 .acts button {
   background: none; border: 1px solid transparent; border-radius: 7px;

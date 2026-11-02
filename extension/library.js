@@ -21,6 +21,7 @@
     view: 'library',
     items: [],
     history: [],
+    words: [],
     q: '',
     sort: 'added',
     tag: null,
@@ -164,20 +165,76 @@
       </article>`;
   }
 
+  /* ------------------------------------------------------------ wordbook */
+  /* Entries come from the reader's translate card (★): the selected text, its translation, the
+     sentence it sat in, and where it came from. Nothing here touches a library entry's note. */
+  function wordMatches(w) {
+    if (!S.q) return true;
+    const hay = [w.term, w.translation, w.example, w.title].join(' ').toLowerCase();
+    return S.q.toLowerCase().split(/\s+/).filter(Boolean).every((t) => hay.includes(t));
+  }
+
+  function wordHtml(w) {
+    const url = safeUrl(w.url);
+    const origin = w.title
+      ? (url ? `<a href="${esc(url)}" data-open-url="${esc(url)}">${esc(w.title)}</a>` : esc(w.title))
+      : (url ? `<a href="${esc(url)}" data-open-url="${esc(url)}">${esc(url)}</a>` : '');
+    const meta = [origin, fmtDate(w.addedAt)].filter(Boolean).join('<span class="dot">·</span>');
+    return `
+      <article class="item word" data-wid="${esc(w.id)}">
+        <div>
+          <h3><span class="term">${esc(w.term)}</span></h3>
+          <div class="trans">${esc(w.translation)}</div>
+          ${w.example ? `<div class="eg">${esc(w.example)}</div>` : ''}
+          ${meta ? `<div class="meta">${meta}</div>` : ''}
+        </div>
+        <div class="acts">
+          <button data-wcopy="${esc(w.id)}" title="Copy the word and its translation (tab separated)">Copy</button>
+          <button class="del" data-wdel="${esc(w.id)}">Delete</button>
+        </div>
+      </article>`;
+  }
+
+  /* Static hints per view — kept out of the item templates so the list stays one string per row. */
+  const EMPTY_HINT = {
+    library: 'Open a paper, click the <b>SchReader</b> pill, then press <b>☆</b> in the reader\u2019s top bar. Saved papers show up here with their tags, notes and where you stopped reading.',
+    history: 'Pages you read are listed here, newest first. Uncheck <b>Record reading history</b> below to stop recording them.',
+    words: 'Select a word or a sentence while reading, press <b>译</b>, then <b>★</b> in the translation card. Saved words are kept here with their translation and the sentence they came from — separate from the papers\u2019 notes.',
+  };
+
   function render() {
+    const isWords = S.view === 'words';
     const isHist = S.view === 'history';
-    const source = isHist ? S.history : S.items;
-    const shown = isHist
-      ? source.filter((e) => !S.q || String(e.title || '').toLowerCase().includes(S.q.toLowerCase()))
-      : sortItems(source.filter(matches));
+    let shown;
+    if (isWords) {
+      shown = S.words.filter(wordMatches);
+    } else if (isHist) {
+      const q = S.q.toLowerCase();
+      shown = S.history.filter((e) => !q || String(e.title || '').toLowerCase().includes(q));
+    } else {
+      shown = sortItems(S.items.filter(matches));
+    }
 
     $('#countLib').textContent = S.items.length ? String(S.items.length) : '';
     $('#countHist').textContent = S.history.length ? String(S.history.length) : '';
-    $('#list').innerHTML = shown.map(isHist ? historyHtml : itemHtml).join('');
+    $('#countWords').textContent = S.words.length ? String(S.words.length) : '';
+    $('#list').innerHTML = shown.map(isWords ? wordHtml : isHist ? historyHtml : itemHtml).join('');
     $('#empty').hidden = shown.length > 0;
-    $('#empty').querySelector('h2').textContent = isHist
-      ? (S.history.length ? 'No match' : 'No history yet')
-      : (S.items.length ? 'Nothing matches' : 'Nothing saved yet');
+    const source = isWords ? S.words : isHist ? S.history : S.items;
+    $('#empty').querySelector('h2').textContent = source.length ? 'Nothing matches'
+      : isWords ? 'No words yet' : isHist ? 'No history yet' : 'Nothing saved yet';
+    $('#emptyHint').innerHTML = EMPTY_HINT[isWords ? 'words' : isHist ? 'history' : 'library'];
+
+    /* the tag list belongs to the paper list only */
+    const tagBlock = $('#side').querySelector('.side-block');
+    if (tagBlock) tagBlock.hidden = isWords;
+    /* sorting and BibTeX-style export are paper concepts; on the wordbook they would look
+       like they act on what you see and then do nothing (or export the papers instead) */
+    $('#sort').hidden = isWords;
+    $('#btnExport').hidden = isWords;
+    $('#btnImport').hidden = isWords;
+    $('#q').placeholder = isWords ? 'Search a word, its translation or the example…'
+      : isHist ? 'Search history…' : 'Search title, author, DOI, tag…';
 
     const tags = tagCounts(S.items);
     $('#tagList').innerHTML = tags.length
@@ -189,6 +246,7 @@
   async function reload() {
     S.items = await LIB.list();
     S.history = (await LIB.history()).slice().sort((a, b) => (b.ts || 0) - (a.ts || 0));
+    S.words = (LIB.words ? await LIB.words() : []) || [];
     render();
   }
 
@@ -286,6 +344,24 @@
       }
       const tag = e.target.closest('.tagbtn[data-tag]');
       if (tag) { e.preventDefault(); S.tag = tag.dataset.tag || null; render(); return; }
+      const wcopy = e.target.closest('[data-wcopy]');
+      if (wcopy) {
+        const w = S.words.find((x) => x.id === wcopy.dataset.wcopy);
+        if (!w) return;
+        try {
+          /* tab separated: pastes into a spreadsheet or an Anki import as two fields */
+          await navigator.clipboard.writeText(`${w.term}\t${w.translation}`);
+          toast('Copied');
+        } catch (err) { toast('Copy failed: ' + (err && err.message || err)); }
+        return;
+      }
+      const wdel = e.target.closest('[data-wdel]');
+      if (wdel) {
+        await LIB.removeWord(wdel.dataset.wdel);
+        await reload();
+        toast('Removed');
+        return;
+      }
       const edit = e.target.closest('[data-edit]');
       if (edit) { editItem(edit.dataset.edit); return; }
       const copy = e.target.closest('[data-copy]');
