@@ -4,7 +4,11 @@
   const U = (SR.util = SR.util || {});
   const F = (SR.figures = {});
 
-  const LABEL = /^\s*((?:Extended\s+Data\s+)?(?:Supplementary\s+)?(?:Fig(?:ure)?s?\.?|Table|Scheme|Movie|Video|Box)\s*(\d+[a-z]?))\s*[:.|]?\s*/i;
+  /* The number may carry a panel letter ("Fig. 1a"), but it must not swallow the first letter
+     of the next word: on a figures-outline item the text runs "Figure 2View in article" (no
+     whitespace between the label and the link), and with the /i flag "2V" used to be a label —
+     which both invented a figure and defeated dedupe against the real "Fig. 2". */
+  const LABEL = /^\s*((?:Extended\s+Data\s+)?(?:Supplementary\s+)?(?:Fig(?:ure)?s?\.?|Table|Scheme|Movie|Video|Box)\s*(\d{1,3}(?:[a-z](?![A-Za-z0-9]))?)(?![A-Za-z0-9]))\s*[:.|]?\s*/i;
 
   const area = (img) => {
     const w = img.naturalWidth || img.width || 0;
@@ -159,6 +163,11 @@
         if (!cand) {
           for (const h of [host.nextElementSibling]) {
             if (!h) continue;
+            /* A sibling that carries its own image is another item in a thumbnail list
+               (Frontiers' figures-outline sidebar), not the caption of this one — reading
+               its label made every outline entry a duplicate figure under the *next*
+               number ("Figure 2V", "Table 1P"). */
+            if (U.qs(h, 'img, picture')) continue;
             const mm = U.text(h).match(LABEL);
             if (mm) { cap = h; label = U.norm(mm[1]); break; }
           }

@@ -136,7 +136,13 @@
     switch (b.t) {
       case 'figure': return figureBlock(S.byFig.get(b.fid));
       case 'image': return `<figure class="fig"><img src="${esc(b.src)}" alt="${esc(b.alt || '')}" loading="lazy" referrerpolicy="no-referrer"></figure>`;
-      case 'table': return `<div class="table-wrap">${sanitize(b.html)}</div>`;
+      case 'table': {
+        /* extractors hand back the <table>'s innerHTML (thead/tbody/tr), and a browser parsing
+           those outside a <table> drops the row structure — the whole table then renders as one
+           run-on paragraph. Keep both shapes working: some sources pass a complete <table>. */
+        const raw = String(b.html || '');
+        return `<div class="table-wrap">${sanitize(/<table\b/i.test(raw) ? raw : `<table>${raw}</table>`)}</div>`;
+      }
       case 'list': return sanitize(b.html);
       case 'quote': return `<blockquote>${sanitize(b.html)}</blockquote>`;
       case 'pre': return `<pre>${sanitize(b.html)}</pre>`;

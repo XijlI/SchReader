@@ -211,26 +211,30 @@
     sections = sections.filter((s) => s.blocks.length || s.title);
 
     /* Publisher footers. Frontiers packs keywords, the citation line, editors, reviewers,
-       copyright, the licence and promo art into a final "Summary" section (plus a promo
-       blurb section). None of it is article content, and the promo image used to arrive as
-       a body image block. */
-    const FOOTER_TITLE = /^(?:summary|share|cite this article|article metrics|related articles|most viewed|people also looked at|expert judgment makes science stronger|frontiers is open science)$/i;
-    const FOOTER_BLOCK = /^(?:©|copyright\b|this is an open-access article|open-access article|correspondence:|edited by|reviewed by|received:|accepted:|published:|keywords\b|all claims expressed|the authors declare|licen[cs]e\b)/i;
+       copyright, the licence and promo art into a final "Summary" section (plus "Editor &
+       Reviewers" and a promo blurb section). None of it is article content, and the promo and
+       avatar images used to arrive as body image blocks. */
+    const FOOTER_TITLE = /^(?:summary|share|cite this article|article metrics|related articles|most viewed|people also looked at|expert judgment makes science stronger|frontiers is open science|publisher['’]s note|editors? (?:&|and) reviewers?)$/i;
+    /* `the authors declare` is deliberately absent: it opens the *real* conflict-of-interest and
+       funding statements of the last sections, and dropped their text while keeping the heading */
+    const FOOTER_BLOCK = /^(?:©|copyright\b|this is an open-access article|open-access article|correspondence:|edited by|reviewed by|received:|accepted:|published:|keywords\b|all claims expressed|licen[cs]e\b)/i;
     /* only near the end: plenty of articles open with a section called "Summary" */
-    sections = sections.filter((s, i) => !(i >= sections.length - 2 && FOOTER_TITLE.test((s.title || '').trim())));
     const isPromoImage = (b) => b.t === 'image' && /(?:brand\.|marketing|promo(?:tion)?[-_/])/i.test(String(b.html || ''));
-    sections = sections.map((s, i) => {
-      const tail = i >= sections.length - 2;
-      return {
-        ...s,
-        blocks: s.blocks.filter((b) => {
-          if (isPromoImage(b)) return false;
-          if (tail && b.t === 'p' && FOOTER_BLOCK.test(stripHtml(b.html))) return false;
-          return true;
-        }),
-      };
-    });
-    sections = sections.filter((s) => s.blocks.length || s.title);
+    const pruneFooter = () => {
+      sections = sections.filter((s, i) => !(i >= sections.length - 2 && FOOTER_TITLE.test((s.title || '').trim())));
+      sections = sections.map((s, i) => {
+        const tail = i >= sections.length - 2;
+        return {
+          ...s,
+          blocks: s.blocks.filter((b) => !(isPromoImage(b) || (tail && b.t === 'p' && FOOTER_BLOCK.test(stripHtml(b.html))))),
+        };
+      });
+      sections = sections.filter((s) => s.blocks.length || s.title);
+    };
+    /* the footer sits behind one or two link-only promo shells, so "the last two sections" at
+       first sight is not the footer at all — each pass only sees a shorter tail, and after three
+       of them "Summary" and "Editor & Reviewers" have moved into the window and are gone */
+    for (let pass = 0; pass < 3; pass++) pruneFooter();
 
     const bodyText = sections.reduce((n, s) => n + s.blocks.reduce((m, b) => m + (b.html ? b.html.length : 0), 0), 0);
     if (!sections.length) warnings.push('no body sections (abstract-only page?)');

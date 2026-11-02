@@ -427,6 +427,11 @@
       if (U.qsa(sup, 'a, .ref-chip').length) continue;
       const t = U.text(sup);
       if (!/^\[?\s*\d{1,3}(\s*[,-–—]\s*\d{1,3})*\s*\]?$/.test(t)) continue;
+      /* A superscript that continues a number is an exponent, not a citation:
+         "1×10^6 cells/mL" (ref 6 exists) used to become a chip and inflate the count. */
+      let prev = sup.previousSibling;
+      while (prev && prev.nodeType !== 3 && prev.nodeType !== 1) prev = prev.previousSibling;
+      if (prev && prev.nodeType === 3 && /[\d×·^*]\s*$/.test(prev.nodeValue || '')) continue;
       const nums = expandNums(t.replace(/[\[\]]/g, '')).filter((n) => refMap.byNum.has(String(n)));
       if (!nums.length) continue;
       const frag = document.createDocumentFragment();
@@ -637,6 +642,11 @@
 
       if (tag === 'TABLE') {
         if (txt.length < 8) continue;
+        /* table cells carry citations too (Frontiers' primer table cites refs 27–30) —
+           link them before cleanBlock strips the <button> markers, or those references
+           read "not cited in text" while the brackets around them come out empty */
+        B.linkFigureMentions(node, figs);
+        B.linkCitations(node, refMap, nyMap);
         const cap = U.qs(node, 'caption');
         push({
           t: 'table',
