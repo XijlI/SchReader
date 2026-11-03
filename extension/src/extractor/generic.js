@@ -92,6 +92,16 @@
     const rootTextLen = U.len(root);
     if (!root || rootTextLen < 400) warnings.push('article body looks very short');
 
+    /* Adapter junk selectors are applied to the LIVE tree as well, before the visibility
+       pass. A collapsed widget they name (Atypon's "Go to section" dropdown, 451 chars) is
+       otherwise "revived" by reviveCollapsed as if it were a collapsed section and dumps its
+       table of contents into the body as a list. 'junk' is not 'hidden', so it never revives. */
+    for (const sel of (adapter && adapter.junk) || []) {
+      for (const el of U.qsa(root, sel)) {
+        if (!el.hasAttribute('data-sr-skip')) el.setAttribute('data-sr-skip', 'junk');
+      }
+    }
+
     SR.blocks.markJunk(root);
     const revived = SR.blocks.reviveCollapsed(root);
     if (revived) warnings.push('collapsed sections revived: ' + revived);
@@ -127,6 +137,28 @@
     };
     markSeparate(refsResult.container);
     if (absInfo) markSeparate(absInfo.el);
+    /* The abstract often exists twice: a visible block in the body plus a hidden tab copy.
+       When meta picked the copy outside the root (Atypon: #abstract_content next to the body),
+       the body one stayed in and rendered as an "ABSTRACT" section duplicating the header.
+       Match it by its own text, not by class, so a real section titled "Abstract" survives. */
+    if (absInfo && root && !root.contains(absInfo.el)) {
+      /* compare on text with the already-junk-marked chrome ("Go to section…" dropdown, menus)
+         removed, or the in-body copy never matches the clean tab copy */
+      const keyOf = (el) => {
+        const c = el.cloneNode(true);
+        for (const s of U.qsa(c, '[data-sr-skip]')) s.remove();
+        return U.dedupeKey(U.text(c));
+      };
+      const aKey = keyOf(absInfo.el);
+      if (aKey.length > 60) {
+        const aBody = aKey.slice(0, 200);
+        for (const el of U.qsa(root, '[class*="abstract" i], [id*="abstract" i]')) {
+          if (el === root || U.len(el) < 120) continue;
+          const k = keyOf(el);
+          if (k.length > 60 && (k.includes(aBody) || aKey.includes(k.slice(0, 200)))) { markSeparate(el); break; }
+        }
+      }
+    }
 
     const clone = root.cloneNode(true);
     U.absolutize(clone);
@@ -134,6 +166,8 @@
     for (const sel of (adapter && adapter.junk) || []) {
       for (const el of U.qsa(clone, sel)) el.remove();
     }
+
+    SR.blocks.promoteHeadings(clone, adapter);
 
     const figures = SR.figures.collect(clone);
     if (!figures.length) warnings.push('no figures found');
@@ -175,6 +209,13 @@
     /* Extended Data / Supplementary sections on a publisher page are usually just shells that
        link to a separate page — their links already live in `supplementary`, so drop the shells */
     sections = sections.filter((s) => !/^(Extended\s+Data\s+(Fig|Table)|Supplementary\s+(Figs?|Figures?|Information|Table|Data|Movie|Video))/i.test(s.title || ''));
+
+    /* A second copy of the reference list walks in as a body section (Atypon keeps one in
+       the back matter and one in a "References" tab), and the reader renders its own list —
+       drop any section titled like one whose blocks are all lists/quotes. */
+    const REF_TITLE = /^(references?|literature cited|bibliography|works? cited|notes and references|citations?)$/i;
+    sections = sections.filter((s) => !(REF_TITLE.test((s.title || '').trim())
+      && s.blocks.length > 1 && s.blocks.every((b) => b.t === 'list' || b.t === 'quote')));
 
     /* the reader renders its own reference list and its own supplementary block, so a body
        section repeating them is noise; UI shells ("View options", "eReader") are pure chrome */

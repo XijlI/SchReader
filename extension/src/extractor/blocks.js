@@ -210,6 +210,31 @@
     for (const el of U.qsa(root, '[data-sr-skip]')) el.removeAttribute('data-sr-skip');
   };
 
+  /* ---------- headings that are not headings ----------
+     Some templates (Atypon/Literatum: Annual Reviews, and anything else on that platform)
+     render a section title as <div class="tl-main-part title"> inside a plain div, and a
+     subheading as <p class="tl-lowest-section">. Nothing in the walker sees them, so the whole
+     paper arrived as one unnamed section. The adapter names the elements; promote them to real
+     h2/h3 on the clone (text only — the divider wrapper also carries the section menu). */
+  B.promoteHeadings = (root, adapter) => {
+    if (!adapter) return 0;
+    let n = 0;
+    for (const [sel, tag] of [[adapter.headings, 'H2'], [adapter.subheadings, 'H3']]) {
+      if (!sel) continue;
+      for (const el of U.qsa(root, sel)) {
+        if (!el.parentNode || el.tagName === tag) continue;
+        if (el.closest('[data-sr-skip]')) continue;
+        const t = U.text(el);
+        if (!t || t.length > 260 || BOILERPLATE.test(t)) continue;
+        const h = document.createElement(tag);
+        h.textContent = t;
+        el.replaceWith(h);
+        n++;
+      }
+    }
+    return n;
+  };
+
   /* ---------- collapsed mobile sections ----------
      Some publishers render the article body as a stack of collapsed accordions on phones
      (PLOS: `section.accordion-content { display:none }` until the heading is tapped). The
@@ -224,6 +249,13 @@
     let revived = 0;
     for (const el of hidden) {
       if (!el.parentNode) continue;
+      /* a collapsed *content* block always holds paragraphs or tiles; a hidden header
+         wrapper (Atypon's "Go to section…" divider) holds only divs and got revived as if
+         it were a hidden section. The whole subtree is marked 'hidden' by the same pass, so
+         only 'junk'/'menu' marks (chrome we named) disqualify an inner paragraph. */
+      const hasContent = U.qsa(el, 'p, li, figure, table, h2, h3, h4')
+        .some((n) => !n.closest('[data-sr-skip="junk"], [data-sr-skip="menu"], [data-sr-skip="popover"]'));
+      if (!hasContent) continue;
       const t = U.norm(el.textContent || '');
       if (t.length < 300) continue;                        /* collapse chrome, not a section */
       if (visible.includes(t.slice(0, 80))) continue;      /* already on screen somewhere else */
@@ -695,6 +727,13 @@
 
       if (tag === 'TABLE') {
         if (txt.length < 8) continue;
+        /* A table with a single cell is a layout box, not data — Atypon wraps a whole
+           subsection in <table><tr><td><p>…, so the table branch flattened four paragraphs
+           (and their heading) into one run-on block. Let its children walk as body flow. */
+        if (U.qsa(node, 'td, th').length <= 1 && U.qs(node, 'p, div, h2, h3, h4, ul, ol')) {
+          candSet.delete(node);
+          continue;
+        }
         /* table cells carry citations too (Frontiers' primer table cites refs 27–30) —
            link them before cleanBlock strips the <button> markers, or those references
            read "not cited in text" while the brackets around them come out empty */

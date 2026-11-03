@@ -122,6 +122,19 @@
     return lead || fallback;
   };
 
+  /* remove a leading element that is nothing but the entry's own counter ("1." / "2)") */
+  const dropBareNumber = (clone) => {
+    for (const el of U.qsa(clone, '*').slice(0, 80)) {
+      const t = U.text(el);
+      if (!t || t.length > 6) continue;
+      if (!/^\d{1,3}[.)\]]?$/.test(t)) continue;
+      if (U.qsa(el, 'img, a[href]').length) continue;
+      el.remove();
+      return true;
+    }
+    return false;
+  };
+
   R.parse = (adapter) => {
     let items = [];
     let container = null;
@@ -184,10 +197,17 @@
       else if (firstEl && /^\d{1,3}[.)\]]?\s*/.test(U.text(firstEl)) && U.len(firstEl) < U.len(clone) * 0.4) {
         const tn0 = document.createTreeWalker(firstEl, NodeFilter.SHOW_TEXT).nextNode();
         if (tn0) tn0.nodeValue = (tn0.nodeValue || '').replace(/^\s*\d{1,3}[.)\]]?\s*/, '');
+      } else {
+        /* …or one level deeper, wrapped by the template (Atypon: the entry starts with
+           <div class="citation-label">1.&nbsp;</div>, so every reference kept our number and
+           its own, rendering as "1. 1. Casrouge …") */
+        dropBareNumber(clone);
       }
       /* drop our own leading "1." numbering, we render our own counters */
       const tn = document.createTreeWalker(clone, NodeFilter.SHOW_TEXT);
-      const first = tn.nextNode();
+      let first = tn.nextNode();
+      let lead = 0;
+      while (first && lead++ < 6 && !(first.nodeValue || '').trim()) first = tn.nextNode();
       if (first && /^\s*\[?\d{1,3}[.)\]]?\s+/.test(first.nodeValue || '')) {
         first.nodeValue = first.nodeValue.replace(/^\s*\[?\d{1,3}[.)\]]?\s+/, '');
       }

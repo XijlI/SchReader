@@ -148,8 +148,21 @@
     {
       id: 'annurev',
       hosts: [/(^|\.)annualreviews\.org$/],
-      articleRoot: ['div.article-body', 'section.article-body', 'article'],
-      refItem: '.references li, ol.references li',
+      /* Atypon/Literatum. The article proper (front matter, body, back matter) lives in
+         #html-body; the Abstract / Metrics / References / Cited tabs next to it are hidden
+         copies of the same content, so they must stay outside the root — walking them made
+         reviveCollapsed pull 16 hidden tab panes back in as duplicate sections. */
+      articleRoot: ['#html-body', 'div.itemFullTextHtml', '#itemFullTextId', 'article'],
+      refItem: 'span.references li, ol#articlereference > li, .references li',
+      /* the section title is a <div class="tl-main-part title"> inside <div class="sectionDivider">,
+         and subheadings are <p|span class="tl-lowest-section"> — no <h2>/<h3> anywhere, so the
+         walker saw the whole paper as one anonymous section */
+      headings: 'div.sectionDivider .tl-main-part.title, div.sectionDivider .tl-main-part',
+      subheadings: '.tl-lowest-section',
+      /* "Go to section…" dropdown, its caret button and the PowerPoint download form are
+         chrome; the dropdown is only 451 chars and would be "revived" as a collapsed section,
+         dumping the table of contents into the body as a list */
+      junk: ['div.dropDownMenu', '.sectionDivider .menuButton', 'form.pptDwnld'],
     },
     {
       id: 'pubmed',

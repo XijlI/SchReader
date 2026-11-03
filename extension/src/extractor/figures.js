@@ -25,8 +25,14 @@
     return /\/images?\/profile\//i.test(src) || /^https?:\/\/loop\./i.test(src);
   };
 
+  /* Loaders and spacers are not figures. Atypon keeps a spinner.gif under every figure
+     thumbnail, and the "image with a caption nearby" pass happily paired it with the real
+     caption — Figure 1 showed up twice, once pointing at spinner.gif. */
+  const PLACEHOLDER = (img) => /sprite|icon|logo|spinner|placeholder|blank|loading/i
+    .test(`${img.className} ${img.id} ${img.alt} ${img.getAttribute('src') || ''}`);
+
   const biggestImg = (el) => {
-    const imgs = U.qsa(el, 'img').filter((i) => !/sprite|icon|logo|spinner|placeholder|blank/i.test(`${i.className} ${i.id} ${i.alt}`) && !AVATAR_IMG(i));
+    const imgs = U.qsa(el, 'img').filter((i) => !PLACEHOLDER(i) && !AVATAR_IMG(i));
     if (!imgs.length) return null;
     return imgs.sort((a, b) => area(b) - area(a))[0];
   };
@@ -145,7 +151,7 @@
 
     /* 2) images with a caption elsewhere in the same block ("div.figure > img + div.figcaption") */
     for (const img of U.qsa(root, 'img')) {
-      if (usedImgs.has(img) || AVATAR_IMG(img)) continue;
+      if (usedImgs.has(img) || AVATAR_IMG(img) || PLACEHOLDER(img)) continue;
       /* lazy images have no natural size yet — only reject the ones we can measure and
          that are small in BOTH dimensions (icons); a wide, short table image is legitimate */
       const iw = img.naturalWidth || img.width || 0;

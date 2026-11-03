@@ -177,13 +177,26 @@
 
   M.keywords = () => {
     const arr = metaAll('citation_keywords').concat(metaAll('keywords')).concat(metaAll('dc.subject'));
-    let out = arr.map((s) => s.replace(/;$/, ''));
+    let out = arr.map((s) => s.replace(/[;,]\s*$/, ''));
     if (!out.length) {
       for (const el of U.qsa(document, '[class*="keyword"], [id*="keyword"], [data-test*="keyword"]').slice(0, 6)) {
-        out = out.concat(U.qsa(el, 'a, li, span').map(U.text).filter((t) => t.length > 1 && t.length < 60));
+        /* harvesting a/li/span together doubles every keyword, and the outer element keeps
+           the separator ("CD4+ T cell differentiation," next to "CD4+ T cell differentiation") */
+        out = out.concat(U.qsa(el, 'a, li, span').map(U.text));
       }
     }
-    return Array.from(new Set(out.filter((t) => t && t.length < 60))).slice(0, 20);
+    const seen = new Set();
+    const clean = [];
+    for (const raw of out) {
+      const t = U.norm(raw).replace(/^[\s,;]+/, '').replace(/[\s,;]+$/, '');
+      if (!t || t.length > 60) continue;
+      const k = t.toLowerCase();
+      if (seen.has(k)) continue;
+      seen.add(k);
+      clean.push(t);
+      if (clean.length >= 20) break;
+    }
+    return clean;
   };
 
   M.extract = () => {
@@ -204,6 +217,9 @@
     const journal = M.pick(['citation_journal_title', 'prism.publicationName', 'dc.source', 'og:site_name'])
       .replace(/^dc\.source$/, '').replace(/\s*\d{4}$/, '');
     const type = M.pick(['citation_article_type', 'dc.type', 'prism.aggregationType', 'article:section']);
+    /* dc.type on Atypon is the *format* ("Text"), not the article type — it read as
+       "Review Article / Text" in the reader header */
+    const typeLabel = /^(text|full ?text|html|body)$/i.test(U.norm(type)) ? '' : U.norm(type);
     const volume = M.pick(['citation_volume', 'prism.volume']);
     const pages = [M.pick(['citation_firstpage']), M.pick(['citation_lastpage'])].filter(Boolean).join('–');
     const pdf = M.pick(['citation_pdf_url']) || U.abs((U.qs(document, 'link[type="application/pdf"], a[href$=".pdf"]') || { href: '' }).href || '');
@@ -215,7 +231,7 @@
       subtitle: U.norm(subtitle),
       journal: U.norm(journal) || location.hostname.replace(/^www\./, ''),
       publisher: U.norm(publisher),
-      articleType: U.norm(type) || 'Article',
+      articleType: typeLabel || 'Article',
       doi: M.doi(),
       date: M.date(),
       volume, pages,
