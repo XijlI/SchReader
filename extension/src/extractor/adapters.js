@@ -97,7 +97,11 @@
     {
       id: 'frontiers',
       hosts: [/(^|\.)frontiersin\.org$/],
-      articleRoot: ['div.JournalFullText', 'div.article-section', 'article'],
+      /* the 2025 template dropped div.JournalFullText: the body is div.ArticleContent (abstract,
+         s1…s4, Statements, References, the Summary footer). Without pinning it the scorer reached
+         div#__nuxt — the whole Nuxt app — and the site's subject taxonomy rendered as the lead
+         section while the "ORIGINAL RESEARCH article" masthead became a section of its own. */
+      articleRoot: ['div.ArticleContent', 'div.JournalFullText', 'div.article-section', 'article'],
       refItem: '.references li, div.References div, .References li',
     },
     {

@@ -401,11 +401,14 @@
   B.linkCitations = (node, refMap, nyMap) => {
     if (!refMap || !refMap.max) return;
 
-    /* 0. Some publishers render an in-text citation as a BUTTON, not a link:
-         Frontiers ships <button id="B3-button" class="ArticleReference">…<span
-         id="B3a"></span>3</button>. Buttons are widget chrome and get stripped later
-         (cleanBlock), which is why the citation numbers used to vanish. Convert first. */
-    for (const el of U.qsa(node, 'button[id], a[id]')) {
+    /* 0. Some publishers render an in-text citation as a widget, not a link: Frontiers ships
+         <button|span role="button" id="B3-button" class="ArticleReference">…<span
+         id="B3a" aria-hidden="true"></span>3</button|span>. Buttons are widget chrome and get
+         stripped later (cleanBlock), which is why the citation numbers used to vanish. Convert
+         first — and match on the id convention alone, not on a tag: the 2025 template swapped
+         the <button> for a <span>, so a tag-qualified query missed all 84 markers and every
+         reference read "not cited in text" while the body showed bare numbers. */
+    for (const el of U.qsa(node, '[id$="-button"]')) {
       if (!el.parentNode) continue;
       const m = (el.id || '').match(/^B(\d{1,3})[a-z]?-button$/i);
       if (!m) continue;
