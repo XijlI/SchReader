@@ -14,8 +14,10 @@
   const isTop = window === window.top;
   const host = location.hostname;
 
-  /* journals that already look like this, plus search engines / social sites */
-  const SKIP = /(^|\.)(nature\.com|science\.org\/search|scholar\.google\.[a-z.]+|google\.[a-z.]+|bing\.com|baidu\.com|duckduckgo\.com|sogou\.com|yandex\.[a-z.]+|wikipedia\.org|youtube\.com|twitter\.com|x\.com|facebook\.com|linkedin\.com|reddit\.com|amazon\.[a-z.]+)$/i;
+  /* search engines / social sites, plus hosts that are not articles at all. A domain the
+     user added on the options page overrides this list (see boot()) — nature.com used to sit
+     here and stayed unreachable even after being added, because the skip ran first. */
+  const SKIP = /(^|\.)(science\.org\/search|scholar\.google\.[a-z.]+|google\.[a-z.]+|bing\.com|baidu\.com|duckduckgo\.com|sogou\.com|yandex\.[a-z.]+|wikipedia\.org|youtube\.com|twitter\.com|x\.com|facebook\.com|linkedin\.com|reddit\.com|amazon\.[a-z.]+)$/i;
 
   const S = { state: 'idle', frameModel: null, autoDone: false };
 
@@ -124,8 +126,9 @@
     S.state = state;
     if (!ui) return;
     const { label, main, hint } = ui;
-    main.disabled = state === 'working';
+    main.disabled = state === 'working' || state === 'waiting';
     if (state === 'working') label.textContent = 'Reading…';
+    else if (state === 'waiting') label.textContent = 'Waiting…';
     else if (state === 'ok') label.textContent = 'Open again';
     else if (state === 'error') label.textContent = 'Retry';
     else label.textContent = 'SchReader';
@@ -150,8 +153,63 @@
   }
 
   /* ------------------------------------------------------------ convert */
-  async function convert(ev) {
-    if (S.state === 'working') return;
+  /* A paper opened from the library lands in a fresh tab, and `SR_CONVERT` can reach it
+     before the article has rendered: publisher pages answer document_idle with the shell
+     (citation meta, a couple of paragraphs) and append the rest from a script after the load
+     event. Extracting there hands the reader a finished-looking model with whole sections and
+     the reference list missing — and the reader then replaces the tab, so there is no second
+     chance. So: wait for `load`, give the page a moment to finish its own render, and only
+     start once the body text has stopped growing (convert() re-checks while extracting). */
+  const bodySize = () => (document.body ? document.body.textContent.length : 0);
+
+  async function waitForContent(maxMs) {
+    const MAX = maxMs || 12000;
+    const QUIET = 1200;   /* body unchanged this long = the render has settled */
+    const SETTLE = 2500;  /* and never convert earlier than this after `load` */
+    const MIN = 1200;     /* far below any real article, well above a loading shell */
+    const started = Date.now();
+    let loadedAt = Date.now();
+    if (document.readyState !== 'complete') {
+      await new Promise((resolve) => {
+        let done = false;
+        const finish = () => {
+          if (done) return;
+          done = true;
+          loadedAt = Date.now();
+          window.removeEventListener('load', finish);
+          resolve();
+        };
+        window.addEventListener('load', finish, { once: true });
+        /* a hanging ad/tracker frame must not hold the conversion hostage */
+        setTimeout(finish, Math.min(6000, MAX));
+      });
+    }
+    let last = -1;
+    let quietSince = Date.now();
+    while (Date.now() - started < MAX) {
+      /* an iframe publisher (IEEE Xplore) has a thin top document; once its model arrived
+         there is nothing left to wait for */
+      if (S.frameModel && (S.frameModel.sections || []).length >= 2) return true;
+      const now = bodySize();
+      if (now !== last) { last = now; quietSince = Date.now(); }
+      else if (now >= MIN && Date.now() - quietSince >= QUIET && Date.now() - loadedAt >= SETTLE) return true;
+      await new Promise((r) => setTimeout(r, 150));
+    }
+    return false;
+  }
+
+  async function convert(ev, opts) {
+    if (S.state === 'working' || S.state === 'waiting') return;
+    let waited = false;
+    /* the library's Open path and the auto-convert timer ask for `wait`: they run before the
+       reader has looked at the page, unlike a click on the pill */
+    if (opts && opts.wait) {
+      S.state = 'waiting';
+      setState('waiting');
+      await waitForContent();
+      if (S.state !== 'waiting') return;
+      waited = true;
+    }
     /* the reader normally replaces this page; Ctrl/Cmd/Shift-click (or the middle
        button) asks for a separate tab, which is also what the old build did */
     const newTab = Boolean(ev && (ev.ctrlKey || ev.metaKey || ev.shiftKey || ev.button === 1));
@@ -164,6 +222,19 @@
       console.error('[SchReader] extract failed', err);
       setState('error', 'This page could not be read.');
       return;
+    }
+    /* a section mounted a moment after that first read is exactly the "incomplete" the reader
+       used to show: keep re-reading while the body is still growing, and keep the richer model */
+    if (waited) {
+      for (let i = 0; i < 3; i++) {
+        const before = bodySize();
+        await new Promise((r) => setTimeout(r, 800));
+        if (bodySize() === before) break;
+        try {
+          const again = SR.extract();
+          if (richness(again) > richness(model)) model = again;
+        } catch (e) { break; }
+      }
     }
     if (S.frameModel && richness(S.frameModel) > richness(model)) model = S.frameModel;
 
@@ -208,13 +279,15 @@
   });
 
   /* ------------------------------------------------------------ boot */
-  if (SKIP.test(host)) return;
-
   (async () => {
-    if (!looksLikeArticle()) return;
     const pref = await prefGet();
+    /* a domain the user added on the options page beats the skip list: they asked for the
+       reading view on that host explicitly */
+    const custom = Array.isArray(pref[SITES.STORAGE_KEY]) ? pref[SITES.STORAGE_KEY] : [];
+    if (!SITES.matches(host, custom) && SKIP.test(host)) return;
     if (!siteAllowed(pref)) return;
     if (pref['sr-hidden'] && pref['sr-hidden'][host]) return;
+    if (!looksLikeArticle()) return;
 
     buildUi();
     ui.auto.checked = Boolean(pref['sr-auto'] && pref['sr-auto'][host]);
@@ -255,10 +328,10 @@
        only a page that passed the whitelist + article gates ever registers this listener */
     chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
       if (!msg || msg.type !== 'SR_CONVERT') return;
-      if (S.state === 'working') { sendResponse({ ok: true, busy: true }); return; }
+      if (S.state === 'working' || S.state === 'waiting') { sendResponse({ ok: true, busy: true }); return; }
       /* convert() owns the state machine — setting "working" here made it return on its own
          guard and left the page stuck (the tab then never navigated) */
-      convert();
+      convert(null, { wait: true });
       sendResponse({ ok: true });
     });
 
@@ -266,7 +339,7 @@
       S.autoDone = true;
       if (!sessionStorage.getItem('sr-auto-' + location.href)) {
         sessionStorage.setItem('sr-auto-' + location.href, '1');
-        setTimeout(convert, 900);
+        setTimeout(() => convert(null, { wait: true }), 900);
       }
     }
   })();
