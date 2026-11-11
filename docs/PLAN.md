@@ -10,8 +10,9 @@ Decisions locked with the user:
 - Fidelity: **structure + interaction only** — the visual design is ours, not a pixel clone.
 - Storage: the article model stays session-only; only the user's own library entries (metadata +
   link, tags, note, reading position), reading history and highlights are persisted locally.
-- Nature family (`nature.com` & subdomains) is **skipped** — it already looks like that.
-- Target publishers: all of them. Nature excluded; everything else best-effort with adapters.
+- Nature family (`nature.com` & subdomains) is on the built-in list and goes through the generic
+  path like every other publisher (65 sections / 87 refs on a live article page).
+- Target publishers: all of them, best-effort with adapters.
 
 ## Architecture
 ```
@@ -100,7 +101,7 @@ two drift (`--check`).
   "Add a publisher" lives in the settings panel (`settings.js`, mounted as a modal from the library
   and as the app's Settings tab): the pill's *allowed sites…* entry opens it with `&add=<host>`
   prefilled, and the request/registration path is unchanged.
-- The in-page list intentionally stays broad (47 domains, subdomain-matched): a paper page that is
+- The in-page list intentionally stays broad (49 domains, subdomain-matched): a paper page that is
   not reflowed is an annoyance, an extension that is injected into a bank page is not.
 
 ## Verified layouts

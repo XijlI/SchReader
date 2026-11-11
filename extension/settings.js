@@ -318,6 +318,9 @@
     if (!box) return;
     custom = await chromeGet(KEY, []);
     if (!Array.isArray(custom)) custom = [];
+    /* a domain that has since become a built-in publisher is no longer an "extra site":
+       its permission cannot be revoked either, so listing it would only offer a dead Remove */
+    custom = custom.filter((d) => !SITES.matches(d, SITES.DEFAULT_DOMAINS));
 
     /* rows built detached and swapped in one go: saving a domain fires storage.onChanged, which
        calls this again, and appending into the live box is what once produced a doubled row */

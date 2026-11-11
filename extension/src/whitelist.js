@@ -30,6 +30,7 @@
     'nejm.org',
     'jamanetwork.com',
     'annualreviews.org',
+    'nature.com',
     // society / open-access journals
     'pnas.org',
     'plos.org',

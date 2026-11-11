@@ -69,7 +69,7 @@ Science, PNAS, PLOS, Frontiers, MDPI, IEEE, ACM, JSTOR, bioRxiv, CNKI and three 
 in [extension/src/whitelist.js](extension/src/whitelist.js); every other site is left untouched.
 
 <details>
-<summary><b>Verified publishers</b> — the six I have actually run the parser against</summary>
+<summary><b>Verified publishers</b> — the seven I have actually run the parser against</summary>
 
 | Publisher | Citation style | Checked against | Sections / paragraphs / figures / refs |
 |---|---|---|---|
@@ -79,12 +79,11 @@ in [extension/src/whitelist.js](extension/src/whitelist.js); every other site is
 | PNAS (pnas.org) | Numeric | Real saved page | 16 / 28 / 4 / 43 |
 | PLOS (journals.plos.org) | Numeric | Live page | 25 / 40 / 7 / 48 |
 | Frontiers (frontiersin.org) | Numeric | Live page | 28 / 64 / 4 / 51 |
+| Nature (nature.com) | Numeric | Live page | 65 / 110 / 5 / 87 |
 
 Everything else on the list goes through the generic path (`citation_*` meta tags + heuristics)
 and is best-effort; the `⋯` panel in the reader shows what was actually found there. Two hand-written
 fixtures (a generic Elsevier layout and an author–year layout) cover that fallback path.
-
-nature.com is deliberately *not* on the list: it already looks like this.
 
 </details>
 

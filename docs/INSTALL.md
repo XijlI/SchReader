@@ -58,14 +58,16 @@ certainly selected the parent directory.
    so you can switch back and compare whenever you like.
 
 3. Can't find the pill?
-   - On some pages the body hasn't finished loading yet — give it a second or scroll down a bit
+   - A page opened straight from **My library** waits until it has finished loading before it builds
+     the reading view; a page you open yourself may still be rendering — give it a second or scroll
+     down a bit
    - If the site is not on the allowed list, no pill appears at all — see section 3
    - The **SchReader icon** in the toolbar does not convert the page: it opens your library
 
 4. Want this site to convert automatically from now on: click the **▾** to the right of the pill →
    tick **This site: convert automatically**.
 
-> nature.com doesn't show the pill, because it already looks like this.
+> nature.com is on the allowed list, so its papers get the pill like any other publisher.
 
 ---
 

@@ -57,11 +57,11 @@ DOI、链接，加上你自己打的标签、备注和阅读位置）和一份�
 ## 它会在哪些站点运行
 
 SchReader 只在自己认识的出版社站点上运行 —— ScienceDirect、Wiley、Springer、Cell、
-Science、PNAS、PLOS、Frontiers、MDPI、IEEE、ACM、JSTOR、bioRxiv、知网等 47 个，
+Science、PNAS、PLOS、Frontiers、MDPI、IEEE、ACM、JSTOR、bioRxiv、知网等 49 个，
 名单在 [extension/src/whitelist.js](extension/src/whitelist.js)；其他网站一概不碰。
 
 <details>
-<summary><b>已实测的出版社</b> —— 真正跑过解析器的 6 家</summary>
+<summary><b>已实测的出版社</b> —— 真正跑过解析器的 7 家</summary>
 
 | 出版社 | 引用样式 | 验证方式 | 节 / 段 / 图 / 文献 |
 |---|---|---|---|
@@ -71,11 +71,10 @@ Science、PNAS、PLOS、Frontiers、MDPI、IEEE、ACM、JSTOR、bioRxiv、知网
 | PNAS（pnas.org） | 数字 | 真实页面存档 | 16 / 28 / 4 / 43 |
 | PLOS（journals.plos.org） | 数字 | 实时页面 | 25 / 40 / 7 / 48 |
 | Frontiers（frontiersin.org） | 数字 | 实时页面 | 28 / 64 / 4 / 51 |
+| Nature（nature.com） | 数字 | 实时页面 | 65 / 110 / 5 / 87 |
 
 名单上其余出版社走通用路径（`citation_*` meta 标签 + 启发式），属于尽力而为；阅读页的 `⋯`
 面板能看到那边实际抓到了多少。通用兜底路径本身用两个手写样例（Elsevier 通用版式、作者-年份版式）验证过。
-
-nature.com 是**故意**不在名单里的：它本来就是这个版式。
 
 </details>
 
