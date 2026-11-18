@@ -44,6 +44,12 @@
   let body = null;
   let foot = null;
 
+  /* the phone docks the selection controls at the bottom (see reader.js) — the 译 button has
+     to follow the pen there, and keep that spot when the pen is not on screen */
+  const MQ = (q) => !!(window.matchMedia && window.matchMedia(q).matches);
+  const TOUCH = MQ('(pointer: coarse)') || ((navigator.maxTouchPoints || 0) > 0 && !MQ('(any-pointer: fine)'));
+  const TOUCH_DOCK = 78;
+
   const esc = (s) => String(s == null ? '' : s)
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
@@ -161,10 +167,21 @@
   function placeBtn() {
     if (!btn || btn.hidden) return;
     const pen = document.getElementById('hlBar');
-    const ref = (pen && !pen.hidden) ? pen.getBoundingClientRect() : anchor();
+    const docked = pen && !pen.hidden;
+    const ref = docked ? pen.getBoundingClientRect() : anchor();
     if (!ref) { hideBtn(); return; }
+    if (TOUCH && !docked) {
+      /* the pen is docked at the bottom on a phone; keep 译 on the same line even when the
+         pen is not showing, instead of parking it next to the text under the system menu */
+      const w0 = btn.offsetWidth || 30;
+      const h0 = btn.offsetHeight || 30;
+      btn.style.left = `${Math.round((window.innerWidth - w0) / 2 + 16)}px`;
+      btn.style.top = `${Math.round(window.innerHeight - h0 - TOUCH_DOCK)}px`;
+      return;
+    }
     const size = btn.offsetWidth || 30;
-    let x = ref.right + 6;
+    /* a wider gap on a phone: the two docked pills' shadows merged into one blob at 6 px */
+    let x = ref.right + (TOUCH ? 12 : 6);
     let y = ref.top;
     if (x + size > window.innerWidth - 8) x = ref.left - size - 6;
     if (y < 56) y = ref.bottom + 6;

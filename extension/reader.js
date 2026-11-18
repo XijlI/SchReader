@@ -29,6 +29,15 @@
     citeStep: new Map(),
   };
 
+  /* Touch has no hover: a tap fires pointerover and then pointerout as the finger lifts, so
+     every hover-driven popover used to close the instant it opened. Phones also put their own
+     selection menu right above the selected text. Both hosts are told apart once at load —
+     a Windows touchscreen still reports a fine pointer, so it keeps the desktop behaviour. */
+  const MQ = (q) => !!(window.matchMedia && window.matchMedia(q).matches);
+  const TOUCH = MQ('(pointer: coarse)') || ((navigator.maxTouchPoints || 0) > 0 && !MQ('(any-pointer: fine)'));
+  /* where the highlight pen docks on a phone: above the app's 58 dp bottom bar */
+  const TOUCH_DOCK = 78;
+
   /* ---------------------------------------------------------
      Sanitizer — publisher HTML goes through a strict whitelist.
      Nothing from the source page is trusted: tags are whitelisted,
@@ -458,10 +467,13 @@
     S.lb.index = idx;
     S.lb.zoom = 1; S.lb.tx = 0; S.lb.ty = 0;
     const f = S.figs[idx];
-    $('#lbImg').src = f.src;
+    /* the article shows a ~1200 px copy; the lightbox is where you zoom, so ask the publisher
+       for the original only now (Springer Nature keeps it at …/full/…) */
+    const full = f.big || f.src;
+    $('#lbImg').src = full;
     $('#lbImg').alt = f.alt || labelOf(f);
     $('#lbCap').textContent = `${labelOf(f)} — ${stripTags(f.captionHtml).slice(0, 220)}`;
-    $('#lbOpen').href = f.src;
+    $('#lbOpen').href = full;
     $('#lb').hidden = false;
     lbApply();
     document.body.style.overflow = 'hidden';
@@ -933,9 +945,11 @@
       if (!e.target.closest('#pop')) hidePopover();
     });
 
-    /* hover preview on inline citations */
+    /* hover preview on inline citations — desktop only: on a phone the tap that shows the
+       card also fires pointerout, which closed it again before the finger left the glass */
     let hoverTimer = 0;
     document.addEventListener('pointerover', (e) => {
+      if (TOUCH) return;
       const chip = e.target.closest('a[data-ref]');
       if (!chip) return;
       clearTimeout(hoverTimer);
@@ -945,6 +959,7 @@
       }, 130);
     });
     document.addEventListener('pointerout', (e) => {
+      if (TOUCH) return;
       const chip = e.target.closest('a[data-ref]');
       if (!chip) return;
       clearTimeout(hoverTimer);
@@ -954,9 +969,12 @@
         else if (!pop.matches(':hover')) hidePopover();
       }, 180);
     });
-    $('#pop').addEventListener('pointerleave', () => setTimeout(() => {
-      if (!$('#pop').matches(':hover')) hidePopover();
-    }, 160));
+    $('#pop').addEventListener('pointerleave', () => {
+      if (TOUCH) return;
+      setTimeout(() => {
+        if (!$('#pop').matches(':hover')) hidePopover();
+      }, 160);
+    });
 
     /* figure image click -> lightbox */
     document.addEventListener('click', (e) => {
@@ -972,6 +990,10 @@
     /* top bar */
     $('#btnRail').addEventListener('click', toggleRail);
     $('#btnDiag').addEventListener('click', showDiagnostics);
+    /* the wordmark is a way home on both hosts: the extension opens library.html, the app
+       calls its bridge — the same path as the ▤ button */
+    const brand = $('#brandBtn');
+    if (brand) brand.addEventListener('click', openLibrary);
     addNativeTabsButton();
 
     /* type & theme panel — markup built from the constants above, no article data involved */
@@ -1357,10 +1379,18 @@
     S.pendingRange = range.cloneRange();
     bar.style.setProperty('--hl-now', hlHex(S.hlColor));
     bar.hidden = false;
-    const rects = range.getClientRects();
-    const last = rects[rects.length - 1] || range.getBoundingClientRect();
     const w = bar.offsetWidth || 32;
     const h = bar.offsetHeight || 32;
+    if (TOUCH) {
+      /* the phone's own selection menu floats directly above the selected text — inline
+         placement put the pen and the 译 button underneath it. Dock them at the bottom edge
+         instead (centred, with room for the 译 button that sits to their right). */
+      bar.style.left = `${Math.round((window.innerWidth - w) / 2 - 22)}px`;
+      bar.style.top = `${Math.round(window.innerHeight - h - TOUCH_DOCK)}px`;
+      return;
+    }
+    const rects = range.getClientRects();
+    const last = rects[rects.length - 1] || range.getBoundingClientRect();
     let x = last.right + 6;
     let y = last.top - h - 6;
     if (x + w > window.innerWidth - 8) x = last.right - w;
