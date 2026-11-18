@@ -124,6 +124,17 @@
     return m[1].replace(/[.,;)\]]+$/, '');
   };
 
+  /* Springer Nature keeps one file per size bucket and only ever puts the 685 px copy in the
+     body markup (…/lw685/springer-static/image/…). That image is soft on a phone and unusable
+     in the lightbox, while the same file exists at …/lw1200/… and …/full/…. Rewrite the bucket
+     in the URL instead of fetching anything: still one plain <img>, still the publisher's CDN. */
+  const SPRINGER_TIER = /(media\.springernature\.com)\/(?:lw|m)?\d{2,4}\/(springer-static\/(?:image|esm)\/)/i;
+  U.imgTier = (src, tier) => {
+    const s = String(src || '');
+    if (!tier || !SPRINGER_TIER.test(s)) return s;
+    return s.replace(SPRINGER_TIER, `$1/${tier}/$2`);
+  };
+
   /* resolve every relative URL inside a cloned subtree so the reader page can load it */
   U.absolutize = (root) => {
     for (const a of U.qsa(root, 'a[href]')) {

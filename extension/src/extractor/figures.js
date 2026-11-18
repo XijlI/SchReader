@@ -46,6 +46,33 @@
     return cap;
   };
 
+  /* Caption blocks inside one figure container that are NOT the primary caption but still
+     belong to it. Springer Nature splits a figure in two: <figcaption> holds the one-line
+     title ("Fig. 3: …") and the panel description ("a, … b, …") sits in a sibling
+     <div data-test="bottom-caption">. The body walker emits the container whole, so whatever
+     the caption does not swallow disappears from the reader — the figure ends up with a bold
+     title and no legend at all. */
+  const CAPTIONISH = [
+    'figcaption', '[class*="figcaption" i]', '[itemprop="caption"]',
+    '[class*="caption" i]', '[class*="legend" i]', '[class*="description" i]',
+    '[data-test*="caption" i]', '[data-test*="description" i]',
+  ].join(',');
+
+  const captionExtras = (scope, cap) => {
+    if (!scope || U.qsa(scope, 'img, picture').length > 3) return [];
+    const base = U.text(cap);
+    const cands = U.qsa(scope, CAPTIONISH)
+      .filter((el) => el !== cap && !(cap && (cap.contains(el) || el.contains(cap))))
+      .filter((el) => !U.qs(el, 'img, picture, table'))
+      .filter((el) => {
+        const t = U.text(el);
+        return t.length > 11 && !(base && base.includes(t));
+      });
+    /* keep the innermost match only: a wrapper that contains another candidate would add
+       the same sentence twice */
+    return cands.filter((el) => !cands.some((o) => o !== el && el.contains(o)));
+  };
+
   const stripLabel = (capClone) => {
     const walker = document.createTreeWalker(capClone, NodeFilter.SHOW_TEXT);
     let tn = walker.nextNode();
@@ -83,9 +110,13 @@
     const seen = new Set();
     const usedImgs = new Set();
 
-    const add = (label, captionEl, img, host, link) => {
-      const src = img ? U.imgSrc(img) : '';
-      if (!src) return;
+    const add = (label, captionEl, img, host, link, scope) => {
+      const raw = img ? U.imgSrc(img) : '';
+      if (!raw) return;
+      /* the article renders the 1200 px copy (crisp on a phone, ~1 MB), the rail keeps the
+         publisher's thumbnail, and the lightbox asks for the original only when opened */
+      const src = U.imgTier(raw, 'lw1200');
+      const big = U.imgTier(raw, 'full');
       const key = `${U.dedupeKey(label)}|${src}`;
       if (seen.has(key)) return;
       seen.add(key);
@@ -93,7 +124,7 @@
       const id = 'fig-' + U.domId(label || `figure-${out.length + 1}`).replace(/^fig-?/, '') || `fig-${out.length + 1}`;
       /* stamp the container so the body walker can drop the figure in at the right place,
          whatever tag the publisher used (<figure>, div.figure, li.figure …) */
-      const box = (captionEl && captionEl.parentElement) || img.closest('figure') || null;
+      const box = scope || (captionEl && captionEl.parentElement) || img.closest('figure') || null;
       if (box && box !== document.body) {
         let hostEl = box;
         /* keep the stamp on a node that also contains the image */
@@ -101,11 +132,15 @@
         if (hostEl.contains(img)) hostEl.setAttribute('data-sr-figure', id);
       }
       let captionHtml = '';
-      if (captionEl) {
-        const c = captionEl.cloneNode(true);
+      const parts = captionEl ? [captionEl].concat(captionExtras(box, captionEl)) : [];
+      const cleaned = [];
+      for (const part of parts) {
+        const c = part.cloneNode(true);
         for (const b of U.qsa(c, 'button, [class*="tool"], [class*="share"]')) b.remove();
         U.absolutize(c);
-        stripLabel(c);
+        /* only the primary caption carries the "Fig. 3:" label — peeling it off a panel
+           description would eat the first words of the legend */
+        if (part === captionEl) stripLabel(c);
         /* PLOS mobile appends the article DOI to every caption block ("… Procedure.
            doi:10.1371/journal.pone.0317372") — noise, not part of the caption. */
         dropDoi(c);
@@ -116,14 +151,17 @@
         for (const e of U.qsa(c, 'span, b, strong, i, em')) {
           if (!U.text(e) && !U.qs(e, 'img')) e.remove();
         }
-        captionHtml = c.innerHTML;
+        const html = c.innerHTML.trim();
+        if (html) cleaned.push(html);
       }
+      captionHtml = cleaned.join(' ');
       out.push({
         id: id || `fig-${out.length + 1}`,
         label: label || `Fig. ${out.length + 1}`,
         captionHtml,
         src,
-        thumb: src,
+        thumb: raw,
+        big: big !== src ? big : '',
         alt: img ? (img.getAttribute('alt') || '').slice(0, 300) : '',
         href: link || '',
         origin: host ? 'inline' : 'loose',
@@ -146,7 +184,7 @@
       const iw = img.naturalWidth || img.width || 0;
       const ih = img.naturalHeight || img.height || 0;
       if (iw > 0 && ih > 0 && Math.max(iw, ih) < 120) continue;
-      add(label, cap, img, true, link);
+      add(label, cap, img, true, link, fig);
     }
 
     /* 2) images with a caption elsewhere in the same block ("div.figure > img + div.figcaption") */
@@ -182,7 +220,9 @@
         host = host.parentElement;
       }
       if (!cap || !label) continue;
-      add(label, cap, img, true, '');
+      /* the scope must hold both the image and the caption, or the extras search would walk
+         a stranger's figure */
+      add(label, cap, img, true, '', host && host.contains(cap) ? host : (cap.parentElement || host));
     }
 
     /* The same image often exists twice — in the article body and in a "figures" outline
