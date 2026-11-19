@@ -466,7 +466,13 @@ h1.title {
 }
 
 .paper p { margin: 0 0 1.02em; }
-.paper p, .paper li { text-align: justify; hyphens: manual; }
+/* ragged-right by default: the reader draws publisher prose with no auto-hyphenation, so
+   `justify` has nothing to break a line with and pays for the flush right edge in rivers of
+   white space between words. Left-aligned text keeps the word spacing even. The Aa panel's
+   Alignment row flips this through `html[data-align]`. */
+.paper p, .paper li { text-align: left; hyphens: manual; }
+html[data-align="justify"] .paper p,
+html[data-align="justify"] .paper li { text-align: justify; }
 .paper ul, .paper ol { margin: 0 0 1.1em; padding-left: 1.4em; }
 .paper li { margin: .25em 0; }
 .paper blockquote {

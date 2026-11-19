@@ -21,6 +21,7 @@
     font: 'palatino',
     leading: 1.72,
     read: 41,
+    align: 'left',
     lb: { index: 0, zoom: 1, tx: 0, ty: 0, dragging: false },
     popFor: null,
     hlColor: 'yellow',
@@ -759,6 +760,17 @@
     try { localStorage.setItem('sr-read', String(S.read)); } catch (e) {}
     syncTypePanel();
   }
+  /* ragged-right by default: the reader draws publisher prose with no auto-hyphenation, so
+     `justify` has nothing to break a line with and pays for the flush right edge in stretched
+     word spaces — worst on a phone. Kept one click away in the Aa panel. */
+  function applyAlign(v) {
+    S.align = v === 'justify' ? 'justify' : 'left';
+    document.documentElement.setAttribute('data-align', S.align);
+    try { localStorage.setItem('sr-align', S.align); } catch (e) {}
+    syncTypePanel();
+    /* every line box moves, so the highlight layer has to be measured again */
+    schedulePaint();
+  }
   /* characters per line. Exact when possible: lay a Range over one long text node and count
      its line boxes — that is the real measure, chips and all. Falls back to a font probe. */
   function measureChars() {
@@ -812,6 +824,7 @@
     if (!tr) return;
     $$('#themeRow button').forEach((b) => b.classList.toggle('on', b.dataset.theme === S.theme));
     $$('#fontRow button').forEach((b) => b.classList.toggle('on', b.dataset.font === S.font));
+    $$('#alignRow button').forEach((b) => b.classList.toggle('on', b.dataset.align === (S.align || 'left')));
     const size = Math.round(S.scale * 100);
     $('#sizeRange').value = String(Math.min(128, Math.max(88, size)));
     $('#sizeOut').textContent = `${size}%`;
@@ -1005,6 +1018,7 @@
       if (!t) return;
       if (t.dataset.theme) applyTheme(t.dataset.theme);
       if (t.dataset.font) applyFont(t.dataset.font);
+      if (t.dataset.align) applyAlign(t.dataset.align);
     });
     $('#sizeRange').addEventListener('input', (e) => applyScale(Number(e.target.value) / 100));
     $('#sizeDown').addEventListener('click', () => applyScale(Math.round((S.scale - 0.04) * 100) / 100));
@@ -1690,6 +1704,7 @@
     applyFont(localStorage.getItem('sr-font') || 'palatino');
     applyLeading(Number(localStorage.getItem('sr-leading')) || 1.72);
     applyRead(Number(localStorage.getItem('sr-read')) || 41);
+    applyAlign(localStorage.getItem('sr-align') || 'left');
 
     const a = await loadArticle();
     if (!a) {

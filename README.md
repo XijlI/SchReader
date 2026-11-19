@@ -102,7 +102,7 @@ pill appears there from then on. **Extension options** in `chrome://extensions` 
 | Select text, click the pen | Highlight in the current colour (right-click the pen for 6 colours) |
 | Select text, click 译 (or press `Y`) | Chinese translation of the selection in a floating card; **Copy** or **Save to note** (keeps both languages on the paper's library note) |
 | `J` / `K`, `S` / `F` / `R`, `T`, `Z`, `Esc` | Next section, tabs, theme, collapse rail, close |
-| `Aa` | Theme, typeface, custom colours, text size, line height, column width |
+| `Aa` | Theme, typeface, custom colours, text size, line height, column width, alignment |
 | `⋯` | Parse diagnostics: paragraphs, figures and references found |
 
 There are 17 themes and 7 fonts (Inter and IBM Plex Sans ship with the extension, so they work
