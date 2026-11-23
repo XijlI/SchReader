@@ -76,7 +76,8 @@ Android, `localStorage` in the dev harness); `library.html` is the one UI both h
 - ☆ in the reader saves/removes the current paper; ▤ opens the library page.
 - Search / sort / tag filters; tags and a note per entry; "Resume" from the stored position.
 - History is recorded on open and can be switched off.
-- Export BibTeX / RIS / CSV / JSON; import BibTeX or a JSON backup.
+- Export BibTeX / RIS / CSV / JSON; import BibTeX or a JSON backup. The wordbook exports TSV (one
+  row per word, which Anki imports as-is) or CSV.
 
 ## Non-goals
 No PDF parsing, no AI summarisation, no auto-translation, no full-text snapshots.

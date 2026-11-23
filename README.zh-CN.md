@@ -47,6 +47,7 @@ DOI、链接，加上你自己打的标签、备注和阅读位置）和一份�
 - 阅读历史可一键关闭
 - 导出 **BibTeX、RIS、CSV、JSON**（可直接导入 Zotero / EndNote / NoteExpress），也能从 BibTeX
   或 JSON 备份导入回来
+- **单词本**：翻译卡片里按 ★ 存下的词，带译文、例句和出处；可导出 **TSV（Anki）** 或 **CSV（表格）**
 - 右上角 **⚙ 设置**（手机上是它自己的一个标签页）：主题、阅读字体与字号、划词翻译（开关 + 目标语言）、允许的站点、版本号
 - **多设备同步**：库、阅读位置、高亮在浏览器和手机之间保持一致，走你自己的私有 gist ——
   见 [docs/INSTALL.zh-CN.md 第六节](docs/INSTALL.zh-CN.md)
@@ -125,7 +126,11 @@ python3 dev/serve.py 8799
 # 然后打开 http://127.0.0.1:8799/extension/reader.html?dev=article.json
 
 python3 .github/scripts/sync_whitelist.py --check   # 检查 manifest.json 与 whitelist.js 是否一致
+python3 .github/scripts/check_consistency.py       # 主题、抽取器顺序、镜像页面
+node dev/sync-sim.mjs                              # 两台模拟设备上的 store 合并
 ```
+
+这三项在每次推送到 `main` 和每个 PR 上由 CI 自动运行（`.github/workflows/ci.yml`）。
 
 ## 已知限制
 

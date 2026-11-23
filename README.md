@@ -53,6 +53,8 @@ reader. The page holds
 - reading history with a one-click off switch
 - export as **BibTeX, RIS, CSV or JSON** (drop straight into Zotero / EndNote / NoteExpress) and
   import back from BibTeX or a JSON backup
+- a **wordbook** for words saved from the translation card (★): the word, its translation, the
+  sentence it came from and the paper — export it as **TSV for Anki** or **CSV for a spreadsheet**
 - **⚙ Settings** (the app has it as its own tab): theme, reading typeface and size, selection
   translation (on/off and the target language), the allowed-site list and the version, in one panel
 - **sync across devices**: the same library, reading positions and highlights on the browser and the
@@ -140,7 +142,11 @@ python3 dev/serve.py 8799
 # then http://127.0.0.1:8799/extension/reader.html?dev=article.json
 
 python3 .github/scripts/sync_whitelist.py --check   # manifest.json and whitelist.js in sync
+python3 .github/scripts/check_consistency.py       # themes, extractor order, mirrored pages
+node dev/sync-sim.mjs                              # the store's merge, on two simulated devices
 ```
+
+All three run in CI on every push to `main` and every pull request (`.github/workflows/ci.yml`).
 
 ## Limitations
 
