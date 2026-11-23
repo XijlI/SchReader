@@ -1,0 +1,49 @@
+name: CI
+
+# Everything a release would otherwise discover too late: a syntax error, a site added to
+# whitelist.js without regenerating the manifest, a theme that only one of the two CSS files
+# grew, an extractor file the phone build would not bundle, or a broken merge in the store.
+# `Release` re-runs the whitelist check on its own; this workflow is the one that runs per push.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Static checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: JavaScript syntax
+        run: |
+          set -euo pipefail
+          files=$(ls extension/*.js extension/src/*.js extension/src/extractor/*.js dev/*.mjs)
+          for f in $files; do
+            node --check "$f"
+            echo "ok  $f"
+          done
+
+      - name: Python syntax
+        run: |
+          set -euo pipefail
+          python3 -m py_compile .github/scripts/*.py dev/*.py android/tools/*.py
+          echo "ok  $(ls .github/scripts/*.py dev/*.py android/tools/*.py | wc -l) files"
+
+      - name: Whitelist matches the manifest
+        run: python3 .github/scripts/sync_whitelist.py --check
+
+      - name: Themes, extractor order and mirrored pages agree
+        run: python3 .github/scripts/check_consistency.py
+
+      - name: Sync merge (two simulated devices, in-memory gist)
+        run: node dev/sync-sim.mjs
