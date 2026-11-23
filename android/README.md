@@ -27,7 +27,7 @@ Settings/Search → Library, Library → the article you came from, and then exi
 ## Install
 
 Easiest: grab `schreader-android-vX.Y.Z.apk` from the
-[Releases page](https://github.com/303035/SchReader/releases/latest) and skip to step 1
+[Releases page](https://github.com/XijlI/SchReader/releases/latest) and skip to step 1
 below — it's signed with the release key, so it installs over an older copy.
 Download the APK on a PC and copy it to the phone, or open the releases page on the phone itself.
 

@@ -38,7 +38,7 @@ certainly selected the parent directory.
 
 > **In a hurry, or on another computer?** Every release publishes
 > `schreader-chrome-vX.Y.Z.zip` on the
-> [Releases page](https://github.com/303035/SchReader/releases/latest). Download it,
+> [Releases page](https://github.com/XijlI/SchReader/releases/latest). Download it,
 > unzip it anywhere, and in step 3 pick that unzipped folder instead of the `extension` folder.
 > Everything else stays the same.
 

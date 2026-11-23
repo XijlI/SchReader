@@ -29,7 +29,7 @@ opened from it before it goes back to the shelf.
 3. Pin the puzzle-piece icon to the toolbar
 
 A click-by-click walkthrough for people who don't write code: [docs/INSTALL.md](docs/INSTALL.md).
-Prefer a ready-made download? The [latest release](https://github.com/303035/SchReader/releases/latest)
+Prefer a ready-made download? The [latest release](https://github.com/XijlI/SchReader/releases/latest)
 carries the extension zip and the APK.
 
 ## Use it

@@ -34,7 +34,7 @@ SchReader 是一个 Chrome 扩展：把论文网页换成 Nature 系期刊那种
 报错信息里如果出现 "manifest" 字样，基本就是选到了上层目录。
 
 > **想省事 / 换台电脑装**：每个版本都会在
-> [Releases 页面](https://github.com/303035/SchReader/releases/latest) 放出
+> [Releases 页面](https://github.com/XijlI/SchReader/releases/latest) 放出
 > `schreader-chrome-vX.Y.Z.zip`。下载解压到任意位置，第 3 步改成选**解压出来的那个文件夹**即可，
 > 其余步骤完全一样。
 
