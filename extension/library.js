@@ -229,9 +229,9 @@
     const tagBlock = $('#side').querySelector('.side-block');
     if (tagBlock) tagBlock.hidden = isWords;
     /* sorting and BibTeX-style export are paper concepts; on the wordbook they would look
-       like they act on what you see and then do nothing (or export the papers instead) */
+       wrong, so the sort is hidden — but Export stays, in its wordbook form (TSV / CSV). */
     $('#sort').hidden = isWords;
-    $('#btnExport').hidden = isWords;
+    $('#btnExport').title = isWords ? 'Export the wordbook' : 'Export the list';
     $('#btnImport').hidden = isWords;
     $('#q').placeholder = isWords ? 'Search a word, its translation or the example…'
       : isHist ? 'Search history…' : 'Search title, author, DOI, tag…';
@@ -258,8 +258,7 @@
     $('#mTitle').textContent = item.title || 'Edit entry';
     $('#mTags').value = (item.tags || []).join(', ');
     $('#mNote').value = item.note || '';
-    $('#modal').hidden = false;
-    $('#mTags').focus();
+    openDialog($('#modal'), '#mTags');
   }
 
   async function saveEdit() {
@@ -267,7 +266,7 @@
     const tags = $('#mTags').value.split(',').map((t) => t.trim()).filter(Boolean)
       .filter((t, i, arr) => arr.indexOf(t) === i);
     await LIB.patch(S.editing, { tags, note: $('#mNote').value.trim() });
-    $('#modal').hidden = true;
+    closeDialog($('#modal'));
     S.editing = null;
     await reload();
     toast('Saved');
@@ -289,20 +288,89 @@
     LIB.download(name, text, mime).then((ok) => toast(ok ? `Exported ${items.length} entries → ${name}` : 'Export failed'));
   }
 
+  /* ------------------------------------------------------------ wordbook export */
+  /* One row per word. A tab or a line break inside a sentence would shift every later column, so
+     both writers flatten each field first. TSV ships without a header row: Anki turns the first
+     line into a note unless you tick "field names", and CSV keeps one for a spreadsheet. */
+  const WORD_HEADER = ['word', 'translation', 'example', 'source', 'added'];
+  const flatCell = (c) => String(c == null ? '' : c).replace(/[\t\r\n]+/g, ' ').trim();
+  const wordRows = (list) => list.map((w) => [
+    w.term, w.translation, w.example || '', w.title || '',
+    w.addedAt ? new Date(w.addedAt).toISOString().slice(0, 10) : '',
+  ]);
+  const toTsv = (rows) => rows.map((r) => r.map(flatCell).join('\t')).join('\n') + '\n';
+  const toCsv = (rows) => rows.map((r) => r.map((c) => {
+    const s = String(c == null ? '' : c);
+    return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+  }).join(',')).join('\r\n') + '\r\n';
+
+  function exportWords(fmt) {
+    const words = S.words.filter(wordMatches);
+    if (!words.length) { toast('No words to export'); return; }
+    const rows = wordRows(words);
+    const stamp = new Date().toISOString().slice(0, 10);
+    const [name, text, mime] = fmt === 'csv'
+      ? ['schreader-words-' + stamp + '.csv', toCsv([WORD_HEADER].concat(rows)), 'text/csv']
+      : ['schreader-words-' + stamp + '.txt', toTsv(rows), 'text/tab-separated-values'];
+    LIB.download(name, text, mime)
+      .then((ok) => toast(ok ? `Exported ${words.length} words → ${name}` : 'Export failed'));
+  }
+
   /* ------------------------------------------------------------ wiring */
   /* The settings panel is mounted on first open. Mounting rebuilds its DOM and attaches one
      chrome.storage listener, so mounting per open would stack duplicate listeners. */
   let settingsMounted = false;
+  /* ------------------------------------------------------------ dialog focus */
+  /* A dialog that opens without moving focus leaves Tab walking the page behind it, and closing it
+     strands the keyboard user at the top of the document. One return point is enough: these two
+     dialogs never stack (settings opens from the header, the edit sheet from a row). */
+  const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]),'
+    + ' textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+  let dialogReturn = null;
+
+  function openDialog(el, firstSel) {
+    dialogReturn = document.activeElement;
+    el.hidden = false;
+    const target = (firstSel && el.querySelector(firstSel)) || el.querySelector(FOCUSABLE);
+    if (target && target.focus) target.focus();
+  }
+
+  function closeDialog(el) {
+    if (!el || el.hidden) return;
+    el.hidden = true;
+    const back = dialogReturn;
+    dialogReturn = null;
+    if (back && back !== document.body && document.contains(back) && back.focus) back.focus();
+  }
+
+  /* Tab / Shift+Tab wrap inside the open sheet instead of escaping to the page underneath */
+  function trapTab(e, el) {
+    if (!el || el.hidden || e.key !== 'Tab') return;
+    const items = $$(FOCUSABLE, el).filter((n) => n.getClientRects().length > 0);
+    if (!items.length) return;
+    const first = items[0];
+    const last = items[items.length - 1];
+    const inside = el.contains(document.activeElement);
+    if (e.shiftKey && (!inside || document.activeElement === first)) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && (!inside || document.activeElement === last)) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
+
   function openSettings() {
     if (!settingsMounted && window.SR_SETTINGS) {
       settingsMounted = true;
       window.SR_SETTINGS.mount($('#settingsBody'));
     }
-    $('#settingsModal').hidden = false;
+    /* first swatch, not the ✕: a keyboard user lands on the theme picker they opened it for */
+    openDialog($('#settingsModal'), '#settingsBody .swatch');
   }
 
   function closeSettings() {
-    $('#settingsModal').hidden = true;
+    closeDialog($('#settingsModal'));
   }
 
   function wire() {
@@ -387,7 +455,7 @@
 
     $('#modal').addEventListener('click', (e) => {
       if (e.target === $('#modal') || e.target.closest('#mCancel')) {
-        $('#modal').hidden = true;
+        closeDialog($('#modal'));
         S.editing = null;
       }
     });
@@ -395,11 +463,18 @@
 
     $('#btnExport').addEventListener('click', (e) => {
       e.stopPropagation();
-      const menu = $('#exportMenu');
+      /* papers have four formats, the wordbook two — one button, the menu follows the tab */
+      const menu = S.view === 'words' ? $('#wordMenu') : $('#exportMenu');
+      const wasOpen = !menu.hidden;
+      $('#exportMenu').hidden = true;
+      $('#wordMenu').hidden = true;
+      if (wasOpen) return;          /* second click on Export closes, like every other menu */
+      /* show first: a hidden menu has no box, and measuring it would place it off-screen */
+      menu.hidden = false;
       const r = e.currentTarget.getBoundingClientRect();
+      const left = Math.min(r.right - menu.offsetWidth, window.innerWidth - menu.offsetWidth - 8);
       menu.style.top = (r.bottom + 6) + 'px';
-      menu.style.left = Math.max(8, r.right - menu.offsetWidth) + 'px';
-      menu.hidden = !menu.hidden;
+      menu.style.left = Math.max(8, left) + 'px';
     });
     $('#exportMenu').addEventListener('click', (e) => {
       const b = e.target.closest('[data-fmt]');
@@ -407,8 +482,17 @@
       $('#exportMenu').hidden = true;
       exportAs(b.dataset.fmt);
     });
+    $('#wordMenu').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-wfmt]');
+      if (!b) return;
+      $('#wordMenu').hidden = true;
+      exportWords(b.dataset.wfmt);
+    });
     document.addEventListener('click', (e) => {
-      if (!e.target.closest('#exportMenu') && !e.target.closest('#btnExport')) $('#exportMenu').hidden = true;
+      if (!e.target.closest('.menu') && !e.target.closest('#btnExport')) {
+        $('#exportMenu').hidden = true;
+        $('#wordMenu').hidden = true;
+      }
     });
 
     $('#btnImport').addEventListener('click', () => $('#file').click());
@@ -432,10 +516,13 @@
     });
 
     document.addEventListener('keydown', (e) => {
+      /* the open sheet keeps Tab; everything below is shortcut handling */
+      trapTab(e, !$('#settingsModal').hidden ? $('#settingsModal') : $('#modal'));
       if (e.key === 'Escape') {
         if (!$('#settingsModal').hidden) { closeSettings(); return; }
-        if (!$('#modal').hidden) { $('#modal').hidden = true; S.editing = null; return; }
+        if (!$('#modal').hidden) { closeDialog($('#modal')); S.editing = null; return; }
         if (!$('#exportMenu').hidden) { $('#exportMenu').hidden = true; return; }
+        if (!$('#wordMenu').hidden) { $('#wordMenu').hidden = true; return; }
       }
       if ((e.key === '/' || (e.key === 'f' && (e.metaKey || e.ctrlKey))) && document.activeElement !== $('#q')) {
         e.preventDefault();

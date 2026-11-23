@@ -52,7 +52,7 @@
   </div>
 </div>
 
-<div class="modal" id="modal" hidden>
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mTitle">
   <div class="sheet">
     <h3 id="mTitle">Edit entry</h3>
     <label class="field"><span>Tags</span>
@@ -69,10 +69,10 @@
 </div>
 
 <!-- Settings — the same panel the Android app mounts as its own Settings tab (settings.js). -->
-<div class="modal" id="settingsModal" hidden>
+<div class="modal" id="settingsModal" hidden role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
   <div class="sheet sheet-wide">
     <div class="sheet-head">
-      <h3>Settings</h3>
+      <h3 id="settingsTitle">Settings</h3>
       <button id="setDone" class="ghost icon" aria-label="Close settings">✕</button>
     </div>
     <div class="settings-body" id="settingsBody"></div>
@@ -84,6 +84,12 @@
   <button data-fmt="ris">RIS (.ris)</button>
   <button data-fmt="csv">CSV (.csv)</button>
   <button data-fmt="json">JSON (backup)</button>
+</div>
+
+<!-- the wordbook exports two shapes: TSV that Anki imports as-is, CSV for a spreadsheet -->
+<div class="menu" id="wordMenu" hidden>
+  <button data-wfmt="tsv">TSV for Anki (.txt)</button>
+  <button data-wfmt="csv">CSV (.csv)</button>
 </div>
 
 <input type="file" id="file" accept=".bib,.json,text/plain,application/json" hidden>
