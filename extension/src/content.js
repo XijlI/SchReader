@@ -28,6 +28,41 @@
     return Boolean(meta) || (paras >= 12 && len > 3500);
   }
 
+  /* A script-rendered publisher (ScienceDirect, Wiley) builds the body after document_idle, so a
+     single check at boot leaves the pill missing until the user reloads. Watch for the article
+     instead — throttled, because innerText forces layout and SPA pages mutate constantly. */
+  const ARTICLE_WAIT_MS = 15000;
+  const ARTICLE_POLL_MS = 800;
+
+  function waitForArticle(budget) {
+    if (looksLikeArticle()) return Promise.resolve(true);
+    return new Promise((resolve) => {
+      let done = false;
+      let poll = 0;
+      let deadline = 0;
+      let debounce = 0;
+      const finish = (ok) => {
+        if (done) return;
+        done = true;
+        clearInterval(poll);
+        clearTimeout(deadline);
+        clearTimeout(debounce);
+        try { obs.disconnect(); } catch (e) { /* already gone with the page */ }
+        resolve(ok);
+      };
+      const check = () => { if (!done && looksLikeArticle()) finish(true); };
+      const obs = new MutationObserver(() => {
+        if (debounce || done) return;
+        debounce = setTimeout(() => { debounce = 0; check(); }, 250);
+      });
+      poll = setInterval(check, ARTICLE_POLL_MS);
+      deadline = setTimeout(() => finish(looksLikeArticle()), budget);
+      try { obs.observe(document.documentElement, { childList: true, subtree: true }); } catch (e) {
+        /* no documentElement (rare): the interval alone still gets there */
+      }
+    });
+  }
+
   /* ------------------------------------------------------------ pill UI */
   let ui = null;
 
@@ -84,6 +119,9 @@
         .err { color: #b42318; }
         .spin { width: 11px; height: 11px; border-radius: 50%; border: 2px solid rgba(255,255,255,.35); border-top-color: #fff; animation: sp .7s linear infinite; }
         @keyframes sp { to { transform: rotate(360deg); } }
+        @media (prefers-reduced-motion: reduce) {
+          .bar, .panel, .spin { transition: none !important; animation: none !important; }
+        }
         .hidden { display: none !important; }
         .link {
           background: none; border: 0; padding: 5px 0 0 22px; width: 100%;
@@ -261,7 +299,8 @@
   if (!isTop) {
     (async () => {
       if (!siteAllowed(await prefGet())) return;
-      if (!looksLikeArticle()) return;
+      /* same async body as the top frame (IEEE Xplore renders the article in an iframe) */
+      if (!looksLikeArticle() && !(await waitForArticle(ARTICLE_WAIT_MS))) return;
       try {
         const m = SR.extract();
         if (m && (m.sections || []).length >= 2) {
@@ -287,7 +326,8 @@
     if (!SITES.matches(host, custom) && SKIP.test(host)) return;
     if (!siteAllowed(pref)) return;
     if (pref['sr-hidden'] && pref['sr-hidden'][host]) return;
-    if (!looksLikeArticle()) return;
+    /* the body of an async page has not arrived yet — wait for it instead of asking for a reload */
+    if (!looksLikeArticle() && !(await waitForArticle(ARTICLE_WAIT_MS))) return;
 
     buildUi();
     ui.auto.checked = Boolean(pref['sr-auto'] && pref['sr-auto'][host]);

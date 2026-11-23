@@ -555,3 +555,13 @@ html.app .sheet { max-height: 78vh; }
 }
 
 .hint.warn { color: var(--danger); }
+
+/* ---- reduced motion ---- (same rule as reader.css: keep the two skins behaved identically) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}

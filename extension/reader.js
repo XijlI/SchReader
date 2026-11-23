@@ -8,6 +8,10 @@
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+  /* scrollTo() ignores the `scroll-behavior` CSS rule, so the OS-level "reduce motion" setting has
+     to be read here too — every smooth jump below goes through this constant. */
+  const MOTION = (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+    ? 'auto' : 'smooth';
   const esc = (s) => String(s == null ? '' : s)
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
@@ -352,7 +356,7 @@
     const body = $('#railBody');
     const top = li.offsetTop - body.offsetTop;
     if (top < body.scrollTop || top > body.scrollTop + body.clientHeight - li.offsetHeight - 8) {
-      body.scrollTo({ top: Math.max(0, top - 10), behavior: 'smooth' });
+      body.scrollTo({ top: Math.max(0, top - 10), behavior: MOTION });
     }
     btn.classList.add('pulse');
     setTimeout(() => btn.classList.remove('pulse'), 1000);
@@ -372,7 +376,7 @@
       const body = $('#railBody');
       const top = li.offsetTop - body.offsetTop;
       if (top < body.scrollTop || top > body.scrollTop + body.clientHeight - li.offsetHeight - 8) {
-        body.scrollTo({ top: Math.max(0, top - 12), behavior: 'smooth' });
+        body.scrollTo({ top: Math.max(0, top - 12), behavior: MOTION });
       }
     }
     const artLi = $(`#ref-${n}`);
@@ -576,7 +580,7 @@
       const body = $('#railBody');
       const top = btn.offsetTop - body.offsetTop;
       if (top < body.scrollTop + 4 || top > body.scrollTop + body.clientHeight - 40) {
-        body.scrollTo({ top: Math.max(0, top - body.clientHeight / 2), behavior: 'smooth' });
+        body.scrollTo({ top: Math.max(0, top - body.clientHeight / 2), behavior: MOTION });
       }
     }, { rootMargin: '-72px 0px -62% 0px', threshold: [0, 0.1, 0.5, 1] });
     secs.forEach((s) => spyObserver.observe(s));
@@ -1661,7 +1665,7 @@
     document.body.appendChild(bar);
     $('#resumeGo').addEventListener('click', () => {
       const h = document.documentElement.scrollHeight - window.innerHeight;
-      window.scrollTo({ top: Math.round(h * pct / 100), behavior: 'smooth' });
+      window.scrollTo({ top: Math.round(h * pct / 100), behavior: MOTION });
       bar.remove();
     });
     $('#resumeNo').addEventListener('click', () => bar.remove());

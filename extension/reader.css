@@ -1117,3 +1117,16 @@ html[data-rail="off"] #btnRail { opacity: .55; }
   .trpop { max-width: min(20rem, 92vw); }
   .trpop-body { max-height: 38vh; }
 }
+
+/* ---- reduced motion ----
+   The rail, the progress bar, the lightbox and the reference flash all animate. A reader who asked
+   their OS for less motion gets none of it; durations shrink to 1ms rather than `none` so anything
+   listening for `transitionend` still fires. Smooth scrolling is gated in JS (scrollTo ignores CSS). */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -11,6 +11,9 @@
 
   const LIB = window.SR_LIB;
   const $ = (sel, root) => (root || document).querySelector(sel);
+  /* the jump-to-card scroll below honours the OS "reduce motion" setting */
+  const MOTION = (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+    ? 'auto' : 'smooth';
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => (
     { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
   ));
@@ -150,7 +153,7 @@
       const f = $('#addForm');
       f.classList.toggle('open');
       if (f.classList.contains('open')) {
-        f.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        f.scrollIntoView({ block: 'center', behavior: MOTION });
         $('#addName').focus({ preventScroll: true });
       }
     });
