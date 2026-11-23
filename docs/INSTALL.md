@@ -4,8 +4,8 @@
 
 SchReader is a Chrome extension: it turns a paper page into something laid out like a Nature-family
 article.
-**No sign-up, no downloads over the network, nothing saved.**
-(Syncing between devices is optional and needs a free GitHub token — see §6.)
+**No sign-up, and the article text is never saved.** The library, highlights and reading history you
+create stay on your machine; the sync in §6 is optional and off by default.
 
 ---
 
@@ -46,21 +46,24 @@ certainly selected the parent directory.
 
 ## 2. How to use it
 
-1. Open a paper as usual (ScienceDirect, Wiley, ACS, Springer, PLOS… any of them) and wait for the
-   body text to show up.
+1. Open a paper as usual (ScienceDirect, Wiley, ACS, Springer, PLOS… any of them). The body can take
+   a moment to render; the pill appears by itself once it has.
 2. A small dark pill appears in the page's **bottom-right corner**:
 
    ```
-   [S  SchReader  ▾]
+   [R  SchReader  ▾]
    ```
 
-   Click it → the reflowed reading layout opens in a **new tab**. The original page is untouched,
-   so you can switch back and compare whenever you like.
+   Click it → the reading layout **takes over this tab**; **Original ↗** in the reader walks back to
+   the publisher page. Ctrl/Cmd-click (or middle-click) the pill instead if you would rather keep the
+   original page open in its own tab.
 
 3. Can't find the pill?
+   - Some publishers insert the body with a script (ScienceDirect, Wiley). The extension watches the
+     page for about 15 seconds and shows the pill as soon as the text is there — wait a moment
+     instead of reloading
    - A page opened straight from **My library** waits until it has finished loading before it builds
-     the reading view; a page you open yourself may still be rendering — give it a second or scroll
-     down a bit
+     the reading view
    - If the site is not on the allowed list, no pill appears at all — see section 3
    - The **SchReader icon** in the toolbar does not convert the page: it opens your library
 
@@ -115,7 +118,7 @@ Everything else:
 |---|---|
 | Look at a figure / zoom | Click the figure itself, or "Expand" on it; wheel to zoom (**25%–600%**, 100% = the whole figure fits the window); drag to pan when zoomed; ← → to change figures, Esc to close |
 | Change theme / font / font size | **Aa** in the top bar — everything is in there (you can also pick your own background and text colors) |
-| Highlight text | Select the text → click the **pen** in the top-right; yellow by default |
+| Highlight text | Select the text → click the **pen** that pops up next to the selection; yellow by default |
 | Use a different highlight color | **Right-click** the pen and pick a color (yellow / green / blue / pink / purple / orange) |
 | Change an existing highlight | **Right-click** the highlight → recolor, or ✕ to delete |
 | Next / previous section | `J` / `K` |
